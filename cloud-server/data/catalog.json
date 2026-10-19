@@ -1,0 +1,6175 @@
+{
+ "generatedFrom": "HomeFragment.java / AndroidManifest.xml / scripts/endpoints",
+ "counts": {
+  "components": 293,
+  "activities": 90,
+  "endpoints": 257
+ },
+ "categories": [
+  "消息公告",
+  "班级/校园",
+  "学生空间",
+  "作业/任务",
+  "相册/视频",
+  "课表",
+  "考勤/打卡",
+  "值日/值周",
+  "德育/评价",
+  "场地/走班",
+  "考试",
+  "图书/阅读",
+  "会议/预约",
+  "投票/问卷",
+  "活动",
+  "宿舍",
+  "巡课",
+  "报修",
+  "留言/咨询",
+  "AI",
+  "物联网",
+  "校历/日历",
+  "倒计时/时钟",
+  "天气/环境",
+  "自定义",
+  "特色",
+  "特殊布局",
+  "学科/特色",
+  "其他"
+ ],
+ "components": [
+  {
+   "tag": "hbtzgg25",
+   "case": 117,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 2,
+   "height": 5,
+   "size": "2×5"
+  },
+  {
+   "tag": "hbxxfb86",
+   "case": 100,
+   "fragment": "MessageHomeFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 8,
+   "height": 6,
+   "size": "8×6"
+  },
+  {
+   "tag": "hbxxfbgg24",
+   "case": 111,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbxxfbgg26",
+   "case": 116,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 2,
+   "height": 6,
+   "size": "2×6"
+  },
+  {
+   "tag": "hbxxfbhb42",
+   "case": 115,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbxxfbsw22",
+   "case": 113,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbxxfbwz22",
+   "case": 112,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbxxfbxw24",
+   "case": 110,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbxxfbxw44",
+   "case": 109,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbxxfbxy42",
+   "case": 114,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "sbxxfb68",
+   "case": 101,
+   "fragment": "MessageHomeFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 6,
+   "height": 8,
+   "size": "6×8"
+  },
+  {
+   "tag": "sbxxfbgg44",
+   "case": 104,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbxxfbhb22",
+   "case": 106,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbxxfbsw22",
+   "case": 107,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbxxfbwz22",
+   "case": 105,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbxxfbxw42",
+   "case": 103,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "sbxxfbxw62",
+   "case": 102,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 6,
+   "height": 2,
+   "size": "6×2"
+  },
+  {
+   "tag": "sbxxfbxy42",
+   "case": 108,
+   "fragment": "MessageFragment",
+   "name": "消息公告",
+   "category": "消息公告",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbtzgg24",
+   "case": 199,
+   "fragment": "AnnouncementFragment2_4L",
+   "name": "通知公告",
+   "category": "消息公告",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbtzgg26",
+   "case": 204,
+   "fragment": "MessageNoticeFragment",
+   "name": "通知公告",
+   "category": "消息公告",
+   "width": 2,
+   "height": 6,
+   "size": "2×6"
+  },
+  {
+   "tag": "hbtzgg44",
+   "case": 203,
+   "fragment": "AnnouncementFragment4_4L",
+   "name": "通知公告",
+   "category": "消息公告",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbtzgg42",
+   "case": 202,
+   "fragment": "AnnouncementFragment4_2P",
+   "name": "通知公告",
+   "category": "消息公告",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "sbtzgg45",
+   "case": 200,
+   "fragment": "AnnouncementFragment2_4L",
+   "name": "通知公告",
+   "category": "消息公告",
+   "width": 4,
+   "height": 5,
+   "size": "4×5"
+  },
+  {
+   "tag": "sbtzgg63",
+   "case": 201,
+   "fragment": "AnnouncementFragment6_3P",
+   "name": "通知公告",
+   "category": "消息公告",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "hbtzggmb4x6",
+   "case": 23,
+   "fragment": "NoticeTemplateFragment",
+   "name": "通知公告模板",
+   "category": "消息公告",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "sbtzggmb6x2",
+   "case": 25,
+   "fragment": "NoticeTemplateFragment",
+   "name": "通知公告模板",
+   "category": "消息公告",
+   "width": 6,
+   "height": 2,
+   "size": "6×2"
+  },
+  {
+   "tag": "sbtzggmb6x4",
+   "case": 24,
+   "fragment": "NoticeTemplateFragment",
+   "name": "通知公告模板",
+   "category": "消息公告",
+   "width": 6,
+   "height": 4,
+   "size": "6×4"
+  },
+  {
+   "tag": "hbbjxq42",
+   "case": 40,
+   "fragment": "ClassInfoFragment4x2",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbbjxx21",
+   "case": 186,
+   "fragment": "ClassInfoFragment2_1L",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "hbbjxx22",
+   "case": 174,
+   "fragment": "ClassInfoFragment2_2L",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbbjxx24",
+   "case": 177,
+   "fragment": "ClassInfoFragment2_4L",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbbjxx86",
+   "case": 29,
+   "fragment": "ClassInfoFragment8x6",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 8,
+   "height": 6,
+   "size": "8×6"
+  },
+  {
+   "tag": "hbbjxxfdy42",
+   "case": 176,
+   "fragment": "ClassInfoFragment4_2L",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbbjxxwxm42",
+   "case": 175,
+   "fragment": "ClassInfoFragment4_2L",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbtzgg_kt_24",
+   "case": 178,
+   "fragment": "ClassInfoFragment2_4L",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "sbbjxx21",
+   "case": 182,
+   "fragment": "ClassInfoFragment2_1_1P",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "sbbjxx22",
+   "case": 179,
+   "fragment": "ClassInfoFragment2_2P",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbbjxx41",
+   "case": 183,
+   "fragment": "ClassInfoFragment4_1_1P",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 4,
+   "height": 1,
+   "size": "4×1"
+  },
+  {
+   "tag": "sbbjxx62",
+   "case": 180,
+   "fragment": "ClassInfoFragment6_2P",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 6,
+   "height": 2,
+   "size": "6×2"
+  },
+  {
+   "tag": "sbbjxxfdy41",
+   "case": 185,
+   "fragment": "ClassInfoFragment4_1P",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 4,
+   "height": 1,
+   "size": "4×1"
+  },
+  {
+   "tag": "sbbjxxfdy62",
+   "case": 181,
+   "fragment": "ClassInfoFragment6_2P",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 6,
+   "height": 2,
+   "size": "6×2"
+  },
+  {
+   "tag": "sbbjxxwxm41",
+   "case": 184,
+   "fragment": "ClassInfoFragment4_1P",
+   "name": "班级信息",
+   "category": "班级/校园",
+   "width": 4,
+   "height": 1,
+   "size": "4×1"
+  },
+  {
+   "tag": "hbzp24",
+   "case": 216,
+   "fragment": "StudentProductionFragment2_4L",
+   "name": "学生作品",
+   "category": "学生空间",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbzp44",
+   "case": 218,
+   "fragment": "StudentProductionFragment4_4L",
+   "name": "学生作品",
+   "category": "学生空间",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbzp46",
+   "case": 219,
+   "fragment": "StudentProductionFragment4_6L",
+   "name": "学生作品",
+   "category": "学生空间",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "sbzp42",
+   "case": 217,
+   "fragment": "StudentProductionFragment2_4L",
+   "name": "学生作品",
+   "category": "学生空间",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "sbzp63",
+   "case": 220,
+   "fragment": "StudentProductionFragment6_3P",
+   "name": "学生作品",
+   "category": "学生空间",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "hbxskj22",
+   "case": 205,
+   "fragment": "StudentCenter2_2L",
+   "name": "学生空间",
+   "category": "学生空间",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbxskj23",
+   "case": 206,
+   "fragment": "StudentCenter2_3L",
+   "name": "学生空间",
+   "category": "学生空间",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "sbkj21",
+   "case": 207,
+   "fragment": "StudentCenter2_1P",
+   "name": "学生空间",
+   "category": "学生空间",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "sbkj22",
+   "case": 209,
+   "fragment": "StudentCenter2_2P",
+   "name": "学生空间",
+   "category": "学生空间",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbkj41",
+   "case": 208,
+   "fragment": "StudentCenter2_1P",
+   "name": "学生空间",
+   "category": "学生空间",
+   "width": 4,
+   "height": 1,
+   "size": "4×1"
+  },
+  {
+   "tag": "hbzy23",
+   "case": 223,
+   "fragment": "AssignmentFragment2_3L",
+   "name": "作业",
+   "category": "作业/任务",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "hbzy24",
+   "case": 221,
+   "fragment": "AssignmentFragment2_4L",
+   "name": "作业",
+   "category": "作业/任务",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "sbzy22",
+   "case": 222,
+   "fragment": "AssignmentFragment2_4L",
+   "name": "作业",
+   "category": "作业/任务",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbbjxc23",
+   "case": 241,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "hbbjxc44",
+   "case": 233,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbbjxc441",
+   "case": 235,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbbjxc46",
+   "case": 245,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "hbxjxc23",
+   "case": 242,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "hbxjxc44",
+   "case": 234,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbxjxc441",
+   "case": 236,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbxjxc46",
+   "case": 244,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "hbxyfg23",
+   "case": 243,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "sbbjxc42",
+   "case": 237,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "sbbjxc63",
+   "case": 239,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "sbxjxc42",
+   "case": 238,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "sbxjxc63",
+   "case": 240,
+   "fragment": "BannerImageFragment",
+   "name": "相册",
+   "category": "相册/视频",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "hbbjsp23",
+   "case": 226,
+   "fragment": "VideoFragment",
+   "name": "视频",
+   "category": "相册/视频",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "hbbjsp44",
+   "case": 224,
+   "fragment": "VideoFragment",
+   "name": "视频",
+   "category": "相册/视频",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbjcjj23",
+   "case": 228,
+   "fragment": "VideoFragment",
+   "name": "视频",
+   "category": "相册/视频",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "hbxjsp23",
+   "case": 227,
+   "fragment": "VideoFragment",
+   "name": "视频",
+   "category": "相册/视频",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "hbxjsp44",
+   "case": 225,
+   "fragment": "VideoFragment",
+   "name": "视频",
+   "category": "相册/视频",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbbjsp42",
+   "case": 229,
+   "fragment": "VideoFragment",
+   "name": "视频",
+   "category": "相册/视频",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "sbbjsp63",
+   "case": 231,
+   "fragment": "VideoFragment",
+   "name": "视频",
+   "category": "相册/视频",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "sbxjsp42",
+   "case": 230,
+   "fragment": "VideoFragment",
+   "name": "视频",
+   "category": "相册/视频",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "sbxjsp63",
+   "case": 232,
+   "fragment": "VideoFragment",
+   "name": "视频",
+   "category": "相册/视频",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "hbcdkb66",
+   "case": 163,
+   "fragment": "KBCDFragment6_6",
+   "name": "场地课表",
+   "category": "课表",
+   "width": 6,
+   "height": 6,
+   "size": "6×6"
+  },
+  {
+   "tag": "hbtable24",
+   "case": 98,
+   "fragment": "UniversityNextTableFragment",
+   "name": "大学课表",
+   "category": "课表",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbtable26",
+   "case": 97,
+   "fragment": "UniversityTableFragment",
+   "name": "大学课表",
+   "category": "课表",
+   "width": 2,
+   "height": 6,
+   "size": "2×6"
+  },
+  {
+   "tag": "hbtable_drak46",
+   "case": 55,
+   "fragment": "UniversityDrakTableFragment",
+   "name": "大学课表",
+   "category": "课表",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "sbcdkb66",
+   "case": 164,
+   "fragment": "KBBJFragment6_6",
+   "name": "班级课表",
+   "category": "课表",
+   "width": 6,
+   "height": 6,
+   "size": "6×6"
+  },
+  {
+   "tag": "hbcdkb44",
+   "case": 169,
+   "fragment": "KBFragment4_4L",
+   "name": "课表",
+   "category": "课表",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbkb24",
+   "case": 166,
+   "fragment": "ClassScheduleFragment2_4L",
+   "name": "课表",
+   "category": "课表",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbkb44",
+   "case": 165,
+   "fragment": "ClassScheduleFragment4_4L",
+   "name": "课表",
+   "category": "课表",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbkb_drak23",
+   "case": 53,
+   "fragment": "ClassScheduleFragment2_3L",
+   "name": "课表",
+   "category": "课表",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "hbkb_sk24",
+   "case": 168,
+   "fragment": "ClassScheduleFragment_sk2_4L",
+   "name": "课表",
+   "category": "课表",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbkb_sk44",
+   "case": 167,
+   "fragment": "ClassScheduleFragment_sk4_4L",
+   "name": "课表",
+   "category": "课表",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbcdkb63",
+   "case": 173,
+   "fragment": "KBFragment6_3P",
+   "name": "课表",
+   "category": "课表",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "sbkb22",
+   "case": 170,
+   "fragment": "KBFragment2_2p",
+   "name": "课表",
+   "category": "课表",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbkb42",
+   "case": 171,
+   "fragment": "KBFragment4_2P",
+   "name": "课表",
+   "category": "课表",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "sbkb63",
+   "case": 172,
+   "fragment": "ClassScheduleFragment6_3P2",
+   "name": "课表",
+   "category": "课表",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "hbdk22",
+   "case": 160,
+   "fragment": "PunchFragment",
+   "name": "打卡",
+   "category": "考勤/打卡",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbdk23",
+   "case": 161,
+   "fragment": "PunchFragment",
+   "name": "打卡",
+   "category": "考勤/打卡",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "sbdk21",
+   "case": 162,
+   "fragment": "PunchFragment",
+   "name": "打卡",
+   "category": "考勤/打卡",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "hbqdThird22",
+   "case": 30,
+   "fragment": "PunchThirdFragment",
+   "name": "第三方打卡",
+   "category": "考勤/打卡",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbkq22",
+   "case": 212,
+   "fragment": "AttendanceFragmentSatistics2_2L",
+   "name": "考勤",
+   "category": "考勤/打卡",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbkq221",
+   "case": 213,
+   "fragment": "AttendanceFragment2_2_2L",
+   "name": "考勤",
+   "category": "考勤/打卡",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbkq_kt_22",
+   "case": 210,
+   "fragment": "AttendanceFragmentSatistics_cartoon_2_2L",
+   "name": "考勤",
+   "category": "考勤/打卡",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbkq22",
+   "case": 211,
+   "fragment": "AttendanceFragmentSatistics2_2L",
+   "name": "考勤",
+   "category": "考勤/打卡",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbkq41",
+   "case": 214,
+   "fragment": "AttendanceFragment4_1_1P_list",
+   "name": "考勤",
+   "category": "考勤/打卡",
+   "width": 4,
+   "height": 1,
+   "size": "4×1"
+  },
+  {
+   "tag": "sbkq42",
+   "case": 215,
+   "fragment": "AttendanceFragment4_2P_list",
+   "name": "考勤",
+   "category": "考勤/打卡",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbzrs22",
+   "case": 31,
+   "fragment": "DutyFragment2x2",
+   "name": "值周",
+   "category": "值日/值周",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbzrs23",
+   "case": 33,
+   "fragment": "DutyFragment2x3",
+   "name": "值周",
+   "category": "值日/值周",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "hbzrs24",
+   "case": 34,
+   "fragment": "DutyFragment2x3",
+   "name": "值周",
+   "category": "值日/值周",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "sbzrs22",
+   "case": 32,
+   "fragment": "DutyFragment2x2",
+   "name": "值周",
+   "category": "值日/值周",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbzrs42",
+   "case": 35,
+   "fragment": "DutyFragment2x3",
+   "name": "值周",
+   "category": "值日/值周",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbzr22",
+   "case": 192,
+   "fragment": "StudentDutyFragment2_2L",
+   "name": "值日生",
+   "category": "值日/值周",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbzr221",
+   "case": 194,
+   "fragment": "StudentDutyFragment2_2L",
+   "name": "值日生",
+   "category": "值日/值周",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbzr23",
+   "case": 195,
+   "fragment": "StudentDutyFragment2_3L",
+   "name": "值日生",
+   "category": "值日/值周",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "sbzr21",
+   "case": 193,
+   "fragment": "StudentDutyFragment2_2L",
+   "name": "值日生",
+   "category": "值日/值周",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "sbzr22",
+   "case": 198,
+   "fragment": "StudentDutyFragment4_1P",
+   "name": "值日生",
+   "category": "值日/值周",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbzr41",
+   "case": 196,
+   "fragment": "StudentDutyFragment4_1P",
+   "name": "值日生",
+   "category": "值日/值周",
+   "width": 4,
+   "height": 1,
+   "size": "4×1"
+  },
+  {
+   "tag": "sbzr42",
+   "case": 197,
+   "fragment": "StudentDutyFragment4_1P",
+   "name": "值日生",
+   "category": "值日/值周",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbxspj26",
+   "case": 27,
+   "fragment": "EvaluationFragment",
+   "name": "德育评价",
+   "category": "德育/评价",
+   "width": 2,
+   "height": 6,
+   "size": "2×6"
+  },
+  {
+   "tag": "sbxspj44",
+   "case": 26,
+   "fragment": "EvaluationFragmentP4x4",
+   "name": "德育评价",
+   "category": "德育/评价",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbdypj241",
+   "case": 283,
+   "fragment": "IndexClassMEFragment241",
+   "name": "班级德育",
+   "category": "德育/评价",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbdypj242",
+   "case": 285,
+   "fragment": "IndexClassMEFragment242",
+   "name": "班级德育",
+   "category": "德育/评价",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbdypj26",
+   "case": 287,
+   "fragment": "IndexClassMEFragment26",
+   "name": "班级德育",
+   "category": "德育/评价",
+   "width": 2,
+   "height": 6,
+   "size": "2×6"
+  },
+  {
+   "tag": "sbdypj441",
+   "case": 284,
+   "fragment": "IndexClassMEFragment241",
+   "name": "班级德育",
+   "category": "德育/评价",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbdypj442",
+   "case": 286,
+   "fragment": "IndexClassMEFragment242",
+   "name": "班级德育",
+   "category": "德育/评价",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbdypj46",
+   "case": 288,
+   "fragment": "IndexClassMEFragment26",
+   "name": "班级德育",
+   "category": "德育/评价",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "hbyjfx2x2",
+   "case": 3,
+   "fragment": "ClassesOverFragment",
+   "name": "班级评比",
+   "category": "德育/评价",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbyjfx2x2",
+   "case": 4,
+   "fragment": "ClassesOverFragment",
+   "name": "班级评比",
+   "category": "德育/评价",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbryq22",
+   "case": 125,
+   "fragment": "HomeHonorFragment2x2",
+   "name": "荣誉墙",
+   "category": "德育/评价",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbryq23",
+   "case": 121,
+   "fragment": "HomeHonorFragment",
+   "name": "荣誉墙",
+   "category": "德育/评价",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "hbryq24",
+   "case": 120,
+   "fragment": "HomeHonorFragment",
+   "name": "荣誉墙",
+   "category": "德育/评价",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "sbryq22",
+   "case": 124,
+   "fragment": "HomeHonorFragment",
+   "name": "荣誉墙",
+   "category": "德育/评价",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbryq32",
+   "case": 123,
+   "fragment": "HomeHonorFragment",
+   "name": "荣誉墙",
+   "category": "德育/评价",
+   "width": 3,
+   "height": 2,
+   "size": "3×2"
+  },
+  {
+   "tag": "sbryq44",
+   "case": 122,
+   "fragment": "HomeHonorFragment",
+   "name": "荣誉墙",
+   "category": "德育/评价",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbxspj44",
+   "case": 118,
+   "fragment": "HonorFragment",
+   "name": "荣誉榜",
+   "category": "德育/评价",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbxspj63",
+   "case": 119,
+   "fragment": "HonorFragment",
+   "name": "荣誉榜",
+   "category": "德育/评价",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "hbcdxx21",
+   "case": 67,
+   "fragment": "SiteInfoFragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "hbcdxx22",
+   "case": 68,
+   "fragment": "SiteInfoFragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbcdxx24",
+   "case": 69,
+   "fragment": "SiteInfoFragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbcdxx26",
+   "case": 71,
+   "fragment": "SiteInfoFragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 2,
+   "height": 6,
+   "size": "2×6"
+  },
+  {
+   "tag": "hbcdxx42",
+   "case": 70,
+   "fragment": "SiteInfoFragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbcdxx46",
+   "case": 56,
+   "fragment": "SiteInfo46Fragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "hbcdxx66",
+   "case": 60,
+   "fragment": "SiteInfo66Fragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 6,
+   "height": 6,
+   "size": "6×6"
+  },
+  {
+   "tag": "hbcdxx86",
+   "case": 61,
+   "fragment": "SiteInfo86Fragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 8,
+   "height": 6,
+   "size": "8×6"
+  },
+  {
+   "tag": "hbcdxx_machine_46",
+   "case": 58,
+   "fragment": "SiteInfo46Fragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "hbsite__drak26",
+   "case": 63,
+   "fragment": "SiteInfoFragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 2,
+   "height": 6,
+   "size": "2×6"
+  },
+  {
+   "tag": "hbskcd24",
+   "case": 41,
+   "fragment": "SiteInfoFragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "sbcdxx21",
+   "case": 64,
+   "fragment": "SiteInfoFragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "sbcdxx22",
+   "case": 65,
+   "fragment": "SiteInfoFragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbcdxx41",
+   "case": 66,
+   "fragment": "SiteInfoFragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 4,
+   "height": 1,
+   "size": "4×1"
+  },
+  {
+   "tag": "sbcdxx45",
+   "case": 57,
+   "fragment": "SiteInfo46Fragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 4,
+   "height": 5,
+   "size": "4×5"
+  },
+  {
+   "tag": "sbcdxx68",
+   "case": 59,
+   "fragment": "SiteInfo68Fragment",
+   "name": "场地信息",
+   "category": "场地/走班",
+   "width": 6,
+   "height": 8,
+   "size": "6×8"
+  },
+  {
+   "tag": "hbcdxx_machine_66",
+   "case": 62,
+   "fragment": "UniversitySiteInfoFragment",
+   "name": "大学场地",
+   "category": "场地/走班",
+   "width": 6,
+   "height": 6,
+   "size": "6×6"
+  },
+  {
+   "tag": "hbksgl24",
+   "case": 94,
+   "fragment": "ExamArrangement24Fragment",
+   "name": "考试安排",
+   "category": "考试",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbksgl44",
+   "case": 92,
+   "fragment": "ExamArrangement44Fragment",
+   "name": "考试安排",
+   "category": "考试",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbksgl66",
+   "case": 90,
+   "fragment": "ExamArrangement66Fragment",
+   "name": "考试安排",
+   "category": "考试",
+   "width": 6,
+   "height": 6,
+   "size": "6×6"
+  },
+  {
+   "tag": "sbksgl43",
+   "case": 95,
+   "fragment": "ExamArrangement24Fragment",
+   "name": "考试安排",
+   "category": "考试",
+   "width": 4,
+   "height": 3,
+   "size": "4×3"
+  },
+  {
+   "tag": "sbksgl63",
+   "case": 93,
+   "fragment": "ExamArrangement44Fragment",
+   "name": "考试安排",
+   "category": "考试",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "sbksgl66",
+   "case": 91,
+   "fragment": "ExamArrangement66Fragment",
+   "name": "考试安排",
+   "category": "考试",
+   "width": 6,
+   "height": 6,
+   "size": "6×6"
+  },
+  {
+   "tag": "hbdztsg22",
+   "case": 28,
+   "fragment": "BookFragment2x2",
+   "name": "图书",
+   "category": "图书/阅读",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbtsg21",
+   "case": 253,
+   "fragment": "BookFragment2_1L",
+   "name": "图书",
+   "category": "图书/阅读",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "sbtsg21",
+   "case": 254,
+   "fragment": "BookFragment2_1P",
+   "name": "图书",
+   "category": "图书/阅读",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "hbtsg223",
+   "case": 272,
+   "fragment": "BookYwFragmentLBy_loan2_2",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbtsg443",
+   "case": 267,
+   "fragment": "BookYwFragmentL2",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbtsg461",
+   "case": 256,
+   "fragment": "BookYwFragment4_6LBy_search",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "hbtsg462",
+   "case": 255,
+   "fragment": "BookYwFragment4_6LBy_search",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "hbtsg463",
+   "case": 268,
+   "fragment": "BookYwFragmentL2",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "hbtsgrm431",
+   "case": 260,
+   "fragment": "BookYwFragment4_2LBy_loan",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 3,
+   "size": "4×3"
+  },
+  {
+   "tag": "hbtsgrm432",
+   "case": 259,
+   "fragment": "BookYwFragment4_2LBy_loan",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 3,
+   "size": "4×3"
+  },
+  {
+   "tag": "hbtsgxs431",
+   "case": 264,
+   "fragment": "BookYwFragment4_2LBy_new",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 3,
+   "size": "4×3"
+  },
+  {
+   "tag": "hbtsgxs432",
+   "case": 263,
+   "fragment": "BookYwFragment4_2LBy_new",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 3,
+   "size": "4×3"
+  },
+  {
+   "tag": "sbtsg223",
+   "case": 273,
+   "fragment": "BookYwFragmentLBy_loan2_2",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbtsg443",
+   "case": 269,
+   "fragment": "BookYwFragmentL2",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbtsg461",
+   "case": 258,
+   "fragment": "BookYwFragment4_6LBy_search",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "sbtsg462",
+   "case": 257,
+   "fragment": "BookYwFragment4_6LBy_search",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "sbtsg633",
+   "case": 270,
+   "fragment": "BookYwFragmentL2",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "sbtsg663",
+   "case": 271,
+   "fragment": "BookYwFragmentL2",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 6,
+   "height": 6,
+   "size": "6×6"
+  },
+  {
+   "tag": "sbtsgrm431",
+   "case": 262,
+   "fragment": "BookYwFragment4_2LBy_loan",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 3,
+   "size": "4×3"
+  },
+  {
+   "tag": "sbtsgrm432",
+   "case": 261,
+   "fragment": "BookYwFragment4_2LBy_loan",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 3,
+   "size": "4×3"
+  },
+  {
+   "tag": "sbtsgxs431",
+   "case": 266,
+   "fragment": "BookYwFragment4_2LBy_new",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 3,
+   "size": "4×3"
+  },
+  {
+   "tag": "sbtsgxs432",
+   "case": 265,
+   "fragment": "BookYwFragment4_2LBy_new",
+   "name": "图书业务",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 3,
+   "size": "4×3"
+  },
+  {
+   "tag": "hblibrary2x2",
+   "case": 11,
+   "fragment": "LibraryFragment2x2",
+   "name": "图书馆",
+   "category": "图书/阅读",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hblibrary4x4",
+   "case": 13,
+   "fragment": "LibraryFragment4x4",
+   "name": "图书馆",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hblibrary4x6",
+   "case": 14,
+   "fragment": "LibraryFragment4x4",
+   "name": "图书馆",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "sblibrary2x2",
+   "case": 12,
+   "fragment": "LibraryFragment2x2",
+   "name": "图书馆",
+   "category": "图书/阅读",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sblibrary4x4",
+   "case": 15,
+   "fragment": "LibraryFragment4x4",
+   "name": "图书馆",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sblibrary4x6",
+   "case": 16,
+   "fragment": "LibraryFragment4x4",
+   "name": "图书馆",
+   "category": "图书/阅读",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "hbcdyy22",
+   "case": 86,
+   "fragment": "HomeReservationFragment",
+   "name": "场地预约",
+   "category": "会议/预约",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbcdyy44",
+   "case": 88,
+   "fragment": "HomeReservation44Fragment",
+   "name": "场地预约",
+   "category": "会议/预约",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbxl36",
+   "case": 51,
+   "fragment": "HomeReservation36Fragment",
+   "name": "场地预约",
+   "category": "会议/预约",
+   "width": 3,
+   "height": 6,
+   "size": "3×6"
+  },
+  {
+   "tag": "hbxl_machine_36",
+   "case": 50,
+   "fragment": "HomeReservation36Fragment",
+   "name": "场地预约",
+   "category": "会议/预约",
+   "width": 3,
+   "height": 6,
+   "size": "3×6"
+  },
+  {
+   "tag": "sbcdyy22",
+   "case": 87,
+   "fragment": "HomeReservationFragment",
+   "name": "场地预约",
+   "category": "会议/预约",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbcdyy63",
+   "case": 89,
+   "fragment": "HomeReservation44Fragment",
+   "name": "场地预约",
+   "category": "会议/预约",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "hbhy54",
+   "case": 83,
+   "fragment": "UniversityReservationFragment",
+   "name": "大学预约",
+   "category": "会议/预约",
+   "width": 5,
+   "height": 4,
+   "size": "5×4"
+  },
+  {
+   "tag": "hbreservation24",
+   "case": 84,
+   "fragment": "UniversityNextReservationFragment",
+   "name": "大学预约",
+   "category": "会议/预约",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbreservation26",
+   "case": 81,
+   "fragment": "UniversityReservationFragment",
+   "name": "大学预约",
+   "category": "会议/预约",
+   "width": 2,
+   "height": 6,
+   "size": "2×6"
+  },
+  {
+   "tag": "hbreservation44",
+   "case": 85,
+   "fragment": "UniversityNextReservationFragment",
+   "name": "大学预约",
+   "category": "会议/预约",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbreservation_machine_54",
+   "case": 82,
+   "fragment": "UniversityReservationFragment",
+   "name": "大学预约",
+   "category": "会议/预约",
+   "width": 5,
+   "height": 4,
+   "size": "5×4"
+  },
+  {
+   "tag": "hbtphd23",
+   "case": 72,
+   "fragment": "HomeVote23Fragment",
+   "name": "投票",
+   "category": "投票/问卷",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "sbtphd22",
+   "case": 73,
+   "fragment": "HomeVote23Fragment",
+   "name": "投票",
+   "category": "投票/问卷",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbsjb22",
+   "case": 74,
+   "fragment": "HomeCollectForm22Fragment",
+   "name": "问卷",
+   "category": "投票/问卷",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbsjb23",
+   "case": 76,
+   "fragment": "HomeCollectForm23Fragment",
+   "name": "问卷",
+   "category": "投票/问卷",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "sbsjb22",
+   "case": 75,
+   "fragment": "HomeCollectForm22Fragment",
+   "name": "问卷",
+   "category": "投票/问卷",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbsjb42",
+   "case": 77,
+   "fragment": "HomeCollectForm23Fragment",
+   "name": "问卷",
+   "category": "投票/问卷",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbhdbm2x2",
+   "case": 17,
+   "fragment": "ActiveApplyFragment2x2",
+   "name": "活动报名",
+   "category": "活动",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbhdbm2x4",
+   "case": 19,
+   "fragment": "ActiveApplyFragment2x4",
+   "name": "活动报名",
+   "category": "活动",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbhdbm4x4",
+   "case": 21,
+   "fragment": "ActiveApplyFragment4x4",
+   "name": "活动报名",
+   "category": "活动",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbhdbm2x2",
+   "case": 18,
+   "fragment": "ActiveApplyFragment2x2",
+   "name": "活动报名",
+   "category": "活动",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbhdbm2x4",
+   "case": 20,
+   "fragment": "ActiveApplyFragment2x4",
+   "name": "活动报名",
+   "category": "活动",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "sbhdbm4x4",
+   "case": 22,
+   "fragment": "ActiveApplyFragment4x4",
+   "name": "活动报名",
+   "category": "活动",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbssxq26",
+   "case": 36,
+   "fragment": "DormitoryFragment2x6",
+   "name": "宿舍",
+   "category": "宿舍",
+   "width": 2,
+   "height": 6,
+   "size": "2×6"
+  },
+  {
+   "tag": "hbssxq46",
+   "case": 37,
+   "fragment": "DormitoryFragment4x6",
+   "name": "宿舍",
+   "category": "宿舍",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "hbssdy26",
+   "case": 38,
+   "fragment": "DormitoryEducationFragment",
+   "name": "宿舍德育",
+   "category": "宿舍",
+   "width": 2,
+   "height": 6,
+   "size": "2×6"
+  },
+  {
+   "tag": "sbssdy45",
+   "case": 39,
+   "fragment": "DormitoryEducationFragment",
+   "name": "宿舍德育",
+   "category": "宿舍",
+   "width": 4,
+   "height": 5,
+   "size": "4×5"
+  },
+  {
+   "tag": "hbcdxk22",
+   "case": 44,
+   "fragment": "HomePatrolFragment",
+   "name": "巡课",
+   "category": "巡课",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbcdxl22",
+   "case": 45,
+   "fragment": "HomePatrolFragment",
+   "name": "巡课",
+   "category": "巡课",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbcdxk22",
+   "case": 46,
+   "fragment": "HomePatrolFragment",
+   "name": "巡课",
+   "category": "巡课",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbcdxl22",
+   "case": 47,
+   "fragment": "HomePatrolFragment",
+   "name": "巡课",
+   "category": "巡课",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbbx21",
+   "case": 289,
+   "fragment": "HomeRepair21Fragment",
+   "name": "报修",
+   "category": "报修",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "hbbx22",
+   "case": 292,
+   "fragment": "HomeRepair22Fragment",
+   "name": "报修",
+   "category": "报修",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbbx21",
+   "case": 290,
+   "fragment": "HomeRepair21Fragment",
+   "name": "报修",
+   "category": "报修",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "sbbx22",
+   "case": 291,
+   "fragment": "HomeRepair22Fragment",
+   "name": "报修",
+   "category": "报修",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbxlyy2x6",
+   "case": 5,
+   "fragment": "ConsultFragment2x6",
+   "name": "校园留言",
+   "category": "留言/咨询",
+   "width": 2,
+   "height": 6,
+   "size": "2×6"
+  },
+  {
+   "tag": "hbxlyy4x2",
+   "case": 6,
+   "fragment": "ConsultFragment4x2",
+   "name": "校园留言",
+   "category": "留言/咨询",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbxlyy4x4",
+   "case": 7,
+   "fragment": "ConsultFragment4x4",
+   "name": "校园留言",
+   "category": "留言/咨询",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbxlyy2x2",
+   "case": 9,
+   "fragment": "ConsultFragmentP2x2",
+   "name": "校园留言",
+   "category": "留言/咨询",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbxlyy4x4",
+   "case": 8,
+   "fragment": "ConsultFragment4x4",
+   "name": "校园留言",
+   "category": "留言/咨询",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbxlyy6x2",
+   "case": 10,
+   "fragment": "ConsultFragmentP6x2",
+   "name": "校园留言",
+   "category": "留言/咨询",
+   "width": 6,
+   "height": 2,
+   "size": "6×2"
+  },
+  {
+   "tag": "hbaifull8x6",
+   "case": 1,
+   "fragment": "AIFragmentFull",
+   "name": "AI 助手",
+   "category": "AI",
+   "width": 8,
+   "height": 6,
+   "size": "8×6"
+  },
+  {
+   "tag": "sbaifull6x8",
+   "case": 2,
+   "fragment": "AIFragmentFull",
+   "name": "AI 助手",
+   "category": "AI",
+   "width": 6,
+   "height": 8,
+   "size": "6×8"
+  },
+  {
+   "tag": "hbwlkz22",
+   "case": 274,
+   "fragment": "Wlkz2_2L",
+   "name": "物联网控制",
+   "category": "物联网",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbwlkz22",
+   "case": 275,
+   "fragment": "Wlkz2_2L",
+   "name": "物联网控制",
+   "category": "物联网",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbtime42",
+   "case": 99,
+   "fragment": "UniversityDateFragment",
+   "name": "日期",
+   "category": "校历/日历",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "dxhbxl44",
+   "case": 279,
+   "fragment": "NCalendarLFragment",
+   "name": "校历",
+   "category": "校历/日历",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbxl25",
+   "case": 276,
+   "fragment": "NCalendarLFragment",
+   "name": "校历",
+   "category": "校历/日历",
+   "width": 2,
+   "height": 5,
+   "size": "2×5"
+  },
+  {
+   "tag": "hbxl43",
+   "case": 278,
+   "fragment": "NCalendarLFragment",
+   "name": "校历",
+   "category": "校历/日历",
+   "width": 4,
+   "height": 3,
+   "size": "4×3"
+  },
+  {
+   "tag": "hbxl44",
+   "case": 277,
+   "fragment": "NCalendarLFragment",
+   "name": "校历",
+   "category": "校历/日历",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbxl42",
+   "case": 280,
+   "fragment": "NCalendarLFragment",
+   "name": "校历",
+   "category": "校历/日历",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "sbxl45",
+   "case": 281,
+   "fragment": "NCalendarLFragment",
+   "name": "校历",
+   "category": "校历/日历",
+   "width": 4,
+   "height": 5,
+   "size": "4×5"
+  },
+  {
+   "tag": "sbxl63",
+   "case": 282,
+   "fragment": "NCalendarLFragment",
+   "name": "校历",
+   "category": "校历/日历",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "hbdjs221",
+   "case": 187,
+   "fragment": "TimerFragment2x2L",
+   "name": "倒计时",
+   "category": "倒计时/时钟",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbdjs23",
+   "case": 188,
+   "fragment": "TimerFragment2x2L",
+   "name": "倒计时",
+   "category": "倒计时/时钟",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "hbtimer24",
+   "case": 190,
+   "fragment": "TimerFragment2x2L",
+   "name": "倒计时",
+   "category": "倒计时/时钟",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "sbdjs21",
+   "case": 191,
+   "fragment": "TimerFragment2x1P",
+   "name": "倒计时",
+   "category": "倒计时/时钟",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "sbdjs22",
+   "case": 189,
+   "fragment": "TimerFragment2x2L",
+   "name": "倒计时",
+   "category": "倒计时/时钟",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbsj21",
+   "case": 248,
+   "fragment": "TimerFragment_2_1P",
+   "name": "倒计时",
+   "category": "倒计时/时钟",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "hbsj211",
+   "case": 249,
+   "fragment": "TimeClockFragment",
+   "name": "时钟",
+   "category": "倒计时/时钟",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "hbsj212",
+   "case": 251,
+   "fragment": "TimeClockFragment2",
+   "name": "时钟",
+   "category": "倒计时/时钟",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "hbsj213",
+   "case": 252,
+   "fragment": "TimeClockFragment3",
+   "name": "时钟",
+   "category": "倒计时/时钟",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "hbsj23",
+   "case": 250,
+   "fragment": "TimeClockFragment",
+   "name": "时钟",
+   "category": "倒计时/时钟",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "sbtq21",
+   "case": 246,
+   "fragment": "WeatherFragment_2_1P",
+   "name": "天气",
+   "category": "天气/环境",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "sbtq41",
+   "case": 247,
+   "fragment": "WeatherFragment_4_1P",
+   "name": "天气",
+   "category": "天气/环境",
+   "width": 4,
+   "height": 1,
+   "size": "4×1"
+  },
+  {
+   "tag": "hbmultmenu46",
+   "case": 96,
+   "fragment": "CartoonMenuFragment",
+   "name": "卡通菜单",
+   "category": "自定义",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "hbzdy21",
+   "case": 128,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "hbzdy22",
+   "case": 129,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbzdy23",
+   "case": 130,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "hbzdy24",
+   "case": 131,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "hbzdy25",
+   "case": 132,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 2,
+   "height": 5,
+   "size": "2×5"
+  },
+  {
+   "tag": "hbzdy26",
+   "case": 133,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 2,
+   "height": 6,
+   "size": "2×6"
+  },
+  {
+   "tag": "hbzdy31",
+   "case": 134,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 3,
+   "height": 1,
+   "size": "3×1"
+  },
+  {
+   "tag": "hbzdy32",
+   "case": 135,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 3,
+   "height": 2,
+   "size": "3×2"
+  },
+  {
+   "tag": "hbzdy36",
+   "case": 136,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 3,
+   "height": 6,
+   "size": "3×6"
+  },
+  {
+   "tag": "hbzdy41",
+   "case": 137,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 4,
+   "height": 1,
+   "size": "4×1"
+  },
+  {
+   "tag": "hbzdy42",
+   "case": 138,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbzdy43",
+   "case": 139,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 4,
+   "height": 3,
+   "size": "4×3"
+  },
+  {
+   "tag": "hbzdy44",
+   "case": 140,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbzdy46",
+   "case": 141,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 4,
+   "height": 6,
+   "size": "4×6"
+  },
+  {
+   "tag": "hbzdy52",
+   "case": 142,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 5,
+   "height": 2,
+   "size": "5×2"
+  },
+  {
+   "tag": "hbzdy54",
+   "case": 143,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 5,
+   "height": 4,
+   "size": "5×4"
+  },
+  {
+   "tag": "hbzdy66",
+   "case": 144,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 6,
+   "height": 6,
+   "size": "6×6"
+  },
+  {
+   "tag": "hbzdy86",
+   "case": 145,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 8,
+   "height": 6,
+   "size": "8×6"
+  },
+  {
+   "tag": "sbzdy21",
+   "case": 146,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 2,
+   "height": 1,
+   "size": "2×1"
+  },
+  {
+   "tag": "sbzdy22",
+   "case": 147,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbzdy24",
+   "case": 148,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 2,
+   "height": 4,
+   "size": "2×4"
+  },
+  {
+   "tag": "sbzdy41",
+   "case": 149,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 4,
+   "height": 1,
+   "size": "4×1"
+  },
+  {
+   "tag": "sbzdy42",
+   "case": 150,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "sbzdy43",
+   "case": 151,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 4,
+   "height": 3,
+   "size": "4×3"
+  },
+  {
+   "tag": "sbzdy44",
+   "case": 152,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "sbzdy45",
+   "case": 153,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 4,
+   "height": 5,
+   "size": "4×5"
+  },
+  {
+   "tag": "sbzdy61",
+   "case": 154,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 6,
+   "height": 1,
+   "size": "6×1"
+  },
+  {
+   "tag": "sbzdy62",
+   "case": 155,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 6,
+   "height": 2,
+   "size": "6×2"
+  },
+  {
+   "tag": "sbzdy63",
+   "case": 156,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 6,
+   "height": 3,
+   "size": "6×3"
+  },
+  {
+   "tag": "sbzdy64",
+   "case": 157,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 6,
+   "height": 4,
+   "size": "6×4"
+  },
+  {
+   "tag": "sbzdy66",
+   "case": 158,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 6,
+   "height": 6,
+   "size": "6×6"
+  },
+  {
+   "tag": "sbzdy68",
+   "case": 159,
+   "fragment": "WebViewFragment",
+   "name": "自定义网页",
+   "category": "自定义",
+   "width": 6,
+   "height": 8,
+   "size": "6×8"
+  },
+  {
+   "tag": "hbtjcustom8x5",
+   "case": 0,
+   "fragment": "CustomHomeFragment",
+   "name": "自定义首页",
+   "category": "自定义",
+   "width": 8,
+   "height": 5,
+   "size": "8×5"
+  },
+  {
+   "tag": "hbzdyyz22",
+   "case": 126,
+   "fragment": "CustomVerifyFragment",
+   "name": "自定义验证",
+   "category": "自定义",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "sbzdyyz22",
+   "case": 127,
+   "fragment": "CustomVerifyFragment",
+   "name": "自定义验证",
+   "category": "自定义",
+   "width": 2,
+   "height": 2,
+   "size": "2×2"
+  },
+  {
+   "tag": "hbsxsb_drak23",
+   "case": 54,
+   "fragment": "UniversityTrainingDeviceFragment",
+   "name": "实训设备",
+   "category": "特色",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "hbmusic_drak86",
+   "case": 52,
+   "fragment": "UniversityMusicFragment",
+   "name": "校园音乐",
+   "category": "特色",
+   "width": 8,
+   "height": 6,
+   "size": "8×6"
+  },
+  {
+   "tag": "hbwl42",
+   "case": 78,
+   "fragment": "UniversityInternetFragment",
+   "name": "网络服务",
+   "category": "特色",
+   "width": 4,
+   "height": 2,
+   "size": "4×2"
+  },
+  {
+   "tag": "hbwl52",
+   "case": 80,
+   "fragment": "UniversityInternetFragment",
+   "name": "网络服务",
+   "category": "特色",
+   "width": 5,
+   "height": 2,
+   "size": "5×2"
+  },
+  {
+   "tag": "hbwl_machine_52",
+   "case": 79,
+   "fragment": "UniversityInternetFragment",
+   "name": "网络服务",
+   "category": "特色",
+   "width": 5,
+   "height": 2,
+   "size": "5×2"
+  },
+  {
+   "tag": "hb_ipad_10_86",
+   "case": 49,
+   "fragment": "Ipad_10_Fragment",
+   "name": "iPad 布局",
+   "category": "特殊布局",
+   "width": 8,
+   "height": 6,
+   "size": "8×6"
+  },
+  {
+   "tag": "zhhb23",
+   "case": 42,
+   "fragment": "BlackBoardFragment2x3",
+   "name": "智慧黑板",
+   "category": "特殊布局",
+   "width": 2,
+   "height": 3,
+   "size": "2×3"
+  },
+  {
+   "tag": "zhhb44",
+   "case": 43,
+   "fragment": "BlackBoardFragment4x4",
+   "name": "智慧黑板",
+   "category": "特殊布局",
+   "width": 4,
+   "height": 4,
+   "size": "4×4"
+  },
+  {
+   "tag": "hbchemistry86",
+   "case": 48,
+   "fragment": "HomeChemistryFragment",
+   "name": "化学",
+   "category": "学科/特色",
+   "width": 8,
+   "height": 6,
+   "size": "8×6"
+  }
+ ],
+ "activities": [
+  {
+   "name": "com.yd.android_brand_mvp.LoginActivity",
+   "short": "LoginActivity",
+   "package": "com.yd.android_brand_mvp",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.MainActivity",
+   "short": "MainActivity",
+   "package": "com.yd.android_brand_mvp",
+   "exported": true,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.SettingActivity",
+   "short": "SettingActivity",
+   "package": "com.yd.android_brand_mvp",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.SkyworthLoginActivity",
+   "short": "SkyworthLoginActivity",
+   "package": "com.yd.android_brand_mvp",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.WebActivity",
+   "short": "WebActivity",
+   "package": "com.yd.android_brand_mvp",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.WelcomeActivity",
+   "short": "WelcomeActivity",
+   "package": "com.yd.android_brand_mvp",
+   "exported": true,
+   "launcher": true
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.AIJuniorAssistantActivity",
+   "short": "AIJuniorAssistantActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.BitmapShowActivity",
+   "short": "BitmapShowActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.ClassModeActivity",
+   "short": "ClassModeActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.ClassScheduleActivity",
+   "short": "ClassScheduleActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.ClassTableActivity",
+   "short": "ClassTableActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.ConfigActivity",
+   "short": "ConfigActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.CustomDominateActivity",
+   "short": "CustomDominateActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.DominateScreenActivity",
+   "short": "DominateScreenActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.FaceSyncActivity",
+   "short": "FaceSyncActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.KBActivity",
+   "short": "KBActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.MessageActivity",
+   "short": "MessageActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.NcalendarActivity",
+   "short": "NcalendarActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.SchoolInfoActivity",
+   "short": "SchoolInfoActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.SiteFullActivity",
+   "short": "SiteFullActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.SiteKBActivity",
+   "short": "SiteKBActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.TBSWebViewActivity",
+   "short": "TBSWebViewActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.VideoALLActivity",
+   "short": "VideoALLActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.YDWebViewActivity",
+   "short": "YDWebViewActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.active.ActiveDetailsActivity",
+   "short": "ActiveDetailsActivity",
+   "package": "com.yd.android_brand_mvp.activity.active",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.active.ActiveListActivity",
+   "short": "ActiveListActivity",
+   "package": "com.yd.android_brand_mvp.activity.active",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.collect.CollectFormActivity",
+   "short": "CollectFormActivity",
+   "package": "com.yd.android_brand_mvp.activity.collect",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.collect.CollectFormDetailActivity",
+   "short": "CollectFormDetailActivity",
+   "package": "com.yd.android_brand_mvp.activity.collect",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.collect.FormSituationActivity",
+   "short": "FormSituationActivity",
+   "package": "com.yd.android_brand_mvp.activity.collect",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.doorControlActivity",
+   "short": "doorControlActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.doorListActivity",
+   "short": "doorListActivity",
+   "package": "com.yd.android_brand_mvp.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.exam.ExamArrangementActivity",
+   "short": "ExamArrangementActivity",
+   "package": "com.yd.android_brand_mvp.activity.exam",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.exam.ExamArrangementDetailActivity",
+   "short": "ExamArrangementDetailActivity",
+   "package": "com.yd.android_brand_mvp.activity.exam",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.exam.ExamFullScreenActivity",
+   "short": "ExamFullScreenActivity",
+   "package": "com.yd.android_brand_mvp.activity.exam",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.honor.HonorActiveDetailActivity",
+   "short": "HonorActiveDetailActivity",
+   "package": "com.yd.android_brand_mvp.activity.honor",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.honor.HonorActiveListActivity",
+   "short": "HonorActiveListActivity",
+   "package": "com.yd.android_brand_mvp.activity.honor",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.honor.HonorCommentActivity",
+   "short": "HonorCommentActivity",
+   "package": "com.yd.android_brand_mvp.activity.honor",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.honor.HonorListActivity",
+   "short": "HonorListActivity",
+   "package": "com.yd.android_brand_mvp.activity.honor",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.honor.HonorScoreDetailActivity",
+   "short": "HonorScoreDetailActivity",
+   "package": "com.yd.android_brand_mvp.activity.honor",
+   "exported": true,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.honor.HonorScoreListActivity",
+   "short": "HonorScoreListActivity",
+   "package": "com.yd.android_brand_mvp.activity.honor",
+   "exported": true,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.honor.HonorWallActivity",
+   "short": "HonorWallActivity",
+   "package": "com.yd.android_brand_mvp.activity.honor",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.iotControl.DoorControlActivity",
+   "short": "DoorControlActivity",
+   "package": "com.yd.android_brand_mvp.activity.iotControl",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.patrol.PatrolDetailActivity",
+   "short": "PatrolDetailActivity",
+   "package": "com.yd.android_brand_mvp.activity.patrol",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.patrol.PatrolEditActivity",
+   "short": "PatrolEditActivity",
+   "package": "com.yd.android_brand_mvp.activity.patrol",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.patrol.PatrolListActivity",
+   "short": "PatrolListActivity",
+   "package": "com.yd.android_brand_mvp.activity.patrol",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.repair.RepairActivity",
+   "short": "RepairActivity",
+   "package": "com.yd.android_brand_mvp.activity.repair",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.reserve.ReservationActivity",
+   "short": "ReservationActivity",
+   "package": "com.yd.android_brand_mvp.activity.reserve",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.reserve.ReservationFullActivity",
+   "short": "ReservationFullActivity",
+   "package": "com.yd.android_brand_mvp.activity.reserve",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.vote.VoteDetailActivity",
+   "short": "VoteDetailActivity",
+   "package": "com.yd.android_brand_mvp.activity.vote",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.activity.vote.VoteListActivity",
+   "short": "VoteListActivity",
+   "package": "com.yd.android_brand_mvp.activity.vote",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.adapter.attence.CheckAttendanceActivity",
+   "short": "CheckAttendanceActivity",
+   "package": "com.yd.android_brand_mvp.adapter.attence",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.banner.manager.ShowImageActivity",
+   "short": "ShowImageActivity",
+   "package": "com.yd.android_brand_mvp.banner.manager",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.landscape.blackboard.BlackBoardActivity",
+   "short": "BlackBoardActivity",
+   "package": "com.yd.android_brand_mvp.landscape.blackboard",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.landscape.book.BookActivity",
+   "short": "BookActivity",
+   "package": "com.yd.android_brand_mvp.landscape.book",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.landscape.book.BookImageInfo",
+   "short": "BookImageInfo",
+   "package": "com.yd.android_brand_mvp.landscape.book",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.landscape.consult.ConsultSignDetailsActivity",
+   "short": "ConsultSignDetailsActivity",
+   "package": "com.yd.android_brand_mvp.landscape.consult",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.landscape.library.LibrarySearchListActivity",
+   "short": "LibrarySearchListActivity",
+   "package": "com.yd.android_brand_mvp.landscape.library",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.landscape.moraleducation.ui.CFRFInThisClassActivity",
+   "short": "CFRFInThisClassActivity",
+   "package": "com.yd.android_brand_mvp.landscape.moraleducation.ui",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.landscape.moraleducation.ui.ClassMEAppraisalActivity",
+   "short": "ClassMEAppraisalActivity",
+   "package": "com.yd.android_brand_mvp.landscape.moraleducation.ui",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.landscape.moraleducation.ui.DailyScoreDetailsActivity",
+   "short": "DailyScoreDetailsActivity",
+   "package": "com.yd.android_brand_mvp.landscape.moraleducation.ui",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.landscape.moraleducation.ui.DailyScoreWeekDetailsActivity",
+   "short": "DailyScoreWeekDetailsActivity",
+   "package": "com.yd.android_brand_mvp.landscape.moraleducation.ui",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.landscape.moraleducation.ui.ROEPInEveryClassActivity",
+   "short": "ROEPInEveryClassActivity",
+   "package": "com.yd.android_brand_mvp.landscape.moraleducation.ui",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.landscape.moraleducation.ui.ROEPInThisClassActivity",
+   "short": "ROEPInThisClassActivity",
+   "package": "com.yd.android_brand_mvp.landscape.moraleducation.ui",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.photo.PhotoAlbumTwoActivity",
+   "short": "PhotoAlbumTwoActivity",
+   "package": "com.yd.android_brand_mvp.photo",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.photo.ShowPhotoAlbumActivity",
+   "short": "ShowPhotoAlbumActivity",
+   "package": "com.yd.android_brand_mvp.photo",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.portrait.activity.MessageDetailsPActivity",
+   "short": "MessageDetailsPActivity",
+   "package": "com.yd.android_brand_mvp.portrait.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.portrait.activity.SettingPActivity",
+   "short": "SettingPActivity",
+   "package": "com.yd.android_brand_mvp.portrait.activity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.AnnouncementListActivity",
+   "short": "AnnouncementListActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.AsslgnmentDayActivity",
+   "short": "AsslgnmentDayActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.AsslgnmentWeekActivity",
+   "short": "AsslgnmentWeekActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.AttenceActivity",
+   "short": "AttenceActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.BookYwActivity",
+   "short": "BookYwActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.ClassInfoActivity",
+   "short": "ClassInfoActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.PhotoAlbumActivity",
+   "short": "PhotoAlbumActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.StudentDutyActivity",
+   "short": "StudentDutyActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.StudentProductionActivity",
+   "short": "StudentProductionActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.TestActivity",
+   "short": "TestActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.TimerActivity",
+   "short": "TimerActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.UserCenterActivity",
+   "short": "UserCenterActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.UserLeaveActivity",
+   "short": "UserLeaveActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.UserTableActivity",
+   "short": "UserTableActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.user.VideoAlbumActivity",
+   "short": "VideoAlbumActivity",
+   "package": "com.yd.android_brand_mvp.user",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.verfity.AllCheckActivity",
+   "short": "AllCheckActivity",
+   "package": "com.yd.android_brand_mvp.verfity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.verfity.CheackNomalActivity",
+   "short": "CheackNomalActivity",
+   "package": "com.yd.android_brand_mvp.verfity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.verfity.StudentCheackActivity",
+   "short": "StudentCheackActivity",
+   "package": "com.yd.android_brand_mvp.verfity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.verfity.StudentCheackActivity2",
+   "short": "StudentCheackActivity2",
+   "package": "com.yd.android_brand_mvp.verfity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.verfity.TeacherCheackActivity",
+   "short": "TeacherCheackActivity",
+   "package": "com.yd.android_brand_mvp.verfity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.verfity.TeacherCheackActivity2",
+   "short": "TeacherCheackActivity2",
+   "package": "com.yd.android_brand_mvp.verfity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.verfity.VerificationExternalActivity",
+   "short": "VerificationExternalActivity",
+   "package": "com.yd.android_brand_mvp.verfity",
+   "exported": false,
+   "launcher": false
+  },
+  {
+   "name": "com.yd.android_brand_mvp.video1.ViewPagerVideoActivity",
+   "short": "ViewPagerVideoActivity",
+   "package": "com.yd.android_brand_mvp.video1",
+   "exported": false,
+   "launcher": false
+  }
+ ],
+ "endpoints": [
+  {
+   "id": "auth-001",
+   "group": "auth",
+   "method": "POST",
+   "path": "/auth/oauth/token",
+   "description": "OAuth 密码模式登录，获取 accessToken",
+   "source": "newLogin",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "auth-002",
+   "group": "auth",
+   "method": "GET",
+   "path": "/auth/qrcode/check",
+   "description": "鉴权与登录 / getCheckLoginQrCode",
+   "source": "getCheckLoginQrCode",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "auth-003",
+   "group": "auth",
+   "method": "GET",
+   "path": "/auth/qrcode/check",
+   "description": "鉴权与登录 / requestQrCodeCheck",
+   "source": "requestQrCodeCheck",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "auth-004",
+   "group": "auth",
+   "method": "GET",
+   "path": "/auth/qrcode/gene",
+   "description": "鉴权与登录 / getLoginQrCode",
+   "source": "getLoginQrCode",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "auth-005",
+   "group": "auth",
+   "method": "GET",
+   "path": "/auth/qrcode/gene",
+   "description": "鉴权与登录 / requestQrCode",
+   "source": "requestQrCode",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "auth-006",
+   "group": "auth",
+   "method": "POST",
+   "path": "/brand/brand/mess/recive/index",
+   "description": "鉴权与登录 / login",
+   "source": "login",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "auth-007",
+   "group": "auth",
+   "method": "POST",
+   "path": "/brand/class-brand-management/app/loginCheck/getSiteByUserName",
+   "description": "鉴权与登录 / getSiteByUserName",
+   "source": "getSiteByUserName",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "auth-008",
+   "group": "auth",
+   "method": "POST",
+   "path": "/brand/obtain",
+   "description": "班牌登录：换取学校/班级/场地/品牌信息",
+   "source": "getBrandObtain",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "auth-009",
+   "group": "auth",
+   "method": "POST",
+   "path": "/brand/obtain",
+   "description": "班牌登录：换取学校/班级/场地/品牌信息",
+   "source": "getBrandInfo",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "device-001",
+   "group": "device",
+   "method": "POST",
+   "path": "/backstage/cloud-backstage/kf/application/getNewestVersion",
+   "description": "设备激活、绑定与升级 / getNewestVersion",
+   "source": "getNewestVersion",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-002",
+   "group": "device",
+   "method": "POST",
+   "path": "/backstage/cloud-backstage/kf/application/queryClassificList",
+   "description": "设备激活、绑定与升级 / queryClassificList",
+   "source": "queryClassificList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-003",
+   "group": "device",
+   "method": "POST",
+   "path": "/brand/after/school/log/afterSchool",
+   "description": "设备激活、绑定与升级 / oneKeySchool",
+   "source": "oneKeySchool",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-004",
+   "group": "device",
+   "method": "POST",
+   "path": "/brand/after/school/log/board",
+   "description": "设备激活、绑定与升级 / classesOverInfo",
+   "source": "classesOverInfo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-005",
+   "group": "device",
+   "method": "GET",
+   "path": "/brand/brand/getSwitchsType",
+   "description": "设备激活、绑定与升级 / switchNewList",
+   "source": "switchNewList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-006",
+   "group": "device",
+   "method": "POST",
+   "path": "/brand/brand/updateApkVersion",
+   "description": "设备激活、绑定与升级 / updateApkVersion",
+   "source": "updateApkVersion",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-007",
+   "group": "device",
+   "method": "POST",
+   "path": "/brand/class-brand-management/android/appRegistraCode/insetVersionUpdatedSchool",
+   "description": "设备激活、绑定与升级 / insetVersionUpdatedSchool",
+   "source": "insetVersionUpdatedSchool",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-008",
+   "group": "device",
+   "method": "POST",
+   "path": "/cloud/v2/barrier/getAppVersion",
+   "description": "设备激活、绑定与升级 / getNewestVersion",
+   "source": "getNewestVersion",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-009",
+   "group": "device",
+   "method": "POST",
+   "path": "/cloud/v2/barrier/getOrBindingDevice",
+   "description": "设备激活、绑定与升级 / getOrBindingDevice",
+   "source": "getOrBindingDevice",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-010",
+   "group": "device",
+   "method": "POST",
+   "path": "/cloud/v2/barrier/getOrBindingDevice",
+   "description": "设备激活、绑定与升级 / getActivationCode",
+   "source": "getActivationCode",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-011",
+   "group": "device",
+   "method": "POST",
+   "path": "/cloud/v2/barrier/getOrBindingDevice",
+   "description": "设备激活、绑定与升级 / getActivationCode",
+   "source": "getActivationCode",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-012",
+   "group": "device",
+   "method": "POST",
+   "path": "/cloud/v2/barrier/getRegistrationCode",
+   "description": "设备激活、绑定与升级 / getRegistrationCode",
+   "source": "getRegistrationCode",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-013",
+   "group": "device",
+   "method": "POST",
+   "path": "/cloud/v2/barrier/getRegistrationCode",
+   "description": "设备激活、绑定与升级 / getRegistrationCode",
+   "source": "getRegistrationCode",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-014",
+   "group": "device",
+   "method": "POST",
+   "path": "/cloud/v2/barrier/updateRegistrationCode",
+   "description": "设备激活、绑定与升级 / updateNewRegistrationCodeByCode",
+   "source": "updateNewRegistrationCodeByCode",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-015",
+   "group": "device",
+   "method": "POST",
+   "path": "/cloud/v2/barrier/updateRegistrationCode",
+   "description": "设备激活、绑定与升级 / updateNewRegistrationCodeByCode",
+   "source": "updateNewRegistrationCodeByCode",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-016",
+   "group": "device",
+   "method": "POST",
+   "path": "/cloud/v2/equipment/brand/getBrandAuthorizeCodeInfo",
+   "description": "设备激活、绑定与升级 / getBrandRegistrationCode",
+   "source": "getBrandRegistrationCode",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-017",
+   "group": "device",
+   "method": "POST",
+   "path": "/cloud/v2/equipment/brand/getBrandAuthorizeCodeInfo",
+   "description": "设备激活、绑定与升级 / getBrandRegistrationCode",
+   "source": "getBrandRegistrationCode",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "device-018",
+   "group": "device",
+   "method": "GET",
+   "path": "/manage/machineInfo/getMachineConfigByDeviceNo",
+   "description": "设备激活、绑定与升级 / requestDeviceConfig",
+   "source": "requestDeviceConfig",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-001",
+   "group": "school",
+   "method": "GET",
+   "path": "/app/area/list",
+   "description": "学校、班级与首页布局 / requestAreaInfo",
+   "source": "requestAreaInfo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-002",
+   "group": "school",
+   "method": "GET",
+   "path": "/brand/brand/campus/style",
+   "description": "学校、班级与首页布局 / SchoolStyle",
+   "source": "SchoolStyle",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-003",
+   "group": "school",
+   "method": "POST",
+   "path": "/brand/brand/campus/teachers",
+   "description": "学校、班级与首页布局 / Teachers",
+   "source": "Teachers",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-004",
+   "group": "school",
+   "method": "GET",
+   "path": "/brand/brand/classes/info",
+   "description": "学校、班级与首页布局 / selectNewClassesInfo",
+   "source": "selectNewClassesInfo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-005",
+   "group": "school",
+   "method": "GET",
+   "path": "/brand/brand/classes/info",
+   "description": "学校、班级与首页布局 / getClassesInfo",
+   "source": "getClassesInfo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-006",
+   "group": "school",
+   "method": "POST",
+   "path": "/brand/brand/classes/watchword/list",
+   "description": "学校、班级与首页布局 / getWatchWord",
+   "source": "getWatchWord",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-007",
+   "group": "school",
+   "method": "POST",
+   "path": "/brand/brand/classes/watchword/list",
+   "description": "学校、班级与首页布局 / getWatchWord",
+   "source": "getWatchWord",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-008",
+   "group": "school",
+   "method": "GET",
+   "path": "/brand/brand/countdown/list",
+   "description": "学校、班级与首页布局 / getNewCountdownList",
+   "source": "getNewCountdownList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-009",
+   "group": "school",
+   "method": "GET",
+   "path": "/brand/brand/getBrandDominateScreen",
+   "description": "学校、班级与首页布局 / requestDominateScreenLevel",
+   "source": "requestDominateScreenLevel",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-010",
+   "group": "school",
+   "method": "POST",
+   "path": "/brand/brand/layoutclasssign/layoutlist",
+   "description": "首页模块布局（x/y/tag/width/height）",
+   "source": "getNewLayoutList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-011",
+   "group": "school",
+   "method": "GET",
+   "path": "/brand/brand/remind/list",
+   "description": "学校、班级与首页布局 / newRemind",
+   "source": "newRemind",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-012",
+   "group": "school",
+   "method": "GET",
+   "path": "/brand/brand/school/semester/current",
+   "description": "学校、班级与首页布局 / getSemesterTime",
+   "source": "getSemesterTime",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-013",
+   "group": "school",
+   "method": "POST",
+   "path": "/brand/class-brand-management/android/class/selectClassesInfo",
+   "description": "学校、班级与首页布局 / selectClassesInfo",
+   "source": "selectClassesInfo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-014",
+   "group": "school",
+   "method": "GET",
+   "path": "/brand/v2/custom/mode/list",
+   "description": "学校、班级与首页布局 / requestDominateScreenLevel",
+   "source": "requestDominateScreenLevel",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-015",
+   "group": "school",
+   "method": "GET",
+   "path": "/brand/v2/custom/mode/list",
+   "description": "学校、班级与首页布局 / requestCustomDominateScreenList",
+   "source": "requestCustomDominateScreenList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-016",
+   "group": "school",
+   "method": "POST",
+   "path": "/cloud/brand/calendar/getSchoolCalendar",
+   "description": "学校、班级与首页布局 / getSchoolCalendar",
+   "source": "getSchoolCalendar",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-017",
+   "group": "school",
+   "method": "POST",
+   "path": "/cloud/calendar/selectSchoolCalendar",
+   "description": "学校、班级与首页布局 / selectSchoolCalendar",
+   "source": "selectSchoolCalendar",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-018",
+   "group": "school",
+   "method": "GET",
+   "path": "/cloud/site/getSite",
+   "description": "学校、班级与首页布局 / requestSiteInfo",
+   "source": "requestSiteInfo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "school-019",
+   "group": "school",
+   "method": "GET",
+   "path": "/management/cloud-system/pc/getClassesInfo/{classId}",
+   "description": "学校、班级与首页布局 / getClassesInfo",
+   "source": "getClassesInfo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-001",
+   "group": "home",
+   "method": "GET",
+   "path": "/Ecalender/weather_mini",
+   "description": "首页卡片与班级展示 / getWeather",
+   "source": "getWeather",
+   "base": "https://zhwnlapi.etouch.cn",
+   "auth": false
+  },
+  {
+   "id": "home-002",
+   "group": "home",
+   "method": "POST",
+   "path": "/brand/brand/album/index",
+   "description": "首页卡片与班级展示 / getHomeVideo",
+   "source": "getHomeVideo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-003",
+   "group": "home",
+   "method": "POST",
+   "path": "/brand/brand/album/list",
+   "description": "首页卡片与班级展示 / getNewClassPhotoList",
+   "source": "getNewClassPhotoList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-004",
+   "group": "home",
+   "method": "POST",
+   "path": "/brand/brand/album/listDetail",
+   "description": "首页卡片与班级展示 / getNewPhotoList",
+   "source": "getNewPhotoList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-005",
+   "group": "home",
+   "method": "GET",
+   "path": "/brand/brand/studentduty/selectRecord",
+   "description": "首页卡片与班级展示 / getNewStudentDuty",
+   "source": "getNewStudentDuty",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-006",
+   "group": "home",
+   "method": "POST",
+   "path": "/brand/brand/studentwork/list",
+   "description": "首页卡片与班级展示 / getNewStudentWorkList",
+   "source": "getNewStudentWorkList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-007",
+   "group": "home",
+   "method": "GET",
+   "path": "/brand/brand/studentwork/selectStudentInfo",
+   "description": "首页卡片与班级展示 / selectNewStudentInfo",
+   "source": "selectNewStudentInfo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-008",
+   "group": "home",
+   "method": "POST",
+   "path": "/brand/brand/studentwork/workComment",
+   "description": "首页卡片与班级展示 / setNewWorkComment",
+   "source": "setNewWorkComment",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-009",
+   "group": "home",
+   "method": "GET",
+   "path": "/brand/brand/studentwork/workLike",
+   "description": "首页卡片与班级展示 / setNewWorkLike",
+   "source": "setNewWorkLike",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-010",
+   "group": "home",
+   "method": "POST",
+   "path": "/brand/brand/v3/studentduty/selectRecord",
+   "description": "首页卡片与班级展示 / getDutyWeekList",
+   "source": "getDutyWeekList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-011",
+   "group": "home",
+   "method": "POST",
+   "path": "/brand/class-brand-management/android/videoalbum/classifylist",
+   "description": "首页卡片与班级展示 / getPhotoAlbumTablist",
+   "source": "getPhotoAlbumTablist",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-012",
+   "group": "home",
+   "method": "GET",
+   "path": "/brand/class-brand-management/app/studentDuty/selectRecord",
+   "description": "首页卡片与班级展示 / getStudentDuty",
+   "source": "getStudentDuty",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-013",
+   "group": "home",
+   "method": "POST",
+   "path": "/brand/weather/day7",
+   "description": "首页卡片与班级展示 / getNewWeatherList",
+   "source": "getNewWeatherList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-014",
+   "group": "home",
+   "method": "POST",
+   "path": "/brand/weather/now",
+   "description": "首页卡片与班级展示 / getNewWeather",
+   "source": "getNewWeather",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "home-015",
+   "group": "home",
+   "method": "POST",
+   "path": "/cloud/app/work/pageThisWeekWork",
+   "description": "首页卡片与班级展示 / getNewTaskList",
+   "source": "getNewTaskList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "messages-001",
+   "group": "messages",
+   "method": "POST",
+   "path": "/brand/brand/mess/recive/dominateScreen/list",
+   "description": "消息公告与 IM / getMessageDominateScreenList",
+   "source": "getMessageDominateScreenList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "messages-002",
+   "group": "messages",
+   "method": "POST",
+   "path": "/brand/brand/mess/recive/dominateScreen/list",
+   "description": "消息公告与 IM / requestMessageDominateScreenList",
+   "source": "requestMessageDominateScreenList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "messages-003",
+   "group": "messages",
+   "method": "GET",
+   "path": "/brand/brand/mess/recive/index",
+   "description": "消息公告与 IM / requestMessageHome",
+   "source": "requestMessageHome",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "messages-004",
+   "group": "messages",
+   "method": "POST",
+   "path": "/brand/brand/mess/recive/page",
+   "description": "公告/消息分页",
+   "source": "getNewNoticeWithPag",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "messages-005",
+   "group": "messages",
+   "method": "POST",
+   "path": "/brand/brand/mess/recive/page",
+   "description": "公告/消息分页",
+   "source": "requestMessage",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "messages-006",
+   "group": "messages",
+   "method": "POST",
+   "path": "/brand/brand/mess/recive/page",
+   "description": "公告/消息分页",
+   "source": "requestMessageList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "messages-007",
+   "group": "messages",
+   "method": "GET",
+   "path": "/cloud/device/mess/publish/getCaptionsNoticeInfo",
+   "description": "消息公告与 IM / getCaptionsNoticeInfo",
+   "source": "getCaptionsNoticeInfo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "messages-008",
+   "group": "messages",
+   "method": "GET",
+   "path": "/cloud/device/mess/publish/getCaptionsNoticeInfo",
+   "description": "消息公告与 IM / requestHomeCaption",
+   "source": "requestHomeCaption",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "messages-009",
+   "group": "messages",
+   "method": "GET",
+   "path": "/cloud/im/user/sig/gen",
+   "description": "消息公告与 IM / getUserSig",
+   "source": "getUserSig",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "messages-010",
+   "group": "messages",
+   "method": "GET",
+   "path": "/cloud/im/user/sig/gen",
+   "description": "消息公告与 IM / getUserSig",
+   "source": "getUserSig",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "messages-011",
+   "group": "messages",
+   "method": "GET",
+   "path": "/cloud/im/user/sig/getSystemSig",
+   "description": "消息公告与 IM / getSystemSign",
+   "source": "getSystemSign",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "messages-012",
+   "group": "messages",
+   "method": "POST",
+   "path": "/management/cloud-system/im/getUserSigByUserId",
+   "description": "消息公告与 IM / getUserSigByUserId",
+   "source": "getUserSigByUserId",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "timetable-001",
+   "group": "timetable",
+   "method": "POST",
+   "path": "/brand/class-brand-management/android/course/classSchedule",
+   "description": "课表 / UserTable",
+   "source": "UserTable",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "timetable-002",
+   "group": "timetable",
+   "method": "POST",
+   "path": "/brand/class-brand-management/android/course/classSchedule",
+   "description": "课表 / getClassSchedule",
+   "source": "getClassSchedule",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "timetable-003",
+   "group": "timetable",
+   "method": "POST",
+   "path": "/cloud/app/timetable/getWeekTime",
+   "description": "班级/教师/学生课表",
+   "source": "getCDKB",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "timetable-004",
+   "group": "timetable",
+   "method": "POST",
+   "path": "/cloud/app/timetable/getWeekTime",
+   "description": "班级/教师/学生课表",
+   "source": "requestCourseList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "timetable-005",
+   "group": "timetable",
+   "method": "POST",
+   "path": "/cloud/app/timetable/getWeekTime",
+   "description": "班级/教师/学生课表",
+   "source": "getCDKB",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "timetable-006",
+   "group": "timetable",
+   "method": "POST",
+   "path": "/timetable/cloud-timetable/v1/kcb/classes",
+   "description": "课表 / getKB",
+   "source": "getKB",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-001",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/attweb/app/attendance/createBrandAttendanceSignIn",
+   "description": "考勤与打卡 / brandAttendanceClock",
+   "source": "brandAttendanceClock",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-002",
+   "group": "attendance",
+   "method": "GET",
+   "path": "/attweb/app/attendance/getAttendanceEventTimetableByClasses",
+   "description": "考勤与打卡 / getAttenceKB",
+   "source": "getAttenceKB",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-003",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/attweb/app/attendance/getAttendanceSiteTimetable",
+   "description": "考勤与打卡 / getAttendanceSiteTimetable",
+   "source": "getAttendanceSiteTimetable",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-004",
+   "group": "attendance",
+   "method": "GET",
+   "path": "/attweb/app/attendance/getBrandAttendanceRule",
+   "description": "考勤与打卡 / Attendlist",
+   "source": "Attendlist",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-005",
+   "group": "attendance",
+   "method": "GET",
+   "path": "/attweb/app/attendance/getBrandAttendanceUser",
+   "description": "考勤与打卡 / getBrandAttendanceUser",
+   "source": "getBrandAttendanceUser",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-006",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/attweb/app/attendance/listToDay",
+   "description": "今日考勤",
+   "source": "queryBrandAttendanceByAttendanceTimeId",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-007",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/attweb/app/attendance/listToDay",
+   "description": "今日考勤",
+   "source": "requestAttendance",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-008",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/attweb/app/attendance/listToDayDetail",
+   "description": "考勤明细",
+   "source": "listToDayDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-009",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/attweb/attendanceSignTask/app/add",
+   "description": "考勤与打卡 / requestAddTask",
+   "source": "requestAddTask",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-010",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/attweb/attendanceSignTask/app/delete",
+   "description": "考勤与打卡 / requestDeleteTask",
+   "source": "requestDeleteTask",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-011",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/attweb/attendanceSignTask/app/update",
+   "description": "考勤与打卡 / requestUpdateTask",
+   "source": "requestUpdateTask",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-012",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/attweb/attendanceSignTask/brand/brandBillBoard",
+   "description": "考勤与打卡 / requestTaskList",
+   "source": "requestTaskList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-013",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/attweb/attendanceSignTask/brand/get",
+   "description": "考勤与打卡 / requestTaskDetail",
+   "source": "requestTaskDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-014",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/attweb/attendanceSignTask/brand/list",
+   "description": "打卡任务列表",
+   "source": "requestMyTaskList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-015",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/attweb/attendanceSignTask/brand/sign",
+   "description": "考勤与打卡 / requestSignTask",
+   "source": "requestSignTask",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-016",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/face/cloud-face/attendance/brand/app/v2/queryBrandAttendanceByClassIds",
+   "description": "考勤与打卡 / queryBrandAttendanceByClassIds",
+   "source": "queryBrandAttendanceByClassIds",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-017",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/face/cloud-face/attendance/peopleAttendance",
+   "description": "考勤与打卡 / attendance",
+   "source": "attendance",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "attendance-018",
+   "group": "attendance",
+   "method": "POST",
+   "path": "/face/cloud-face/attendance/viewCbAttendance",
+   "description": "考勤与打卡 / getAttencelist",
+   "source": "getAttencelist",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "card-001",
+   "group": "card",
+   "method": "POST",
+   "path": "/brand/brand/Authority/checkIotControlByPassword",
+   "description": "刷卡、人脸与身份识别 / verifyTeacherLogin",
+   "source": "verifyTeacherLogin",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "card-002",
+   "group": "card",
+   "method": "POST",
+   "path": "/brand/brand/Authority/selectStudentByIcCard",
+   "description": "刷卡：学生信息",
+   "source": "selectNewStudentByIcCard",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "card-003",
+   "group": "card",
+   "method": "POST",
+   "path": "/brand/brand/Authority/selectStudentByIcCard",
+   "description": "刷卡：学生信息",
+   "source": "selectNewStudentByIcCard",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "card-004",
+   "group": "card",
+   "method": "POST",
+   "path": "/brand/brand/Authority/selectTeacherByClassesId",
+   "description": "刷卡、人脸与身份识别 / selectNewTeacherByClassesId",
+   "source": "selectNewTeacherByClassesId",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "card-005",
+   "group": "card",
+   "method": "POST",
+   "path": "/brand/brand/Authority/selectTeacherByIcCard",
+   "description": "刷卡：教师信息",
+   "source": "selectNewTeacherByIcCard",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "card-006",
+   "group": "card",
+   "method": "POST",
+   "path": "/brand/brand/Authority/selectTeacherByIcCard",
+   "description": "刷卡：教师信息",
+   "source": "selectTeacherInfoByCardOrFace",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "card-007",
+   "group": "card",
+   "method": "POST",
+   "path": "/brand/brand/Authority/selectUserInfoByIcCard",
+   "description": "刷卡：卡号换用户（判断学生/教师）",
+   "source": "selectNewUserInfoByIcCard",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "card-008",
+   "group": "card",
+   "method": "POST",
+   "path": "/brand/brand/Authority/selectUserInfoByIcCard",
+   "description": "刷卡：卡号换用户（判断学生/教师）",
+   "source": "selectUserByCardOrFace",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "card-009",
+   "group": "card",
+   "method": "POST",
+   "path": "/brand/class-brand-management/Android/Authority/selectTeacherByIcCard",
+   "description": "刷卡、人脸与身份识别 / selectTeacherByIcCard",
+   "source": "selectTeacherByIcCard",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "card-010",
+   "group": "card",
+   "method": "POST",
+   "path": "/brand/class-brand-management/android/studentspace/selectStudentByIcCard",
+   "description": "刷卡、人脸与身份识别 / selectStudentByIcCard",
+   "source": "selectStudentByIcCard",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "card-011",
+   "group": "card",
+   "method": "POST",
+   "path": "/brand/upload/signInLog",
+   "description": "刷卡、人脸与身份识别 / pauschCard",
+   "source": "pauschCard",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-001",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/app/actLeaveVacation/calculateLeaveDays",
+   "description": "学生空间、请假与报修 / requestLeaveLength",
+   "source": "requestLeaveLength",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-002",
+   "group": "userspace",
+   "method": "GET",
+   "path": "/app/formProcessTemplates/getDefaultStudentLeave",
+   "description": "学生空间、请假与报修 / requestStudentLeaveForm",
+   "source": "requestStudentLeaveForm",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-003",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/app/userAppr/pageDeviceAppr",
+   "description": "学生空间、请假与报修 / requestRepairList",
+   "source": "requestRepairList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-004",
+   "group": "userspace",
+   "method": "GET",
+   "path": "/app/userAppr/v2/getInfo",
+   "description": "学生空间、请假与报修 / requestLeaveDetail",
+   "source": "requestLeaveDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-005",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/app/v2/proc/deleteInstance",
+   "description": "学生空间、请假与报修 / requestRevokeLeave",
+   "source": "requestRevokeLeave",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-006",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/app/v2/proc/getFlowElements",
+   "description": "请假/报修审批流节点",
+   "source": "requestStudentLeaveProcess",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-007",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/app/v2/proc/pageTask",
+   "description": "学生空间、请假与报修 / requestLeaveRecord",
+   "source": "requestLeaveRecord",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-008",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/app/v2/proc/startInstance",
+   "description": "提交请假/报修",
+   "source": "requestSubmitStudentLeave",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-009",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/app/v2/proc/updateApprovalProc",
+   "description": "学生空间、请假与报修 / requestFormModify",
+   "source": "requestFormModify",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-010",
+   "group": "userspace",
+   "method": "GET",
+   "path": "/cloud/actLeaveVacation/list",
+   "description": "学生空间、请假与报修 / requestLeaveTypeOption",
+   "source": "requestLeaveTypeOption",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-011",
+   "group": "userspace",
+   "method": "GET",
+   "path": "/cloud/address/book/student",
+   "description": "学生空间、请假与报修 / getAddressBook",
+   "source": "getAddressBook",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-012",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/cloud/app/procAppr/deleteInstance",
+   "description": "学生空间、请假与报修 / deleteInstance",
+   "source": "deleteInstance",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-013",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/cloud/app/procAppr/deleteInstance",
+   "description": "学生空间、请假与报修 / requestOldRevokeLeave",
+   "source": "requestOldRevokeLeave",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-014",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/cloud/app/procAppr/getApprList",
+   "description": "学生空间、请假与报修 / getApprover",
+   "source": "getApprover",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-015",
+   "group": "userspace",
+   "method": "GET",
+   "path": "/cloud/app/userAppr/getInfo",
+   "description": "学生空间、请假与报修 / getApproverInfo",
+   "source": "getApproverInfo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-016",
+   "group": "userspace",
+   "method": "GET",
+   "path": "/cloud/app/userAppr/getInfo",
+   "description": "学生空间、请假与报修 / requestOldLeaveDetail",
+   "source": "requestOldLeaveDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-017",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/cloud/app/userAppr/page",
+   "description": "学生空间、请假与报修 / askForLeaveRecordBandList",
+   "source": "askForLeaveRecordBandList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-018",
+   "group": "userspace",
+   "method": "GET",
+   "path": "/cloud/formProcessTemplates/getByKey",
+   "description": "学生空间、请假与报修 / requestRepairForm",
+   "source": "requestRepairForm",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-019",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/cloud/leaveWord/brand/create",
+   "description": "学生空间、请假与报修 / requestAddComments",
+   "source": "requestAddComments",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-020",
+   "group": "userspace",
+   "method": "GET",
+   "path": "/cloud/leaveWord/delete",
+   "description": "学生空间、请假与报修 / requestCommentsDelete",
+   "source": "requestCommentsDelete",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-021",
+   "group": "userspace",
+   "method": "GET",
+   "path": "/cloud/leaveWord/get",
+   "description": "学生空间、请假与报修 / requestCommentsDetail",
+   "source": "requestCommentsDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-022",
+   "group": "userspace",
+   "method": "GET",
+   "path": "/cloud/leaveWord/getLeaveWordSetting",
+   "description": "学生空间、请假与报修 / getLeaveWordSetting",
+   "source": "getLeaveWordSetting",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-023",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/cloud/leaveWord/page",
+   "description": "学生空间、请假与报修 / requestCommentsList",
+   "source": "requestCommentsList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-024",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/cloud/proc/startInstance",
+   "description": "学生空间、请假与报修 / addLeave",
+   "source": "addLeave",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-025",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/cloud/student/allStudents",
+   "description": "班级学生列表",
+   "source": "allStudents",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "userspace-026",
+   "group": "userspace",
+   "method": "POST",
+   "path": "/leave-server/cloud-leave/student/addStudentLeaveByStudentUserId",
+   "description": "学生空间、请假与报修 / LeaveCommit",
+   "source": "LeaveCommit",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "activity-001",
+   "group": "activity",
+   "method": "POST",
+   "path": "/brand/activity/enroll/activityEnrollInfo",
+   "description": "活动与报名 / requestLoginActiveDetails",
+   "source": "requestLoginActiveDetails",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "activity-002",
+   "group": "activity",
+   "method": "POST",
+   "path": "/brand/activity/enroll/detail",
+   "description": "活动与报名 / requestActiveDetails",
+   "source": "requestActiveDetails",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "activity-003",
+   "group": "activity",
+   "method": "POST",
+   "path": "/brand/activity/enroll/page",
+   "description": "活动列表",
+   "source": "requestActiveList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "activity-004",
+   "group": "activity",
+   "method": "POST",
+   "path": "/brand/activity/enroll/userActivityEnroll",
+   "description": "活动与报名 / requestActiveRegistration",
+   "source": "requestActiveRegistration",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "activity-005",
+   "group": "activity",
+   "method": "POST",
+   "path": "/brand/activity/enroll/userEnrollPage",
+   "description": "活动与报名 / requestMyRegistrationList",
+   "source": "requestMyRegistrationList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-001",
+   "group": "honor",
+   "method": "POST",
+   "path": "/brand/appEvalMedal/getUserMedalInfo",
+   "description": "德育评价、荣誉与勋章 / requestEvaluationMedalDetails",
+   "source": "requestEvaluationMedalDetails",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-002",
+   "group": "honor",
+   "method": "GET",
+   "path": "/brand/appEvalMedal/listEvalMedalType",
+   "description": "德育评价、荣誉与勋章 / requestEvaluationMedalTypeList",
+   "source": "requestEvaluationMedalTypeList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-003",
+   "group": "honor",
+   "method": "POST",
+   "path": "/brand/appEvalMedal/pageEvalUserMedal",
+   "description": "德育评价、荣誉与勋章 / requestEvaluationMedalPageList",
+   "source": "requestEvaluationMedalPageList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-004",
+   "group": "honor",
+   "method": "POST",
+   "path": "/brand/evalDataCountStatistic/rankListByClass",
+   "description": "德育评价、荣誉与勋章 / requestEvaluationList",
+   "source": "requestEvaluationList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-005",
+   "group": "honor",
+   "method": "GET",
+   "path": "/brand/evalPersonScore/getEvalPersonScoreInfo",
+   "description": "德育评价、荣誉与勋章 / requestEvaluationPointDetails",
+   "source": "requestEvaluationPointDetails",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-006",
+   "group": "honor",
+   "method": "POST",
+   "path": "/brand/evalScoreCard/getUserScoreCardInfo",
+   "description": "德育评价、荣誉与勋章 / requestEvaluationPointCardDetails",
+   "source": "requestEvaluationPointCardDetails",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-007",
+   "group": "honor",
+   "method": "POST",
+   "path": "/brand/evalScoreCard/pageUserScoreCard",
+   "description": "德育评价、荣誉与勋章 / requestEvaluationPointCardPageList",
+   "source": "requestEvaluationPointCardPageList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-008",
+   "group": "honor",
+   "method": "POST",
+   "path": "/brand/evalScoreRecord/page",
+   "description": "德育评价、荣誉与勋章 / requestEvaluationPointPageList",
+   "source": "requestEvaluationPointPageList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-009",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/app/honor/brandPage",
+   "description": "荣誉墙",
+   "source": "requestHonorWallList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-010",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/evaluationActivityBrand/detail",
+   "description": "德育评价、荣誉与勋章 / requestActiveDetail",
+   "source": "requestActiveDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-011",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/evaluationActivityBrand/goToScore",
+   "description": "德育评价、荣誉与勋章 / requestGoToScore",
+   "source": "requestGoToScore",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-012",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/evaluationActivityBrand/identityDetail",
+   "description": "德育评价、荣誉与勋章 / requestIdentityDetail",
+   "source": "requestIdentityDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-013",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/evaluationActivityBrand/list",
+   "description": "德育评价、荣誉与勋章 / requestActiveHonorList",
+   "source": "requestActiveHonorList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-014",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/evaluationActivityBrand/queryActivityCycle",
+   "description": "德育评价、荣誉与勋章 / requestActivityCycle",
+   "source": "requestActivityCycle",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-015",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/evaluationActivityBrand/queryLastClassScoreResult",
+   "description": "德育评价、荣誉与勋章 / requestClassScoreResult",
+   "source": "requestClassScoreResult",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-016",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/evaluationActivityBrand/result",
+   "description": "德育评价、荣誉与勋章 / requestActiveResultList",
+   "source": "requestActiveResultList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-017",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/evaluationActivityBrand/scoreClass",
+   "description": "德育评价、荣誉与勋章 / requestClassScoreComment",
+   "source": "requestClassScoreComment",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-018",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/evaluationActivityBrand/scoreStudent",
+   "description": "德育评价、荣誉与勋章 / requestStudentScoreComment",
+   "source": "requestStudentScoreComment",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-019",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/evaluationActivityMobile/childrenHonor",
+   "description": "德育评价、荣誉与勋章 / requestKidsHonorList",
+   "source": "requestKidsHonorList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-020",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/evaluationPrize/classHonor",
+   "description": "德育评价、荣誉与勋章 / requestClassHonorList",
+   "source": "requestClassHonorList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-021",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/evaluationPrize/studentHonor",
+   "description": "德育评价、荣誉与勋章 / requestStudentHonorList",
+   "source": "requestStudentHonorList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-022",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/moralEducationActivityBrand/gotoScore",
+   "description": "德育评价、荣誉与勋章 / gotoScore",
+   "source": "gotoScore",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-023",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/moralEducationActivityBrand/overviewDetail",
+   "description": "德育评价、荣誉与勋章 / requestDailyScoreDetails",
+   "source": "requestDailyScoreDetails",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-024",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/moralEducationActivityBrand/race",
+   "description": "德育评价、荣誉与勋章 / requestClassMe",
+   "source": "requestClassMe",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-025",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/moralEducationActivityBrand/scoringRubric",
+   "description": "德育评价、荣誉与勋章 / requestScoringRubric",
+   "source": "requestScoringRubric",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "honor-026",
+   "group": "honor",
+   "method": "POST",
+   "path": "/cloud/moralEducationActivityBrand/securityCheck",
+   "description": "德育评价、荣誉与勋章 / securityCheck",
+   "source": "securityCheck",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "exam-001",
+   "group": "exam",
+   "method": "POST",
+   "path": "/brand/exam/by/student",
+   "description": "学生考试列表",
+   "source": "requestUserExamList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "exam-002",
+   "group": "exam",
+   "method": "POST",
+   "path": "/brand/exam/detail",
+   "description": "考试 / requestExamDetail",
+   "source": "requestExamDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "exam-003",
+   "group": "exam",
+   "method": "POST",
+   "path": "/brand/exam/person",
+   "description": "考试 / requestExamPersonSeat",
+   "source": "requestExamPersonSeat",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "exam-004",
+   "group": "exam",
+   "method": "POST",
+   "path": "/brand/exam/plan/week",
+   "description": "考试 / requestWeekExam",
+   "source": "requestWeekExam",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "exam-005",
+   "group": "exam",
+   "method": "POST",
+   "path": "/brand/exam/recent",
+   "description": "考试 / requestTodayExam",
+   "source": "requestTodayExam",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "exam-006",
+   "group": "exam",
+   "method": "POST",
+   "path": "/brand/exam/student/sing/in",
+   "description": "考试 / requestSignExam",
+   "source": "requestSignExam",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "library-001",
+   "group": "library",
+   "method": "GET",
+   "path": "/opac/assets/{ctrlNo}",
+   "description": "图书与阅读 / getBookMsgAssets",
+   "source": "getBookMsgAssets",
+   "base": "https://open-lcs.libsaas.com.cn",
+   "auth": false
+  },
+  {
+   "id": "library-002",
+   "group": "library",
+   "method": "GET",
+   "path": "/opac/ctrl/{ctrlNo}",
+   "description": "图书与阅读 / getBookMsg",
+   "source": "getBookMsg",
+   "base": "https://open-lcs.libsaas.com.cn",
+   "auth": false
+  },
+  {
+   "id": "library-003",
+   "group": "library",
+   "method": "POST",
+   "path": "/opac/search",
+   "description": "图书与阅读 / searchBook",
+   "source": "searchBook",
+   "base": "https://open-lcs.libsaas.com.cn",
+   "auth": false
+  },
+  {
+   "id": "library-004",
+   "group": "library",
+   "method": "GET",
+   "path": "/opac/tops/{topType}",
+   "description": "图书与阅读 / getTops",
+   "source": "getTops",
+   "base": "https://open-lcs.libsaas.com.cn",
+   "auth": false
+  },
+  {
+   "id": "library-005",
+   "group": "library",
+   "method": "POST",
+   "path": "/rfid/class-board/category/list",
+   "description": "图书与阅读 / requestLibraryClassifyList",
+   "source": "requestLibraryClassifyList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "library-006",
+   "group": "library",
+   "method": "POST",
+   "path": "/rfid/class-board/opac/book",
+   "description": "图书与阅读 / requestLibrarySearch",
+   "source": "requestLibrarySearch",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "library-007",
+   "group": "library",
+   "method": "POST",
+   "path": "/rfid/class-board/opac/bookDetail",
+   "description": "图书与阅读 / requestLibraryBookSituation",
+   "source": "requestLibraryBookSituation",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "library-008",
+   "group": "library",
+   "method": "GET",
+   "path": "/rfid/class-board/opac/itemTypeList",
+   "description": "图书与阅读 / requestLibraryTypeList",
+   "source": "requestLibraryTypeList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "library-009",
+   "group": "library",
+   "method": "POST",
+   "path": "/rfid/class-board/rank/hot-circulation-rank",
+   "description": "图书与阅读 / requestHotList",
+   "source": "requestHotList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "library-010",
+   "group": "library",
+   "method": "POST",
+   "path": "/rfid/class-board/rank/new-book-recommend",
+   "description": "图书与阅读 / requestLibraryNewList",
+   "source": "requestLibraryNewList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "library-011",
+   "group": "library",
+   "method": "POST",
+   "path": "/rfid/hm-board/library/list",
+   "description": "图书与阅读 / requestLibraryList",
+   "source": "requestLibraryList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "reservation-001",
+   "group": "reservation",
+   "method": "GET",
+   "path": "/cloud/employee/get",
+   "description": "场地预约与咨询 / requestEmployeeDetails",
+   "source": "requestEmployeeDetails",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "reservation-002",
+   "group": "reservation",
+   "method": "POST",
+   "path": "/cloud/employee/getEmployeeListByLabel",
+   "description": "场地预约与咨询 / requestConsultList",
+   "source": "requestConsultList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "reservation-003",
+   "group": "reservation",
+   "method": "POST",
+   "path": "/cloud/siteBooking/bookingRecordPage",
+   "description": "预约记录",
+   "source": "requestReservationRecordList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "reservation-004",
+   "group": "reservation",
+   "method": "GET",
+   "path": "/cloud/siteBooking/get",
+   "description": "场地预约与咨询 / requestReservationRecordDetail",
+   "source": "requestReservationRecordDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "reservation-005",
+   "group": "reservation",
+   "method": "POST",
+   "path": "/cloud/siteBooking/siteBookingBatchSign",
+   "description": "场地预约与咨询 / requestReservationOfflineSign",
+   "source": "requestReservationOfflineSign",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "reservation-006",
+   "group": "reservation",
+   "method": "POST",
+   "path": "/cloud/siteBooking/siteBookingSign",
+   "description": "场地预约与咨询 / requestReservationSign",
+   "source": "requestReservationSign",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "patrol-001",
+   "group": "patrol",
+   "method": "POST",
+   "path": "/app/patrolDayTaskSite/finishSiteTask",
+   "description": "巡课 / requestSubmitPatrol",
+   "source": "requestSubmitPatrol",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "patrol-002",
+   "group": "patrol",
+   "method": "GET",
+   "path": "/app/patrolDayTaskSite/get",
+   "description": "巡课 / requestPatrolDetail",
+   "source": "requestPatrolDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "patrol-003",
+   "group": "patrol",
+   "method": "POST",
+   "path": "/app/patrolDayTaskSite/page",
+   "description": "巡课任务列表",
+   "source": "requestPatrolList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "patrol-004",
+   "group": "patrol",
+   "method": "POST",
+   "path": "/app/patrolDayTaskSite/updateClockIn",
+   "description": "巡课 / requestUpdatePatrolPunch",
+   "source": "requestUpdatePatrolPunch",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "patrol-005",
+   "group": "patrol",
+   "method": "POST",
+   "path": "/app/patrolDayTaskSite/updateNowClock",
+   "description": "巡课 / requestPatrolPunch",
+   "source": "requestPatrolPunch",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "patrol-006",
+   "group": "patrol",
+   "method": "GET",
+   "path": "/app/patrolQrCode/getSiteQrCodeStatus",
+   "description": "巡课 / requestScanQrCodeStatus",
+   "source": "requestScanQrCodeStatus",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "vote-001",
+   "group": "vote",
+   "method": "POST",
+   "path": "/app/collectTableBrand/check",
+   "description": "投票与问卷 / requestFormDetail",
+   "source": "requestFormDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "vote-002",
+   "group": "vote",
+   "method": "POST",
+   "path": "/app/collectTableBrand/lookOver",
+   "description": "投票与问卷 / requestCollectSituation",
+   "source": "requestCollectSituation",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "vote-003",
+   "group": "vote",
+   "method": "POST",
+   "path": "/app/collectTableBrand/overview",
+   "description": "投票与问卷 / requestCollectList",
+   "source": "requestCollectList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "vote-004",
+   "group": "vote",
+   "method": "POST",
+   "path": "/app/collectTableBrand/write",
+   "description": "提交问卷/收集表",
+   "source": "requestSubmitFormContent",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "vote-005",
+   "group": "vote",
+   "method": "POST",
+   "path": "/app/collectTableComponent/brand",
+   "description": "投票与问卷 / requestHomeCollectList",
+   "source": "requestHomeCollectList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "vote-006",
+   "group": "vote",
+   "method": "GET",
+   "path": "/app/employee/getDeptById",
+   "description": "投票与问卷 / requestTeacherDeptList",
+   "source": "requestTeacherDeptList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "vote-007",
+   "group": "vote",
+   "method": "GET",
+   "path": "/app/student/selectClassByStudentId",
+   "description": "投票与问卷 / requestStudentClasses",
+   "source": "requestStudentClasses",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "vote-008",
+   "group": "vote",
+   "method": "POST",
+   "path": "/cloud/vote/clickVote",
+   "description": "投票与问卷 / requestSubmitVote",
+   "source": "requestSubmitVote",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "vote-009",
+   "group": "vote",
+   "method": "POST",
+   "path": "/cloud/vote/get",
+   "description": "投票与问卷 / requestVoteDetail",
+   "source": "requestVoteDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "vote-010",
+   "group": "vote",
+   "method": "POST",
+   "path": "/cloud/vote/page",
+   "description": "投票列表",
+   "source": "requestHomeVoteList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "dormitory-001",
+   "group": "dormitory",
+   "method": "GET",
+   "path": "/brand/brand/dormitory/dormitoryHomepage/detail",
+   "description": "宿舍 / requestHomeDormitoryDetail",
+   "source": "requestHomeDormitoryDetail",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "dormitory-002",
+   "group": "dormitory",
+   "method": "GET",
+   "path": "/cloud/moralEducationActivityBrand/dormitory",
+   "description": "宿舍 / requestHomeDormitoryEducation",
+   "source": "requestHomeDormitoryEducation",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "ai-001",
+   "group": "ai",
+   "method": "POST",
+   "path": "/ai/assistant/get",
+   "description": "AI 助手 / requestAIGetInfo",
+   "source": "requestAIGetInfo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "ai-002",
+   "group": "ai",
+   "method": "POST",
+   "path": "/ai/assistant/public/list",
+   "description": "AI 助手 / requestAIHomeList",
+   "source": "requestAIHomeList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "ai-003",
+   "group": "ai",
+   "method": "POST",
+   "path": "/ai/chat/models",
+   "description": "AI 助手 / requestAIModelList",
+   "source": "requestAIModelList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "ai-004",
+   "group": "ai",
+   "method": "POST",
+   "path": "/ai/chat/session/create",
+   "description": "AI 会话创建",
+   "source": "requestAICreateSession",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "upload-001",
+   "group": "upload",
+   "method": "POST",
+   "path": "/app/file/upload",
+   "description": "文件上传（multipart）",
+   "source": "upload",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "upload-002",
+   "group": "upload",
+   "method": "POST",
+   "path": "/app/file/upload",
+   "description": "文件上传（multipart）",
+   "source": "upload",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "upload-003",
+   "group": "upload",
+   "method": "POST",
+   "path": "/file/upload/path",
+   "description": "日志上传（multipart）",
+   "source": "uploadLogFile",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "iot-001",
+   "group": "iot",
+   "method": "POST",
+   "path": "/api/lock/listSwk.html",
+   "description": "设备物联与扩展 / listSwk",
+   "source": "listSwk",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "iot-002",
+   "group": "iot",
+   "method": "POST",
+   "path": "/api/lock/saveSwk",
+   "description": "设备物联与扩展 / saveSwk",
+   "source": "saveSwk",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "iot-003",
+   "group": "iot",
+   "method": "POST",
+   "path": "/brand/layoutclasssign/getVideoStreams",
+   "description": "设备物联与扩展 / requestRTSPPath",
+   "source": "requestRTSPPath",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "iot-004",
+   "group": "iot",
+   "method": "POST",
+   "path": "/brand/openDoor/records/create",
+   "description": "设备物联与扩展 / requestRecords",
+   "source": "requestRecords",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "iot-005",
+   "group": "iot",
+   "method": "POST",
+   "path": "/cloud/device/face-sync/update-status",
+   "description": "设备物联与扩展 / requestSynchronizeStatusFaceExtraction",
+   "source": "requestSynchronizeStatusFaceExtraction",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "iot-006",
+   "group": "iot",
+   "method": "POST",
+   "path": "/cloud/device/shared-config/get",
+   "description": "设备物联与扩展 / requestFaceConfig",
+   "source": "requestFaceConfig",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "iot-007",
+   "group": "iot",
+   "method": "POST",
+   "path": "/cloud/sks/site/get",
+   "description": "设备物联与扩展 / requestSiteInfo",
+   "source": "requestSiteInfo",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "iot-008",
+   "group": "iot",
+   "method": "POST",
+   "path": "/cloud/sks/site/getSiteEnvIndicators",
+   "description": "设备物联与扩展 / requestSensorInfoList",
+   "source": "requestSensorInfoList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "iot-009",
+   "group": "iot",
+   "method": "POST",
+   "path": "/cloud/sks/site/getSiteImages",
+   "description": "设备物联与扩展 / requestWarningInfoList",
+   "source": "requestWarningInfoList",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "ttlock-001",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/oauth2/token",
+   "description": "OAuth 登录，获取 access_token",
+   "source": "demo/retrofit/ApiService.auth",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-002",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/fingerprint/add",
+   "description": "添加指纹",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-003",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/identityCard/add",
+   "description": "添加 IC 卡",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-004",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/wirelessKeyboard/add",
+   "description": "添加无线键盘",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-005",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/lock/changeAdminKeyboardPwd",
+   "description": "修改管理员键盘密码",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-006",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/fingerprint/clear",
+   "description": "清空指纹",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-007",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/identityCard/clear",
+   "description": "清空 IC 卡",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-008",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/fingerprint/delete",
+   "description": "删除指纹",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-009",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/identityCard/delete",
+   "description": "删除 IC 卡",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-010",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/lock/delete",
+   "description": "删除锁",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-011",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/gateway/isInitSuccess",
+   "description": "网关初始化状态",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-012",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/gateway/upgradeCheck",
+   "description": "网关升级检查",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-013",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/gateway/list",
+   "description": "网关列表",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-014",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/lock/list",
+   "description": "锁列表",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-015",
+   "group": "ttlock",
+   "method": "GET",
+   "path": "/v3/fingerprint/list",
+   "description": "指纹列表",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-016",
+   "group": "ttlock",
+   "method": "GET",
+   "path": "/v3/identityCard/list",
+   "description": "IC 卡列表",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-017",
+   "group": "ttlock",
+   "method": "GET",
+   "path": "/v3/key/list",
+   "description": "钥匙列表",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-018",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/lock/initialize",
+   "description": "初始化锁",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-019",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/lock/upgradeCheck",
+   "description": "锁升级检查",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-020",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/lock/upgradeRecheck",
+   "description": "锁升级复查",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-021",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/identityCard/changePeriod",
+   "description": "修改 IC 卡有效期",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-022",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/room/registerNb",
+   "description": "注册 NB 物联网模块",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-023",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/lock/resetKeyboardPwd",
+   "description": "重置键盘密码",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-024",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/lock/resetKey",
+   "description": "重置 eKey",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-025",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/v3/gateway/uploadDetail",
+   "description": "上传网关详情",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "ttlock-026",
+   "group": "ttlock",
+   "method": "POST",
+   "path": "/lockRecords/fromLock",
+   "description": "上传锁记录",
+   "source": "demo/retrofit/ApiService",
+   "base": "",
+   "auth": false
+  },
+  {
+   "id": "face-001",
+   "group": "face",
+   "method": "POST",
+   "path": "/cloud/device/face-sync/sync-page",
+   "description": "分页拉取人脸",
+   "source": "com/yyide/facepass/network/INetworkService",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "face-002",
+   "group": "face",
+   "method": "POST",
+   "path": "/cloud/device/face-sync/sync-all",
+   "description": "全量同步人脸",
+   "source": "com/yyide/facepass/network/INetworkService",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "face-003",
+   "group": "face",
+   "method": "POST",
+   "path": "/cloud/device/face-sync/batch-update-status",
+   "description": "批量更新同步状态",
+   "source": "com/yyide/facepass/network/INetworkService",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "face-004",
+   "group": "face",
+   "method": "POST",
+   "path": "/cloud/v2/machine/updateApkVersion",
+   "description": "上报 APK 版本",
+   "source": "com/yyide/facepass/network/INetworkService",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "external-001",
+   "group": "external",
+   "method": "POST",
+   "path": "/ai/chat/completion/stream",
+   "description": "AI 流式对话（text/event-stream）",
+   "source": "network/base/SSEClient",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "external-002",
+   "group": "external",
+   "method": "POST",
+   "path": "/brand/brand/album/list",
+   "description": "旧相册列表（HttpUtils.post）",
+   "source": "net/MachineIpService",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "external-003",
+   "group": "external",
+   "method": "POST",
+   "path": "/brand/brand/album/listDetail",
+   "description": "旧相册详情（HttpUtils.post）",
+   "source": "net/MachineIpService",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "external-004",
+   "group": "external",
+   "method": "POST",
+   "path": "/brand/class-brand-management/android/videoalbum/list",
+   "description": "旧视频列表（HttpUtils2.post）",
+   "source": "net/MachineIpService2",
+   "base": "",
+   "auth": true
+  },
+  {
+   "id": "external-005",
+   "group": "external",
+   "method": "POST",
+   "path": "/v4/openim/get_c2c_unread_msg_num",
+   "description": "腾讯云 IM：查询单聊未读数（需要管理员 UserSig）",
+   "source": "MainActivity.getStudentMsg",
+   "base": "https://console.tim.qq.com",
+   "auth": false
+  }
+ ]
+}

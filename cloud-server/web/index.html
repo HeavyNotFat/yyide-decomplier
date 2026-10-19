@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>智慧班牌 · 云端控制器</title>
+  <link rel="stylesheet" href="/admin/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">班</div>
+        <div class="brand-text">
+          <strong>云端控制器</strong>
+          <span>智慧班牌 3.0.14</span>
+        </div>
+      </div>
+
+      <nav class="nav" id="nav">
+        <button class="nav-item active" data-view="dashboard">
+          <span class="nav-icon">◈</span><span>概览</span>
+        </button>
+        <button class="nav-item" data-view="layout">
+          <span class="nav-icon">▦</span><span>卡片布局</span>
+        </button>
+        <button class="nav-item" data-view="library">
+          <span class="nav-icon">▤</span><span>组件库</span><span class="nav-count" id="navComponents">293</span>
+        </button>
+        <button class="nav-item" data-view="content">
+          <span class="nav-icon">✎</span><span>内容中心</span>
+        </button>
+        <button class="nav-item" data-view="endpoints">
+          <span class="nav-icon">⇄</span><span>接口模拟</span><span class="nav-count" id="navEndpoints">257</span>
+        </button>
+        <button class="nav-item" data-view="device">
+          <span class="nav-icon">⌁</span><span>设备连接</span>
+        </button>
+        <button class="nav-item" data-view="features">
+          <span class="nav-icon">✦</span><span>功能地图</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="server-state">
+          <span class="dot" id="serverDot"></span>
+          <div>
+            <strong id="serverState">等待连接</strong>
+            <span id="serverAddr">127.0.0.1:8765</span>
+          </div>
+        </div>
+        <div class="sidebar-tip">修改即时生效 · 班牌重启或下拉刷新后加载</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="title-block">
+          <h1 id="pageTitle">概览</h1>
+          <p id="pageSubtitle">云端控制器与班牌实时数据</p>
+        </div>
+        <div class="topbar-actions" id="topbarActions"></div>
+      </header>
+
+      <section class="view" id="view"></section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" id="modal">
+      <div class="modal-head">
+        <h3 id="modalTitle">标题</h3>
+        <button class="icon-btn" id="modalClose" title="关闭">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-foot" id="modalFoot"></div>
+    </div>
+  </div>
+
+  <div class="toast-wrap" id="toasts"></div>
+  <script src="/admin/app.js"></script>
+</body>
+</html>
