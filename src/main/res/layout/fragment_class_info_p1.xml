@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bg_white20_bottom" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:background="@drawable/bg_class_info_stroke" android:padding="@dimen/dp_60" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/dp_30">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/img_head" android:layout_width="@dimen/dp_103" android:layout_height="@dimen/dp_103" />
+            <TextView android:textSize="30.0sp" android:textColor="@color/black13" android:ellipsize="end" android:id="@id/tv_class_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_30" android:singleLine="true" />
+        </LinearLayout>
+        <TextView android:textSize="24.0sp" android:textColor="@color/purple2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_35" android:text="基本信息" android:drawableLeft="@drawable/icon_class_info_lab1" android:drawablePadding="@dimen/dp_6" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_25">
+            <TextView android:textColor="@color/black11" android:id="@id/tv_teacher_duty" android:text="班主任" style="@style/TextSize_18sp" />
+            <TextView android:textColor="@color/black13" android:id="@id/tv_teacher_name" android:layout_marginLeft="@dimen/dp_33" android:text="无" style="@style/TextSize_18sp" />
+            <TextView android:textColor="@color/black11" android:layout_marginLeft="50.0dp" android:text="任课教师" style="@style/TextSize_18sp" />
+            <TextView android:textColor="@color/black13" android:id="@id/tv_teacher_nums" android:layout_marginLeft="@dimen/dp_33" android:text="" style="@style/TextSize_18sp" />
+            <TextView android:textColor="@color/black11" android:layout_marginLeft="50.0dp" android:text="学生人数" style="@style/TextSize_18sp" />
+            <TextView android:textColor="@color/black13" android:id="@id/tv_student_num" android:layout_marginLeft="@dimen/dp_33" android:text="" style="@style/TextSize_18sp" />
+        </LinearLayout>
+        <TextView android:textSize="24.0sp" android:textColor="@color/purple2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_35" android:text="班级项目" android:drawableLeft="@drawable/icon_class_info_lab2" android:drawablePadding="@dimen/dp_6" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyleview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="30.0dp" android:layout_marginRight="@dimen/dp_180" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="right|bottom" android:layout_width="@dimen/dp_281" android:layout_height="@dimen/dp_218" android:layout_marginRight="@dimen/dp_32" android:layout_marginBottom="@dimen/dp_34" android:src="@drawable/icon_class_info_bt" android:scaleType="fitXY" />
+</FrameLayout>

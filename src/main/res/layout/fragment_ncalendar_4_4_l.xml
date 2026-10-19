@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:id="@id/bg" android:background="@drawable/bg_white20" android:paddingRight="@dimen/dp_30" android:paddingBottom="20.0dp" android:layout_width="908.0dp" android:layout_height="404.0dp">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include android:layout_width="868.0dp" android:layout_height="wrap_content" layout="@layout/layout_head_title" />
+            <LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:id="@id/top_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:layout_marginStart="@dimen/dp_60">
+                <TextView android:textSize="20.0sp" android:textColor="#ff393939" android:ellipsize="end" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/schoolyear" android:layout_width="0.0dp" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="18.0sp" android:textColor="@color/purple6" android:id="@id/left_month" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上" />
+                    <TextView android:textSize="18.0sp" android:textColor="@color/purple6" android:id="@id/month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginRight="5.0dp" android:text="2021年11月" android:layout_marginHorizontal="5.0dp" />
+                    <TextView android:textSize="18.0sp" android:textColor="@color/purple6" android:id="@id/right_month" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/all_mu" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="75.0dp" app:msv_emptyView="@layout/item_nc_null_layout44_x" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <LinearLayout android:orientation="vertical" android:id="@id/ll_calendar" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" android:layout_marginStart="@dimen/dp_10">
+                        <com.necer.view.WeekBar android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" />
+                        <com.necer.calendar.MonthCalendar android:id="@id/calendar" android:layout_width="match_parent" android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <TextView android:background="#ffeeeeee" android:layout_width="1.0dp" android:layout_height="match_parent" />
+                    <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" app:msv_emptyView="@layout/item_nc_null_layout44" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+                        <ListView android:scrollbarSize="@dimen/dp_4" android:id="@id/listview" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@color/transparent" android:dividerHeight="20.0dp" android:layout_marginStart="@dimen/dp_20" />
+                    </com.yd.android_brand_mvp.weight.MultiStateView>
+                </LinearLayout>
+            </RelativeLayout>
+        </com.yd.android_brand_mvp.weight.MultiStateView>
+    </RelativeLayout>
+</RelativeLayout>

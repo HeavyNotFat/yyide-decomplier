@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/page_margin" android:paddingRight="@dimen/page_margin" android:layout_width="match_parent" android:layout_height="60.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.qcloud.tim.uikit.component.gatherimage.ShadeImageView android:id="@id/group_apply_member_icon" android:layout_width="50.0dp" android:layout_height="50.0dp" android:src="@drawable/default_user_icon" android:scaleType="fitCenter" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginRight="10.0dp" android:layout_weight="1.0">
+        <TextView android:textColor="@color/text_color_black" android:id="@id/group_apply_member_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" />
+        <TextView android:textColor="@color/text_color_gray" android:id="@id/group_apply_reason" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" />
+    </LinearLayout>
+    <Button android:textColor="#fff" android:id="@id/group_apply_accept" android:background="@color/bg_positive_btn" android:layout_width="60.0dp" android:layout_height="40.0dp" android:layout_marginRight="10.0dp" android:text="@string/accept" android:onClick="startConversation" />
+    <Button android:textColor="#fb6155" android:id="@id/group_apply_refuse" android:background="@color/bg_negative_btn" android:layout_width="60.0dp" android:layout_height="40.0dp" android:layout_marginRight="10.0dp" android:text="@string/refuse" android:onClick="startConversation" />
+</LinearLayout>

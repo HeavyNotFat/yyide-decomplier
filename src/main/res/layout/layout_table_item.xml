@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="@dimen/dp_2" />
+    <FrameLayout android:id="@id/fl_content" android:background="@drawable/item_table_bg_white20" android:layout_width="match_parent" android:layout_height="110.0dp">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="80.0dp" android:layout_marginEnd="@dimen/dp_120">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_img" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/sp_18" android:textColor="@color/black9" android:ellipsize="middle" android:id="@id/subjectName" android:layout_width="wrap_content" android:layout_height="28.0dp" android:singleLine="true" />
+                <TextView android:textSize="16.0sp" android:textColor="#ff6b4cd5" android:gravity="center" android:id="@id/tv_table_tip" android:background="@drawable/duty_bg_border_1dp" android:layout_width="50.0dp" android:layout_height="26.0dp" android:text="代课" android:layout_marginStart="@dimen/dp_10" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/sp_14" android:textColor="@color/black11" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="right|center" android:orientation="vertical" android:layout_width="@dimen/dp_100" android:layout_height="match_parent">
+            <TextView android:textSize="@dimen/sp_30" android:textStyle="bold" android:textColor="@color/color_bule67" android:gravity="center_horizontal" android:id="@id/no" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/sp_16" android:textStyle="bold" android:textColor="@color/color_bule67" android:gravity="center_horizontal" android:id="@id/e_time" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

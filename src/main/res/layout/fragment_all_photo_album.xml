@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="match_parent" android:layout_height="808.0dp"
+  xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.flyco.tablayout.CommonTabLayout android:id="@id/ctl_tab" android:layout_width="wrap_content" android:layout_height="@dimen/dp_77" app:tl_indicator_color="@color/purple2" app:tl_indicator_height="@dimen/dp_3" app:tl_indicator_width="@dimen/dp_40" app:tl_tab_width="@dimen/dp_160" app:tl_textSelectColor="@color/purple2" app:tl_textUnselectColor="@color/black13" app:tl_textsize="@dimen/sp_20" />
+    <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" app:msv_emptyView="@layout/item_min_null_layout_2" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+        <androidx.viewpager.widget.ViewPager android:id="@id/vpList" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </com.yd.android_brand_mvp.weight.MultiStateView>
+</LinearLayout>

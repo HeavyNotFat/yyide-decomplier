@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/rl_outside_view" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/rl_inputdlg_view" android:background="@color/live_color_input_dialog_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/barrage_area" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.3">
+            <Button android:id="@id/barrage_btn" android:background="@drawable/live_barrage_slider_off" android:layout_width="42.0dp" android:layout_height="27.0dp" android:layout_marginLeft="15.0dp" android:layout_marginRight="10.0dp" />
+        </LinearLayout>
+        <View android:background="@color/live_color_transparent_black" android:layout_width="1.0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/live_input_message_divider_margin_left" android:layout_marginTop="@dimen/live_input_message_divider_margin_top" android:layout_marginRight="@dimen/live_input_message_divider_margin_left" android:layout_marginBottom="@dimen/live_input_message_divider_margin_top" />
+        <EditText android:textSize="@dimen/live_input_message_dialog_text" android:textColor="@android:color/black" android:id="@id/et_input_message" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/live_dialog_input_text_hint" android:maxLines="1" android:singleLine="true" android:maxLength="32" android:layout_weight="4.0" android:inputType="text" android:imeOptions="actionUnspecified|normal" />
+        <View android:background="@color/live_color_transparent_black" android:layout_width="1.0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/live_input_message_divider_margin_left" android:layout_marginTop="@dimen/live_input_message_divider_margin_top" android:layout_marginRight="@dimen/live_input_message_divider_margin_left" android:layout_marginBottom="@dimen/live_input_message_divider_margin_top" />
+        <LinearLayout android:layout_gravity="center" android:id="@id/confirm_area" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/live_input_message_divider_margin_left">
+            <TextView android:textSize="@dimen/live_input_message_dialog_text" android:textColor="@color/live_color_send_btn" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/confirm_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/live_send" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

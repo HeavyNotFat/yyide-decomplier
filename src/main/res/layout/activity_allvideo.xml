@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bg" android:background="@color/blue7" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:background="#372b0e" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0"> SampleCoverVideo 
+            <com.yd.android_brand_mvp.video1.SampleCoverVideo android:id="@id/player" android:background="@color/white" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" />
+            <LinearLayout android:gravity="center" android:id="@id/ll_remark" android:background="@drawable/bg_gray" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="24.0dp" android:textStyle="bold" android:gravity="center" android:background="@drawable/bg_white20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="还未上传视频 !" />
+            </LinearLayout>
+            <TextView android:layout_gravity="right" android:id="@id/close" android:background="@drawable/gb_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dp" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

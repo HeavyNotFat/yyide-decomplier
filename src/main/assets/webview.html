@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>Android WebView JavaScript 交互</title>
+<h1>Android WebView JavaScript 交互</h1>
+<!--<p><input type="button" value="弹出 Toast 提示" onclick="android.showToast('简单教程,简单编程');"/></p>-->
+<p><input type="button" value="测试webview接口回调" onclick="android.showValidation();"/>
+    <script>
+    function cardCallBack(json) {
+        alert("简单测试事件刷卡监听回调:返回JSON字符串" + json);
+    }
+    function faceCallBack(msg) {
+        alert("简单测试事件监听回调:返回JSON字符串" + msg);
+    }
+
+    function getBrandInfo(json) {
+        alert("获取班牌信息:返回JSON字符串" + json);
+    }
+
+    </script>

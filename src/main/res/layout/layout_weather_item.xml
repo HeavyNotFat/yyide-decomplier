@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
+        <TextView android:textSize="@dimen/dp_16" android:textColor="@color/home_E7" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/icon" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" android:layout_marginLeft="@dimen/dp_125" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/dp_16" android:textColor="@color/home_E7" android:id="@id/weather" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:id="@id/line" android:background="@color/line3" android:layout_width="match_parent" android:layout_height="@dimen/dp_1" />
+</LinearLayout>

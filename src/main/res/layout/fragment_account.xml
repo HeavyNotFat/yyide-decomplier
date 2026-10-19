@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.yd.android_brand_mvp.widget.YDEditText android:textSize="@dimen/sp_26" android:textColor="@color/black3" android:layout_gravity="center_horizontal" android:id="@id/edit" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_50" android:layout_marginTop="@dimen/dp_50" android:layout_marginRight="@dimen/dp_50" android:hint="请输入验证密码" android:inputType="textPassword" />
+        <TextView android:textSize="@dimen/sp_26" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/qd" android:background="@drawable/bg_comment_bt_30" android:layout_width="@dimen/dp_200" android:layout_height="@dimen/dp_50" android:text="确定" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,75 @@
+# ---------------------------------------------------------------------------
+# Gradle
+# ---------------------------------------------------------------------------
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+captures/
+.externalNativeBuild/
+.cxx/
+PERMISSION.md
+
+# Local, machine-specific SDK path
+local.properties
+
+# ---------------------------------------------------------------------------
+# Secrets / local-only material (see scripts/secrets.py)
+# ---------------------------------------------------------------------------
+_private/
+.secrets.local.json
+mock-server/requests.log
+src/main/res/raw/server.key
+src/main/assets/*.cert
+*.jks
+*.keystore
+
+# Compiled original/ECJ jars embed hard-coded production keys; keep them local.
+# Only the R constant jar is safe to publish.
+libs/*.jar
+!libs/app-r.jar
+
+# Endpoint output that can contain real tokens/responses
+scripts/endpoints/output/*.resolved.*
+scripts/endpoints/output/groups-resolved/
+scripts/endpoints/output/forged-requests.json
+scripts/endpoints/output/run-*.jsonl
+
+# ---------------------------------------------------------------------------
+# Android Studio / IntelliJ IDEA
+# ---------------------------------------------------------------------------
+# Project-wide settings are small and worth keeping; per-user workspace files
+# and caches are not.
+.idea/*
+!.idea/.gitignore
+!.idea/gradle.xml
+!.idea/misc.xml
+!.idea/compiler.xml
+!.idea/encodings.xml
+scripts/.idea
+
+*.iml
+*.iws
+*.ipr
+out/
+
+# ---------------------------------------------------------------------------
+# Build/reconstruction output
+# ---------------------------------------------------------------------------
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Decompilation and ECJ logs/temp files
+logs/
+*.log
+build_resource.log
+javac.*.args
+__pycache__/
+*.pyc
+
+# ---------------------------------------------------------------------------
+# OS
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db

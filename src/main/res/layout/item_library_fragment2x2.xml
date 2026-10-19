@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/clContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:paddingEnd="@dimen/dp_38"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_cover" android:layout_width="@dimen/dp_80" android:layout_height="@dimen/dp_115" android:src="@drawable/book_nomal2" />
+    <TextView android:textSize="@dimen/sp_18" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/tv_library_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12" android:text="十万个为" android:lines="1" />
+</androidx.appcompat.widget.LinearLayoutCompat>

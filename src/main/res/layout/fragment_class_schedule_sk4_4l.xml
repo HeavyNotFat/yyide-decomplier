@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="vertical" android:id="@id/content_layout" android:background="@drawable/bg_white_10" android:layout_width="@dimen/dp_908" android:layout_height="@dimen/dp_604">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_class_schedule_head_title_sk" />
+            <FrameLayout android:id="@id/table_view" android:layout_width="match_parent" android:layout_height="match_parent">
+                <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" app:msv_emptyView="@layout/item_min_null_layout_2_2" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <GridView android:id="@id/grid_rl" android:background="@drawable/table_item_bg9l_sk" android:layout_width="match_parent" android:layout_height="52.0dp" android:layout_marginTop="@dimen/dp_22" android:layout_marginStart="@dimen/dp_30" android:layout_marginEnd="@dimen/dp_28" />
+                        <GridView android:id="@id/list_table" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_26" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_26" android:layout_marginBottom="@dimen/dp_20" android:horizontalSpacing="@dimen/dp_4" android:verticalSpacing="@dimen/dp_10" android:numColumns="4" />
+                    </LinearLayout>
+                </com.yd.android_brand_mvp.weight.MultiStateView>
+            </FrameLayout>
+            <TextView android:textSize="34.0sp" android:textColor="#8c8c8c" android:gravity="center" android:id="@id/nodata" android:visibility="gone" android:layout_width="match_parent" android:layout_height="150.0dp" android:text="您今日没有课程" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

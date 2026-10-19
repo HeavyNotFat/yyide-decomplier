@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.qcloud.tim.tuikit.live.component.common.CircleImageView android:id="@id/iv_audience_head" android:layout_width="@dimen/live_top_anchor_avatar_height" android:layout_height="@dimen/live_top_anchor_avatar_height" android:src="@drawable/live_default_head_img" android:scaleType="centerCrop" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="10.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/iv_audience_weight" android:background="@drawable/live_top_item_experience_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-10.0dp" android:layout_below="@id/iv_audience_head" android:layout_centerHorizontal="true" android:paddingStart="2.0dp" android:paddingEnd="2.0dp" />
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingTop="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dp_20" android:paddingEnd="@dimen/dp_20"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:id="@id/ll_index" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#ff333333" android:id="@id/tv_seq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1." />
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#ff666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="一级指标：" />
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#ff333333" android:id="@id/tv_first_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="课堂纪律" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#ff666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="二级指标：" />
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#ff333333" android:id="@id/tv_second_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="课堂纪律" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#ff666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="得分：" />
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#ff4e4e" android:id="@id/tv_score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-5分" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat android:id="@id/ll_scoring_standard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ll_index">
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#ff666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  评分标准：" />
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#333333" android:id="@id/tv_standard_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="纪律严重混乱-2分，比较混乱-1分，正常" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat android:id="@id/ll_remark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ll_scoring_standard">
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#ff666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  得分备注：" />
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#333333" android:id="@id/tv_remark_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="xxx上课吃东西" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <View android:background="#d8d8d8" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="@dimen/dp_20" app:layout_constraintTop_toBottomOf="@id/ll_remark" />
+</androidx.constraintlayout.widget.ConstraintLayout>

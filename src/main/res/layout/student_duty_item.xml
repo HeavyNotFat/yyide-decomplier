@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:gravity="center_vertical" android:id="@id/ll_duty" android:layout_width="444.0dp" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:id="@id/iv_icon" android:padding="3.0dp" android:layout_width="@dimen/dp_42" android:layout_height="@dimen/dp_43" android:layout_marginLeft="@dimen/dp_29" android:layout_marginTop="15.0dp" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textColor="@color/nc_b" android:id="@id/tv_project_name" android:layout_marginTop="@dimen/dp_10" app:layout_constraintEnd_toEndOf="@id/iv_icon" app:layout_constraintStart_toStartOf="@id/iv_icon" app:layout_constraintTop_toBottomOf="@id/iv_icon" style="@style/TextSize_16sp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_name" android:layout_width="@dimen/dp_300" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginTop="@dimen/dp_18" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toRightOf="@id/cl_lab" app:layout_constraintTop_toTopOf="parent" />
+    <View android:background="@color/line" android:layout_width="match_parent" android:layout_height="@dimen/dp_1" android:layout_marginLeft="@dimen/dp_29" android:layout_marginRight="@dimen/dp_29" android:layout_marginHorizontal="@dimen/dp_29" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

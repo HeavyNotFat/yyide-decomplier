@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/img_head" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/wait_background" android:scaleType="centerCrop" />
+    <FrameLayout android:id="@id/fl_shade" android:background="#70000000" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.wang.avi.AVLoadingIndicatorView android:layout_gravity="center" android:id="@id/loading_view" android:layout_width="wrap_content" android:layout_height="wrap_content" app:indicatorName="BallPulseIndicator" style="@style/AVLoadingIndicatorView.Large" />
+    </FrameLayout>
+    <TextView android:textSize="14.0sp" android:textColor="@color/colorWhite" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_name" android:background="@drawable/username_border" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="3.0dp" android:layout_above="@id/pb_audio" android:layout_centerHorizontal="true" android:layout_marginStart="2.0dp" android:layout_marginEnd="2.0dp" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/pb_audio" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:max="100" android:progress="0" android:minHeight="3.0dp" android:layout_alignParentBottom="true" android:layout_marginStart="2.0dp" android:layout_marginEnd="2.0dp" style="?android:progressBarStyleHorizontal" />
+</merge>

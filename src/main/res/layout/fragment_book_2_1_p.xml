@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/book_layout" android:background="@drawable/bg_book" android:layout_width="320.0dp" android:layout_height="@dimen/dp_202">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_30" android:layout_marginTop="@dimen/dp_25">
+            <TextView android:background="@color/white" android:layout_width="5.0dp" android:layout_height="23.0dp" />
+            <TextView android:textSize="24.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:text="图书馆" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center|bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="13.0dp" android:src="@drawable/icon_ts2" />
+    </FrameLayout>
+</FrameLayout>

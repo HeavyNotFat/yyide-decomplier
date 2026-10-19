@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="vertical" android:id="@id/content" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_320" android:layout_height="@dimen/dp_424">
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_head_title" />
+        <androidx.viewpager.widget.ViewPager android:id="@id/pager" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_65" />
+    </FrameLayout>
+</FrameLayout>

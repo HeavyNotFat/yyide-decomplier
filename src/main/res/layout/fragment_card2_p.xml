@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/fl_cameraView" android:layout_width="@dimen/dp_380" android:layout_height="@dimen/dp_380">
+        <TextView android:gravity="center" android:layout_gravity="center|bottom" android:background="@drawable/bg_card" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="140.0dp" />
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#999999" android:layout_gravity="center|bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/please_device_card_area" />
+        <com.yd.android_brand_mvp.weight.CameraView android:layout_gravity="center_horizontal" android:id="@id/camera" android:visibility="gone" android:layout_width="@dimen/dp_300" android:layout_height="@dimen/dp_300" />
+        <ImageView android:gravity="center" android:layout_gravity="center|bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dp" android:src="@drawable/bg_card" />
+        <TextView android:id="@id/pm" android:background="@color/black" android:visibility="gone" android:layout_width="@dimen/dp_300" android:layout_height="@dimen/dp_300" android:layout_centerHorizontal="true" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/fl_card" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:gravity="center" android:layout_gravity="center|bottom" android:background="@drawable/bg_card" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="140.0dp" />
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#999999" android:layout_gravity="center|bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="65.0dp" android:text="@string/please_device_card_area" />
+    </FrameLayout>
+</FrameLayout>

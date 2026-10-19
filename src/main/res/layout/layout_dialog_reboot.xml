@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white10" android:layout_width="@dimen/dp_500" android:layout_height="200.0dp">
+        <TextView android:textStyle="normal" android:textColor="#504f4f" android:gravity="center" android:id="@id/msg" android:layout_width="match_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0" style="@style/TextSize_28" />
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/dp_100" android:paddingRight="@dimen/dp_100" android:layout_width="match_parent" android:layout_height="@dimen/dp_40" android:layout_marginBottom="@dimen/dp_40">
+            <TextView android:textStyle="normal" android:textColor="@color/black13" android:gravity="center" android:id="@id/cancel" android:background="@drawable/bg_black20_stroke" android:layout_width="@dimen/dp_0" android:layout_height="match_parent" android:layout_marginRight="@dimen/dp_20" android:text="取消" android:layout_weight="1.0" style="@style/TextSize_24black" />
+            <TextView android:textStyle="normal" android:textColor="@color/white" android:gravity="center" android:id="@id/yes" android:background="@drawable/bg_comment_bt_30" android:layout_width="@dimen/dp_0" android:layout_height="match_parent" android:text="确认" android:layout_weight="1.0" style="@style/TextSize_24black" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:padding="30.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:paddingLeft="42.0px" android:paddingTop="30.0px" android:paddingRight="42.0px" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="42.0px">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="470.0px">
+                <TextView android:textSize="@dimen/sp_24" android:textColor="@color/black9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="已打卡" />
+                <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" app:msv_emptyView="@layout/item_min_null_layout_2_2" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/rl_has_clock" android:paddingTop="@dimen/dp_24" android:layout_width="match_parent" android:layout_height="match_parent" />
+                </com.yd.android_brand_mvp.weight.MultiStateView>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="575.0px">
+                <TextView android:textSize="@dimen/sp_24" android:textColor="@color/black9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:text="考勤统计" />
+                <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu1" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" app:msv_emptyView="@layout/item_min_null_layout_2_2" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/rl_attence" android:layout_width="match_parent" android:layout_height="match_parent" />
+                </com.yd.android_brand_mvp.weight.MultiStateView>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_white20" android:layout_width="match_parent" android:layout_height="490.0px" android:layout_marginTop="@dimen/dp_30">
+            <FrameLayout android:id="@id/fl_layout" android:layout_width="380.0px" android:layout_height="380.0px" android:layout_marginLeft="@dimen/dp_69" android:src="@drawable/default_user_icon" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/sp_20" android:textColor="@color/black10" android:gravity="center" android:id="@id/tv_swiping_card" android:background="@drawable/bg_black20_stroke_d" android:layout_width="160.0dp" android:layout_height="48.0dp" android:text="刷卡" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="@dimen/sp_20" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_human_face" android:background="@drawable/bg_black20_stroke_f" android:layout_width="160.0dp" android:layout_height="48.0dp" android:layout_marginTop="@dimen/dp_38" android:text="人脸" android:layout_alignParentRight="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

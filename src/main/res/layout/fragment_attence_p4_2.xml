@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/content" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_660" android:layout_height="@dimen/dp_349">
+        <LinearLayout android:orientation="vertical" android:layout_width="@dimen/dp_160" android:layout_height="wrap_content">
+            <com.github.mikephil.charting.charts.PieChart android:id="@id/piechart" android:layout_width="160.0dp" android:layout_height="160.0dp" android:layout_marginTop="@dimen/dp_4" />
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_90">
+                <TextView android:textSize="20.0sp" android:textColor="#ff504f4f" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_time" android:layout_width="140.0dp" android:layout_height="wrap_content" android:text="0:00" android:lines="1" android:singleLine="true" />
+                <TextView android:textSize="20.0sp" android:textColor="#504f4f" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_name" android:layout_width="140.0dp" android:layout_height="wrap_content" android:text="事件考勤名称" android:lines="1" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/dp_20" android:layout_width="0.0dp" android:layout_height="@dimen/dp_349" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30.0dp" android:layout_marginLeft="@dimen/dp_20" android:layout_marginRight="@dimen/dp_10">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:id="@id/y1" android:background="@drawable/bg_att_shape1" android:layout_width="@dimen/dp_12" android:layout_height="@dimen/dp_12" />
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="#999999" android:id="@id/tv1" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_4" android:text="实到" />
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="#504f4f" android:id="@id/s1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:text="0人" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:id="@id/y2" android:background="@drawable/bg_attendance_level" android:layout_width="@dimen/dp_12" android:layout_height="@dimen/dp_12" />
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="#999999" android:id="@id/tv2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_4" android:text="迟到" />
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="#504f4f" android:id="@id/s2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:text="0人" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:id="@id/y3" android:background="@drawable/bg_att_shape3" android:layout_width="@dimen/dp_12" android:layout_height="@dimen/dp_12" />
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="#999999" android:id="@id/tv3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_4" android:text="签退" />
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="#504f4f" android:id="@id/s3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:text="0人" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:id="@id/y4" android:background="@drawable/bg_oval_black504f4f" android:layout_width="@dimen/dp_12" android:layout_height="@dimen/dp_12" />
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="#999999" android:id="@id/tv4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_4" android:text="早退" />
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="#504f4f" android:id="@id/s4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:text="0人" />
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv" android:paddingBottom="@dimen/dp_50" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_5" android:layout_marginBottom="@dimen/dp_10" android:groupIndicator="@null" android:divider="@null" />
+            <ExpandableListView android:id="@id/expandableListView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dp_319" android:layout_marginLeft="-5.0dp" android:groupIndicator="@null" android:divider="#ffffff" android:layout_weight="1.0" android:footerDividersEnabled="false" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

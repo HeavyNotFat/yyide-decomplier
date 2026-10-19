@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yd.android_brand_mvp.banner.manager.YDVideo android:id="@id/player" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <TextView android:id="@id/tm" android:background="@drawable/video_enlarge" android:paddingLeft="@dimen/dp_10" android:layout_width="25.0dp" android:layout_height="25.0dp" android:layout_marginRight="@dimen/dp_14" android:layout_marginBottom="@dimen/dp_14" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" />
+    <CheckBox android:id="@id/check" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_14" android:layout_marginBottom="@dimen/dp_7" android:button="@drawable/bg_voice_check_select" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_school_stroke" android:paddingTop="@dimen/dp_48" android:paddingBottom="@dimen/dp_40" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginLeft="@dimen/dp_30" android:layout_marginTop="@dimen/dp_30" android:layout_marginRight="@dimen/dp_30" android:layout_weight="1.0" android:paddingStart="@dimen/dp_62" android:paddingEnd="@dimen/dp_64" android:layout_marginHorizontal="@dimen/dp_30">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/dp_116">
+                <ImageView android:id="@id/img" android:layout_width="@dimen/dp_118" android:layout_height="@dimen/dp_116" android:scaleType="fitXY" />
+                <TextView android:textSize="@dimen/sp_30" android:textColor="@color/black13" android:layout_gravity="center_vertical" android:id="@id/school_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_39" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/dp_24" android:textColor="#6747d3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_40" android:text="基本信息" android:drawableLeft="@drawable/icon_school_2" android:drawablePadding="@dimen/dp_8" />
+            <GridView android:id="@id/grid" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dp" android:horizontalSpacing="@dimen/dp_20" android:numColumns="1" />
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_30">
+                <TextView android:textSize="@dimen/sp_24" android:textColor="#6747d3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="学校简介" android:drawableLeft="@drawable/icon_school_1" android:drawablePadding="@dimen/dp_8" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_25">
+                    <TextView android:textSize="18.0sp" android:textColor="#ff999999" android:layout_width="80.0dp" android:layout_height="wrap_content" android:text="中文名" />
+                    <TextView android:textSize="18.0sp" android:textColor="#ff393939" android:id="@id/tv_sname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_23" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_25">
+                    <TextView android:textSize="18.0sp" android:textColor="#ff999999" android:layout_width="80.0dp" android:layout_height="wrap_content" android:text="创办时间" />
+                    <TextView android:textSize="18.0sp" android:textColor="#ff393939" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_23" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_22">
+                    <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="18.0sp" android:textColor="#ff999999" android:layout_width="80.0dp" android:layout_height="wrap_content" android:text="学校介绍" />
+                            <com.yd.android_brand_mvp.widget.YDWebView android:id="@id/webview" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_138" android:src="@drawable/icon_kj_left" android:layout_marginStart="@dimen/dp_80" />
+</FrameLayout>

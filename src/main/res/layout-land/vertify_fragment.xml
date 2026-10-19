@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_444" android:layout_height="@dimen/dp_292">
+        <include android:id="@id/top" android:layout_width="match_parent" android:layout_height="@dimen/dp_75" layout="@layout/layout_head_title" />
+        <ImageView android:id="@id/imageview" android:layout_width="@dimen/dp_191" android:layout_height="@dimen/dp_198" android:scaleType="fitCenter" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/top" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

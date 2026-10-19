@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:layout_marginRight="15.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.tencent.liteav.audiosettingkit.CircleImageView android:id="@id/img_item" android:layout_width="44.0dp" android:layout_height="44.0dp" android:src="@drawable/audio_effect_setting_changetype_dashu" />
+    <TextView android:textSize="10.0sp" android:textColor="@color/white_alpha" android:layout_gravity="center" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" />
+</LinearLayout>

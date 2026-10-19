@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="@dimen/dp_90"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:paddingLeft="@dimen/dp_30" android:paddingTop="@dimen/dp_23" android:paddingRight="@dimen/dp_30" android:paddingBottom="@dimen/dp_23" android:layout_width="match_parent" android:layout_height="@dimen/dp_89" android:paddingHorizontal="@dimen/dp_30" android:paddingVertical="@dimen/dp_23">
+        <ImageView android:id="@id/iv_head_portrait" android:layout_width="@dimen/dp_44" android:layout_height="@dimen/dp_44" />
+        <TextView android:textColor="@color/black13" android:id="@id/tv_name" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:lines="1" android:singleLine="true" android:layout_toLeftOf="@id/tv_time" android:layout_toRightOf="@id/iv_head_portrait" style="@style/TextSize_16sp" />
+        <TextView android:textColor="@color/black11" android:ellipsize="end" android:id="@id/tv_comment" android:layout_marginLeft="@dimen/dp_10" android:lines="1" android:layout_toRightOf="@id/iv_head_portrait" android:layout_alignParentBottom="true" style="@style/TextSize_16sp" />
+        <TextView android:textColor="@color/black11" android:ellipsize="end" android:id="@id/tv_time" android:lines="1" android:layout_alignParentRight="true" style="@style/TextSize_16sp" />
+    </RelativeLayout>
+    <View android:background="@color/black17" android:paddingLeft="@dimen/dp_30" android:paddingRight="@dimen/dp_30" android:layout_width="match_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" android:paddingHorizontal="@dimen/dp_30" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bg_10dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yd.android_brand_mvp.widget.ChildViewPager android:id="@id/viewpager" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <net.lucode.hackware.magicindicator.MagicIndicator android:layout_gravity="center|bottom" android:id="@id/indicatorBanner" android:layout_width="wrap_content" android:layout_height="12.0dp" android:layout_marginBottom="12.0dp" android:layout_marginEnd="8.0dp" />
+</FrameLayout>

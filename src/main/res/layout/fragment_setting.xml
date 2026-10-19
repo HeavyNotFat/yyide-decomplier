@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@id/rl_bg" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/dp_100">
+                <LinearLayout android:gravity="center" android:id="@id/ll_back" android:layout_width="@dimen/dp_80" android:layout_height="match_parent" android:layout_alignParentEnd="true">
+                    <ImageView android:layout_gravity="center" android:layout_width="@dimen/dp_17" android:layout_height="@dimen/dp_17" android:src="@drawable/icon_set_close" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/sp_24" android:textColor="@color/black9" android:gravity="center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设置" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dp_30" />
+                <FrameLayout android:id="@id/bg" android:layout_width="match_parent" android:layout_height="match_parent" />
+                <TextView android:id="@id/toplongview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="5.0dp" android:layout_marginEnd="@dimen/dp_95" android:layout_toEndOf="@id/title" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingLeft="@dimen/dp_30" android:paddingRight="@dimen/dp_30" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_get_face" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:id="@id/img_get_face" android:background="@drawable/activation_icon" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="获取人脸激活码" android:layout_marginStart="20.0dp" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:id="@id/activation_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="未激活" style="@style/TextSize_24black" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_btn2" android:layout_marginStart="20.0dp" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout1" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:id="@id/img" android:background="@drawable/icon_y1" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="切换班级" android:layout_marginStart="20.0dp" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="切换班级" style="@style/TextSize_24black" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:src="@drawable/back_btn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout3" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_y2" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:text="网络设置" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:id="@id/tv_lab3" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:src="@drawable/back_btn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout10" android:visibility="gone" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_y2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:text="以太网" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textStyle="normal" android:textColor="@color/home_E7" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:src="@drawable/back_btn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout4" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_y3" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:text="声音" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:id="@id/tv_currentVolume" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:id="@id/tv_bg_img2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:src="@drawable/icon_xdonw" />
+                    <ImageView android:id="@id/tv_bg_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:src="@drawable/back_btn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout9" android:background="@color/white" android:paddingLeft="@dimen/dp_20" android:paddingRight="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="@dimen/dp_70" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:id="@id/down" android:paddingTop="@dimen/dp_20" android:paddingBottom="@dimen/dp_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_down" android:paddingVertical="@dimen/dp_20" />
+                    <SeekBar android:id="@id/seekBar" android:background="@android:color/transparent" android:paddingTop="@dimen/dp_10" android:paddingBottom="@dimen/dp_10" android:focusable="true" android:visibility="visible" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_15" android:layout_marginRight="@dimen/dp_15" android:maxHeight="4.0dp" android:max="100" android:progressDrawable="@drawable/seek_bar_voice_bg" android:minHeight="4.0dp" android:thumb="@drawable/seek_bar_voice_circle" android:layout_weight="1.0" android:paddingVertical="@dimen/dp_10" />
+                    <ImageView android:id="@id/up" android:paddingTop="@dimen/dp_10" android:paddingBottom="@dimen/dp_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_up" android:paddingVertical="@dimen/dp_10" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout5" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_y5" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:text="串口" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:id="@id/tv_lab4" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:src="@drawable/back_btn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout6" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_y6" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:text="软件更新" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:id="@id/msg2" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:src="@drawable/back_btn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout11" android:visibility="gone" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_close_system" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:text="退出系统" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:src="@drawable/back_btn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout7" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_y7" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:text="重启" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:src="@drawable/back_btn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout8" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_y8" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="20.0dp" android:text="关机" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:src="@drawable/back_btn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout88" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_y10" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="20.0dp" android:text="连接蓝牙锁" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_btn2" android:layout_marginStart="20.0dp" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_skin" android:visibility="gone" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_y9" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tvSkin" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="20.0dp" android:text="切换模式" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:src="@drawable/back_btn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout99" android:visibility="gone" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_y8" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="20.0dp" android:text="查看本地人脸" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:src="@drawable/back_btn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_config" android:visibility="gone" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/activation_icon" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tvConfig" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="20.0dp" android:text="配置地址" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:src="@drawable/back_btn2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_open" android:visibility="visible" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/activation_icon" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="开门" android:layout_marginStart="20.0dp" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_btn2" android:layout_marginStart="20.0dp" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_close" android:visibility="visible" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/activation_icon" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="关门" android:layout_marginStart="20.0dp" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_btn2" android:layout_marginStart="20.0dp" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_screen" android:visibility="visible" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_screen" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="设置为主屏" android:layout_marginStart="20.0dp" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@color/home_E7" android:id="@id/tvScreen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="否" style="@style/TextSize_24black" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_btn2" android:layout_marginStart="20.0dp" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_network_test" android:visibility="visible" android:layout_width="match_parent" android:layout_height="70.0dp" android:foreground="?android:selectableItemBackground">
+                    <ImageView android:background="@drawable/icon_y2" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+                    <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="@color/black20" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="网络测试" android:layout_marginStart="20.0dp" style="@style/TextSize_24black" />
+                    <TextView android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_btn2" android:layout_marginStart="20.0dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

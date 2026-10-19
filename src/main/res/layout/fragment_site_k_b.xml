@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="1776.0dp" android:layout_height="916.0dp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_class_schedule_top_20" android:layout_width="match_parent" android:layout_height="@dimen/dp_67" android:layout_marginLeft="30.0dp" android:layout_marginTop="@dimen/dp_21" android:layout_marginRight="30.0dp" android:layout_marginHorizontal="30.0dp">
+            <TextView android:textSize="15.0sp" android:textColor="#ffa4a4a4" android:gravity="center" android:paddingLeft="@dimen/dp_49" android:layout_width="@dimen/dp_233" android:layout_height="match_parent" android:text="节次" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/weekRecyclerView" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </LinearLayout>
+        <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" app:msv_emptyView="@layout/item_null_layout_4" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+            <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="30.0dp" android:layout_marginRight="30.0dp" android:layout_marginBottom="@dimen/dp_20" android:layout_marginHorizontal="30.0dp">
+                <LinearLayout android:orientation="vertical" android:background="@drawable/bg_class_schedule_bt_20" android:paddingBottom="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/ll_content" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="@dimen/dp_49" android:layout_height="match_parent">
+                            <LinearLayout android:gravity="center" android:id="@id/ll_morning_reading" android:background="#ffe0dd" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="@dimen/sp_15" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="早读" android:ems="1" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:id="@id/ll_forenoon" android:background="#c7f3f2" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="@dimen/sp_15" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上午" android:ems="1" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:id="@id/ll_afternoon" android:background="#c8e9fc" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="@dimen/sp_15" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下午" android:ems="1" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:id="@id/ll_night_ws" android:background="@drawable/bg_class_schedule_ws_20" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="@dimen/sp_15" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="晚上" android:ems="1" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:id="@id/ll_night" android:background="@drawable/bg_class_schedule_xw_20" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="@dimen/sp_15" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="晚自习" android:ems="1" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@id/ll_lab" android:layout_width="@dimen/dp_174" android:layout_height="match_parent" />
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <com.yd.android_brand_mvp.utils.view.MyGridView android:id="@id/gv_list1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_1" android:layout_marginRight="@dimen/dp_1" android:horizontalSpacing="1.0dp" android:verticalSpacing="@dimen/dp_1" android:layout_marginHorizontal="@dimen/dp_1" />
+                            <View android:id="@id/v1" android:layout_width="match_parent" android:layout_height="10.0dp" />
+                            <com.yd.android_brand_mvp.utils.view.MyGridView android:id="@id/gv_list2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_1" android:layout_marginRight="@dimen/dp_1" android:horizontalSpacing="1.0dp" android:verticalSpacing="@dimen/dp_1" android:layout_marginHorizontal="@dimen/dp_1" />
+                            <View android:id="@id/v2" android:layout_width="match_parent" android:layout_height="10.0dp" />
+                            <com.yd.android_brand_mvp.utils.view.MyGridView android:id="@id/gv_list3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_1" android:layout_marginRight="@dimen/dp_1" android:horizontalSpacing="1.0dp" android:verticalSpacing="@dimen/dp_1" android:layout_marginHorizontal="@dimen/dp_1" />
+                            <View android:id="@id/v3" android:layout_width="match_parent" android:layout_height="10.0dp" />
+                            <com.yd.android_brand_mvp.utils.view.MyGridView android:id="@id/gv_list4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_1" android:layout_marginRight="@dimen/dp_1" android:horizontalSpacing="1.0dp" android:verticalSpacing="@dimen/dp_1" android:layout_marginHorizontal="@dimen/dp_1" />
+                            <View android:id="@id/v4" android:layout_width="match_parent" android:layout_height="10.0dp" />
+                            <com.yd.android_brand_mvp.utils.view.MyGridView android:id="@id/gv_list5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_1" android:layout_marginRight="@dimen/dp_1" android:horizontalSpacing="1.0dp" android:verticalSpacing="@dimen/dp_1" android:layout_marginHorizontal="@dimen/dp_1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </com.yd.android_brand_mvp.weight.MultiStateView>
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/rl_check" android:visibility="visible" android:layout_width="match_parent" android:layout_height="@dimen/dp_80">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/rg_check" android:layout_width="match_parent" android:layout_height="@dimen/dp_80">
+                <Button android:textSize="@dimen/sp_15" android:textColor="@color/black11" android:gravity="center" android:id="@id/rb_week" android:background="@drawable/bg_white_stroke4" android:layout_width="@dimen/dp_118" android:layout_height="@dimen/dp_34" android:button="@null" android:text="上一周" android:stateListAnimator="@null" />
+                <Button android:textSize="@dimen/sp_15" android:textColor="@color/purple2" android:gravity="center" android:id="@id/rb_month" android:background="@drawable/bg_white_stroke4" android:layout_width="@dimen/dp_118" android:layout_height="@dimen/dp_34" android:layout_marginLeft="@dimen/dp_51" android:button="@null" android:text="本周" android:stateListAnimator="@null" />
+                <Button android:textSize="@dimen/sp_15" android:textColor="@color/black11" android:gravity="center" android:id="@id/rb_trimester" android:background="@drawable/bg_white_stroke4" android:layout_width="@dimen/dp_118" android:layout_height="@dimen/dp_34" android:layout_marginLeft="@dimen/dp_51" android:button="@null" android:text="下一周" android:stateListAnimator="@null" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

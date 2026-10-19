@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/tv_msg_content" android:background="@drawable/live_voice_room_bg_msg" android:paddingLeft="7.0dp" android:paddingTop="3.0dp" android:paddingRight="7.0dp" android:paddingBottom="4.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:layout_toLeftOf="@id/btn_msg_agree" />
+    </FrameLayout>
+    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/btn_msg_agree" android:background="@drawable/live_voice_room_bg_btn_msg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/live_voice_room_agree" />
+</LinearLayout>

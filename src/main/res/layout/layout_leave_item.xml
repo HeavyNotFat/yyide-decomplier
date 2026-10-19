@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/item_layout" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:padding="30.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/sp_20" android:textColor="@color/black9" android:ellipsize="end" android:id="@id/reason" android:layout_width="0.0dp" android:layout_height="wrap_content" android:singleLine="true" app:layout_constraintEnd_toStartOf="@id/type" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:id="@id/tv_layout_leave_item_time" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" app:layout_constraintStart_toStartOf="@id/reason" app:layout_constraintTop_toBottomOf="@id/reason" />
+        <TextView android:textSize="@dimen/sp_20" android:id="@id/type" android:background="@drawable/ask_for_leave_status_pass_shape" android:paddingLeft="15.0dp" android:paddingTop="10.0dp" android:paddingRight="15.0dp" android:paddingBottom="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="未通过" android:layout_centerVertical="true" android:layout_alignParentEnd="true" android:paddingHorizontal="15.0dp" android:paddingVertical="10.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View android:background="@color/line2" android:layout_width="match_parent" android:layout_height="1.0dp" />
+</LinearLayout>

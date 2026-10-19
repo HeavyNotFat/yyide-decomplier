@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yd.android_brand_mvp.view.ListenerConstraint android:paddingTop="60.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.tabs.TabLayout android:id="@id/tl_dialog_verify_user" android:layout_width="match_parent" android:layout_height="59.0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tabIndicator="@drawable/indicator_tab_layout" app:tabIndicatorColor="@color/colorPrimaryDark" app:tabIndicatorFullWidth="false" app:tabIndicatorGravity="bottom" app:tabIndicatorHeight="2.0dp" app:tabMode="fixed" app:tabRippleColor="@android:color/transparent" app:tabSelectedTextColor="@color/colorPrimaryDark" app:tabTextAppearance="@style/TabLayoutVerify" app:tabTextColor="#909399" />
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/vp_dialog_verify_user" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="1.0dp" android:layout_marginBottom="20.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/tl_dialog_verify_user" />
+</com.yd.android_brand_mvp.view.ListenerConstraint>

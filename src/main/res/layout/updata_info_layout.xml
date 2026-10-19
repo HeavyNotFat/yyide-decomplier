@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="730.0dp" android:layout_height="603.0dp">
+        <FrameLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/content_layout" android:background="@drawable/bg_white20" android:layout_width="680.0dp" android:layout_height="553.0dp">
+            <TextView android:layout_gravity="center_horizontal" android:background="@drawable/icon_updataing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_40" />
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_140">
+                <TextView android:textSize="24.0sp" android:textColor="#999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="有最新版本啦，确认更新到新版本" />
+                <TextView android:textSize="24.0sp" android:textColor="@color/white" android:id="@id/version" android:background="@drawable/bg_updata" android:padding="2.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="vv5555" android:layout_marginStart="5.0dp" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_50">
+                <TextView android:textSize="@dimen/sp_24" android:textColor="#666666" android:gravity="center" android:id="@id/cancel" android:background="@drawable/bg_black20_stroke_yt" android:layout_width="@dimen/dp_167" android:layout_height="46.0dp" android:layout_marginTop="-1.0dp" android:text="暂不更新" />
+                <TextView android:textSize="@dimen/sp_24" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/qd" android:background="@drawable/bg_comment_bt_30" android:paddingTop="@dimen/dp_8" android:layout_width="@dimen/dp_167" android:layout_height="55.0dp" android:text="立即更新" android:layout_marginStart="@dimen/dp_25" />
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:layout_gravity="right" android:id="@id/close" android:background="@drawable/icon_img_close" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

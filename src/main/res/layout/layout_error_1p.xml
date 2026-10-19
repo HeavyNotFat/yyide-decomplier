@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/retry" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="@dimen/dp_120" android:layout_height="@dimen/dp_120" android:src="@drawable/error_msg" />
+    <TextView android:text="网络加载失败，点击重试" style="@style/TextSize_16sp" />
+</LinearLayout>

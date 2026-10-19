@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/layout" android:background="@drawable/book_info_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/page" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <FrameLayout android:id="@id/layout_ll" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="188.0dp" android:layout_marginTop="31.0dp" android:layout_marginRight="188.0dp" android:layout_marginBottom="31.0dp">
+        <FrameLayout android:background="@drawable/library_book_bg" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.yd.android_brand_mvp.view.HackyViewPager2 android:id="@id/pager" android:layout_width="match_parent" android:layout_height="match_parent" />
+            <LinearLayout android:layout_gravity="center" android:layout_width="80.0dp" android:layout_height="match_parent">
+                <ImageView android:background="@drawable/tsgyy" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" />
+                <ImageView android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@id/toplayout" android:background="#99decda8" android:paddingLeft="30.0px" android:paddingRight="30.0px" android:layout_width="match_parent" android:layout_height="80.0dp">
+        <FrameLayout android:id="@id/back_layout" android:layout_width="50.0dp" android:layout_height="match_parent">
+            <TextView android:layout_gravity="center" android:id="@id/back" android:background="@drawable/back2_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <TextView android:textSize="40.0dp" android:textColor="#222222" android:layout_gravity="center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="图书馆" />
+        <TextView android:layout_gravity="right|center" android:id="@id/setting" android:layout_width="72.0px" android:layout_height="72.0px" />
+    </FrameLayout>
+</FrameLayout>

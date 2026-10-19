@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_tab" android:layout_width="match_parent" android:layout_height="60.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/line" android:background="@color/purple2" android:visibility="invisible" android:layout_width="6.0dp" android:layout_height="match_parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <CheckedTextView android:id="@id/checkImg" android:background="@drawable/user_tab1" android:layout_width="22.0dp" android:layout_height="22.0dp" />
+        <CheckedTextView android:textSize="18.0sp" android:textColor="@color/rb_check_color3" android:id="@id/check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="课表" android:layout_marginStart="15.0dp" />
+    </LinearLayout>
+    <TextView android:layout_gravity="bottom" android:id="@id/textView30" android:background="#f5f6fa" android:layout_width="match_parent" android:layout_height="1.0dp" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

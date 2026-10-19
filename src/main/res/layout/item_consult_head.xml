@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:paddingTop="@dimen/dp_50" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/dp_50"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="32.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/tv_name_text" android:background="@drawable/bg_3f87ff_50" android:layout_width="@dimen/dp_96" android:layout_height="@dimen/dp_96" android:text="长" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@id/iv_head" android:layout_width="@dimen/dp_96" android:layout_height="@dimen/dp_96" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="@dimen/sp_20" android:textColor="#ff333333" android:ellipsize="end" android:gravity="center" android:id="@id/tv_name" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_8" android:lines="1" app:layout_constraintEnd_toEndOf="@id/tv_name_text" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/iv_head" />
+</androidx.constraintlayout.widget.ConstraintLayout>

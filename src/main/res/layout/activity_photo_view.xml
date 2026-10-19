@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#000" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/photo_view_back" android:paddingLeft="16.0dp" android:paddingRight="30.0dp" android:layout_width="wrap_content" android:layout_height="45.0dp">
+        <ImageView android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/title_bar_back" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.tencent.qcloud.tim.uikit.component.photoview.PhotoView android:id="@id/photo_view" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <TextView android:textSize="12.0sp" android:textColor="#fff" android:id="@id/view_original_btn" android:background="@drawable/view_original_image_border" android:padding="2.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dp" android:text="@string/view_original_image" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/bg_white20" android:padding="30.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="30.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="28.0sp" android:textColor="@color/black9" android:gravity="center" android:id="@id/tv_fragment_reservation_noSign_detail_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_count_people" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_fragment_reservation__noSign_detail_sign" android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_fragment_reservation_noSign_detail_count" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_bottom" android:background="@drawable/bg_white20" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" app:msv_emptyView="@layout/item_null_layout_4" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+            <LinearLayout android:orientation="horizontal" android:id="@id/llContent" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingEnd="@dimen/dp_30">
+                <include android:id="@id/content" layout="@layout/layout_list_announcement" />
+            </LinearLayout>
+        </com.yd.android_brand_mvp.weight.MultiStateView>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingTop="@dimen/dp_20" android:paddingBottom="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingVertical="@dimen/dp_20"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="14.0sp" android:textColor="#ff333333" android:id="@id/tvMessage" android:background="@drawable/bg_ai_chat_search" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/dp_600" android:minHeight="@dimen/dp_40" android:text="如何训练学生专注力" android:layout_marginEnd="@dimen/dp_12" app:layout_constraintEnd_toStartOf="@id/ic_head" app:layout_constraintTop_toTopOf="@id/ic_head" />
+    <ImageView android:id="@id/ic_head" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:src="@drawable/icon_ai_chat_head" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

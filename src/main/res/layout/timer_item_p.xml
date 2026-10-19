@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:layout_width="940.0dp" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="vertical" android:id="@id/fl_bg" android:background="@drawable/icon_timer_item_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:layout_marginRight="@dimen/dp_20" android:layout_marginHorizontal="@dimen/dp_20">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="470.0dp" android:layout_height="522.0dp" android:layout_marginTop="@dimen/dp_31">
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/dp_10" android:paddingRight="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:paddingHorizontal="@dimen/dp_10">
+                <TextView android:textSize="151.0sp" android:textStyle="bold" android:textColor="@color/yellow5" android:id="@id/tv_num" android:text="0" style="@style/TextSize_70sp" />
+                <TextView android:textSize="42.0sp" android:textStyle="bold" android:textColor="@color/yellow5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="天" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/sp_42" android:textColor="@color/black3" android:gravity="center_horizontal" android:layout_gravity="bottom" android:id="@id/tv_content" android:paddingLeft="@dimen/dp_20" android:paddingRight="@dimen/dp_10" android:layout_width="match_parent" android:layout_marginTop="@dimen/dp_25" android:text="我看见爱上了几分" android:layout_below="@id/tv_num" style="@style/TextSize_20sp" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:paddingBottom="12.599976dp" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="12.599976sp" android:textColor="@color/text_tips_color" android:id="@id/chat_time_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.9799805dp" android:layout_marginBottom="20.579987dp" android:includeFontPadding="false" android:layout_centerHorizontal="true" />
+    <FrameLayout android:id="@id/msg_content_fl" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/chat_time_tv" />
+</RelativeLayout>

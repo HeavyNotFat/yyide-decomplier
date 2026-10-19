@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="1920.0dp" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:background="#80000000" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <RelativeLayout android:layout_gravity="center" android:id="@id/image" android:layout_width="@dimen/dp_500" android:layout_height="@dimen/dp_260" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_card_10" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_50">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_55">
+                <TextView android:textSize="@dimen/sp_20" android:textColor="#262626" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                <TextView android:textSize="@dimen/sp_18" android:textColor="#504f4f" android:id="@id/tv_class" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:text="" />
+            </LinearLayout>
+            <TextView android:textSize="34.0sp" android:textColor="@color/purple2" android:id="@id/tv_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_28" android:text="" />
+            <TextView android:textSize="18.0sp" android:textColor="#999999" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="" />
+        </LinearLayout>
+        <RelativeLayout android:gravity="center" android:background="@drawable/bg_yuan_bg" android:layout_width="@dimen/dp_100" android:layout_height="@dimen/dp_100" android:layout_centerHorizontal="true">
+            <com.makeramen.roundedimageview.RoundedImageView android:id="@id/iv_img" android:layout_width="@dimen/dp_88" android:layout_height="@dimen/dp_88" android:scaleType="fitXY" app:riv_oval="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:id="@id/fl_bg" android:background="@drawable/icon_timer_item_bg" android:layout_width="587.0dp" android:layout_height="381.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dp_280" android:layout_height="366.0dp">
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20">
+            <TextView android:textSize="@dimen/sp_70" android:textStyle="bold" android:textColor="@color/yellow5" android:id="@id/tv_num" android:text="0" style="@style/TextSize_70sp" />
+            <TextView android:textSize="35.0sp" android:textStyle="bold" android:textColor="@color/yellow5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="天" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/sp_30" android:textStyle="bold" android:textColor="@color/black9" android:gravity="center_horizontal" android:layout_gravity="bottom" android:id="@id/tv_content" android:layout_width="match_parent" android:layout_marginTop="@dimen/dp_25" android:text="我看见爱上了几分" android:layout_below="@id/tv_num" style="@style/TextSize_20sp" />
+    </LinearLayout>
+</FrameLayout>

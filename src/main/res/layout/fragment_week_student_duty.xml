@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:padding="@dimen/dp_26" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" app:msv_emptyView="@layout/item_null_layout_4" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+        <com.yd.android_brand_mvp.customview.NestRecyclerView android:id="@id/rv_all_duty" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </com.yd.android_brand_mvp.weight.MultiStateView>
+</FrameLayout>

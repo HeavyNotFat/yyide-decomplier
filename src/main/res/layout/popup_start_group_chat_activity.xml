@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.tencent.qcloud.tim.uikit.component.TitleBarLayout android:id="@id/group_create_title_bar" android:layout_width="match_parent" android:layout_height="@dimen/page_title_height" />
+    <com.tencent.qcloud.tim.uikit.component.LineControllerView android:id="@id/group_type_join" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dp" app:name="@string/group_join_type" />
+    <com.tencent.qcloud.tim.uikit.modules.contact.ContactListView android:id="@id/group_create_member_list" android:layout_width="match_parent" android:layout_height="match_parent" />
+</LinearLayout>

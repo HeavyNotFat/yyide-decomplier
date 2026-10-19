@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/layout_table_item" android:background="@drawable/bg_white_transparency_65" android:padding="@dimen/dp_10" android:layout_width="264.0dp" android:layout_height="100.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:id="@id/tv_table_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="高分子化学" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:id="@id/tv_table_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dp" android:text="08:00-08:40" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_table_name" />
+    <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="right" android:id="@id/tv_teacher_name" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="佳兴" android:lines="1" android:layout_marginStart="@dimen/dp_5" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/tv_table_time" app:layout_constraintTop_toTopOf="@id/tv_table_time" />
+</androidx.constraintlayout.widget.ConstraintLayout>

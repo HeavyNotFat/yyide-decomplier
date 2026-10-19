@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="20.0sp" android:textColor="#a4a4a4" android:id="@id/tv_view_leave_process" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="流程:" android:layout_marginStart="20.0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="16.0sp" android:textColor="#a4a4a4" android:id="@id/tv_view_leave_process_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="必填信息填写后,流程将自动显示" android:layout_marginStart="20.0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_view_leave_process" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_view_leave_process" android:background="@color/white" android:paddingTop="20.0dp" android:paddingBottom="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:paddingVertical="20.0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_view_leave_process" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/bg" android:background="@drawable/bg_white20" android:layout_width="444.0dp" android:layout_height="292.0dp">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include android:id="@id/in_top" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_head_title" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:background="@drawable/bg_book2" android:paddingLeft="8.0dp" android:paddingTop="3.0dp" android:paddingRight="8.0dp" android:paddingBottom="3.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="140.0dp" android:layout_marginTop="25.0dp" android:text="热门借阅" android:paddingHorizontal="8.0dp" android:paddingVertical="3.0dp" />
+        </FrameLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_35" android:layout_marginTop="25.0dp" android:layout_marginRight="@dimen/dp_35" />
+    </LinearLayout>
+</RelativeLayout>

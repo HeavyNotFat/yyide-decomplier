@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="7.0dp" android:paddingRight="7.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.5sp" android:textColor="@color/black_font_color" android:gravity="center_vertical" android:id="@id/msg_tv_live_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" />
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/darker_gray" android:id="@id/msg_tv_live_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" />
+    <View android:background="@android:color/darker_gray" android:layout_width="match_parent" android:layout_height="1.0px" android:layout_marginTop="10.0dp" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="3.0dp" android:paddingBottom="3.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="14.0dp" android:layout_height="14.0dp" android:src="@drawable/live_ic_group_live" />
+        <TextView android:textSize="14.0sp" android:textColor="@android:color/darker_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dp" android:text="@string/live_group_live" />
+    </LinearLayout>
+</LinearLayout>

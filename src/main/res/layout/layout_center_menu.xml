@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_183"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckedTextView android:id="@id/checkImg" android:background="@drawable/user_tab1" android:layout_width="56.0dp" android:layout_height="56.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <CheckedTextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="@color/rb_check_color3" android:id="@id/check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="课表" android:drawablePadding="@dimen/dp_10" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/checkImg" />
+</androidx.constraintlayout.widget.ConstraintLayout>

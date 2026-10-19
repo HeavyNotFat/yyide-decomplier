@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/ll_content" android:background="@drawable/bg_checked" android:layout_width="40.0dp" android:layout_height="40.0dp">
+        <TextView android:textSize="16.0sp" android:gravity="center" android:id="@id/tv_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20" />
+        <TextView android:textSize="10.0sp" android:gravity="center" android:id="@id/tv_lunar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="初一" />
+    </LinearLayout>
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/flag" android:background="@color/colorAccent" android:visibility="gone" android:layout_width="5.0dp" android:layout_height="5.0dp" />
+</LinearLayout>

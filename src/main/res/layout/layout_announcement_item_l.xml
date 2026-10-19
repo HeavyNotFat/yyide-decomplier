@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="match_parent" android:layout_height="@dimen/dp_29" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_assignment_2" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="22.0sp" android:textColor="@color/purple2" android:id="@id/tv_subject" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_22" android:layout_marginTop="@dimen/dp_19" android:layout_marginBottom="@dimen/dp_20" />
+        <TextView android:textSize="16.0sp" android:textColor="#999999" android:gravity="right" android:id="@id/tv_create_people" android:paddingRight="@dimen/sp_20" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0sp" android:textColor="#999999" android:gravity="right" android:id="@id/tv_time" android:paddingRight="@dimen/sp_20" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:background="@drawable/bg_assignment_1" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textColor="#ff303133" android:id="@id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_22" android:layout_marginTop="@dimen/dp_19" android:layout_marginBottom="@dimen/dp_10" android:lineSpacingExtra="@dimen/dp_6" />
+    </LinearLayout>
+</LinearLayout>

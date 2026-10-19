@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/layoutContent" android:background="@drawable/bg_10dp_gray1" android:padding="15.0dp" android:layout_width="match_parent" android:layout_height="120.0dp" android:layout_marginTop="@dimen/dp_15"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/img" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/icon_item_table" />
+        <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/text_333333" android:ellipsize="end" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:text="16:00-17:00" android:maxLines="1" android:singleLine="true" />
+    </LinearLayout>
+    <TextView android:textSize="20.0sp" android:textColor="@color/color_999999" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_6" android:text="大学综合教程英语" />
+</LinearLayout>

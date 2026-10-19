@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/bg_white_top_r20" android:padding="30.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="26.0sp" android:textColor="#333333" android:id="@id/tv_view_collect_form_head_title" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="20.0sp" android:textColor="#666666" android:id="@id/tv_view_collect_form_head_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="19.0dp" android:text="请要请假的学生填写以下信息" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_view_collect_form_head_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

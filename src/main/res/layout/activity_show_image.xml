@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.to.aboomy.pager2banner.Banner android:id="@id/banner" android:background="@color/black16" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/black10" android:id="@id/tv_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_40" android:layout_marginBottom="@dimen/dp_30" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

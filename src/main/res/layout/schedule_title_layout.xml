@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/layoutTop" android:background="@drawable/bg_title_3" android:paddingLeft="@dimen/dp_30" android:paddingRight="@dimen/dp_30" android:layout_width="match_parent" android:layout_height="79.0dp">
+        <TextView android:textSize="26.0sp" android:textColor="@color/black9" android:layout_gravity="center" android:id="@id/title_Name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <RelativeLayout android:id="@id/rl_rb" android:layout_width="match_parent" android:layout_height="match_parent">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="@dimen/sp_18" android:textColor="#ff393939" android:layout_gravity="right|center" android:id="@id/week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_30" android:text="当前周次" />
+                <TextView android:textSize="@dimen/sp_20" android:textColor="@color/purple2" android:gravity="center" android:layout_gravity="right|center" android:id="@id/checkbox" android:background="@drawable/bg_rb_ann_23_on_stroke" android:visibility="gone" android:layout_width="@dimen/dp_140" android:layout_height="@dimen/dp_46" android:layout_marginRight="@dimen/dp_30" android:text="切换双周" android:textAlignment="center" />
+            </FrameLayout>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/rl_check" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dp_110" android:layout_marginLeft="@dimen/dp_30">
+            <LinearLayout android:gravity="right|center" android:orientation="horizontal" android:id="@id/rg_check" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dp_110">
+                <Button android:textSize="@dimen/sp_20" android:textColor="@color/purple2" android:gravity="center" android:id="@id/rb_week" android:background="@drawable/bg_rb_ann_23_on_stroke" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:button="@null" android:text="上一周" android:stateListAnimator="@null" />
+                <Button android:textSize="@dimen/sp_20" android:textColor="@color/purple2" android:gravity="center" android:id="@id/rb_trimester" android:background="@drawable/bg_rb_ann_23_on_stroke" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:layout_marginLeft="@dimen/dp_30" android:button="@null" android:text="下一周" android:stateListAnimator="@null" />
+            </LinearLayout>
+        </RelativeLayout>
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/back_layout" android:layout_width="@dimen/dp_50" android:layout_height="@dimen/dp_50">
+            <TextView android:layout_gravity="center" android:id="@id/left" android:background="@drawable/back_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </FrameLayout>
+    <TextView android:background="#ffeeeeee" android:layout_width="match_parent" android:layout_height="1.0dp" />
+</LinearLayout>

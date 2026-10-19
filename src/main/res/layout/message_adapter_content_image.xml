@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/content_image_iv" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/video_play_btn" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chat_play_icon" android:layout_centerInParent="true" />
+    <TextView android:textSize="11.0sp" android:textColor="@color/white" android:id="@id/video_duration_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.5dp" android:layout_marginBottom="4.0dp" android:layout_alignRight="@id/content_image_iv" android:layout_alignBottom="@id/content_image_iv" />
+</RelativeLayout>

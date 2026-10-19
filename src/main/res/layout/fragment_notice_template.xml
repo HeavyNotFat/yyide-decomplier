@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/clContent" android:background="@drawable/bg_white20" android:padding="@dimen/dp_30" android:layout_width="@dimen/dp_908" android:layout_height="@dimen/dp_916"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/top" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:id="@id/iv3" android:layout_width="5.0dp" android:layout_height="25.0dp" android:src="@drawable/bg_comment_bt_40" app:layout_constraintBottom_toBottomOf="@id/top3" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/top3" />
+        <TextView android:textSize="@dimen/sp_24" android:textStyle="bold" android:gravity="center" android:id="@id/top3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="通知公告" android:layout_marginStart="@dimen/dp_15" app:layout_constraintStart_toEndOf="@id/iv3" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textSize="@dimen/sp_24" android:textColor="@color/table_two_hint" android:id="@id/tvRight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全部" android:drawablePadding="@dimen/dp_6" android:layout_marginStart="@dimen/dp_15" app:drawableRightCompat="@drawable/right" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="0.0dp" android:layout_height="0.0dp" android:layout_marginTop="@dimen/dp_10" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/top" />
+</androidx.constraintlayout.widget.ConstraintLayout>

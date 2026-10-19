@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/rl_bg" android:background="@drawable/icon_kb_white" android:paddingLeft="@dimen/dp_20" android:paddingTop="@dimen/dp_14" android:paddingRight="@dimen/dp_20" android:paddingBottom="@dimen/dp_17" android:layout_width="@dimen/dp_208" android:layout_height="@dimen/dp_211" android:paddingHorizontal="@dimen/dp_20">
+        <TextView android:textSize="16.0sp" android:textColor="#ffa4a4a4" android:id="@id/seletion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="第一节" />
+        <TextView android:textSize="22.0sp" android:textColor="@color/black2" android:ellipsize="end" android:id="@id/subjectName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_3" android:text="名称" android:singleLine="true" android:drawableRight="@drawable/icon_one_st" android:drawablePadding="@dimen/dp_8" android:layout_below="@id/seletion" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_two" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0px" android:layout_below="@id/subjectName">
+            <TextView android:textSize="@dimen/sp_15" android:textColor="@color/black16" android:ellipsize="end" android:id="@id/otherClassesTeacher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_80" android:text="教学楼" android:lines="1" android:singleLine="true" android:layout_above="@id/time" />
+            <TextView android:textSize="@dimen/sp_15" android:textColor="@color/black16" android:id="@id/time1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12：43" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="22.0sp" android:textColor="@color/black2" android:ellipsize="end" android:id="@id/otherSubjectName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="名称" android:singleLine="true" android:drawableRight="@drawable/icon_two_st" android:drawablePadding="@dimen/dp_8" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/black16" android:ellipsize="end" android:id="@id/teacherName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_80" android:text="教学楼" android:lines="1" android:singleLine="true" android:layout_above="@id/time" />
+        <TextView android:textSize="@dimen/sp_15" android:textColor="@color/black16" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12：43" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_fragment_repair22" android:background="@drawable/bg_repair_landscape22" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatButton android:textSize="24.0sp" android:textColor="#ff5f76d3" android:id="@id/btn_fragment_repair" android:background="@drawable/bg_white20" android:layout_width="120.0dp" android:layout_height="46.0dp" android:layout_marginBottom="30.0dp" android:text="报修" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_item" android:layout_width="match_parent" android:layout_height="@dimen/dp_51"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_item2" android:background="@color/white" android:paddingLeft="4.0dp" android:paddingRight="4.0dp" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" android:paddingHorizontal="4.0dp">
+        <TextView android:id="@id/dian" android:background="@drawable/bg_dots_shape" android:layout_width="@dimen/dp_6" android:layout_height="@dimen/dp_6" android:layout_marginStart="40.0dp" />
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/black13" android:ellipsize="end" android:id="@id/tv_title" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_11" android:layout_marginRight="@dimen/dp_11" android:maxLines="1" android:lines="1" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textColor="@color/black11" android:id="@id/tv_time" android:layout_marginEnd="@dimen/dp_10" style="@style/TextSize_14sp" />
+    </LinearLayout>
+    <include layout="@layout/layout_line" />
+</LinearLayout>

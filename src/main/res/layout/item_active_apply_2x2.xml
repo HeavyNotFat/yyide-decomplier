@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/dp_48"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/sp_13" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_active_status" android:background="@drawable/bg_4cc89b_50" android:layout_width="@dimen/dp_64" android:layout_height="@dimen/dp_22" android:text="@string/active_apply_ing" />
+    <TextView android:textSize="@dimen/sp_18" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/tv_active_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="小学提升教育质量讨论会" android:lines="1" android:layout_marginStart="@dimen/dp_10" android:layout_marginEnd="@dimen/dp_10" />
+</androidx.appcompat.widget.LinearLayoutCompat>

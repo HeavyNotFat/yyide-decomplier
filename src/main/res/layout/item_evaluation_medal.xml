@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white" android:paddingTop="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ivIcon" android:layout_width="183.0dp" android:layout_height="183.0dp" android:src="@drawable/icon_evaluation_medal_details" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="18.0sp" android:textColor="#ff666666" android:gravity="center" android:id="@id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_15" android:text="首次阅读完一本书" app:layout_constraintEnd_toEndOf="@id/ivIcon" app:layout_constraintStart_toStartOf="@id/ivIcon" app:layout_constraintTop_toBottomOf="@id/ivIcon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

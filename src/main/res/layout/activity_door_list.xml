@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:background="#383d56" android:layout_width="match_parent" android:layout_height="70.0dp">
+        <LinearLayout android:gravity="center" android:id="@id/ll_back" android:layout_width="50.0dp" android:layout_height="match_parent">
+            <TextView android:layout_gravity="center" android:id="@id/back" android:background="@drawable/back_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:textSize="32.0dp" android:textStyle="normal" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="系统设置" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:paddingLeft="110.0dp" android:paddingRight="110.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="30.0dp">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_biankuang20" android:paddingLeft="38.0dp" android:paddingRight="38.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="60.0dp" android:layout_marginBottom="142.0dp">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/list_device" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

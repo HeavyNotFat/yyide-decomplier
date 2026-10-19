@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_fragment_exam_arrangement" android:background="@drawable/bg_white20" android:paddingBottom="30.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/top_fragment_exam_arrangement" app:layout_constraintTop_toTopOf="parent" layout="@layout/layout_head_title" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_margin="30.0dp" app:layout_constraintBottom_toTopOf="@id/btn_fragment_exam_sign" app:layout_constraintTop_toBottomOf="@id/top_fragment_exam_arrangement">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_fragment_exam_arrangement_week" android:background="@drawable/bg_class_schedule_top_20" android:layout_width="match_parent" android:layout_height="50.0dp" app:layout_constraintTop_toTopOf="parent" />
+        <ScrollView android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/rv_fragment_exam_arrangement_week">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_fragment_exam_arrangement_course" android:background="@drawable/frame_ebeef5_grey_bottom_r20" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/rv_fragment_exam_arrangement_week" />
+        </ScrollView>
+        <ViewStub android:id="@id/empty_view" android:layout="@layout/item_min_null_layout_2" android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/rv_fragment_exam_arrangement_week" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/btn_fragment_exam_sign" android:background="@drawable/bg_purple23" android:layout_width="207.0dp" android:layout_height="50.0dp" android:text="@string/sign" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <ViewStub android:id="@id/empty_view2" android:layout="@layout/item_min_null_layout_2" android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/top_fragment_exam_arrangement" />
+</androidx.constraintlayout.widget.ConstraintLayout>

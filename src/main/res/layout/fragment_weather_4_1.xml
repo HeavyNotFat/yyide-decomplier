@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:paddingLeft="@dimen/dp_20" android:paddingRight="@dimen/dp_20" android:layout_width="660.0dp" android:layout_height="@dimen/dp_202" android:paddingHorizontal="@dimen/dp_20">
+        <ImageView android:id="@id/tv_weather" android:layout_width="@dimen/dp_207" android:layout_height="@dimen/dp_150" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/dp_11" android:layout_alignParentEnd="true" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:layout_marginStart="@dimen/dp_17" android:layout_marginEnd="-218.0dp" android:layout_toStartOf="@id/tv_weather">
+            <TextClock android:textSize="26.0sp" android:textColor="@color/black10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:format24Hour="yyyy年MM月dd日" />
+            <TextClock android:textSize="26.0sp" android:textColor="@color/black10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_10" android:format24Hour="EEEE" />
+            <TextClock android:textSize="26.0sp" android:textColor="@color/black10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_10" android:format24Hour="HH:mm" />
+        </LinearLayout>
+        <RelativeLayout android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="100.0dp" android:layout_marginBottom="@dimen/dp_10" android:layout_alignParentBottom="true">
+            <TextView android:textSize="40.0sp" android:textColor="@color/black10" android:id="@id/wd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_5" android:layout_marginStart="@dimen/dp_10" />
+            <TextView android:textSize="28.0sp" android:textColor="@color/black10" android:id="@id/weathertext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_24" android:layout_above="@id/site" android:layout_marginStart="10.0dp" android:layout_toEndOf="@id/wd" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/black10" android:id="@id/site" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_marginBottom="@dimen/dp_12" android:layout_alignBottom="@id/wd" android:layout_marginStart="10.0dp" android:layout_toEndOf="@id/wd" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

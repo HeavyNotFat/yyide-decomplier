@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Toolbar android:id="@id/toolbar" android:layout_width="match_parent" android:layout_height="?android:actionBarSize" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:navigationIcon="@drawable/ic_back">
+        <TextView android:textSize="18.0sp" android:textColor="@color/colorWhite" android:layout_gravity="center" android:id="@id/toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="语音通话" android:singleLine="true" />
+    </androidx.constraintlayout.widget.Toolbar>
+    <ImageView android:id="@id/img_start_new_call" android:layout_width="100.0dp" android:layout_height="100.0dp" android:src="@drawable/ic_add_contact" app:layout_constraintBottom_toTopOf="@id/tv_start_new_call" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" />
+    <TextView android:textSize="@dimen/text_size_large" android:textColor="@color/colorWhite" android:id="@id/tv_start_new_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="点击上方按钮发起呼叫" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/img_start_new_call" />
+</androidx.constraintlayout.widget.ConstraintLayout>

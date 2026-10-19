@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:background="@mipmap/icon_cartoon_student_msg_bg" android:paddingLeft="@dimen/dp_6" android:paddingRight="@dimen/dp_6" android:paddingBottom="@dimen/dp_9" android:layout_width="@dimen/dp_444" android:layout_height="@dimen/dp_454">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_25" android:layout_marginStart="@dimen/dp_20">
+            <ImageView android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_60" android:src="@mipmap/icon_cartoon_student_msg_left" />
+            <TextView android:textSize="38.0sp" android:textStyle="bold" android:textColor="#ff856100" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="消息" android:layout_marginStart="@dimen/dp_20" />
+        </LinearLayout>
+        <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="@dimen/dp_35" android:layout_weight="1.0" app:msv_emptyView="@layout/item_min_null_layout_2_1_2" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+            <GridView android:id="@id/grid" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_20" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_20" android:layout_marginBottom="@dimen/dp_12" android:horizontalSpacing="@dimen/dp_20" android:verticalSpacing="@dimen/dp_20" android:numColumns="3" />
+        </com.yd.android_brand_mvp.weight.MultiStateView>
+    </LinearLayout>
+</FrameLayout>

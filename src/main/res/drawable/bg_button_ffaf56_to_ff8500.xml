@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="#ffffaf56" android:endColor="#ffff8500" android:useLevel="true" android:angle="90.0" android:type="linear" />
+    <corners android:radius="50.0dp" />
+    <item android:name="android:shadowColor">#4dfe8e57</item>
+    <item android:name="android:shadowDx">0</item>
+    <item android:name="android:shadowDy">2</item>
+    <size android:height="@dimen/dp_46" android:width="@dimen/dp_180" />
+</shape>

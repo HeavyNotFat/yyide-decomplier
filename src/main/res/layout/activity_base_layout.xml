@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bg" android:background="@drawable/bp_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include android:layout_width="match_parent" android:layout_height="@dimen/dp_82" layout="@layout/top_layout" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_two" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_42" android:layout_marginRight="@dimen/dp_42" android:layout_marginBottom="@dimen/dp_42">
+            <FrameLayout android:id="@id/fl_title" android:layout_width="match_parent" android:layout_height="80.0dp" />
+            <View android:background="#dddddd" android:layout_width="match_parent" android:layout_height="1.0dp" />
+            <FrameLayout android:id="@id/content" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </LinearLayout>
+        <TextView android:layout_gravity="bottom" android:id="@id/tv_close" android:background="@drawable/icon_sb_close" android:paddingTop="@dimen/dp_20" android:paddingBottom="@dimen/dp_20" android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_80" android:paddingEnd="20.0dp" android:paddingVertical="@dimen/dp_20" />
+    </LinearLayout>
+</FrameLayout>

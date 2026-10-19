@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_title" android:paddingTop="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dp_30"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <View android:background="@drawable/bg_custom_line" android:layout_width="5.0dp" android:layout_height="25.0dp" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/sp_24" android:textColor="@color/white" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="标题" android:layout_marginStart="15.0dp" />
+    <TextView android:textSize="@dimen/sp_18" android:textColor="@color/white" android:gravity="right" android:id="@id/tv_week" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/dp_37" />
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:background="@drawable/bg_white20_bottom" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="@dimen/dp_38" android:paddingEnd="@dimen/dp_30"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="@dimen/dp_96" android:layout_height="match_parent">
+        <RelativeLayout android:gravity="center_horizontal" android:id="@id/rl_head" android:layout_width="@dimen/dp_96" android:layout_height="@dimen/dp_104">
+            <View android:background="@drawable/icon_head_bg" android:layout_width="@dimen/dp_96" android:layout_height="@dimen/dp_96" />
+            <ImageView android:id="@id/iv_head_portrait" android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_60" android:layout_marginTop="@dimen/sp_15" android:layout_centerHorizontal="true" />
+            <View android:id="@id/v_is_fine" android:background="@drawable/icon_medal" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <TextView android:textColor="@color/black13" android:id="@id/tv_name" android:layout_marginTop="@dimen/dp_20" android:layout_below="@id/rl_head" android:layout_centerHorizontal="true" style="@style/TextSize_16sp" />
+        <TextView android:textColor="@color/black13" android:ellipsize="end" android:id="@id/tv_personal_motto" android:visibility="gone" android:layout_marginLeft="@dimen/dp_19" android:layout_marginTop="19.0dp" android:lines="1" android:layout_toRightOf="@id/rl_head" android:layout_below="@id/tv_name" android:layout_centerVertical="true" style="@style/TextSize_16sp" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/white" android:layout_width="1033.0dp" android:layout_height="match_parent" android:layout_marginStart="@dimen/dp_38">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="581.0dp">
+            <androidx.viewpager.widget.ViewPager android:id="@id/vp_production" android:background="@drawable/bg_black20" android:visibility="gone" android:layout_width="match_parent" android:layout_height="520.0dp" />
+            <com.youth.banner.Banner android:id="@id/banner" android:background="@drawable/bg_black20" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/like_layout" android:background="@drawable/bt_bg_comment_z_20" android:layout_width="@dimen/dp_140" android:layout_height="@dimen/dp_40" android:layout_marginTop="@dimen/dp_26" android:layout_alignParentEnd="true">
+                <ImageView android:id="@id/iv_like" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_sp_give" />
+                <TextView android:textColor="@color/purple2" android:id="@id/tv_like" android:layout_marginStart="6.0dp" style="@style/TextSize_16sp" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/sp_18" android:textColor="@color/black11" android:id="@id/tv_lab1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_26" android:text="作品名称:" />
+            <TextView android:textSize="@dimen/sp_18" android:textColor="@color/black9" android:ellipsize="end" android:id="@id/tv_work_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_26" android:text="名称" android:lines="1" android:singleLine="true" android:layout_marginEnd="@dimen/dp_20" android:layout_toStartOf="@id/like_layout" android:layout_toEndOf="@id/tv_lab2" />
+            <TextView android:textSize="@dimen/sp_18" android:textColor="@color/black11" android:id="@id/tv_lab2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="作品简介:" android:layout_below="@id/tv_lab1" />
+            <TextView android:textSize="@dimen/sp_18" android:textColor="@color/black9" android:ellipsize="end" android:id="@id/tv_work_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="作品说明:" android:lines="3" android:layout_below="@id/tv_lab1" android:layout_marginEnd="@dimen/dp_20" android:layout_toStartOf="@id/like_layout" android:layout_toEndOf="@id/tv_lab2" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" android:layout_marginStart="@dimen/dp_30">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/black11" android:text="评论" android:drawableLeft="@drawable/icon_sp_comment" android:drawablePadding="@dimen/dp_8" android:layout_marginStart="@dimen/dp_4" style="@style/TextSize_18sp" />
+        </LinearLayout>
+        <RelativeLayout android:gravity="center" android:background="@drawable/bg_black20" android:layout_width="match_parent" android:layout_height="402.0dp" android:layout_marginTop="@dimen/dp_17">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_comment_list" android:layout_width="match_parent" android:layout_height="@dimen/dp_360" />
+            <TextView android:id="@id/tv_comment_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="暂时还没有评论哦~" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.yd.android_brand_mvp.widget.YDEditText android:textSize="@dimen/sp_16" android:gravity="top" android:id="@id/et_comment" android:background="@drawable/bg_edit_10" android:padding="@dimen/dp_10" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="@dimen/dp_120" android:layout_marginTop="@dimen/dp_21" android:hint="请输入内容" android:maxLength="50" />
+        <Button android:textSize="@dimen/sp_20" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/bt_comment" android:background="@drawable/bg_right2" android:visibility="invisible" android:layout_width="@dimen/dp_140" android:layout_height="@dimen/dp_40" android:layout_marginTop="@dimen/dp_20" android:text="评论" />
+    </LinearLayout>
+</LinearLayout>

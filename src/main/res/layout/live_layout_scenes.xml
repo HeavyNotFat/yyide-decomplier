@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.tabs.TabLayout android:id="@id/live_scenes_tab" android:background="@color/status_bar_color" android:layout_width="match_parent" android:layout_height="wrap_content" app:tabBackground="@android:color/transparent" app:tabIndicatorColor="@android:color/transparent" app:tabRippleColor="@android:color/transparent" app:tabTextAppearance="@style/TUILiveScenesTabLayoutStyle" />
+    <androidx.viewpager.widget.ViewPager android:id="@id/live_scenes_pager" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+</LinearLayout>

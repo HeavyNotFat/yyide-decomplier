@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/audience_background" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" />
+    <TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:id="@id/tv_anchor_leave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/live_anchor_offline" android:layout_centerInParent="true" />
+    <com.tencent.qcloud.tim.tuikit.live.component.common.CircleImageView android:id="@id/btn_close" android:background="@drawable/live_bottom_toolbar_btn_bg" android:layout_width="@dimen/live_bottom_toolbar_btn_icon_size" android:layout_height="@dimen/live_bottom_toolbar_btn_icon_size" android:layout_marginRight="5.0dp" android:layout_marginBottom="20.0dp" android:src="@drawable/live_ic_close" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</merge>

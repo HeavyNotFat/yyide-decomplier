@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/icon_item_dormitory_bg" android:layout_width="match_parent" android:layout_height="180.0dp" android:layout_margin="15.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff333333" android:ellipsize="end" android:gravity="center" android:id="@id/tvNumber" android:background="@drawable/bg_white_6" android:layout_width="87.0dp" android:layout_height="37.0dp" android:layout_marginTop="10.0dp" android:text="A103-2" android:lines="1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:background="@drawable/icon_dormitory_item_text" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="10.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/tvNumber">
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff333333" android:ellipsize="end" android:gravity="center" android:id="@id/tvName" android:layout_width="match_parent" android:layout_height="wrap_content" android:lines="1" android:layout_marginStart="@dimen/dp_15" android:layout_marginEnd="@dimen/dp_15" />
+        <View android:layout_width="match_parent" android:layout_height="10.0dp" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center" android:id="@id/tvClasses" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="七年级2班" android:lines="2" android:minLines="1" android:layout_marginStart="@dimen/dp_15" android:layout_marginEnd="@dimen/dp_15" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

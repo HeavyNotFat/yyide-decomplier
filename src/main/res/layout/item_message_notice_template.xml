@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingTop="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:textColor="#ff6747d3" android:id="@id/tvTop" android:background="@drawable/message_top_border" android:paddingTop="@dimen/dp_4" android:paddingBottom="@dimen/dp_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="置顶" android:paddingStart="@dimen/dp_10" android:paddingEnd="@dimen/dp_10" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ff333333" android:id="@id/tvTitle" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_2" android:text="2023年秋季开学通知公告" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/tvTop" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:id="@id/tvDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_15" android:text="发布时间：2023-11-08 10:30:52" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    <View android:background="#dddddd" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="@dimen/dp_15" app:layout_constraintTop_toBottomOf="@id/tvDate" />
+</androidx.constraintlayout.widget.ConstraintLayout>

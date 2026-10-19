@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="400.0dp" android:layout_height="130.0dp">
+        <com.yd.android_brand_mvp.widget.YDEditText android:textStyle="normal" android:textColor="@color/black5" android:gravity="center" android:id="@id/msg" android:layout_width="80.0dp" android:layout_height="wrap_content" android:maxEms="6" android:singleLine="true" android:inputType="textPassword" style="@style/TextSize_24black" />
+        <TextView android:textSize="20.0dp" android:textColor="@color/white" android:gravity="center" android:id="@id/qd" android:background="@color/blue7" android:layout_width="80.0dp" android:layout_height="30.0dp" android:layout_marginTop="20.0dp" android:text="确定" />
+    </LinearLayout>
+</LinearLayout>

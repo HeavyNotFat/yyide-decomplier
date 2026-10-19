@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/cl_bottom_toolbar" android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_function" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="@dimen/live_text_size_large" android:textColorHint="@color/live_voice_room_text_color_second" android:gravity="center_vertical" android:id="@id/tv_message" android:background="@drawable/live_bg_button_common" android:layout_width="0.0dp" android:layout_height="@dimen/live_bottom_toolbar_height" android:layout_marginLeft="10.0dp" android:layout_marginRight="10.0dp" android:hint="说点什么" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toLeftOf="@id/ll_function" app:layout_constraintTop_toTopOf="parent" />
+</merge>

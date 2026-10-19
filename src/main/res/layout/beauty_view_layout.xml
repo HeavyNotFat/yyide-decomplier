@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/layout_root" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/beauty_rl_title" android:layout_width="match_parent" android:layout_height="52.0dp">
+        <TextView android:textSize="16.0dp" android:textColor="@android:color/white" android:id="@id/beauty_tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <TextView android:textSize="16.0dp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/beauty_tv_close" android:paddingLeft="20.0dp" android:paddingRight="20.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/beauty_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/beauty_rl_seek_bar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="52.0dp" android:layout_below="@id/beauty_rl_title">
+        <TextView android:textColor="@android:color/white" android:id="@id/beauty_tv_seek_bar_hint" android:paddingLeft="20.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/beauty_strength" android:layout_centerVertical="true" />
+        <SeekBar android:id="@id/beauty_seek_bar_third" android:paddingLeft="28.0dp" android:paddingRight="12.0dp" android:layout_width="274.0dp" android:layout_height="wrap_content" android:maxHeight="2.0dp" android:max="9" android:progress="0" android:indeterminate="false" android:progressDrawable="@drawable/beauty_rebuild_seekbar_progress_drawable" android:minHeight="2.0dp" android:thumb="@drawable/beauty_rebuild_seekbar_progress_thumb" android:layout_centerInParent="true" android:paddingStart="28.0dp" android:paddingEnd="12.0dp" />
+        <TextView android:textColor="@android:color/white" android:id="@id/beauty_tv_seek_bar_value" android:paddingRight="20.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/beauty_rl_item" android:layout_width="match_parent" android:layout_height="116.0dp" android:layout_below="@id/beauty_rl_seek_bar">
+        <com.tencent.liteav.demo.beauty.view.TCHorizontalScrollView android:id="@id/beauty_horizontal_picker_second" android:paddingLeft="5.0dp" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@android:id/content" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </com.tencent.liteav.demo.beauty.view.TCHorizontalScrollView>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/beauty_rl_tab" android:layout_width="match_parent" android:layout_height="54.0dp" android:layout_below="@id/beauty_rl_item">
+        <com.tencent.liteav.demo.beauty.view.TCHorizontalScrollView android:id="@id/beauty_horizontal_picker_view_first" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@android:id/content" android:layout_width="wrap_content" android:layout_height="match_parent" />
+        </com.tencent.liteav.demo.beauty.view.TCHorizontalScrollView>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginTop="10.0dp" android:layout_marginRight="10.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_anchor_info" android:background="@drawable/live_top_anchor_info_bg" android:paddingTop="1.0dp" android:paddingBottom="1.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="1.0dp" android:paddingEnd="10.0dp">
+        <com.tencent.qcloud.tim.tuikit.live.component.common.CircleImageView android:layout_gravity="center_vertical" android:id="@id/iv_anchor_head" android:layout_width="@dimen/live_top_anchor_avatar_height" android:layout_height="@dimen/live_top_anchor_avatar_height" android:layout_marginLeft="2.0dp" android:src="@drawable/live_default_head_img" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginStart="3.0dp">
+            <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/tv_anchor_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dp" android:maxWidth="@dimen/live_text_max_show_width" android:minWidth="30.0dp" android:maxLines="1" android:singleLine="true" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="10.0sp" android:textColor="@color/live_white" android:id="@id/tv_experience" android:background="@drawable/live_top_experience_bg" android:paddingTop="2.0dp" android:paddingBottom="2.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="@string/live_experience" android:paddingStart="7.0dp" android:paddingEnd="7.0dp" />
+                    <TextView android:textSize="10.0sp" android:textColor="@color/live_white" android:id="@id/tv_empirical_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="@string/live_default_anchor_empirical_value" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="14.0sp" android:textColor="@color/live_color_red" android:gravity="center" android:layout_gravity="center" android:id="@id/btn_anchor_follow" android:background="@drawable/live_subscribe_anchor_btn_bg" android:visibility="gone" android:layout_width="40.0dp" android:layout_height="28.0dp" android:text="@string/live_btn_follow_anchor" android:layout_marginStart="12.0dp" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_audiences_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_audiences" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_toLeftOf="@id/ll_audience_number" android:layout_marginEnd="5.0dp" />
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_audience_number" android:background="@drawable/live_top_audience_count_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="35.0dp" android:minWidth="40.0dp">
+            <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/tv_audience_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerInParent="true" android:paddingStart="5.0dp" android:paddingEnd="5.0dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

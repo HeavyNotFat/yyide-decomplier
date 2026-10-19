@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@drawable/bg_title_2" android:layout_width="match_parent" android:layout_height="@dimen/dp_80">
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/back_layout" android:layout_width="@dimen/dp_80" android:layout_height="@dimen/dp_80" android:foreground="?android:selectableItemBackground">
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_btn" />
+        </FrameLayout>
+        <TextView android:id="@id/left_view" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" android:layout_marginStart="0.0dp" />
+        <TextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="#393939" android:layout_gravity="center" android:id="@id/title_Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="标题" />
+        <TextView android:textSize="24.0sp" android:textColor="@color/purple2" android:gravity="end|center" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" android:paddingEnd="30.0dp" />
+    </LinearLayout>
+    <TextView android:textSize="24.0sp" android:textColor="@color/purple2" android:ellipsize="end" android:gravity="end|center" android:layout_gravity="end" android:id="@id/right_view" android:layout_width="350.0dp" android:layout_height="match_parent" android:lines="1" android:paddingEnd="30.0dp" android:layout_marginEnd="@dimen/dp_30" />
+</FrameLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:padding="40.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="20.0dp">
+        <HorizontalScrollView android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RadioGroup android:gravity="center" android:orientation="horizontal" android:id="@id/rg_check" android:layout_width="match_parent" android:layout_height="@dimen/dp_123">
+                <RadioButton android:textSize="@dimen/sp_20" android:textColor="@color/rl_tab_color_1" android:gravity="center" android:id="@id/rb_monday" android:background="@drawable/att_tab_rl_l" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:button="@null" android:text="周一" />
+                <RadioButton android:textSize="@dimen/sp_20" android:textColor="@color/rl_tab_color_1" android:gravity="center" android:id="@id/rb_tuesday" android:background="@drawable/att_tab_rl_l" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:layout_marginLeft="@dimen/dp_51" android:button="@null" android:text="周二" />
+                <RadioButton android:textSize="@dimen/sp_20" android:textColor="@color/rl_tab_color_1" android:gravity="center" android:id="@id/rb_wednesday" android:background="@drawable/att_tab_rl_l" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:layout_marginLeft="@dimen/dp_51" android:button="@null" android:text="周三" />
+                <RadioButton android:textSize="@dimen/sp_20" android:textColor="@color/rl_tab_color_1" android:gravity="center" android:id="@id/rb_thursday" android:background="@drawable/att_tab_rl_l" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:layout_marginLeft="@dimen/dp_51" android:button="@null" android:text="周四" />
+                <RadioButton android:textSize="@dimen/sp_20" android:textColor="@color/rl_tab_color_1" android:gravity="center" android:id="@id/rb_fri" android:background="@drawable/att_tab_rl_l" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:layout_marginLeft="@dimen/dp_51" android:button="@null" android:text="周五" />
+                <RadioButton android:textSize="@dimen/sp_20" android:textColor="@color/rl_tab_color_1" android:gravity="center" android:id="@id/rb_sat" android:background="@drawable/att_tab_rl_l" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:layout_marginLeft="@dimen/dp_51" android:button="@null" android:text="周六" />
+                <RadioButton android:textSize="@dimen/sp_20" android:textColor="@color/rl_tab_color_1" android:gravity="center" android:id="@id/rb_week" android:background="@drawable/att_tab_rl_l" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:layout_marginLeft="@dimen/dp_51" android:button="@null" android:text="周日" />
+            </RadioGroup>
+        </HorizontalScrollView>
+        <FrameLayout android:id="@id/table_view" android:padding="@dimen/dp_35" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" app:msv_emptyView="@layout/item_null_layout_4" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+                <GridView android:id="@id/list_table" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_19" android:layout_marginBottom="@dimen/dp_20" android:horizontalSpacing="@dimen/dp_30" android:verticalSpacing="@dimen/dp_37" android:numColumns="2" />
+            </com.yd.android_brand_mvp.weight.MultiStateView>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

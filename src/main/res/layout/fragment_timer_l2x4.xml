@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/bg_white30" android:layout_width="@dimen/dp_444" android:layout_height="@dimen/dp_604"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_content" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="#ff333333" android:id="@id/textView11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_30" android:text="倒计时" android:layout_marginStart="@dimen/dp_30" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="@dimen/dp_10" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/textView11" app:msv_emptyView="@layout/item_min_null_layout_2_2" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+        <com.youth.banner.Banner android:id="@id/announRoll" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </com.yd.android_brand_mvp.weight.MultiStateView>
+    <include android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="@dimen/dp_10" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/textView11" layout="@layout/fragment_timer_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_pk_select" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.tencent.qcloud.tim.tuikit.live.component.common.CircleImageView android:id="@id/iv_avatar" android:layout_width="38.0dp" android:layout_height="38.0dp" android:src="@drawable/live_bg_cover" android:layout_centerHorizontal="true" app:layout_constraintBottom_toBottomOf="@id/cl_pk_select" app:layout_constraintLeft_toLeftOf="@id/cl_pk_select" app:layout_constraintTop_toTopOf="@id/cl_pk_select" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tv_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toRightOf="@id/iv_avatar" app:layout_constraintTop_toTopOf="@id/cl_pk_select" />
+    <Button android:textSize="@dimen/live_text_size_middle" android:textColor="@color/white" android:id="@id/btn_invite_anchor" android:background="@color/live_color_text_blue" android:layout_width="68.0dp" android:layout_height="30.0dp" android:text="邀请" app:layout_constraintBottom_toBottomOf="@id/cl_pk_select" app:layout_constraintRight_toRightOf="@id/cl_pk_select" app:layout_constraintTop_toTopOf="@id/cl_pk_select" />
+</androidx.constraintlayout.widget.ConstraintLayout>

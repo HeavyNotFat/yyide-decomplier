@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item android:left="@dimen/switch_thumb_padding" android:top="@dimen/switch_thumb_padding" android:right="@dimen/switch_thumb_padding" android:bottom="@dimen/switch_thumb_padding">
+                <shape android:shape="rectangle">
+                    <size android:height="@dimen/switch_thumb_height" android:width="@dimen/switch_thumb_width" />
+                    <corners android:radius="@dimen/switch_thumb_radius" />
+                    <gradient android:startColor="#ffffff" android:endColor="#ffffff" android:angle="0.0" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

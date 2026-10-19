@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="vertical" android:background="@drawable/bg_white10" android:layout_width="@dimen/dp_580" android:layout_height="290.0dp">
+        <FrameLayout android:background="@drawable/bg_cheack" android:layout_width="match_parent" android:layout_height="56.0dp" android:layout_marginLeft="@dimen/dp_90" android:layout_marginTop="@dimen/dp_90" android:layout_marginRight="@dimen/dp_90">
+            <com.yd.android_brand_mvp.widget.YDEditText android:textSize="@dimen/sp_20" android:textColor="#999999" android:id="@id/edit" android:background="@null" android:layout_width="match_parent" android:layout_height="56.0dp" android:layout_marginLeft="@dimen/dp_40" android:hint="请输入密码" android:inputType="textPassword" />
+        </FrameLayout>
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_46">
+            <TextView android:textSize="@dimen/sp_24" android:textColor="#666666" android:gravity="center" android:id="@id/cancel" android:background="@drawable/bg_black20_stroke_yt" android:layout_width="@dimen/dp_167" android:layout_height="46.0dp" android:text="取消" />
+            <TextView android:textSize="@dimen/sp_24" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/qd" android:background="@drawable/cheack_qd" android:paddingTop="@dimen/dp_8" android:layout_width="@dimen/dp_167" android:layout_height="55.0dp" android:layout_marginLeft="@dimen/dp_25" android:layout_marginTop="1.0dp" android:text="确定" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

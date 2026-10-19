@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="50.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@id/add_lab" android:background="@drawable/bg_purple10" android:layout_width="80.0dp" android:layout_height="50.0dp" android:text="加载更多" android:lines="1" android:singleLine="true" />
+</LinearLayout>

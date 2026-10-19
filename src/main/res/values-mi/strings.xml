@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort">Whakamutu</string>
+    <string name="hms_abort_message">Me whakamutu te tikiake?</string>
+    <string name="hms_bindfaildlg_message">Kāore e taea e %1$s te whakamahi HMS Core. Whakarewatia te Pūarotau (Pūwhakahaere Waea), haere rānei ki Ngā Tautuhinga, whakahohea ngā taupānga katoa mō %2$s (tae atu ki whakarewa-aunoa me te whakarewa tuarua), ka ngana anō.</string>
+    <string name="hms_cancel">Whakakore</string>
+    <string name="hms_check_failure">I rahua te tirotiro i ngā whakahōunga.</string>
+    <string name="hms_check_no_update">Kei te hōu tonu tō putanga.</string>
+    <string name="hms_checking">Tirotiro whakahōu ana...</string>
+    <string name="hms_confirm">ĀE</string>
+    <string name="hms_download_failure">I rahua te tikiake i te mōkī HMS Core.</string>
+    <string name="hms_download_no_space">He iti rawa te mokowā wātea. Tē taea te tikiake te whakaoti.</string>
+    <string name="hms_download_retry">I rahua te tikiake. Ngana anō?</string>
+    <string name="hms_downloading">"Tikiake ana i HMS Core 
+: %d%%"</string>
+    <string name="hms_downloading_loading">Tikiake ana</string>
+    <string name="hms_downloading_new">Tikiake HMS Core ana</string>
+    <string name="hms_gamebox_name">HUAWEI GameCenter</string>
+    <string name="hms_install">Tāuta</string>
+    <string name="hms_install_message">Me mātua tāuta HMS Core hei whakamahi i tēnei āhuahira. Me tāuta?</string>
+    <string name="hms_push_channel">Taunoa</string>
+    <string name="hms_retry">Ngana anō</string>
+    <string name="hms_update">Whakahōu</string>
+    <string name="hms_update_continue">Tikiake</string>
+    <string name="hms_update_message">Whakahōutia ki te putanga hōu rawa o HMS Core hei whakamahi i tēnei āhuahira. Me whakahōu ināianei?</string>
+    <string name="hms_update_message_new">"Me whai tēnei ratonga i te putanga hōu rawa o te taupānga e whai ake:
+
+%1$s"</string>
+    <string name="hms_update_nettype">Kāore he tūhononga Wi-Fi. Tikiake mā te whakamahi raraunga pūkoro?</string>
+    <string name="hms_update_title">HMS Core</string>
+    <string name="upsdk_app_dl_installing">Tikiake AppGallery ana</string>
+    <string name="upsdk_app_download_info_new">Tāuta</string>
+    <string name="upsdk_app_size">Rahi</string>
+    <string name="upsdk_app_version">Putanga</string>
+    <string name="upsdk_cancel">Whakakore</string>
+    <string name="upsdk_checking_update_prompt">Tirotiro whakahōu ana…</string>
+    <string name="upsdk_choice_update">E wātea ana he whakahōu. Me tikiake ka tāuta i te putanga hōu rawa.</string>
+    <string name="upsdk_connect_server_fail_prompt_toast">Tē taea te tūhono ki te tūmau. Ngana anō ā muri ake.</string>
+    <string name="upsdk_detail">Ngā taipitopito</string>
+    <string name="upsdk_getting_message_fail_prompt_toast">Tē taea te whiwhi mōhiohio. Ngana anō ā muri ake.</string>
+    <string name="upsdk_install">Tāuta AppGallery hei whakahōu. Me tāuta ināianei?</string>
+    <string name="upsdk_no_available_network_prompt_toast">Kāore he tūhononga Ipurangi. Tirohia ō tautuhinga whatunga.</string>
+    <string name="upsdk_ota_app_name">Taupānga</string>
+    <string name="upsdk_ota_cancel">Ā muri ake</string>
+    <string name="upsdk_ota_force_cancel_new">Putaatu</string>
+    <string name="upsdk_ota_notify_updatebtn">Whakahōu</string>
+    <string name="upsdk_ota_title">Putanga hōu</string>
+    <string name="upsdk_storage_utils">%1$s MB</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex">Whakakorea te tāutanga?</string>
+    <string name="upsdk_third_app_dl_install_failed">I rahua te tāutanga.</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download">Āe</string>
+    <string name="upsdk_update_check_no_new_version">Kei te hōu tonu tō putanga.</string>
+    <string name="upsdk_updating">Whakahōu ana</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/test_custom_message_view" android:background="#c4c4c4" android:layout_width="100.0dp" android:layout_height="100.0dp" android:layout_alignParentLeft="true" />
+    <TextView android:textSize="10.0sp" android:textColor="#fff" android:id="@id/test_custom_message_tv" android:background="#05000000" android:padding="2.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:layout_alignRight="@id/test_custom_message_view" android:layout_alignBottom="@id/test_custom_message_view" android:layout_alignParentLeft="true" />
+</RelativeLayout>

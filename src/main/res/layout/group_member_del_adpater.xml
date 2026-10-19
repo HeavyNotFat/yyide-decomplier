@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#fcfcfc" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:id="@id/group_member_del_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:button="@drawable/checkbox_selector" />
+    <com.tencent.qcloud.tim.uikit.component.gatherimage.ShadeImageView android:id="@id/group_member_icon" android:layout_width="40.0dp" android:layout_height="40.0dp" android:layout_margin="10.0dp" android:src="@drawable/default_user_icon" />
+    <RelativeLayout android:paddingLeft="5.0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textColor="@color/text_color_gray" android:gravity="center" android:id="@id/group_member_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="name" android:lines="1" android:layout_centerVertical="true" />
+        <View android:id="@id/view_line" android:background="@color/status_bar_color" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

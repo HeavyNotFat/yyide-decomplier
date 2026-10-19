@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="@dimen/dp_260" android:layout_height="@dimen/dp_200" android:src="@drawable/icon_image_null" />
+    <TextView android:textSize="@dimen/sp_20" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_40" android:layout_marginTop="@dimen/dp_50" android:layout_marginRight="@dimen/dp_40" android:text="暂无相册" android:layout_marginHorizontal="@dimen/dp_40" />
+</LinearLayout>

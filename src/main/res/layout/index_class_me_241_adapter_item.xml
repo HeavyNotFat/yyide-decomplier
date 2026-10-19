@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="@dimen/dp_210" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_medal_of_honor" android:layout_width="@dimen/dp_42" android:layout_height="@dimen/dp_42" />
+</LinearLayout>
