@@ -3,6 +3,8 @@
 # ---------------------------------------------------------------------------
 .gradle/
 build/
+!gradle/wrapper/gradle-wrapper.jar
+captures/
 .externalNativeBuild/
 .cxx/
 PERMISSION.md
