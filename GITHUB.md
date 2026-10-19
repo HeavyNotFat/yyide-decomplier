@@ -7,17 +7,19 @@
 
 | 路径 | 大小 | 说明 |
 | --- | ---: | --- |
-| `README.md`、`RESTORE.md`、`ENDPOINTS.md`、`GITHUB.md` | ~0.2MB | 构建/使用/API/上传说明 |
+| `README.md`、`RESTORE.md`、`ENDPOINTS.md`、`CLOUD.md`、`GITHUB.md` | ~0.3MB | 构建/使用/API/云端控制器/上传说明 |
 | `.gitignore` | 4KB | 排除密钥、APK、构建产物 |
 | `build.gradle`、`settings.gradle`、`gradle.properties`、`gradlew`、`gradlew.bat`、`gradle/` | ~100KB | Gradle 构建入口 |
 | `proguard-rules.pro` | 1KB | 混淆规则 |
-| `scripts/` | 1.4MB | 还原版构建、脱敏、接口表/客户端 |
+| `scripts/` | 1.5MB | 还原版/云端版构建、脱敏、接口表/客户端 |
+| `cloud-server/` | ~1MB | 云端控制器：Flask 服务、Web 控制台、组件目录、演示数据生成器（运行时 JSON/assets 已忽略） |
 | `src/main/java/` | 26MB | 反编译应用源码（含本次 7 个补丁类） |
 | `src/main/res/` | 44MB | 布局、drawable、values、raw |
 | `src/main/AndroidManifest.xml` | 56KB | 应用清单 |
 | `src/main/*.properties`、`*.txt`、`*.json` | ~2MB | 资源/构建元数据 |
 | `libs/app-r.jar` | 217KB | 补丁类编译需要的 R 常量 |
 | `dist/preview-home.png`、`preview-teacher.png`、`preview-student.png` | ~1.1MB | README 截图 |
+| `dist/preview-cloud-*.png` | ~1.5MB | 云端控制器 / 云端版首页截图 |
 
 > `libs/original-classes.jar`、`app-classes.jar` 等编译 jar 含有原版硬编码凭据，**不随公开仓库发布**；本地构建时保留即可。公开仓库只放 `libs/app-r.jar`。
 
@@ -37,6 +39,7 @@
 | `vendor-src/` | 299MB | 第三方库源码缺失；不影响还原版补丁构建，但不利于完整审计 |
 | `libs/original-classes.jar`、`app-classes.jar`、`app-support-classes.jar`、`app-patch-classes.jar`、`decompiled-libs.jar` | 100MB | **本地构建/实验用，含原版编译字节码和硬编码配置，不要公开上传** |
 | `dist/智慧班牌-3.0.14-还原版.apk` | 185MB | 不能直接下载 APK；建议作为 GitHub Release 附件 |
+| `dist/智慧班牌-3.0.14-云端版.apk` | 185MB | 云端控制器调试包；同样走 Release，不要进 git |
 
 建议：
 

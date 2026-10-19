@@ -38,6 +38,8 @@
 | 接口文档 | `ENDPOINTS.md` | 222 个 Retrofit 接口 + 外部接口 + 示例 |
 | 还原说明 | `RESTORE.md` | 设备身份、布局、快捷入口、构建与验证记录 |
 | Python 接口客户端 | `scripts/endpoints/` | 257 条请求、真实环境客户端、预览/执行/伪造 |
+| 云端控制器 | `cloud-server/` | 本地替代 `api.yyide.com`：293 组件布局、257 接口、内容管理、请求日志、Web 控制台 |
+| 云端控制器文档 | `CLOUD.md` | 启动、控制台、布局协议、构建云端版 APK、故障排查 |
 
 ### 还原版做了什么
 
@@ -288,6 +290,37 @@ python -m scripts.endpoints.runner --forge --mac <MAC> --android-id <ID>
 
 详见 [scripts/endpoints/README.md](scripts/endpoints/README.md)。
 
+### 4.5 云端控制器（推荐）
+
+不依赖线上服务，在本地接管班牌的首页布局和全部业务数据：
+
+```powershell
+python -m pip install flask pillow
+python cloud-server/server.py --port 8765
+
+# 浏览器打开
+start http://127.0.0.1:8765/admin
+
+# 构建指向本机的云端调试包（模拟器用 10.0.2.2）
+.\scripts\build-cloud-apk.ps1 -CloudUrl "http://10.0.2.2:8765"
+adb install -r "dist\智慧班牌-3.0.14-云端版.apk"
+```
+
+控制台提供：
+
+- **卡片布局**：8×6 栅格拖拽/缩放，293 个组件任意组合，多分页；
+- **组件库**：全部首页组件，可搜索、按分类/尺寸筛选；
+- **内容中心**：公告、相册、视频、荣誉、值日、考试、图书、活动、投票、课表；
+- **接口模拟**：257 个接口的自定义响应覆盖 + 实时请求日志；
+- **组件巡展**：一键生成多页布局，逐页浏览全部组件；
+- **功能地图**：90 个 Activity、导出状态与 adb 启动命令。
+
+登录账号 `demo / demo`。完整说明见 [CLOUD.md](CLOUD.md)。
+
+![云端控制器](dist/preview-cloud-admin.png)
+
+![云端版首页](dist/preview-cloud-home.png)
+
 ---
 
 ## 5. 文件结构
@@ -320,18 +353,30 @@ HackedBrand/
 │  └─ decompiled-libs.jar                 ECJ 重建的依赖库
 ├─ scripts/
 │  ├─ build-restore-apk.ps1               还原版 APK 构建
+│  ├─ build-cloud-apk.ps1                 云端版 APK 构建（替换接口域名）
 │  ├─ repack_restore.py                   注入 patch dex / 重打包
+│  ├─ repack_cloud.py                     替换 dex / 重打包
+│  ├─ patch_smali_urls.py                 smali URL 批量替换
 │  ├─ secrets.py                          脱敏 / 恢复 / 泄漏检查
 │  ├─ build-mock.ps1                      旧 Mock APK 流程（当前缺依赖）
 │  ├─ generate_endpoints.py               从 Retrofit 提取接口清单
 │  ├─ call_endpoint.py                    最小接口调用示例
 │  └─ endpoints/                          257 条请求 + Python 客户端
+├─ cloud-server/                          云端控制器（Flask + Web 控制台）
+│  ├─ server.py                           接口模拟 + 控制台 API
+│  ├─ store.py                            JSON 数据、演示内容、媒体生成
+│  ├─ web/                                控制台前端
+│  ├─ data/catalog.json                   293 组件 / 90 Activity / 257 接口
+│  └─ tools/extract_catalog.py            从源码重新生成组件目录
 ├─ dist/
 │  ├─ 智慧班牌-3.0.14-还原版.apk
+│  ├─ 智慧班牌-3.0.14-云端版.apk
 │  ├─ preview-home.png
 │  ├─ preview-teacher.png
-│  └─ preview-student.png
+│  ├─ preview-student.png
+│  └─ preview-cloud-*.png                 云端控制器与云端版截图
 ├─ ENDPOINTS.md                           接口文档
+├─ CLOUD.md                               云端控制器说明
 ├─ RESTORE.md                             还原版说明
 ├─ GITHUB.md                              GitHub 上传清单
 ├─ README.md
@@ -351,6 +396,9 @@ HackedBrand/
 | --- | --- | --- |
 | [`build-restore-apk.ps1`](scripts/build-restore-apk.ps1) | 编译 7 个补丁类、d8、注入原版 APK、zipalign、签名 | 输入原版 APK；输出 `dist/智慧班牌-3.0.14-还原版.apk` |
 | [`repack_restore.py`](scripts/repack_restore.py) | 把 patch dex 放到 `classes.dex`，原 dex 后移 | 原版 APK + patch dex → 未签名 APK |
+| [`build-cloud-apk.ps1`](scripts/build-cloud-apk.ps1) | 只反汇编含接口域名的 dex，改 URL 后重新汇编、重打包、签名 | 还原版/原版 APK + `-CloudUrl` → `dist/智慧班牌-3.0.14-云端版.apk` |
+| [`repack_cloud.py`](scripts/repack_cloud.py) | 替换 APK 中的 dex 并去掉旧签名 | 基础 APK + `dex=path` → 未签名 APK |
+| [`patch_smali_urls.py`](scripts/patch_smali_urls.py) | 在 baksmali 输出树里替换 URL | smali 目录 + 旧/新 URL |
 | [`secrets.py`](scripts/secrets.py) | 发布前脱敏、恢复本地凭据、检查泄漏 | `scrub` / `restore` / `check` / `status` |
 | [`build-mock.ps1`](scripts/build-mock.ps1) | 旧 Mock APK 流程：编译 mock-portal、d8、apktool、注入 `classes7.dex` | 需要 `build/apktool*`、`mock-portal/`；当前缺依赖 |
 | [`generate_endpoints.py`](scripts/generate_endpoints.py) | 从 19 个 Retrofit 接口文件提取原始清单 | 输出 `ENDPOINTS.raw.md`（默认不覆盖手工文档） |
@@ -379,6 +427,7 @@ HackedBrand/
 | --- | --- |
 | [ENDPOINTS.md](ENDPOINTS.md) | 222 个 Retrofit 接口、外部接口、请求参数、示例 |
 | [RESTORE.md](RESTORE.md) | 还原版改了什么、8×6 布局、快捷入口、构建与验证记录 |
+| [CLOUD.md](CLOUD.md) | 云端控制器：启动、控制台、布局协议、云端版 APK、故障排查 |
 | [scripts/endpoints/README.md](scripts/endpoints/README.md) | 请求表、预览/执行/伪造、BrandClient |
 | [GITHUB.md](GITHUB.md) | 上传清单：必须上传 / 可选大文件 / 绝对不要上传 |
 | [README.md](README.md) | 本文件：构建、使用、目录、脚本、发布 |

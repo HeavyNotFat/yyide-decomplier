@@ -286,7 +286,7 @@ curl -X POST "https://api.yyide.com/auth/oauth/token?username=<账号>&password=
 | `studentId` / `userId` | `student-1` | 学生/用户 ID |
 | `teacherId` | `teacher-1` | 教师 ID |
 | `brandId` / `id` | `mock-device-001` | 班牌设备/品牌 ID |
-| `deviceNo` / `no` | `aabbccddeeff` | MAC，去掉冒号、转小写 |
+| `deviceNo` / `no` | `__SEC_MAC_PUT_92F7D57E__` | MAC，去掉冒号、转小写 |
 | `deviceType` | `"2"` | 班牌设备类型，固定字符串 |
 | `identity` | `0` / `1` | 身份类型，不同接口含义不同 |
 | 时间 | `2026-10-19 08:00:00` | 多数接口用 `yyyy-MM-dd HH:mm:ss` |
@@ -380,7 +380,7 @@ curl -X POST "https://api.yyide.com/auth/oauth/token?username=<账号>&password=
 ```json
 {
   "loginName": "<账号>",
-  "no": "aabbccddeeff",
+  "no": "__SEC_MAC_PUT_92F7D57E__",
   "wlanMac": "aa:bb:cc:dd:ee:ff",
   "seriaNo": "37fb6ff724b93cca",
   "direction": "0"
@@ -1134,7 +1134,7 @@ Query：`bjid`（班级 ID）、`skzc`（周次）。返回 `KBRsp`。
   {
     "attendanceIds": "a1",
     "deviceName": "班牌01",
-    "deviceNo": "aabbccddeeff",
+    "deviceNo": "__SEC_MAC_PUT_92F7D57E__",
     "signInImg": "",
     "signInTime": "2026-10-19 08:01:00",
     "siteId": "site-1",
@@ -2151,7 +2151,7 @@ data: [DONE]
 
 ```json
 {
-  "mac": "aabbccddeeff",
+  "mac": "__SEC_MAC_PUT_92F7D57E__",
   "schoolId": "mock-school-001",
   "version": "3.0.14",
   "status": "online"
@@ -2562,7 +2562,7 @@ python mock_server.py --host 0.0.0.0 --port 8765
 | 改动 | 值 |
 | --- | --- |
 | API host | `http://10.0.2.2:8765` |
-| MAC | `aabbccddeeff` |
+| MAC | `__SEC_MAC_PUT_92F7D57E__` |
 | 登录 | 任意账号密码 |
 | 额外 Activity | `MockLeaveActivity`、`MockManagerActivity`、`MockPortalActivity` |
 | 注入 dex | `classes7.dex` |
@@ -2797,7 +2797,7 @@ class YideClient:
 if __name__ == "__main__":
     c = YideClient("http://127.0.0.1:8765")
     c.login("admin", "123456")
-    c.obtain("admin", "aabbccddeeff")
+    c.obtain("admin", "__SEC_MAC_PUT_92F7D57E__")
     print(c.announcements())
     print(c.layout(c.user.get("id", "mock-device-001")))
 ```
@@ -3059,16 +3059,16 @@ PORT = 1883
 USERNAME = "yide"
 PASSWORD = "<见 本地凭据>"
 
-client = mqtt.Client(client_id="brand/mock-school-001/aabbccddeeff")
+client = mqtt.Client(client_id="brand/mock-school-001/__SEC_MAC_PUT_92F7D57E__")
 client.username_pw_set(USERNAME, PASSWORD)
 
 
 def on_connect(c, userdata, flags, rc):
     print("connected", rc)
     c.subscribe("brand/sync/message/status", qos=1)
-    c.subscribe("device_web/push/aabbccddeeff", qos=1)
+    c.subscribe("device_web/push/__SEC_MAC_PUT_92F7D57E__", qos=1)
     c.publish("/biz/sync/device/system/information", json.dumps({
-        "mac": "aabbccddeeff",
+        "mac": "__SEC_MAC_PUT_92F7D57E__",
         "schoolId": "mock-school-001",
         "version": "3.0.14",
     }), qos=1)
@@ -3170,7 +3170,7 @@ curl -s -X POST "https://api.yyide.com/auth/oauth/token?username=<user>&password
 # 2. 学校/班级
 curl -s -X POST "https://api.yyide.com/brand/obtain" \
   -H "Authorization: Bearer <token>" -H "Content-Type: application/json" \
-  -d '{"loginName":"<user>","no":"aabbccddeeff","wlanMac":"","seriaNo":"<androidid>","direction":"0"}'
+  -d '{"loginName":"<user>","no":"__SEC_MAC_PUT_92F7D57E__","wlanMac":"","seriaNo":"<androidid>","direction":"0"}'
 
 # 3. 首页布局
 curl -s -X POST "https://api.yyide.com/brand/brand/layoutclasssign/layoutlist" \
