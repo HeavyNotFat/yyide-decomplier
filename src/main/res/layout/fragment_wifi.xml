@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_bg" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dp_100">
+        <LinearLayout android:id="@id/wifi_back" android:layout_width="@dimen/dp_80" android:layout_height="match_parent" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:src="@drawable/icon_back_left_land" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/sp_24" android:textColor="@color/black9" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:text="无线网络" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/sp_20" android:textColor="@color/black11" android:gravity="center" android:id="@id/tv_yt" android:background="@drawable/bg_black20_stroke_yt" android:visibility="gone" android:layout_width="@dimen/dp_136" android:layout_height="@dimen/dp_40" android:layout_marginRight="@dimen/dp_43" android:layout_marginBottom="@dimen/dp_82" android:text="切换以太网" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" />
+    <FrameLayout android:orientation="horizontal" android:id="@id/wifi_layout" android:paddingTop="@dimen/dp_20" android:paddingBottom="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_50" android:layout_marginRight="@dimen/dp_50" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toBottomOf="@id/rl_bg">
+        <TextView android:textSize="@dimen/sp_22" android:textColor="#666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="无线局域网" />
+        <CheckedTextView android:layout_gravity="right|center" android:id="@id/checkbox" android:background="@drawable/tab_cheack" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rc_view" android:layout_width="match_parent" android:layout_height="700.0dp" android:layout_marginLeft="@dimen/dp_50" android:layout_marginRight="@dimen/dp_50" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toBottomOf="@id/wifi_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

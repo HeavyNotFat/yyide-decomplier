@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/clContent" android:background="@drawable/bg_white20" android:padding="@dimen/dp_20" android:layout_width="@dimen/dp_444" android:layout_height="448.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/linearLayoutCompat" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:id="@id/clTime" android:background="@drawable/icon_duty_bg_2x3" android:layout_width="match_parent" android:layout_height="99.0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <ImageView android:layout_width="50.0dp" android:layout_height="50.0dp" android:layout_marginTop="@dimen/dp_10" android:src="@drawable/icon_duty_head" android:layout_marginStart="@dimen/dp_10" />
+            <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="今日值日" android:layout_marginStart="@dimen/dp_10" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.constraintlayout.widget.ConstraintLayout android:gravity="center_vertical" android:id="@id/clAllDay" android:background="@drawable/icon_duty_bg_2x3" android:visibility="gone" android:layout_width="match_parent" android:layout_height="152.0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <ImageView android:id="@id/imageView7" android:layout_width="60.0dp" android:layout_height="60.0dp" android:layout_marginTop="@dimen/dp_20" android:src="@drawable/icon_duty_head" android:layout_marginStart="@dimen/dp_20" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:textSize="@dimen/sp_22" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/textView17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="今日值日" android:layout_marginStart="@dimen/dp_10" app:layout_constraintStart_toEndOf="@id/imageView7" app:layout_constraintTop_toTopOf="@id/imageView7" />
+            <TextView android:textSize="@dimen/sp_18" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/tvWeek" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="周一" app:layout_constraintStart_toStartOf="@id/textView17" app:layout_constraintTop_toBottomOf="@id/textView17" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/linearLayoutCompat" />
+</androidx.constraintlayout.widget.ConstraintLayout>

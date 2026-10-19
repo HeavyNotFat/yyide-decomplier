@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginLeft="@dimen/dp_15" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_15" android:layout_marginHorizontal="@dimen/dp_15" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:layout_constraintBottom_toTopOf="@id/cl_bottom" app:layout_constraintTop_toTopOf="parent" app:spanCount="3" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_bottom" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" app:layout_constraintBottom_toBottomOf="parent">
+        <TextView android:textSize="@dimen/sp_16" android:textColor="#ff999999" android:gravity="center" android:id="@id/tv_previous" android:layout_width="80.0dp" android:layout_height="match_parent" android:text="上一页" android:layout_marginStart="@dimen/dp_15" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textSize="@dimen/sp_16" android:textColor="#ff6747d3" android:gravity="center" android:id="@id/tv_next_page" android:layout_width="80.0dp" android:layout_height="match_parent" android:text="下一页" android:layout_marginEnd="@dimen/dp_15" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/_xpopup_round3_bg" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="@color/_xpopup_title_color" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/tv_title" android:paddingTop="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="22.0dp" android:lines="1" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/_xpopup_content_color" android:gravity="center" android:id="@id/tv_content" android:paddingLeft="20.0dp" android:paddingRight="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" />
+    <EditText android:textSize="16.0sp" android:textColor="@color/_xpopup_content_color" android:id="@id/et_input" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:layout_marginRight="20.0dp" android:singleLine="true" />
+    <View android:id="@id/xpopup_divider" android:background="@color/_xpopup_list_divider" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="16.0dp" />
+    <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="50.0dp">
+        <TextView android:textSize="16.0sp" android:gravity="center" android:id="@id/tv_cancel" android:background="?android:selectableItemBackground" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/cancel" android:layout_weight="1.0" />
+        <View android:id="@id/xpopup_divider_h" android:background="@color/_xpopup_list_divider" android:layout_width="0.5dp" android:layout_height="match_parent" />
+        <TextView android:textSize="16.0sp" android:gravity="center" android:id="@id/tv_confirm" android:background="?android:selectableItemBackground" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/ok" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

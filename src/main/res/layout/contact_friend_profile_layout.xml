@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.tencent.qcloud.tim.uikit.component.TitleBarLayout android:id="@id/friend_titlebar" android:layout_width="match_parent" android:layout_height="@dimen/page_title_height" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="180.0dp" android:layout_marginTop="10.0dp">
+        <com.tencent.qcloud.tim.uikit.component.CircleImageView android:id="@id/avatar" android:layout_width="115.0dp" android:layout_height="115.0dp" android:layout_marginTop="20.0dp" android:src="@drawable/default_user_icon" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/text_gray1" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" />
+    </LinearLayout>
+    <com.tencent.qcloud.tim.uikit.component.LineControllerView android:id="@id/id" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" app:name="@string/profile_id" />
+    <com.tencent.qcloud.tim.uikit.component.LineControllerView android:id="@id/add_wording" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" app:name="@string/profile_add_wording" />
+    <com.tencent.qcloud.tim.uikit.component.LineControllerView android:id="@id/remark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" app:canNav="true" app:name="@string/profile_remark" />
+    <com.tencent.qcloud.tim.uikit.component.LineControllerView android:id="@id/chat_to_top" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" app:isSwitch="true" app:name="@string/chat_to_top" />
+    <com.tencent.qcloud.tim.uikit.component.LineControllerView android:id="@id/blackList" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" app:isSwitch="true" app:name="@string/profile_black" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/btn_margin_left" android:paddingRight="@dimen/btn_margin_right" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+        <TextView android:textSize="14.0sp" android:textColor="@color/positive_text" android:gravity="center" android:id="@id/btnChat" android:background="@color/bg_positive_btn" android:clickable="true" android:layout_width="match_parent" android:layout_height="50.0dp" android:text="@string/profile_chat" android:layout_weight="1.0" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/negative_text" android:gravity="center" android:id="@id/btnDel" android:background="@color/bg_negative_btn" android:clickable="true" android:layout_width="match_parent" android:layout_height="50.0dp" android:layout_marginTop="10.0dp" android:text="@string/profile_del" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

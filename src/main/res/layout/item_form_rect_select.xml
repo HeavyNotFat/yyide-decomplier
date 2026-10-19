@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_item_form_rect_select" android:background="@drawable/frame_black_r4" android:layout_width="wrap_content" android:layout_height="60.0dp" android:layout_marginTop="30.0dp" android:layout_marginEnd="20.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:paddingLeft="50.0dp" android:paddingRight="50.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="50.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textSize="20.0sp" android:textColor="#333333" android:id="@id/tv_item_form_rect_select" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8分" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView android:id="@id/iv_item_form_rect_select" android:layout_width="14.0dp" android:layout_height="14.0dp" android:src="@drawable/icon_right_bottom_select" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

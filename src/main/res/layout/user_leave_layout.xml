@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:padding="40.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="20.0dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_400" android:layout_marginRight="@dimen/dp_400">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_100">
+                <TextView android:textSize="20.0sp" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请假时间:" />
+                <TextView android:layout_width="@dimen/dp_40" android:layout_height="wrap_content" />
+                <CheckedTextView android:textColor="@color/rb_check_color" android:gravity="center" android:id="@id/tab1" android:background="@drawable/att_leave_tab" android:layout_width="@dimen/dp_150" android:layout_height="@dimen/dp_50" android:text="事假" android:textAlignment="center" />
+                <TextView android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <CheckedTextView android:textColor="@color/rb_check_color" android:gravity="center" android:id="@id/tab2" android:background="@drawable/att_leave_tab" android:layout_width="@dimen/dp_150" android:layout_height="@dimen/dp_50" android:text="病假" android:textAlignment="center" />
+                <TextView android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <CheckedTextView android:textColor="@color/rb_check_color" android:gravity="center" android:id="@id/tab3" android:background="@drawable/att_leave_tab" android:layout_width="@dimen/dp_150" android:layout_height="@dimen/dp_50" android:text="其他" android:textAlignment="center" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_50">
+                <TextView android:textSize="20.0sp" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请假时间:" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_black20_stroke2" android:layout_width="match_parent" android:layout_height="47.0dp" android:layout_marginLeft="@dimen/dp_40">
+                    <TextView android:textSize="20.0sp" android:textColor="@color/gray" android:gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="2021-04-12 10:00" android:layout_weight="1.0" />
+                    <TextView android:textSize="20.0sp" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="至" />
+                    <TextView android:textSize="20.0sp" android:textColor="@color/gray" android:gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="2021-04-12 10:00" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_50">
+                <TextView android:textSize="20.0sp" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请假事由:" />
+                <LinearLayout android:background="@drawable/bg_black20_stroke2" android:padding="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="@dimen/dp_300" android:layout_marginLeft="@dimen/dp_40">
+                    <com.yd.android_brand_mvp.widget.YDEditText android:gravity="top" android:id="@id/edit" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

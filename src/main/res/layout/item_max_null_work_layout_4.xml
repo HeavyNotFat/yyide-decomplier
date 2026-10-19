@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_null_work" />
+    <TextView android:textSize="@dimen/sp_28" android:gravity="center" android:id="@id/tv_null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="暂无作业" />
+</LinearLayout>

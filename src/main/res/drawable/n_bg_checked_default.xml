@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval" android:useLevel="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/N_checkedHollowCircleStroke" android:color="@color/N_hollowCircleColor" />
+    <size android:height="@dimen/N_checkedCircleRadius" android:width="@dimen/N_checkedCircleRadius" />
+</shape>

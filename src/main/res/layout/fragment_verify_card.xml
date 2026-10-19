@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_fragment_verify_card" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bg_card" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="@dimen/sp_24" android:textColor="#999999" android:id="@id/tv_fragment_verify_card" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dp" android:text="@string/please_device_card_area" app:layout_constraintEnd_toEndOf="@id/iv_fragment_verify_card" app:layout_constraintStart_toStartOf="@id/iv_fragment_verify_card" app:layout_constraintTop_toBottomOf="@id/iv_fragment_verify_card" />
+</androidx.constraintlayout.widget.ConstraintLayout>

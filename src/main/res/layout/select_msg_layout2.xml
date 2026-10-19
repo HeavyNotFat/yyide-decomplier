@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white10" android:layout_width="500.0dp" android:layout_height="200.0dp">
+        <TextView android:textStyle="normal" android:textColor="@color/black3" android:gravity="center" android:id="@id/msg" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" style="@style/TextSize_28" />
+        <TextView android:background="@color/line" android:layout_width="match_parent" android:layout_height="1.0dp" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="80.0dp">
+            <TextView android:textStyle="normal" android:textColor="@color/blue7" android:gravity="center" android:id="@id/cancel" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="否" android:layout_weight="1.0" style="@style/TextSize_24black" />
+            <TextView android:textStyle="normal" android:textColor="@color/white" android:gravity="center" android:id="@id/yes" android:background="@drawable/bg_right2" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="是" android:layout_weight="1.0" style="@style/TextSize_24black" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

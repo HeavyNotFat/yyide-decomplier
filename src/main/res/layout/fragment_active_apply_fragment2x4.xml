@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/clContent" android:background="@drawable/bg_f5f6fa_20" android:layout_width="@dimen/dp_320" android:layout_height="@dimen/dp_868"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/top" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_head_title" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_16" />
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_white20" android:paddingLeft="@dimen/dp_20" android:paddingRight="@dimen/dp_20" android:layout_width="320.0dp" android:layout_height="@dimen/dp_202" android:paddingHorizontal="@dimen/dp_20">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_7">
+            <TextClock android:textSize="78.0sp" android:textColor="@color/black10" android:gravity="center" android:background="@drawable/icon_time_bg" android:layout_width="@dimen/dp_128" android:layout_height="@dimen/dp_128" android:format24Hour="HH" />
+            <TextView android:textSize="78.0sp" android:textColor="@color/black10" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="@dimen/dp_128" android:text=":" />
+            <TextClock android:textSize="78.0sp" android:textColor="@color/black10" android:gravity="center" android:background="@drawable/icon_time_bg" android:layout_width="@dimen/dp_128" android:layout_height="@dimen/dp_128" android:format24Hour="mm" />
+        </LinearLayout>
+        <TextClock android:textSize="22.0dp" android:textColor="@color/black10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:format24Hour="yyyy年MM月dd日 EEEE" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

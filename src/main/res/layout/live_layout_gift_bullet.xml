@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="left" android:id="@id/gift_group" android:background="@drawable/live_gift_bullet_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:layout_marginTop="20.0dp">
+        <com.tencent.qcloud.tim.tuikit.live.component.common.CircleImageView android:id="@id/iv_send_user_icon" android:layout_width="39.0dp" android:layout_height="39.0dp" android:layout_margin="3.0dp" android:scaleType="centerCrop" android:layout_centerVertical="true" />
+        <RelativeLayout android:id="@id/gift_text_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_send_user_icon">
+            <TextView android:textSize="12.0sp" android:textColor="@color/live_gift_white" android:id="@id/tv_send_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dp" android:layout_marginTop="4.0dp" android:maxWidth="@dimen/live_text_max_show_width" android:maxLines="1" />
+            <TextView android:textSize="11.0sp" android:textColor="@color/live_gift_white" android:ellipsize="end" android:id="@id/tv_gift_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:maxWidth="@dimen/live_text_max_show_width" android:maxLines="1" android:layout_below="@id/tv_send_user_name" android:layout_alignLeft="@id/tv_send_user_name" />
+        </RelativeLayout>
+        <ImageView android:id="@id/iv_gift_icon" android:layout_width="39.0dp" android:layout_height="39.0dp" android:layout_toRightOf="@id/gift_text_group" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="end|center" android:orientation="vertical" android:id="@id/app_video_brightness_box" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/content" android:layout_width="100.0dp" android:layout_height="wrap_content">
+        <ImageView android:id="@id/app_video_brightness_icon" android:layout_width="40.0dp" android:layout_height="40.0dp" android:src="@drawable/video_brightness_6_white_36dp" android:layout_centerHorizontal="true" android:layout_marginEnd="15.0dp" android:layout_alignParentEnd="true" />
+        <TextView android:textSize="16.0dp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/app_video_brightness" android:paddingTop="8.0dp" android:layout_width="70.0dp" android:layout_height="wrap_content" android:text="50%" android:layout_below="@id/app_video_brightness_icon" android:layout_centerHorizontal="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

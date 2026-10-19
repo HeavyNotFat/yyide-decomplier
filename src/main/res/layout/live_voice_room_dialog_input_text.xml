@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/rl_outside_view" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/rl_inputdlg_view" android:background="#b4ffffff" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <EditText android:textColor="@color/live_voice_room_color_black" android:id="@id/et_input_message" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:maxLength="32" android:layout_weight="1.0" android:inputType="text" android:imeOptions="actionUnspecified|normal" />
+        <View android:background="@color/live_voice_room_color_transparent_black" android:layout_width="0.5dp" android:layout_height="match_parent" android:layout_marginLeft="6.0dp" android:layout_marginTop="10.0dp" android:layout_marginBottom="10.0dp" android:layout_marginStart="6.0dp" />
+        <LinearLayout android:layout_gravity="center" android:id="@id/confirm_area" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dp">
+            <Button android:textColor="@color/colorWhite" android:gravity="center" android:id="@id/confrim_btn" android:background="@drawable/live_voice_room_bg_button_border" android:layout_width="50.0dp" android:layout_height="30.0dp" android:text="@string/live_voice_room_send" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

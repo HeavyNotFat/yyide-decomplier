@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:padding="@dimen/dp_30" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:id="@id/iv_img" android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@drawable/default_head" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff666666" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_10" app:layout_constraintBottom_toBottomOf="@id/iv_img" app:layout_constraintStart_toEndOf="@id/iv_img" app:layout_constraintTop_toTopOf="@id/iv_img" />
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ff393939" android:ellipsize="end" android:id="@id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:maxLines="2" app:layout_constraintStart_toStartOf="@id/iv_img" app:layout_constraintTop_toBottomOf="@id/iv_img" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" app:layout_constraintStart_toStartOf="@id/tv_content" app:layout_constraintTop_toBottomOf="@id/tv_content" />
+        <TextView android:textSize="18.0sp" android:textColor="#393939" android:ellipsize="end" android:id="@id/tv_reply" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:maxLines="2" app:layout_constraintTop_toBottomOf="@id/tv_time" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View android:background="#d8d8d8" android:layout_width="match_parent" android:layout_height="1.0dp" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bp_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@drawable/bg_white20" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_80" android:layout_marginTop="@dimen/dp_62" android:layout_marginRight="@dimen/dp_80" android:layout_marginBottom="@dimen/dp_62" />
+    <FrameLayout android:paddingLeft="@dimen/dp_150" android:paddingRight="@dimen/dp_195" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="200.0dp" android:src="@drawable/login_bg" />
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="right" android:orientation="vertical" android:id="@id/ll_account" android:visibility="visible" android:layout_width="@dimen/dp_489" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_400" android:layout_marginRight="@dimen/dp_20">
+            <LinearLayout android:layout_width="@dimen/dp_489" android:layout_height="@dimen/dp_61" android:layout_marginTop="@dimen/dp_37">
+                <TextView android:textSize="@dimen/sp_20" android:textColor="@color/black9" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="注册码: " />
+                <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                    <com.yd.android_brand_mvp.widget.YDEditText android:textSize="@dimen/sp_20" android:textColor="@color/black3" android:textColorHint="@color/home_E7" android:gravity="center_vertical" android:id="@id/register" android:background="@drawable/bg_white21" android:paddingLeft="@dimen/dp_20" android:paddingTop="@dimen/dp_10" android:paddingBottom="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_20" android:text="" android:hint="请输入注册码" android:maxLines="1" android:lines="1" android:maxEms="20" android:singleLine="true" />
+                    <TextView android:textSize="@dimen/sp_24" android:textColor="#7a5cde" android:layout_gravity="right|center" android:id="@id/getCode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_25" android:text="立即获取" />
+                </FrameLayout>
+            </LinearLayout>
+            <TextView android:textColor="@color/blue4" android:gravity="right" android:id="@id/tips" android:layout_width="@dimen/dp_476" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_17" android:maxLines="1" />
+            <FrameLayout android:layout_width="@dimen/dp_476" android:layout_height="@dimen/dp_61" android:layout_marginTop="@dimen/dp_52">
+                <TextView android:textSize="@dimen/sp_26" android:textColor="@color/white" android:gravity="center" android:id="@id/config" android:background="@drawable/login_btn_bg" android:paddingBottom="@dimen/dp_6" android:layout_width="@dimen/dp_476" android:layout_height="@dimen/dp_61" android:text="登录" />
+                <TextView android:textSize="@dimen/sp_26" android:textColor="@color/white" android:gravity="center" android:id="@id/registerBtn" android:background="@drawable/login_btn_bg" android:paddingBottom="@dimen/dp_6" android:visibility="gone" android:layout_width="@dimen/dp_476" android:layout_height="@dimen/dp_61" android:text="注册" />
+                <TextView android:textSize="@dimen/sp_26" android:textColor="@color/white" android:gravity="center" android:id="@id/activateBtn" android:background="@drawable/login_btn_bg" android:paddingBottom="@dimen/dp_6" android:visibility="gone" android:layout_width="@dimen/dp_476" android:layout_height="@dimen/dp_61" android:text="激活" />
+                <ProgressBar android:layout_gravity="right|center" android:id="@id/progress" android:visibility="gone" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:layout_marginRight="@dimen/dp_130" android:indeterminateTint="@color/white" android:indeterminateTintMode="src_atop" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_230" android:layout_marginRight="@dimen/dp_300">
+            <TextView android:textSize="66.0sp" android:textColor="#666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hey!" />
+            <TextView android:textSize="56.0sp" android:textColor="#666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="欢迎回来" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

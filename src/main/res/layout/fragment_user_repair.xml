@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white" android:padding="30.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_fragment_repair_detail_nav" android:layout_width="match_parent" android:layout_height="60.0dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/line_division" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.5" />
+        <TextView android:textSize="26.0sp" android:textColor="@color/text_333333" android:gravity="center" android:id="@id/tv_fragment_repair_detail_launch" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="发起报修" android:layout_marginEnd="10.0dp" app:layout_constraintEnd_toEndOf="@id/line_division" />
+        <TextView android:textSize="24.0sp" android:textColor="@color/color_999999" android:gravity="center" android:id="@id/tv_fragment_repair_detail_list" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="报修记录" android:layout_marginStart="10.0dp" app:layout_constraintStart_toEndOf="@id/line_division" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout android:id="@id/fl_fragment_repair_detail" android:background="@color/white" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="15.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/cl_fragment_repair_detail_nav" />
+</androidx.constraintlayout.widget.ConstraintLayout>

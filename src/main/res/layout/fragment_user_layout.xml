@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/dp_162" android:paddingTop="@dimen/dp_32" android:paddingRight="@dimen/dp_162" android:paddingBottom="@dimen/dp_32" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:paddingLeft="@dimen/dp_30" android:paddingRight="@dimen/dp_30" android:layout_width="@dimen/dp_580" android:layout_height="match_parent">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_170">
+                <FrameLayout android:layout_gravity="center_vertical" android:background="@drawable/icon_head_bg" android:layout_width="@dimen/dp_90" android:layout_height="@dimen/dp_90">
+                    <ImageView android:layout_gravity="center" android:id="@id/img" android:layout_width="@dimen/dp_70" android:layout_height="@dimen/dp_70" />
+                </FrameLayout>
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_150">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/sp_20" android:textColor="#393939" android:ellipsize="end" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                        <TextView android:textSize="@dimen/sp_20" android:textColor="#666666" android:ellipsize="end" android:id="@id/tv_class_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_14" android:singleLine="true" />
+                    </LinearLayout>
+                    <TextView android:textSize="@dimen/sp_18" android:ellipsize="end" android:id="@id/teacherName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:singleLine="true" />
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:background="@drawable/bg_black_stroke" android:layout_width="match_parent" android:layout_height="@dimen/dp_120">
+                <FrameLayout android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="@dimen/dp_60">
+                    <TextView android:textSize="@dimen/sp_20" android:textColor="#a4a4a4" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:text="即将上课" />
+                    <TextView android:textSize="@dimen/sp_18" android:textColor="@color/white" android:gravity="center" android:layout_gravity="right|center" android:id="@id/table_btn" android:background="@drawable/bg_purple20" android:layout_width="@dimen/dp_111" android:layout_height="@dimen/dp_40" android:layout_marginRight="@dimen/dp_21" android:text="本周课表" />
+                </FrameLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="@dimen/dp_60" android:layout_marginTop="@dimen/dp_60">
+                    <TextView android:textSize="@dimen/sp_20" android:textColor="#393939" android:id="@id/subjectName" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/sp_20" android:textColor="#393939" android:id="@id/subjectName2" android:paddingLeft="@dimen/dp_10" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/sp_20" android:textColor="#393939" android:id="@id/subjectName3" android:paddingLeft="@dimen/dp_10" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:background="@drawable/bg_black_stroke" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_44">
+                <FrameLayout android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="@dimen/dp_60">
+                    <TextView android:textSize="@dimen/sp_20" android:textColor="#a4a4a4" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:text="请假记录" />
+                    <TextView android:textSize="@dimen/sp_18" android:textColor="@color/white" android:gravity="center" android:layout_gravity="right|center" android:id="@id/leave_btn" android:background="@drawable/bg_purple20" android:layout_width="@dimen/dp_111" android:layout_height="@dimen/dp_40" android:layout_marginRight="@dimen/dp_21" android:text="请假" />
+                </FrameLayout>
+                <ListView android:id="@id/list" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_80" android:layout_marginBottom="@dimen/dp_20" android:divider="@color/transparent" android:dividerHeight="20.0dp" />
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:layout_width="@dimen/dp_20" android:layout_height="wrap_content" />
+        <FrameLayout android:id="@id/content" android:background="@drawable/bg_white20" android:padding="3.0dp" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

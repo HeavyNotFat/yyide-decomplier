@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/blue7" android:paddingLeft="42.0dp" android:paddingRight="42.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_blue10" android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/dp_86">
+        <FrameLayout android:background="@drawable/bg_white20" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="26.0dp" android:textStyle="bold" android:textColor="@color/black3" android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="88.0dp" android:text="课程表" />
+            <FrameLayout android:layout_gravity="center_vertical" android:id="@id/back_layout" android:paddingLeft="20.0dp" android:paddingRight="20.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10.0dp">
+                <TextView android:layout_gravity="center" android:id="@id/back" android:background="@drawable/back_btn" android:layout_width="16.0dp" android:layout_height="27.0dp" />
+            </FrameLayout>
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:padding="40.0dp" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="20.0dp" android:layout_weight="1.0">
+            <com.yd.android_brand_mvp.customview.MyGridView android:id="@id/grid_rl" android:background="@drawable/table_item_bg9l" android:layout_width="1716.0dp" android:layout_height="@dimen/dp_86" />
+            <FrameLayout android:id="@id/table_view" android:padding="@dimen/dp_35" android:layout_width="match_parent" android:layout_height="match_parent">
+                <GridView android:id="@id/list_table" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_26" android:layout_marginTop="@dimen/dp_19" android:layout_marginRight="@dimen/dp_26" android:layout_marginBottom="@dimen/dp_20" android:horizontalSpacing="@dimen/dp_4" android:verticalSpacing="@dimen/dp_37" android:numColumns="4" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <include android:visibility="gone" android:layout_width="wrap_content" android:layout_height="82.0dp" layout="@layout/activity_layout_bottom" />
+</LinearLayout>

@@ -1,0 +1,45 @@
+package com.yd.android_brand_mvp.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import androidx.viewbinding.ViewBinding;
+import com.yd.android_brand_mvp.R;
+
+/* JADX INFO: loaded from: classes4.dex */
+public final class ActivitySettingLandscapePBinding implements ViewBinding {
+    public final FrameLayout fmSetting;
+    private final LinearLayout rootView;
+
+    private ActivitySettingLandscapePBinding(LinearLayout linearLayout, FrameLayout frameLayout) {
+        this.rootView = linearLayout;
+        this.fmSetting = frameLayout;
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    public LinearLayout getRoot() {
+        return this.rootView;
+    }
+
+    public static ActivitySettingLandscapePBinding inflate(LayoutInflater layoutInflater) {
+        return inflate(layoutInflater, null, false);
+    }
+
+    public static ActivitySettingLandscapePBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z) {
+        View viewInflate = layoutInflater.inflate(R.layout.activity_setting_landscape_p, viewGroup, false);
+        if (z) {
+            viewGroup.addView(viewInflate);
+        }
+        return bind(viewInflate);
+    }
+
+    public static ActivitySettingLandscapePBinding bind(View view) {
+        FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.fm_setting);
+        if (frameLayout != null) {
+            return new ActivitySettingLandscapePBinding((LinearLayout) view, frameLayout);
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(R.id.fm_setting)));
+    }
+}

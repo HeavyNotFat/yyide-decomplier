@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="110.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yd.android_brand_mvp.widget.TextCircleImage android:id="@id/tvCircleName" android:layout_width="50.0dp" android:layout_height="50.0dp" android:layout_marginTop="@dimen/dp_15" app:circle_background_color="#6747d3" app:circle_text_color="@color/white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:sub_first_character="true" app:text_size="@dimen/sp_16" />
+    <TextView android:textSize="@dimen/sp_16" android:textColor="#ff333333" android:ellipsize="end" android:gravity="center" android:id="@id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_6" android:text="长山" android:lines="1" android:ems="4" app:layout_constraintEnd_toEndOf="@id/tvCircleName" app:layout_constraintStart_toStartOf="@id/tvCircleName" app:layout_constraintTop_toBottomOf="@id/tvCircleName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

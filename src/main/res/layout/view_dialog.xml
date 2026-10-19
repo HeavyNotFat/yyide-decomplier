@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_background" android:background="@drawable/alert_bg" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@id/tv_title" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_marginLeft="15.0dp" android:layout_marginTop="15.0dp" android:layout_marginRight="15.0dp" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_alert" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <ImageView android:background="@color/dialog_line_bg" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="10.0dp" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textSize="16.0sp" android:textColor="@color/font_blue" android:gravity="center" android:id="@id/btn_neg" android:background="@drawable/trans_bg" android:layout_width="wrap_content" android:layout_height="50.0dp" android:layout_weight="1.0" />
+        <ImageView android:id="@id/img_line" android:background="@color/dialog_line_bg" android:layout_width="0.5dp" android:layout_height="50.0dp" />
+        <Button android:textSize="16.0sp" android:textColor="@color/font_blue" android:gravity="center" android:id="@id/btn_pos" android:background="@drawable/trans_bg" android:layout_width="wrap_content" android:layout_height="50.0dp" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

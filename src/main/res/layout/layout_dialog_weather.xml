@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="vertical" android:background="@drawable/bg_weather" android:layout_width="681.0dp" android:layout_height="500.0dp" android:layout_marginTop="@dimen/dp_45" android:layout_marginRight="@dimen/dp_45">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_39" android:layout_marginTop="@dimen/dp_25" android:layout_marginRight="@dimen/dp_39">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="72.0sp" android:textColor="#fafdff" android:id="@id/wd" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="24.0sp" android:textColor="#fafdff" android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_10" android:text="℃" />
+            </LinearLayout>
+            <TextView android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_5">
+                <TextClock android:textSize="20.0sp" android:textColor="#fafdff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:format12Hour="EEEE" android:format24Hour="EEEE" />
+                <TextClock android:textSize="20.0sp" android:textColor="#fafdff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:format12Hour="yyyy年MM月dd日" android:format24Hour="yyyy年MM月dd日" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/sp_20" android:textColor="#fafdff" android:id="@id/info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_39" android:layout_marginTop="@dimen/dp_135" android:layout_marginRight="@dimen/dp_39" android:text="" />
+        <GridView android:layout_gravity="bottom" android:id="@id/grid" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_35" android:layout_marginRight="@dimen/dp_35" android:layout_marginBottom="@dimen/dp_137" android:horizontalSpacing="@dimen/dp_12" android:numColumns="5" />
+    </FrameLayout>
+    <TextView android:layout_gravity="right" android:id="@id/close" android:background="@drawable/del_btn" android:layout_width="@dimen/dp_45" android:layout_height="@dimen/dp_45" />
+</FrameLayout>

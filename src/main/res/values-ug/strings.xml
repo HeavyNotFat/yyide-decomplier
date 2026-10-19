@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort">توختىتىش</string>
+    <string name="hms_abort_message">چۈشۈرۈشنى توختىتامسىز؟</string>
+    <string name="hms_bindfaildlg_message">نۆۋەتتە %1$s مۇلازىمىتى HMS Core ئىشلىتەلمەيدۇ. باشقۇرغۇچ ياكى تەڭشەكتە %2$s ئۈچۈن بارلىق ئىجازەتنى ئېچىڭ («ئۆزلۈكىدىن قوزغىلىش» ۋە «باغلانما قوزغىتىش» مۇ شۇنىڭ ئىچىدە).</string>
+    <string name="hms_cancel">بىكار قىلىش</string>
+    <string name="hms_check_failure">كەچۈرۈڭ، HMS Core يېڭىلانمىسى تەكشۈرۈلمىدى.</string>
+    <string name="hms_check_no_update">بۇ ئەڭ يېڭى نەشرى</string>
+    <string name="hms_checking">يېڭى نەشرىنى تەكشۈرۈۋاتىدۇ...</string>
+    <string name="hms_confirm">بىلدىم</string>
+    <string name="hms_download_failure">كەچۈرۈڭ، HMS Core قاچىلاش بوغچىسى چۈشمىدى.</string>
+    <string name="hms_download_no_space">بوشلۇق يېتەرسىز، چۈشمەيدۇ.</string>
+    <string name="hms_download_retry">كەچۈرۈڭ، HMS Core چۈشمىدى، قايتا سىنامسىز؟</string>
+    <string name="hms_downloading">نۆۋەتتە HMS Core چۈشۈۋاتىدۇ | %d%% تاماملاندى</string>
+    <string name="hms_downloading_loading">يۈكلەۋاتىدۇ</string>
+    <string name="hms_downloading_new">نۆۋەتتە HMS Core يۈكلىنىۋاتىدۇ</string>
+    <string name="hms_gamebox_name">شياۋمى ئويۇن مەركىزى</string>
+    <string name="hms_install">قاچىلاش</string>
+    <string name="hms_install_message">ئۈسكۈنىگە HMS Core قاچىلانمىغان، بۇ ئىقتىدار شۇنى قاچىلىغاندىن كېيىن ئىشلەيدۇ. قاچىلامسىز؟</string>
+    <string name="hms_push_channel">سۈكۈتتىكى</string>
+    <string name="hms_retry">قايتا سىناش</string>
+    <string name="hms_update">يېڭلاش</string>
+    <string name="hms_update_continue">داۋاملىق چۈشۈرۈش</string>
+    <string name="hms_update_message">ئۈسكۈنىدىكى HMS Core نىڭ نەشرى بەك تۆۋەن، يېڭىلاش كېرەك. يېڭىلامسىز؟</string>
+    <string name="hms_update_message_new">"بۇ مۇلازىمەتنى ئىشلىتىش ئۈچۈن تۆۋەندىكى ئەپنىڭ ئەڭ يېڭى نەشرىنى قاچىلاش كېرەك: 
+
+·%1$s"</string>
+    <string name="hms_update_nettype">نۆۋەتتىكىسى Wi-Fi تورى ئەمەس. چۈشۈرۈشنى داۋاملاشتۇرامسىز؟</string>
+    <string name="hms_update_title">HMS Core</string>
+    <string name="upsdk_app_dl_installing">خۇاۋېي ئەپ بازىرى چۈشۈۋاتىدۇ</string>
+    <string name="upsdk_app_download_info_new">قاچىلاش</string>
+    <string name="upsdk_app_size">سىغىم</string>
+    <string name="upsdk_app_version">نەشرى</string>
+    <string name="upsdk_cancel">بىكار قىلىش</string>
+    <string name="upsdk_checking_update_prompt">يېڭىلانما تەكشۈرۈۋاتىدۇ...</string>
+    <string name="upsdk_choice_update">ئىشلەتكىلى بولىدىغان يېڭىلانما بار، تېز دەرىجىسىنى ئۆستۈرۈۋېلىڭ.</string>
+    <string name="upsdk_connect_server_fail_prompt_toast">مۇلازىمىتېرغا ئۇلانمىدى، سەل تۇرۇپ قايتا سىناڭ</string>
+    <string name="upsdk_detail">تەپسىلات</string>
+    <string name="upsdk_getting_message_fail_prompt_toast">ئۇچۇرغا ئېرىشەلمىدى، سەل تۇرۇپ قايتا سىناڭ</string>
+    <string name="upsdk_install">خۇاۋېي ئورگان ئەپ بازىرىنى ئىشلەتكەندىلا ئاندىن دەرىجىسىنى ئۆستۈرۈشكە بولىدۇ، داۋاملاشتۇرامسىز؟</string>
+    <string name="upsdk_no_available_network_prompt_toast">تور ئۇلانمىدى، تور تەڭشىكىنى تەكشۈرۈڭ</string>
+    <string name="upsdk_ota_app_name">ئەپ</string>
+    <string name="upsdk_ota_cancel">كېيىنچە</string>
+    <string name="upsdk_ota_force_cancel_new">ئەپتىن چېكىنىش</string>
+    <string name="upsdk_ota_notify_updatebtn">يېڭىلاش</string>
+    <string name="upsdk_ota_title">يېڭى نەشرى بايقالدى</string>
+    <string name="upsdk_storage_utils">%1$sMB</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex">قاچىلاشنى بىكار قىلامسىز؟</string>
+    <string name="upsdk_third_app_dl_install_failed">قاچىلانمىدى</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download">جەزملەش</string>
+    <string name="upsdk_update_check_no_new_version">بۇ ئەڭ يېڭى نەشرى</string>
+    <string name="upsdk_updating">يېڭىلىنىۋاتىدۇ</string>
+</resources>

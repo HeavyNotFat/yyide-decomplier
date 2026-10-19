@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/activity_detail_player" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/view_pager2" android:background="@drawable/bg_item_20_photo" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_indicator" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_30" android:layout_alignParentBottom="true" />
+    <TextView android:layout_gravity="right" android:id="@id/close" android:background="@drawable/gb_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dp" android:layout_alignParentRight="true" />
+</RelativeLayout>

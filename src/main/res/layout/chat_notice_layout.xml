@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#f6ebbc" android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:id="@id/notice_content" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textColor="@color/font_blue" android:id="@id/notice_content_extra" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/page_margin" android:text="@string/group_apply_click_handle" />
+    </LinearLayout>
+</RelativeLayout>

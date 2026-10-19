@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white" android:paddingBottom="@dimen/dp_10" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_user_head" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_5" android:src="@drawable/default_head" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="10.0sp" android:textColor="@color/list_bottom_text_bg" android:ellipsize="end" android:id="@id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_5" android:lines="1" android:maxEms="5" app:layout_constraintEnd_toEndOf="@id/iv_user_head" app:layout_constraintStart_toStartOf="@id/iv_user_head" app:layout_constraintTop_toBottomOf="@id/iv_user_head" />
+    <ImageView android:id="@id/ivCheck" android:visibility="invisible" android:layout_width="14.0dp" android:layout_height="14.0dp" android:layout_marginTop="@dimen/dp_4" android:layout_marginStart="@dimen/dp_20" app:layout_constraintStart_toStartOf="@id/iv_user_head" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

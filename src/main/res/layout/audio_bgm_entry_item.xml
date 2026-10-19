@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="9.0">
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="left|center" android:id="@id/tv_bgm_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" />
+        <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:layout_gravity="left|center" android:id="@id/tv_bgm_actor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" />
+    </LinearLayout>
+    <ImageView android:id="@id/iv_bgm_play" android:layout_width="0.0dp" android:layout_height="wrap_content" android:src="@drawable/audio_effect_setting_bgm_play" android:layout_weight="1.0" />
+</LinearLayout>

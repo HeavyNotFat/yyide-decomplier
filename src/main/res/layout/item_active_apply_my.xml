@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent" android:layout_height="@dimen/dp_65"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/sp_18" android:textColor="#595959" android:gravity="center" android:id="@id/tv_serial_number" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="1" android:layout_weight="0.5" />
+    <TextView android:textSize="@dimen/sp_18" android:textColor="#595959" android:ellipsize="end" android:gravity="center" android:id="@id/tv_active_name" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="2024校运会" android:lines="1" android:layout_weight="1.0" android:layout_marginEnd="@dimen/dp_5" />
+    <TextView android:textSize="@dimen/sp_18" android:textColor="#595959" android:ellipsize="end" android:gravity="center" android:id="@id/tv_child_project" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="100米" android:lines="1" android:layout_weight="1.0" android:layout_marginStart="@dimen/dp_5" />
+    <TextView android:textSize="@dimen/sp_18" android:textColor="#595959" android:gravity="center" android:id="@id/tv_registration_status" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="已报名" android:layout_weight="1.5" />
+    <TextView android:textSize="@dimen/sp_18" android:textColor="#595959" android:gravity="center" android:id="@id/tv_registration_time" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="2024-10-11 12:30:21" android:layout_weight="1.0" />
+</androidx.appcompat.widget.LinearLayoutCompat>

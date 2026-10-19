@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/content" android:background="@drawable/timebg_red" android:layout_width="@dimen/dp_444" android:layout_height="@dimen/dp_136" android:paddingStart="39.0dp">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextClock android:textSize="64.0sp" android:textStyle="bold" android:textColor="#ffff656e" android:gravity="center" android:layout_gravity="center_vertical" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_90" android:layout_height="@dimen/dp_90" android:format24Hour="HH" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dp" android:layout_marginRight="11.0dp">
+                <TextView android:background="@drawable/bg_yuan_whitle_bg" android:layout_width="5.0dp" android:layout_height="5.0dp" />
+                <TextView android:background="@drawable/bg_yuan_whitle_bg" android:layout_width="match_parent" android:layout_height="4.0dp" android:layout_marginTop="@dimen/dp_12" />
+            </LinearLayout>
+            <TextClock android:textSize="64.0sp" android:textStyle="bold" android:textColor="#ffff656e" android:gravity="center" android:layout_gravity="center_vertical" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_90" android:layout_height="@dimen/dp_90" android:format24Hour="mm" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="right|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="40.0dp">
+            <TextClock android:textSize="22.0sp" android:textColor="@color/white3" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:format24Hour="EEEE" />
+            <TextClock android:textSize="18.0sp" android:textColor="@color/white3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:format24Hour="yyyy年MM月dd日" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

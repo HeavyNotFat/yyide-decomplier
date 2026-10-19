@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/cb_contact" android:background="@drawable/icon_selector" android:layout_width="30.0dp" android:layout_height="30.0dp" />
+    <ImageView android:id="@id/img_avatar" android:layout_width="@dimen/contact_avatar_width" android:layout_height="@dimen/contact_avatar_width" android:layout_marginLeft="10.0dp" />
+    <TextView android:textSize="@dimen/text_size_large" android:textColor="@color/colorWhite" android:id="@id/tv_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" />
+</LinearLayout>

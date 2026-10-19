@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:background="@drawable/icon_cartoon_class_info_bg" android:paddingTop="@dimen/dp_9" android:paddingRight="@dimen/dp_6" android:paddingBottom="@dimen/dp_9" android:layout_width="@dimen/dp_444" android:layout_height="@dimen/dp_604">
+        <LinearLayout android:id="@id/ll_tab" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/dp_140">
+                <com.makeramen.roundedimageview.RoundedImageView android:id="@id/img_head" android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_60" android:layout_marginTop="@dimen/dp_30" android:layout_marginStart="@dimen/dp_30" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:riv_border_color="#fff2b4" app:riv_border_width="@dimen/dp_8" app:riv_oval="true" />
+                <TextView android:textSize="42.0sp" android:textStyle="bold" android:textColor="@color/color_856100" android:layout_gravity="center_vertical" android:id="@id/tv_class_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" app:layout_constraintBottom_toBottomOf="@id/img_head" app:layout_constraintStart_toEndOf="@id/img_head" app:layout_constraintTop_toTopOf="@id/img_head" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_no" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" app:layout_constraintStart_toStartOf="@id/img_head" app:layout_constraintTop_toBottomOf="@id/img_head">
+                    <TextView android:textSize="22.0sp" android:textColor="@color/color_856100" android:id="@id/tv_teacher_duty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="班主任" />
+                    <TextView android:textSize="22.0sp" android:textColor="@color/color_856100" android:ellipsize="end" android:id="@id/tv_teacher_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="70.0dp" android:singleLine="true" android:layout_marginStart="@dimen/dp_10" />
+                    <TextView android:textSize="22.0sp" android:textColor="@color/color_856100" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="学生人数" android:layout_marginStart="@dimen/dp_10" />
+                    <TextView android:textSize="22.0sp" android:textColor="@color/color_856100" android:layout_gravity="center_horizontal" android:id="@id/tv_student_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_10" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyleview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/dp_30" />
+        <TextView android:background="@color/color_856100" android:layout_width="@dimen/dp_1" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_4" android:layout_marginBottom="@dimen/dp_4" android:layout_marginStart="@dimen/dp_10" android:layout_marginVertical="@dimen/dp_4" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/sp_36" android:textColor="@color/white" android:gravity="center" android:orientation="vertical" android:id="@id/tv_class" android:background="@drawable/class_info_24" android:paddingLeft="@dimen/dp_6" android:paddingTop="@dimen/dp_9" android:paddingRight="@dimen/dp_6" android:paddingBottom="@dimen/dp_9" android:visibility="gone" android:layout_width="@dimen/dp_444" android:layout_height="@dimen/dp_231" android:lines="2" />
+</FrameLayout>

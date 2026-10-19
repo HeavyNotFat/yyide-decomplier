@@ -1,0 +1,145 @@
+// Single-module reconstruction of the decompiled APK.
+//
+// The Java sources are compiled ahead of time by the external ECJ tool
+// (D:\Documents\ToolsForDSH\HackedBrand\build-ecj-jars.ps1) and consumed as
+// jars in libs/.  This module only merges the manifest/resources/assets/native
+// libraries and lets AGP generate and compile the R class.
+plugins {
+    id 'com.android.application' version '7.4.2'
+}
+
+android {
+    namespace = 'com.yd.android_brand_mvp'
+
+    // The original APK was built against API 31; targetSdk stays 29.
+    compileSdk = 31
+
+    // Only build-tools 34.0.0 is installed locally.  Pin it explicitly so AGP
+    // does not try to download its own default build-tools version.
+    buildToolsVersion = '34.0.0'
+
+    defaultConfig {
+        applicationId = 'com.yd.android_brand_mvp'
+        minSdk = 22
+        // Original APK targets API 29 (see AndroidManifest.xml).
+        targetSdk = 29
+        versionCode = 3002
+        versionName = '3.0.14'
+        vectorDrawables.useSupportLibrary = true
+        // The APK contains well over 64K methods; minSdk 22 supports native
+        // multidex, so no multidex support library is required.
+        multiDexEnabled = true
+    }
+
+    buildTypes {
+        debug {
+            // Debuggable build; the decompiled BuildConfig is shipped as a
+            // class from libs/app-classes.jar (buildConfig is disabled below).
+            debuggable = true
+        }
+        release {
+            minifyEnabled = false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+        encoding = 'UTF-8'
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+
+            // The decompiled application and library sources are compiled by
+            // the external ECJ tool (error-recovery mode) into
+            // libs/app-classes.jar and libs/decompiled-libs.jar, because JADX
+            // output contains constructs javac refuses to compile.  AGP still
+            // generates and compiles the R class.
+            java.srcDirs = []
+
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+
+            // The decompiled APK kept its native libraries in src/main/lib.
+            jniLibs.srcDirs = ['src/main/lib']
+        }
+    }
+
+    buildFeatures {
+        // BuildConfig, data-binding and view-binding classes were decompiled
+        // into src/main/java; letting AGP generate them would duplicate classes.
+        buildConfig = false
+        dataBinding = false
+        viewBinding = false
+        aidl = false
+        renderScript = false
+        shaders = false
+    }
+
+    packagingOptions {
+        resources {
+            excludes += [
+                    'META-INF/*.version',
+                    'META-INF/*.kotlin_module',
+                    'META-INF/DEPENDENCIES',
+                    'META-INF/INDEX.LIST',
+                    'META-INF/LICENSE',
+                    'META-INF/LICENSE.txt',
+                    'META-INF/NOTICE',
+                    'META-INF/NOTICE.txt',
+                    'META-INF/*.SF',
+                    'META-INF/*.DSA',
+                    'META-INF/*.RSA'
+            ]
+        }
+    }
+
+    lint {
+        abortOnError = false
+        checkReleaseBuilds = false
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs += ['-Xmaxerrs', '20000']
+}
+
+dependencies {
+    // javax.annotation.* (@Nullable/@Nonnull) is referenced by hundreds of
+    // decompiled files, but annotations are not part of the APK dex.
+    compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
+
+    // Runtime build modes:
+    //
+    //  * default: use the classes present in the dex2jar jar
+    //    (libs/original-classes.jar).  This is build-only: dex2jar drops the
+    //    original R8 lambda classes (-$$Lambda$...), so the D8 output crashes
+    //    at runtime.  Use dist/智慧班牌-3.0.14-原版签名.apk for board/trial runs.
+    //
+    //  * -PuseDecompiledClasses: use the reconstructed ECJ jars.  This is for
+    //    source-level work; it is not runtime-safe either.
+    if (project.hasProperty('useDecompiledClasses')) {
+        implementation files('libs/app-classes.jar')
+        implementation files('libs/app-patch-classes.jar')
+        implementation files('libs/decompiled-libs.jar')
+        implementation files('libs/app-support-classes.jar')
+    } else {
+        implementation files('libs/original-classes.jar')
+    }
+
+    // Annotation-only APIs referenced by the decompiled third-party sources.
+    // They are not needed at runtime (retention is CLASS/SOURCE), so they are
+    // compileOnly and never end up in the APK.
+    compileOnly 'com.google.errorprone:error_prone_annotations:2.18.0'
+    compileOnly 'org.checkerframework:checker-qual:3.32.0'
+    compileOnly 'org.checkerframework:checker-compat-qual:2.5.5'
+    compileOnly 'org.joda:joda-convert:2.2.3'
+    compileOnly 'org.apache.httpcomponents:httpclient:4.5.14'
+    compileOnly 'org.slf4j:slf4j-api:1.7.36'
+    compileOnly 'org.slf4j:slf4j-simple:1.7.36'
+    compileOnly 'org.greenrobot:greendao:3.3.0'
+}

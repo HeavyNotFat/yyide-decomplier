@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingLeft="@dimen/dp_30" android:paddingRight="@dimen/dp_30" android:layout_width="match_parent" android:layout_height="52.0dp" android:paddingHorizontal="@dimen/dp_30"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_head" android:layout_width="@dimen/dp_34" android:layout_height="@dimen/dp_34" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/tv_head_name" android:background="@drawable/bg_3f87ff_50" android:layout_width="@dimen/dp_34" android:layout_height="@dimen/dp_34" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="18.0sp" android:textColor="#ff333333" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="李四" android:layout_marginStart="12.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/iv_head" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/right" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

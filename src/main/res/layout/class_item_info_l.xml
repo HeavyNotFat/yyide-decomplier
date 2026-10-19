@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/dp_50"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:paddingBottom="@dimen/dp_5" android:layout_width="match_parent" android:layout_height="match_parent" android:minHeight="@dimen/dp_50">
+        <TextView android:textStyle="bold" android:textColor="@color/black11" android:ellipsize="end" android:id="@id/item" android:layout_width="125.0dp" android:text="班训班d训" android:maxLines="2" android:lineSpacingMultiplier="1.5" style="@style/TextSize_18sp" />
+        <TextView android:textColor="@color/black9" android:id="@id/item2" android:text="班训班训" android:lineSpacingMultiplier="1.5" style="@style/TextSize_18sp" />
+    </LinearLayout>
+</FrameLayout>

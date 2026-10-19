@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="vertical" android:id="@id/content" android:background="@drawable/bgtime" android:paddingLeft="29.0dp" android:layout_width="@dimen/dp_444" android:layout_height="@dimen/dp_136">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+            <TextClock android:textSize="16.0dp" android:textColor="@color/white3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:format24Hour="yyyy年MM月dd日" />
+            <TextClock android:textSize="16.0dp" android:textColor="@color/white3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:format24Hour="EEEE" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="13.0dp">
+            <TextClock android:textSize="58.0dp" android:textStyle="bold" android:textColor="#fffdaa2a" android:gravity="center" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_81" android:layout_height="@dimen/dp_81" android:format24Hour="HH" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp">
+                <TextView android:background="@drawable/bg_yuan_whitle_bg" android:layout_width="5.0dp" android:layout_height="5.0dp" />
+                <TextView android:background="@drawable/bg_yuan_whitle_bg" android:layout_width="5.0dp" android:layout_height="5.0dp" android:layout_marginTop="@dimen/dp_12" />
+            </LinearLayout>
+            <TextClock android:textSize="58.0dp" android:textStyle="bold" android:textColor="#fffdaa2a" android:gravity="center" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_81" android:layout_height="@dimen/dp_81" android:layout_marginLeft="8.0dp" android:format24Hour="mm" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp">
+                <TextView android:background="@drawable/bg_yuan_whitle_bg" android:layout_width="5.0dp" android:layout_height="5.0dp" />
+                <TextView android:background="@drawable/bg_yuan_whitle_bg" android:layout_width="5.0dp" android:layout_height="5.0dp" android:layout_marginTop="@dimen/dp_12" />
+            </LinearLayout>
+            <TextClock android:textSize="58.0dp" android:textStyle="bold" android:textColor="#fffdaa2a" android:gravity="center" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_81" android:layout_height="@dimen/dp_81" android:layout_marginLeft="8.0dp" android:format24Hour="ss" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

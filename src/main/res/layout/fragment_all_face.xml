@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/previewView" android:layout_width="480.0dp" android:layout_height="300.0dp" android:layout_marginTop="@dimen/dp_60" />
+    <com.yd.android_brand_mvp.widget.FaceView android:layout_gravity="center_horizontal" android:id="@id/faceView" android:layout_width="480.0dp" android:layout_height="300.0dp" android:layout_marginTop="@dimen/dp_60" />
+</FrameLayout>

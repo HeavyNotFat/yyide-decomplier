@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingBottom="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:textColor="#999999" android:id="@id/tv_view_leave_content_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请假时间" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="18.0sp" android:textColor="#333333" android:ellipsize="end" android:id="@id/tv_view_leave_content_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="请假时间" android:maxLines="1" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_view_leave_content_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

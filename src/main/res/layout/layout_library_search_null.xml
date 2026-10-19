@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/dp_20"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/book_img" />
+    <TextView android:textSize="20.0sp" android:textColor="#d8d8d8" android:layout_gravity="center_horizontal" android:id="@id/msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_25" android:text="暂无搜索书籍信息" />
+</androidx.appcompat.widget.LinearLayoutCompat>

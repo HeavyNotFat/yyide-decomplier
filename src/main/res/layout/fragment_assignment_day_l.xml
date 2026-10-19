@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bg_white20" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" app:msv_emptyView="@layout/item_max_null_work_layout_4" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rl_list" android:paddingLeft="@dimen/dp_30" android:paddingRight="@dimen/dp_30" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingHorizontal="@dimen/dp_30" />
+    </com.yd.android_brand_mvp.weight.MultiStateView>
+</FrameLayout>

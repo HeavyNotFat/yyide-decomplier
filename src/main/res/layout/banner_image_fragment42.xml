@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_908" android:layout_height="@dimen/dp_604">
+        <include android:id="@id/in_top" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_head_title" />
+        <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" app:msv_emptyView="@layout/item_image_home_null_layout42" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <com.to.aboomy.pager2banner.Banner android:id="@id/banner" android:background="@drawable/bg_item_20_photo" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_30" android:layout_marginTop="@dimen/dp_20" android:layout_marginRight="@dimen/dp_30" android:layout_marginBottom="@dimen/dp_20" android:layout_marginHorizontal="@dimen/dp_30" android:layout_marginVertical="@dimen/dp_20" />
+                <TextView android:textSize="@dimen/sp_16" android:textColor="@color/black10" android:id="@id/tv_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_50" android:layout_marginBottom="@dimen/dp_30" android:text="0/0" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </com.yd.android_brand_mvp.weight.MultiStateView>
+    </LinearLayout>
+</FrameLayout>

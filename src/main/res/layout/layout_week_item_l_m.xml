@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckedTextView android:textSize="34.0dp" android:textColor="@color/rl_tab_color_1" android:ellipsize="end" android:gravity="center" android:id="@id/weekItem" android:background="@drawable/att_tab_rl_l_m" android:layout_width="match_parent" android:layout_height="86.0dp" android:maxLines="1" android:textAlignment="center" />
+</LinearLayout>

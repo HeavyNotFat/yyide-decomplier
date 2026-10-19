@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_assignment_10_stroke" android:layout_width="474.0dp" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_34" android:layout_marginBottom="@dimen/dp_34" android:layout_marginVertical="@dimen/dp_34"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textStyle="bold" android:textColor="@color/black13" android:id="@id/tv_subject" android:layout_marginTop="@dimen/dp_39" android:layout_centerHorizontal="true" style="@style/TextSize_28" />
+    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/black11" android:id="@id/tv_issuer" android:layout_marginTop="@dimen/dp_39" android:layout_marginBottom="@dimen/dp_29" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/TextSize_16sp" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@id/tv_issuer" android:layout_below="@id/tv_subject">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="@dimen/sp_16" android:textColor="@color/black11" android:id="@id/tv_content" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_34" android:layout_marginTop="@dimen/dp_49" android:layout_marginRight="@dimen/dp_34" android:lineSpacingExtra="3.0dp" android:lineSpacingMultiplier="1.5" android:layout_marginHorizontal="@dimen/dp_34" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

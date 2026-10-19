@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/status_bar_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/contact_member_list" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <com.tencent.qcloud.tim.uikit.component.indexlib.IndexBar.widget.IndexBar android:layout_gravity="right|center" android:id="@id/contact_indexBar" android:layout_width="24.0dp" android:layout_height="match_parent" android:layout_marginTop="54.0dp" android:layout_marginBottom="40.799988dp" app:indexBarPressBackground="@color/partTranslucent" app:indexBarTextSize="12.0sp" />
+    <TextView android:textSize="40.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/contact_tvSideBarHint" android:background="@drawable/shape_side_bar_bg" android:visibility="gone" android:layout_width="60.0dp" android:layout_height="60.0dp" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:id="@id/contact_loading_bar" android:layout_width="28.0dp" android:layout_height="28.0dp" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="59.0dp">
+        <TextView android:textSize="20.0sp" android:textColor="#ff999999" android:gravity="center" android:background="@drawable/bg_ac_nc_item_2" android:layout_width="0.0dp" android:layout_height="59.0dp" android:text="年" android:layout_weight="1.0" />
+        <TextView android:textSize="20.0sp" android:textColor="#ff999999" android:gravity="center" android:background="@drawable/bg_ac_nc_item" android:layout_width="0.0dp" android:layout_height="59.0dp" android:text="月份" android:layout_weight="1.0" />
+        <TextView android:textSize="20.0sp" android:textColor="#ff999999" android:gravity="center" android:background="@drawable/bg_ac_nc_item" android:layout_width="0.0dp" android:layout_height="59.0dp" android:text="周次" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="440.0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_zr" android:background="@drawable/bg_white20" android:layout_width="match_parent" android:layout_height="@dimen/dp_84" android:weightSum="2.0">
+        <TextView android:gravity="center_vertical" android:id="@id/tv_title" android:layout_weight="1.0" android:layout_marginStart="@dimen/dp_30" style="@style/TextSize_24black" />
+        <Button android:textSize="@dimen/sp_20" android:textColor="@color/purple2" android:gravity="center" android:id="@id/bt_duty_today" android:background="@drawable/bg_zr_check_w" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dp_46" android:text="@string/gank_Is_on_duty_today" android:layout_weight="1.0" android:layout_marginEnd="@dimen/dp_40" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_duty" android:layout_width="match_parent" android:layout_height="match_parent" />
+</LinearLayout>

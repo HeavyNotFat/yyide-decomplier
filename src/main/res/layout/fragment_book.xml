@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/layout" android:background="@drawable/bg_dzts" android:paddingLeft="20.0dp" android:paddingTop="30.0dp" android:paddingRight="20.0dp" android:layout_width="@dimen/dp_444" android:layout_height="@dimen/dp_292">
+        <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="电子图书" />
+        <TextView android:layout_gravity="center" android:background="@drawable/pic_ts" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="20.0sp" android:textColor="#ffffff" android:gravity="center" android:layout_gravity="center|bottom" android:id="@id/dj" android:background="@drawable/bg_blue19" android:layout_width="130.0dp" android:layout_height="40.0dp" android:layout_marginBottom="30.0dp" android:text="点击进入" />
+    </FrameLayout>
+</LinearLayout>

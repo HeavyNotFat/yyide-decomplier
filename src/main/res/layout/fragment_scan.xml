@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:gravity="center" android:layout_gravity="center" android:layout_width="320.0dp" android:layout_height="320.0dp" android:text="扫码" />
+    </FrameLayout>
+</FrameLayout>

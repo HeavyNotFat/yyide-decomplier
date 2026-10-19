@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/dp_27" android:paddingRight="@dimen/dp_27" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingHorizontal="@dimen/dp_27"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:background="@drawable/icon_subject_bg" android:paddingLeft="@dimen/dp_26" android:paddingRight="@dimen/dp_26" android:paddingBottom="@dimen/dp_6" android:layout_width="match_parent" android:layout_height="@dimen/dp_46" android:layout_marginTop="10.0dp" android:paddingHorizontal="@dimen/dp_26">
+        <TextView android:textColor="@color/white" android:ellipsize="end" android:id="@id/tv_subject" android:layout_width="match_parent" android:maxLength="10" style="@style/TextSize_20sp" />
+    </RelativeLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/black10" android:id="@id/tv_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:layout_toLeftOf="@id/tv_time" android:lineSpacingExtra="3.0dp" android:lineSpacingMultiplier="1.0" android:layout_marginHorizontal="@dimen/dp_10" style="@style/TextSize_16sp" />
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0sp">
+        <TextView android:textSize="@dimen/sp_14" android:textColor="#999999" android:id="@id/lab1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_3" android:text="发布人：" />
+        <TextView android:textSize="@dimen/sp_14" android:textColor="#999999" android:ellipsize="end" android:id="@id/tv_create_people" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_10" android:lines="1" android:layout_toLeftOf="@id/tv_time" android:layout_toRightOf="@id/lab1" />
+        <TextView android:textColor="#999999" android:id="@id/tv_time" android:layout_alignParentRight="true" style="@style/TextSize_14sp" />
+    </RelativeLayout>
+</LinearLayout>

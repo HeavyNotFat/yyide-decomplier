@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.rtmp.ui.TXCloudVideoView android:id="@id/trtc_tc_cloud_view" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <FrameLayout android:id="@id/fl_no_video" android:background="#444444" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.tencent.liteav.trtcvideocalldemo.ui.videolayout.SquareImageView android:layout_gravity="center_horizontal" android:id="@id/img_avatar" android:layout_width="match_parent" android:layout_height="100.0dp" android:src="@drawable/ic_avatar" />
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@id/tv_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="XXXX" />
+        </LinearLayout>
+    </FrameLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/pb_audio" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:max="100" android:progress="0" android:minHeight="3.0dp" android:layout_alignParentBottom="true" android:layout_marginStart="2.0dp" android:layout_marginEnd="2.0dp" style="?android:progressBarStyleHorizontal" />
+</merge>

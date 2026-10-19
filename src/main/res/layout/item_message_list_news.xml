@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/clItem" android:paddingTop="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dp_10" android:paddingEnd="@dimen/dp_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ivImg" android:layout_width="138.0dp" android:layout_height="@dimen/dp_98" android:src="@drawable/icon_img_defulat" android:scaleType="fitXY" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="18.0sp" android:textColor="#393939" android:ellipsize="end" android:id="@id/tvTitle" android:layout_width="0.0dp" android:layout_height="wrap_content" android:lines="2" android:layout_marginStart="@dimen/dp_6" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/ivImg" app:layout_constraintTop_toTopOf="@id/ivImg" />
+    <TextView android:textSize="14.0sp" android:textColor="#999999" android:id="@id/tvTime" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/ivImg" app:layout_constraintStart_toStartOf="@id/tvTitle" />
+    <View android:background="@color/gray1" android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_marginTop="@dimen/dp_10" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/ivImg" app:layout_constraintTop_toBottomOf="@id/ivImg" />
+</androidx.constraintlayout.widget.ConstraintLayout>

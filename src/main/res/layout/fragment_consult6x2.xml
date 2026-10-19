@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_1000" android:layout_height="@dimen/dp_424"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/top" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_head_title" />
+    <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/linearLayoutCompat2" app:msv_emptyView="@layout/item_min_null_layout_2" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+        <com.youth.banner.Banner android:id="@id/banner" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_20" android:layout_marginRight="@dimen/dp_20" android:layout_marginHorizontal="@dimen/dp_20" />
+    </com.yd.android_brand_mvp.weight.MultiStateView>
+</androidx.appcompat.widget.LinearLayoutCompat>

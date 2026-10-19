@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll" android:background="@drawable/att_tab_rl_l" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_day" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_day_st" />
+    <CheckedTextView android:textSize="16.0dp" android:textColor="@color/rl_tab_color_1" android:ellipsize="end" android:gravity="center" android:id="@id/weekItem" android:layout_width="wrap_content" android:layout_height="54.0dp" android:text="周一" android:maxLines="1" android:textAlignment="center" />
+</LinearLayout>

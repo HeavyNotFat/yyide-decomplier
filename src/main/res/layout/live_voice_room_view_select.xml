@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/live_voice_room_bg_main_gradient" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/colorWhite" android:gravity="center_horizontal" android:id="@id/tv_pusher_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="5.0dp" android:text="邀请上麦" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/colorWhite" android:id="@id/tv_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dp" android:text="取消" android:layout_alignBottom="@id/tv_pusher_tag" android:layout_alignParentRight="true" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_pusher_list" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20.0dp" android:layout_marginTop="30.0dp" android:layout_marginRight="20.0dp" android:layout_below="@id/tv_pusher_tag" />
+</RelativeLayout>

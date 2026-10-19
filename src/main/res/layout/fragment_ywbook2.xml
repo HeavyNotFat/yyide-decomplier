@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/layout_bg" android:background="@drawable/bg_white20" android:layout_width="908.0dp" android:layout_height="916.0dp">
+        <include android:id="@id/top" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_head_title" />
+        <GridView android:id="@id/grid" android:background="@drawable/table_item_bg9l" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_30" android:layout_marginTop="@dimen/dp_20" android:layout_marginRight="@dimen/dp_30" android:numColumns="3" android:layout_below="@id/top" />
+        <FrameLayout android:id="@id/content" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/grid" />
+    </RelativeLayout>
+</RelativeLayout>

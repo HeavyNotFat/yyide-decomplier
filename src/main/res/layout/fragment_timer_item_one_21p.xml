@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/fitem" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="@dimen/dp_170" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_26">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="60.0sp" android:textStyle="bold" android:textColor="@color/yellow5" android:id="@id/tv_num" android:text="1" style="@style/TextSize_70sp" />
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/yellow5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="天" />
+            </LinearLayout>
+            <TextView android:textColor="@color/black3" android:layout_gravity="bottom" android:id="@id/tv_content" android:layout_width="match_parent" android:layout_marginLeft="@dimen/dp_4" android:text="我看" android:layout_below="@id/tv_num" style="@style/TextSize_18sp" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="right|bottom" android:id="@id/iv_img" android:background="@drawable/icon_timer_bg1" android:layout_width="@dimen/dp_133" android:layout_height="@dimen/dp_113" android:layout_marginRight="10.0dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</FrameLayout>

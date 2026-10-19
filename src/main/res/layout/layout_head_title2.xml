@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_title" android:layout_width="match_parent" android:layout_height="40.0dp" android:paddingStart="@dimen/dp_20"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/linearLayout2" android:layout_width="0.0dp" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@id/tv_layout_head_subTitle" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:id="@id/ivBack" android:background="@drawable/bg_comment_bt_40" android:layout_width="5.0dp" android:layout_height="25.0dp" />
+        <TextView android:id="@id/title" android:text="标题" android:layout_marginStart="10.0dp" style="@style/TextSize_24black" />
+    </LinearLayout>
+    <TextView android:textSize="18.0sp" android:textColor="#ff393939" android:gravity="right" android:id="@id/tv_layout_head_subTitle" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/dp_25" app:layout_constraintBottom_toBottomOf="@id/linearLayout2" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

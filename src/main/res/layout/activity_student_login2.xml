@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="680.0dp" android:layout_height="640.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="680.0dp" android:layout_height="640.0dp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_75" android:layout_marginTop="@dimen/dp_50" android:layout_marginRight="@dimen/dp_75">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <CheckedTextView android:textSize="26.0dp" android:textColor="@color/tab_color" android:layout_gravity="center_horizontal" android:id="@id/btn1" android:paddingTop="@dimen/dp_20" android:paddingBottom="@dimen/dp_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="刷卡验证" android:textAlignment="center" />
+                <TextView android:layout_gravity="center_horizontal" android:id="@id/line1" android:background="@drawable/bg_tab" android:layout_width="103.0dp" android:layout_height="2.0dp" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <CheckedTextView android:textSize="26.0dp" android:textColor="@color/tab_color" android:layout_gravity="center" android:id="@id/btn2" android:paddingTop="@dimen/dp_20" android:paddingBottom="@dimen/dp_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="人脸验证" android:textAlignment="center" />
+                <TextView android:layout_gravity="center_horizontal" android:id="@id/line2" android:background="@drawable/bg_tab" android:layout_width="103.0dp" android:layout_height="2.0dp" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <CheckedTextView android:textSize="26.0dp" android:textColor="@color/tab_color" android:layout_gravity="center" android:id="@id/btn3" android:paddingTop="@dimen/dp_20" android:paddingBottom="@dimen/dp_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="扫码验证" android:textAlignment="center" />
+                <TextView android:layout_gravity="center_horizontal" android:id="@id/line3" android:background="@drawable/bg_tab" android:layout_width="103.0dp" android:layout_height="2.0dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@id/content" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

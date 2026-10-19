@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/content" android:background="@drawable/bg_white20" android:paddingLeft="@dimen/dp_6" android:paddingTop="@dimen/dp_9" android:paddingRight="@dimen/dp_6" android:paddingBottom="@dimen/dp_9" android:layout_width="960.0dp" android:layout_height="1607.0dp" android:layout_margin="@dimen/dp_10">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="608.0dp">
+            <ImageView android:layout_width="760.0dp" android:layout_height="608.0dp" android:layout_marginTop="10.0dp" android:src="@drawable/icon_class_topl" android:scaleType="fitXY" android:layout_marginStart="@dimen/dp_61" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_tab" android:background="@drawable/icon_class_centerl" android:layout_width="807.0dp" android:layout_height="@dimen/dp_203" android:layout_marginTop="39.0dp">
+            <ImageView android:id="@id/img_head" android:layout_width="@dimen/dp_103" android:layout_height="@dimen/dp_103" android:layout_marginStart="@dimen/dp_48" />
+            <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_39">
+                <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:id="@id/tv_class_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/ll_teacher_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_24" android:layout_below="@id/tv_class_name">
+                    <TextView android:textSize="@dimen/sp_24" android:textColor="@color/black14" android:layout_gravity="center_horizontal" android:id="@id/tv_teacher_duty" android:layout_marginTop="@dimen/dp_6" android:text="班主任" style="@style/TextSize_16sp" />
+                </LinearLayout>
+                <TextView android:textSize="24.0sp" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/tv_teacher_name" android:text="" android:layout_marginStart="@dimen/dp_10" style="@style/TextSize_20sp" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/ll_student_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_24" android:layout_below="@id/tv_class_name" android:layout_marginStart="@dimen/dp_50" android:layout_toEndOf="@id/ll_teacher_name">
+                    <TextView android:textSize="24.0sp" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/tv_student_num" style="@style/TextSize_22sp" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/black14" android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/dp_6" android:text="学生人数" android:layout_marginStart="@dimen/dp_10" style="@style/TextSize_20sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyleview" android:padding="@dimen/dp_30" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/live_scenes_live_room_swipe_refresh_layout_list" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/live_scenes_live_room_rv_room_list" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <ImageButton android:id="@id/live_scenes_live_create_room" android:background="@drawable/live_voice_room_ic_create_room" android:clickable="true" android:layout_width="65.0dp" android:layout_height="65.0dp" android:layout_marginRight="20.0dp" android:layout_marginBottom="20.0dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

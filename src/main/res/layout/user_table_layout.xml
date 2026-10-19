@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:paddingLeft="40.0dp" android:paddingTop="40.0dp" android:paddingRight="40.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="20.0dp" android:paddingHorizontal="40.0dp">
+        <com.yd.android_brand_mvp.customview.MyGridView android:id="@id/grid_rl" android:background="@drawable/table_item_bg45" android:layout_width="1716.0dp" android:layout_height="@dimen/dp_86" />
+        <FrameLayout android:id="@id/table_view" android:padding="@dimen/dp_35" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16.0dp">
+            <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" app:msv_emptyView="@layout/item_null_layout_4" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+                <GridView android:id="@id/list_table" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="@dimen/dp_26" android:horizontalSpacing="@dimen/dp_4" android:verticalSpacing="@dimen/dp_23" android:numColumns="4" />
+            </com.yd.android_brand_mvp.weight.MultiStateView>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

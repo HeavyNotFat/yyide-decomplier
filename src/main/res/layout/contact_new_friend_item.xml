@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.qcloud.tim.uikit.component.CircleImageView android:id="@id/avatar" android:layout_width="45.0dp" android:layout_height="45.0dp" android:layout_marginLeft="10.0dp" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_weight="1.0">
+        <TextView android:textSize="16.0sp" android:textColor="@color/black" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/text_gray1" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dp" android:maxLines="3" />
+    </LinearLayout>
+    <Button android:textSize="@dimen/btn_text_size" android:textColor="@color/positive_text" android:layout_gravity="center" android:id="@id/agree" android:background="@color/bg_positive_btn" android:paddingLeft="@dimen/btn_padding_left" android:paddingRight="@dimen/btn_padding_right" android:layout_width="wrap_content" android:layout_height="@dimen/btn_height" android:layout_marginRight="@dimen/btn_margin_right" />
+</LinearLayout>

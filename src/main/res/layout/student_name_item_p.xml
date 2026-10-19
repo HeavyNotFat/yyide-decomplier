@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/black15" android:ellipsize="end" android:id="@id/tv_name" android:layout_marginBottom="@dimen/dp_15" android:lines="1" android:singleLine="true" style="@style/TextSize_14sp" />
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:orientation="vertical" android:background="@drawable/icon_center_top_bg" android:layout_width="match_parent" android:layout_height="464.0dp">
+            <com.makeramen.roundedimageview.RoundedImageView android:id="@id/img" android:layout_width="@dimen/dp_140" android:layout_height="@dimen/dp_140" android:layout_marginLeft="@dimen/dp_39" android:layout_marginTop="@dimen/dp_60" />
+            <TextView android:textSize="@dimen/sp_30" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_31" android:layout_marginTop="@dimen/dp_98" android:layout_toRightOf="@id/img" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_31" android:layout_marginTop="@dimen/dp_146" android:layout_toRightOf="@id/img">
+                <TextView android:textSize="@dimen/sp_16" android:textColor="@color/white" android:id="@id/tv_class_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:layout_gravity="center_vertical" android:background="#999999" android:layout_width="1.0dp" android:layout_height="15.0dp" android:layout_marginLeft="@dimen/dp_20" android:layout_marginRight="@dimen/dp_20" />
+                <TextView android:textSize="@dimen/sp_16" android:textColor="@color/white" android:ellipsize="end" android:id="@id/teacherName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/dp_20" android:paddingRight="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="@dimen/dp_200" android:layout_alignParentBottom="true" android:paddingHorizontal="@dimen/dp_20">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab1" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <CheckedTextView android:id="@id/iconcheck1" android:background="@drawable/user_tab1" android:layout_width="42.0dp" android:layout_height="43.0dp" />
+                    <CheckedTextView android:textSize="18.0sp" android:textColor="@color/rb_check_color3" android:id="@id/textcheck1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="课表" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab2" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <CheckedTextView android:id="@id/iconcheck2" android:background="@drawable/user_tab2" android:layout_width="42.0dp" android:layout_height="43.0dp" />
+                    <CheckedTextView android:textSize="18.0sp" android:textColor="@color/rb_check_color3" android:id="@id/textcheck2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="请假" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab4" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <CheckedTextView android:id="@id/iconcheck4" android:background="@drawable/user_sign_task_tab4" android:layout_width="42.0dp" android:layout_height="43.0dp" />
+                    <CheckedTextView android:textSize="18.0sp" android:textColor="@color/rb_check_color3" android:id="@id/textcheck4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="打卡任务" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab3" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <CheckedTextView android:id="@id/iconcheck3" android:background="@drawable/user_tab3" android:layout_width="42.0dp" android:layout_height="43.0dp" />
+                    <CheckedTextView android:textSize="18.0sp" android:textColor="@color/rb_check_color3" android:id="@id/textcheck3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="消息" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab5" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <CheckedTextView android:id="@id/iconcheck5" android:background="@drawable/user_tab4" android:layout_width="42.0dp" android:layout_height="43.0dp" />
+                    <CheckedTextView android:textSize="18.0sp" android:textColor="@color/rb_check_color3" android:id="@id/textcheck5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="个人荣誉" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab6" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <CheckedTextView android:id="@id/iconcheck6" android:background="@drawable/user_tab_6" android:layout_width="42.0dp" android:layout_height="43.0dp" />
+                    <CheckedTextView android:textSize="18.0sp" android:textColor="@color/rb_check_color3" android:id="@id/textcheck6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="意见箱" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab7" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <CheckedTextView android:id="@id/iconcheck7" android:background="@drawable/user_tab_exam" android:layout_width="42.0dp" android:layout_height="43.0dp" />
+                    <CheckedTextView android:textSize="18.0sp" android:textColor="@color/rb_check_color3" android:id="@id/textcheck7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="考试" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <FrameLayout android:id="@id/content" android:background="@drawable/bg_white20" android:padding="2.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_12" />
+    </LinearLayout>
+</FrameLayout>

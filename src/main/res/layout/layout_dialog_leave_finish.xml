@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_580" android:layout_height="290.0dp">
+        <TextView android:textSize="@dimen/sp_24" android:textColor="#ff999999" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_97" android:text="请假提交成功，请等待审批" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="46.0dp" android:layout_marginLeft="93.0dp" android:layout_marginRight="93.0dp" android:layout_marginBottom="@dimen/dp_55">
+            <FrameLayout android:id="@id/back_layout" android:background="@drawable/bg_black20_stroke_leave" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/sp_20" android:textColor="#ff666666" android:layout_gravity="center_vertical" android:id="@id/close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="返回首页" android:layout_marginStart="@dimen/dp_66" />
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/home_icon" android:layout_marginStart="@dimen/dp_36" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/sp_20" android:textColor="@color/white" android:gravity="center" android:id="@id/qd" android:background="@drawable/bg_right2" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="留在学生空间" android:layout_weight="1.0" android:layout_marginStart="@dimen/dp_31" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

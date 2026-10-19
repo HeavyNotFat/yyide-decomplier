@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/bg_white20_center" android:paddingLeft="@dimen/dp_162" android:paddingTop="@dimen/dp_32" android:paddingRight="@dimen/dp_162" android:paddingBottom="@dimen/dp_32" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_300" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_top" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_30" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <FrameLayout android:background="@drawable/drawable_border_10dp" android:layout_width="@dimen/dp_90" android:layout_height="@dimen/dp_90">
+                    <ImageView android:layout_gravity="center" android:id="@id/img" android:layout_width="@dimen/dp_70" android:layout_height="@dimen/dp_70" />
+                </FrameLayout>
+                <TextView android:textSize="@dimen/sp_24" android:textColor="@color/black9" android:layout_gravity="center_horizontal" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10">
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="#999999" android:id="@id/tv_class_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:layout_gravity="center_vertical" android:background="#999999" android:layout_width="1.0dp" android:layout_height="15.0dp" android:layout_marginLeft="@dimen/dp_20" android:layout_marginRight="@dimen/dp_20" />
+                    <TextView android:textSize="@dimen/sp_16" android:textColor="#999999" android:ellipsize="end" android:id="@id/teacherName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+                </LinearLayout>
+                <TextView android:textColor="#999999" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="@dimen/dp_30" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginBottom="@dimen/dp_20" app:layout_constraintBottom_toTopOf="@id/btn_back" app:layout_constraintTop_toBottomOf="@id/ll_top" />
+            <TextView android:textSize="18.0sp" android:textColor="#fe5d61" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/btn_back" android:background="@drawable/bg_login_out" android:layout_width="140.0dp" android:layout_height="46.0dp" android:layout_marginBottom="@dimen/dp_44" android:text="退出登录" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <FrameLayout android:id="@id/content" android:background="@drawable/bg_white20" android:padding="2.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="@dimen/dp_30" />
+    </LinearLayout>
+</FrameLayout>

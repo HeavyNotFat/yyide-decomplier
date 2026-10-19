@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/btn_kick_out" android:background="@drawable/live_btn_close" android:visibility="gone" android:layout_width="35.0dp" android:layout_height="35.0dp" android:layout_margin="5.0dp" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+    <com.tencent.rtmp.ui.TXCloudVideoView android:id="@id/video_player" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <FrameLayout android:id="@id/loading_background" android:background="@color/live_black20" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.5">
+        <ImageView android:layout_gravity="center" android:id="@id/loading_imageview" android:layout_width="50.0dp" android:layout_height="50.0dp" />
+    </FrameLayout>
+</merge>

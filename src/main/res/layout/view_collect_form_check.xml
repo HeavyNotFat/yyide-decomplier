@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/bg_white_10" android:padding="30.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="22.0sp" android:textColor="#ff0000" android:id="@id/tv_view_collect_form_check_required" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="*" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="22.0sp" android:textColor="#333333" android:id="@id/tv_view_collect_form_check_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="标题内容" app:layout_constraintStart_toEndOf="@id/tv_view_collect_form_check_required" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_view_collect_form_check_option" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/tv_view_collect_form_check_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>

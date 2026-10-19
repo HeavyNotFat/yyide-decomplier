@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.qcloud.tim.uikit.component.TitleBarLayout android:id="@id/edit_title_bar" android:layout_width="match_parent" android:layout_height="@dimen/page_title_height" />
+    <EditText android:id="@id/edit_content_et" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginTop="10.0dp" android:layout_marginRight="10.0dp" android:singleLine="true" android:textCursorDrawable="@drawable/my_cursor" />
+    <RadioGroup android:orientation="vertical" android:id="@id/content_list_rg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginTop="10.0dp" android:layout_marginRight="10.0dp" />
+</LinearLayout>

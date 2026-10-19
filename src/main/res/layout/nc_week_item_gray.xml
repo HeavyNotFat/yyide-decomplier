@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0sp" android:textColor="#ff999999" android:gravity="center" android:id="@id/week" android:background="@drawable/bg_ac_nc_item4" android:layout_width="match_parent" android:layout_height="59.0dp" />
+    </LinearLayout>
+</LinearLayout>

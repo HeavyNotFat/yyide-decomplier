@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white" android:padding="@dimen/dp_30" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:id="@id/ll_top" android:background="@drawable/bg_class_mode_40" android:layout_width="match_parent" android:layout_height="@dimen/dp_60" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <CheckedTextView android:textSize="26.0sp" android:textColor="@color/rl_tab_color_2" android:gravity="center" android:id="@id/tv_tab_1" android:background="@drawable/bg_rb_ann_select2" android:layout_width="0.0dp" android:layout_height="match_parent" android:checked="true" android:text="图书检索" android:layout_weight="1.0" android:textAlignment="center" />
+        <CheckedTextView android:textSize="26.0sp" android:textColor="@color/rl_tab_color_2" android:ellipsize="end" android:gravity="center" android:id="@id/tv_tab_2" android:background="@drawable/bg_rb_ann_select2" android:layout_width="0.0dp" android:layout_height="match_parent" android:checked="false" android:text="热门借阅" android:layout_weight="1.0" android:textAlignment="center" />
+        <CheckedTextView android:textSize="26.0sp" android:textColor="@color/rl_tab_color_2" android:ellipsize="end" android:gravity="center" android:id="@id/tv_tab_3" android:background="@drawable/bg_rb_ann_select2" android:layout_width="0.0dp" android:layout_height="match_parent" android:checked="false" android:text="新书推荐" android:layout_weight="1.0" android:textAlignment="center" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <FrameLayout android:id="@id/content" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="@dimen/dp_30" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/ll_top" />
+</androidx.constraintlayout.widget.ConstraintLayout>

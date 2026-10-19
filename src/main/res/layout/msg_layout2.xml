@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="400.0dp" android:layout_height="130.0dp">
+        <TextView android:textStyle="normal" android:textColor="@color/black5" android:id="@id/msg" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextSize_24black" />
+    </LinearLayout>
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/cancel" android:background="@drawable/del_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" />
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="@color/text_color_gray" android:gravity="center" android:id="@id/pop_dialog_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15.0dp" android:lines="1" />
+</RelativeLayout>

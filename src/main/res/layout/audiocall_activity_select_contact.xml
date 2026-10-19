@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="match_parent" android:layout_height="?android:actionBarSize" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:navigationIcon="@drawable/ic_back">
+        <TextView android:textSize="18.0sp" android:textColor="@color/colorWhite" android:layout_gravity="center" android:id="@id/toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发起呼叫" android:singleLine="true" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/colorWhite" android:layout_gravity="end" android:id="@id/btn_complete" android:background="@drawable/bg_button_border" android:paddingLeft="10.0dp" android:paddingTop="5.0dp" android:paddingRight="10.0dp" android:paddingBottom="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dp" android:text="完成" android:layout_marginEnd="10.0dp" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/et_search" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:hint="@string/search_call_hint" android:maxLines="1" android:imeOptions="actionSearch" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_selected_member" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginRight="10.0dp" android:layout_marginBottom="5.0dp" />
+    <TextView android:id="@id/tv_search_tag" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:text="@string/group_members" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_group_member_list" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10.0dp" android:layout_marginTop="5.0dp" android:layout_marginRight="10.0dp" />
+    <RelativeLayout android:id="@id/rl_group_member_loading" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_width="28.0dp" android:layout_height="28.0dp" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

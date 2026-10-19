@@ -1,0 +1,41 @@
+package com.yd.android_brand_mvp.landscape;
+
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import androidx.viewpager.widget.ViewPager;
+import butterknife.Unbinder;
+import butterknife.internal.Utils;
+import com.yd.android_brand_mvp.R;
+import com.yd.android_brand_mvp.weight.MultiStateView;
+
+/* JADX INFO: loaded from: classes4.dex */
+public class AttenceFragment2_2P_list_ViewBinding implements Unbinder {
+    private AttenceFragment2_2P_list target;
+
+    public AttenceFragment2_2P_list_ViewBinding(AttenceFragment2_2P_list attenceFragment2_2P_list, View view) {
+        this.target = attenceFragment2_2P_list;
+        attenceFragment2_2P_list.post = (TextView) Utils.findRequiredViewAsType(view, R.id.post, "field 'post'", TextView.class);
+        attenceFragment2_2P_list.pager = (ViewPager) Utils.findRequiredViewAsType(view, R.id.pager, "field 'pager'", ViewPager.class);
+        attenceFragment2_2P_list.title = (TextView) Utils.findRequiredViewAsType(view, R.id.title, "field 'title'", TextView.class);
+        attenceFragment2_2P_list.mu = (MultiStateView) Utils.findRequiredViewAsType(view, R.id.mu, "field 'mu'", MultiStateView.class);
+        attenceFragment2_2P_list.llIndicator = (LinearLayout) Utils.findRequiredViewAsType(view, R.id.ll_indicator, "field 'llIndicator'", LinearLayout.class);
+        attenceFragment2_2P_list.rlAtt = (RelativeLayout) Utils.findRequiredViewAsType(view, R.id.rl_att, "field 'rlAtt'", RelativeLayout.class);
+    }
+
+    @Override // butterknife.Unbinder
+    public void unbind() {
+        AttenceFragment2_2P_list attenceFragment2_2P_list = this.target;
+        if (attenceFragment2_2P_list == null) {
+            throw new IllegalStateException("Bindings already cleared.");
+        }
+        this.target = null;
+        attenceFragment2_2P_list.post = null;
+        attenceFragment2_2P_list.pager = null;
+        attenceFragment2_2P_list.title = null;
+        attenceFragment2_2P_list.mu = null;
+        attenceFragment2_2P_list.llIndicator = null;
+        attenceFragment2_2P_list.rlAtt = null;
+    }
+}

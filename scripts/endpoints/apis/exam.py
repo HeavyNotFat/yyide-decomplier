@@ -1,0 +1,85 @@
+"""考试（由 scripts/endpoints 生成）"""
+from __future__ import annotations
+
+from ..common import Endpoint
+
+GROUP = "exam"
+TITLE = "考试"
+
+ENDPOINTS = [
+    Endpoint(
+        id='exam-001',
+        method='POST',
+        path='/brand/exam/by/student',
+        params={},
+        json_body={'studentId': '{student_id}'},
+        files=None,
+        auth=True,
+        base=None,
+        description='学生考试列表',
+        source='requestUserExamList',
+    ),
+    Endpoint(
+        id='exam-002',
+        method='POST',
+        path='/brand/exam/detail',
+        params={},
+        json_body={'siteId': '{site_id}', 'subjectId': '{subject_id}', 'examinationId': '{examination_id}'},
+        files=None,
+        auth=True,
+        base=None,
+        description='考试 / requestExamDetail',
+        source='requestExamDetail',
+    ),
+    Endpoint(
+        id='exam-003',
+        method='POST',
+        path='/brand/exam/person',
+        params={},
+        json_body={'siteId': '{site_id}', 'subjectId': '{subject_id}', 'examinationId': '{examination_id}'},
+        files=None,
+        auth=True,
+        base=None,
+        description='考试 / requestExamPersonSeat',
+        source='requestExamPersonSeat',
+    ),
+    Endpoint(
+        id='exam-004',
+        method='POST',
+        path='/brand/exam/plan/week',
+        params={},
+        json_body={},
+        files=None,
+        auth=True,
+        base=None,
+        description='考试 / requestWeekExam',
+        source='requestWeekExam',
+    ),
+    Endpoint(
+        id='exam-005',
+        method='POST',
+        path='/brand/exam/recent',
+        params={},
+        json_body={'examStartTime': '2026-10-19 00:00:00', 'examEndTime': '2026-10-19 23:59:59', 'limit': 10},
+        files=None,
+        auth=True,
+        base=None,
+        description='考试 / requestTodayExam',
+        source='requestTodayExam',
+    ),
+    Endpoint(
+        id='exam-006',
+        method='POST',
+        path='/brand/exam/student/sing/in',
+        params={},
+        json_body={'studentId': '{student_id}',
+ 'siteId': '{site_id}',
+ 'subjectId': '{subject_id}',
+ 'examinationId': '{examination_id}'},
+        files=None,
+        auth=True,
+        base=None,
+        description='考试 / requestSignExam',
+        source='requestSignExam',
+    ),
+]

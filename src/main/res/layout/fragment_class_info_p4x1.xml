@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/content" android:background="@drawable/icon_sb_bjxx" android:paddingLeft="@dimen/dp_6" android:paddingTop="@dimen/dp_9" android:paddingRight="@dimen/dp_6" android:paddingBottom="@dimen/dp_9" android:layout_width="@dimen/dp_4x" android:layout_height="@dimen/dp_1y">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_tab" android:layout_width="@dimen/dp_4x" android:layout_height="@dimen/dp_1y">
+            <com.makeramen.roundedimageview.RoundedImageView android:id="@id/img_head" android:layout_width="@dimen/dp_140" android:layout_height="@dimen/dp_140" android:layout_marginLeft="@dimen/dp_32" app:riv_border_color="#8064e1" app:riv_border_width="@dimen/dp_8" app:riv_oval="true" />
+            <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20">
+                <TextView android:textSize="48.0sp" android:textColor="@color/white" android:ellipsize="end" android:id="@id/tv_class_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_no" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:layout_marginRight="@dimen/dp_10" android:layout_below="@id/tv_class_name">
+                    <LinearLayout android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="18.0sp" android:textColor="#80ffffff" android:id="@id/tv_teacher_duty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="班主任" />
+                        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:ellipsize="end" android:id="@id/tv_teacher_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_12" android:maxWidth="@dimen/dp_110" android:singleLine="true" />
+                    </LinearLayout>
+                    <TextView android:background="@color/white" android:layout_width="@dimen/dp_1" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_14" android:layout_marginTop="@dimen/dp_4" android:layout_marginRight="@dimen/dp_14" android:layout_marginBottom="@dimen/dp_4" android:layout_marginHorizontal="@dimen/dp_14" android:layout_marginVertical="@dimen/dp_4" />
+                    <LinearLayout android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="18.0sp" android:textColor="#80ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="任课教师" />
+                        <TextView android:textSize="18.0sp" android:textColor="#80ffffff" android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@id/tv_teacher_nums" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_12" android:text="0" android:lines="1" android:singleLine="true" />
+                    </LinearLayout>
+                    <TextView android:background="@color/white" android:layout_width="@dimen/dp_1" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_14" android:layout_marginTop="@dimen/dp_4" android:layout_marginRight="@dimen/dp_14" android:layout_marginBottom="@dimen/dp_4" android:layout_marginHorizontal="@dimen/dp_14" android:layout_marginVertical="@dimen/dp_4" />
+                    <LinearLayout android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="18.0sp" android:textColor="#80ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="学生人数" />
+                        <TextView android:textSize="18.0sp" android:textColor="#80ffffff" android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@id/tv_student_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_12" android:lines="1" android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

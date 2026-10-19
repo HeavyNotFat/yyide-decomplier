@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="30.0dp" android:layout_marginRight="30.0dp">
+            <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dp">
+                <FrameLayout android:id="@id/cs" android:background="@drawable/bg_biankuang21" android:layout_width="600.0dp" android:layout_height="50.0dp" android:layout_centerHorizontal="true" android:paddingStart="20.0dp">
+                    <TextView android:layout_gravity="center_vertical" android:id="@id/search" android:background="@drawable/searcher" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <com.yd.android_brand_mvp.view.ClearEditText android:textSize="18.0sp" android:textColorHint="@color/home_E7" android:layout_gravity="center_vertical" android:id="@id/edit" android:background="@null" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="506.0dp" android:layout_height="35.0dp" android:hint="请输入想看的图书名称/作者" android:layout_marginStart="52.0dp" android:layout_marginEnd="20.0dp" />
+                </FrameLayout>
+                <TextView android:textSize="24.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/post" android:background="@drawable/bg_blue17" android:layout_width="100.0dp" android:layout_height="50.0dp" android:text="搜索" android:layout_marginStart="20.0dp" android:layout_toEndOf="@id/cs" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="100.0dp" android:layout_marginBottom="100.0dp" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/left" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:src="@drawable/left" android:layout_marginEnd="30.0dp" />
+                <androidx.viewpager.widget.ViewPager android:id="@id/viewpager" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/right" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:src="@drawable/right" android:layout_marginStart="30.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

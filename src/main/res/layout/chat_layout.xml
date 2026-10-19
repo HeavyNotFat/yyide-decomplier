@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/chat_bg_white20" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.qcloud.tim.uikit.component.TitleBarLayout android:id="@id/chat_title_bar" android:layout_width="match_parent" android:layout_height="@dimen/page_title_height" />
+    <View android:id="@id/view_line" android:background="@color/chat_title_line_color" android:layout_width="match_parent" android:layout_height="0.30000007dp" android:layout_below="@id/chat_title_bar" />
+    <com.tencent.qcloud.tim.uikit.component.NoticeLayout android:id="@id/chat_group_apply_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/view_line" />
+    <com.tencent.qcloud.tim.uikit.component.NoticeLayout android:id="@id/chat_notice_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dp" android:layout_below="@id/chat_group_apply_layout" />
+    <com.tencent.qcloud.tim.uikit.modules.chat.layout.message.MessageLayout android:id="@id/chat_message_layout" android:clickable="false" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_above="@id/chat_at_text_view" android:layout_below="@id/chat_notice_layout" />
+    <TextView android:textColor="@color/read_dot_bg" android:id="@id/chat_at_text_view" android:background="@color/list_bottom_text_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="20.0dp" android:text="@string/ui_at_me" android:layout_above="@id/chat_input_layout" android:layout_marginEnd="@dimen/btn_margin_right" android:layout_alignParentEnd="true" />
+    <com.tencent.qcloud.tim.uikit.modules.chat.layout.input.InputLayout android:id="@id/chat_input_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <RelativeLayout android:id="@id/voice_recording_view" android:background="@drawable/ic_volume_dialog_bg" android:visibility="gone" android:layout_width="150.0dp" android:layout_height="150.0dp" android:layout_centerInParent="true">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+            <ImageView android:id="@id/recording_icon" android:layout_width="match_parent" android:layout_height="100.0dp" android:layout_marginTop="10.0dp" />
+            <TextView android:textSize="12.0sp" android:id="@id/recording_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

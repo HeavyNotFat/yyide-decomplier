@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/bg_reop_item_selector" android:layout_width="@dimen/dp_331" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_30" android:layout_marginTop="@dimen/dp_30" android:layout_marginBottom="@dimen/dp_30">
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_666666" android:id="@id/tv_activity_cycle_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_cycle" />
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_666666" android:id="@id/tv_ranking_in_this_class_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:text="@string/ranking_in_this_class" />
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_666666" android:id="@id/tv_score_in_this_class_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:text="@string/score_in_this_class" />
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_666666" android:id="@id/tv_honorary_title_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:text="@string/honorary_title" />
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_666666" android:id="@id/tv_medal_of_honor_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:text="@string/medal_of_honor" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_30">
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_333333" android:id="@id/tv_activity_cycle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/dp_25" />
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_FF7D4A" android:id="@id/tv_ranking_in_this_class" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:minHeight="@dimen/dp_25" />
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_333333" android:id="@id/tv_score_in_this_class" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:minHeight="@dimen/dp_25" />
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_333333" android:id="@id/tv_honorary_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:minHeight="@dimen/dp_25" />
+        <RelativeLayout android:layout_width="@dimen/dp_42" android:layout_height="@dimen/dp_42" android:layout_marginTop="@dimen/dp_8">
+            <ImageView android:id="@id/iv_medal_of_honor" android:visibility="gone" android:layout_width="@dimen/dp_42" android:layout_height="@dimen/dp_42" />
+            <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_333333" android:id="@id/tv_no_medal_of_honor" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nothing" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_current_cycle_label" android:background="@drawable/bg_ff7b46_r12_lt_lb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_30" android:text="@string/current_cycle" android:layout_marginStart="@dimen/dp_82" />
+</LinearLayout>

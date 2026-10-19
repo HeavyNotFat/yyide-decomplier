@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/dp_24" android:paddingBottom="@dimen/dp_24" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingVertical="@dimen/dp_24">
+        <ImageView android:id="@id/img" android:layout_width="87.0dp" android:layout_height="124.0dp" />
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_32">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/sp_14" android:textColor="@color/white" android:gravity="center" android:background="@drawable/bg_ts_icon" android:layout_width="40.0dp" android:layout_height="24.0dp" android:text="图书" />
+                <TextView android:textSize="18.0sp" android:textColor="#ff6747d3" android:id="@id/booktitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" />
+            </LinearLayout>
+            <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:id="@id/msg2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" />
+            <TextView android:layout_width="wrap_content" android:layout_height="0.0dp" android:layout_weight="1.0" />
+            <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:id="@id/msg3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:id="@id/msg4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:layout_gravity="bottom" android:background="@color/line" android:layout_width="match_parent" android:layout_height="1.0dp" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="right|bottom" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_25">
+        <TextView android:background="@color/gray" android:layout_width="16.0dp" android:layout_height="14.0dp" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:id="@id/clik" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" />
+    </LinearLayout>
+</FrameLayout>

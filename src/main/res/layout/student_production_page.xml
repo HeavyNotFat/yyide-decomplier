@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_85" android:layout_marginTop="@dimen/dp_16">
+        <RelativeLayout android:gravity="center_horizontal" android:id="@id/rl_head" android:layout_width="@dimen/dp_72" android:layout_height="@dimen/dp_82">
+            <View android:background="@drawable/icon_head_bg" android:layout_width="@dimen/dp_72" android:layout_height="@dimen/dp_72" />
+            <ImageView android:id="@id/iv_head_portrait" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginTop="@dimen/dp_16" android:layout_centerHorizontal="true" />
+            <View android:id="@id/v_is_fine" android:background="@drawable/icon_medal" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_26" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <TextView android:textColor="@color/black13" android:id="@id/tv_name" android:visibility="gone" android:layout_marginTop="@dimen/dp_9" android:layout_marginStart="@dimen/dp_19" android:layout_toEndOf="@id/rl_head" style="@style/TextSize_16sp" />
+        <TextView android:textColor="@color/black13" android:ellipsize="end" android:id="@id/tv_personal_motto" android:layout_marginTop="@dimen/dp_28" android:lines="1" android:layout_marginStart="@dimen/dp_19" android:layout_toEndOf="@id/rl_head" style="@style/TextSize_16sp" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="10.0dp" android:layout_weight="1.0">
+        <com.youth.banner.Banner android:id="@id/banner" android:background="@drawable/bg_black20" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_indicator" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_20" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

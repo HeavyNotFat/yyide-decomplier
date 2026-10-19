@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/clContent" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_908" android:layout_height="@dimen/dp_604"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/top" android:layout_width="match_parent" android:layout_height="@dimen/dp_75" app:layout_constraintTop_toTopOf="parent" layout="@layout/layout_head_title" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/constraintlayout" android:background="@drawable/bg_class_mode_40" android:layout_width="match_parent" android:layout_height="@dimen/dp_52" android:layout_marginStart="@dimen/dp_25" android:layout_marginEnd="@dimen/dp_25" app:layout_constraintTop_toBottomOf="@id/top">
+        <TextView android:textSize="@dimen/sp_22" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/tvHonorClass" android:background="@drawable/bg_comment_bt_40" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="班级荣誉" app:layout_constraintEnd_toStartOf="@id/tvHonorStudent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="spread_inside" />
+        <TextView android:textSize="@dimen/sp_22" android:textStyle="bold" android:textColor="@color/black16" android:gravity="center" android:id="@id/tvHonorStudent" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="学生荣誉" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/tvHonorClass" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/constraintlayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

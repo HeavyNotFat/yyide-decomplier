@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/bg_title_2" android:layout_width="match_parent" android:layout_height="@dimen/dp_80">
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/back_layout" android:layout_width="@dimen/dp_50" android:layout_height="@dimen/dp_50" android:layout_marginStart="@dimen/dp_20">
+            <TextView android:layout_gravity="center" android:background="@drawable/back_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <CheckedTextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="@color/tab_school_tab_color" android:layout_gravity="center" android:id="@id/tab1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="校园风采" />
+            <CheckedTextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="@color/tab_school_tab_color" android:layout_gravity="center" android:id="@id/tab2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="校园师资" android:layout_marginStart="@dimen/dp_40" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

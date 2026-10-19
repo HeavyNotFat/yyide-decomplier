@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="3002"
+    android:versionName="3.0.14"
+    android:compileSdkVersion="31"
+    android:compileSdkVersionCodename="12"
+    platformBuildVersionCode="31"
+    platformBuildVersionName="12">
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="29"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS"/>
+    <uses-permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-feature android:name="android.hardware.Camera"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.DISABLE_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE"/>
+    <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE"/>
+    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-feature android:name="android.hardware.autofocus"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <permission
+        android:name="com.yd.android_brand_mvp.permission.PROCESS_PUSH_MSG"
+        android:protectionLevel="signatureOrSystem"/>
+    <permission
+        android:name="com.yd.android_brand_mvp.permission.PUSH_PROVIDER"
+        android:protectionLevel="signatureOrSystem"/>
+    <permission
+        android:name="com.yd.android_brand_mvp.permission.PUSH_WRITE_PROVIDER"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.yd.android_brand_mvp.permission.PROCESS_PUSH_MSG"/>
+    <uses-permission android:name="com.yd.android_brand_mvp.permission.PUSH_PROVIDER"/>
+    <uses-permission android:name="com.oplus.ocs.permission.third"/>
+    <queries>
+        <package android:name="com.huawei.multimedia.audioengine"/>
+    </queries>
+    <queries>
+        <package android:name="com.hihonor.android.magicx.media.audioengine"/>
+    </queries>
+    <queries>
+        <package android:name="com.oplus.karaoke"/>
+        <package android:name="com.coloros.karaoke"/>
+        <package android:name="com.coloros.ocs.opencapabilityservice"/>
+        <package android:name="com.oplus.ocs"/>
+    </queries>
+    <permission
+        android:name="com.yd.android_brand_mvp.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.yd.android_brand_mvp.permission.MIPUSH_RECEIVE"/>
+    <permission
+        android:name="com.yd.android_brand_mvp.push.permission.MESSAGE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.yd.android_brand_mvp.push.permission.MESSAGE"/>
+    <permission
+        android:name="com.yd.android_brand_mvp.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.yd.android_brand_mvp.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+    <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA"/>
+    <application
+        android:theme="@style/NoTitleFullscreen"
+        android:label="智慧班牌"
+        android:icon="@mipmap/logo_bp"
+        android:name="com.yd.android_brand_mvp.BaseApplication"
+        android:testOnly="false"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:requestLegacyExternalStorage="true">
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.AIJuniorAssistantActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.portrait.activity.MessageDetailsPActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.active.ActiveListActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.landscape.library.LibrarySearchListActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.landscape.consult.ConsultSignDetailsActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.active.ActiveDetailsActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.landscape.book.BookImageInfo"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.landscape.book.BookActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.BitmapShowActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.landscape.blackboard.BlackBoardActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.SkyworthLoginActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.ConfigActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.SiteFullActivity"
+            android:exported="false"
+            android:launchMode="singleTask"/>
+        <activity
+            android:theme="@style/NoTitleDialog2"
+            android:name="com.yd.android_brand_mvp.verfity.AllCheckActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.honor.HonorScoreDetailActivity"
+            android:exported="true"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.honor.HonorScoreListActivity"
+            android:exported="true"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.honor.HonorCommentActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.honor.HonorActiveDetailActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.honor.HonorListActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.honor.HonorActiveListActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.ClassModeActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.YDWebViewActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/MyTransparent"
+            android:name="com.yd.android_brand_mvp.activity.FaceSyncActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.DominateScreenActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.yd.android_brand_mvp.fileProvider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <receiver
+            android:name="com.yd.android_brand_mvp.ApkBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.ClassScheduleActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.NcalendarActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.doorControlActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.doorListActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="fontScale|layoutDirection|screenSize|orientation|keyboardHidden|keyboard|locale"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <service android:name="com.yaoxiaowen.download.service.DownloadService"/>
+        <service android:name="org.eclipse.paho.android.service.MqttService"/>
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="1920"/>
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="1080"/>
+        <activity
+            android:theme="@style/SplashActivityTheme"
+            android:name="com.yd.android_brand_mvp.WelcomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yd.android_brand_mvp.LoginActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.WebActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:theme="@style/NoTitleDialog2"
+            android:name="com.yd.android_brand_mvp.adapter.attence.CheckAttendanceActivity"
+            android:exported="false"/>
+        <receiver
+            android:name="com.yd.android_brand_mvp.BootBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/NoTitleDialog2"
+            android:name="com.yd.android_brand_mvp.SettingActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="unspecified"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.VideoALLActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.UserTableActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.portrait.activity.SettingPActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.UserLeaveActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:theme="@style/NoTitleDialog2"
+            android:name="com.yd.android_brand_mvp.verfity.StudentCheackActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/NoTitleDialog2"
+            android:name="com.yd.android_brand_mvp.verfity.StudentCheackActivity2"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/NoTitleDialog2"
+            android:name="com.yd.android_brand_mvp.verfity.CheackNomalActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/NoTitleDialog2"
+            android:name="com.yd.android_brand_mvp.verfity.TeacherCheackActivity2"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/NoTitleDialog2"
+            android:name="com.yd.android_brand_mvp.verfity.VerificationExternalActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/NoTitleDialog2"
+            android:name="com.yd.android_brand_mvp.verfity.TeacherCheackActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.UserCenterActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.ClassTableActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.TestActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.AnnouncementListActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.StudentDutyActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.SchoolInfoActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.StudentProductionActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.AsslgnmentWeekActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.AsslgnmentDayActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.TimerActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.PhotoAlbumActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.VideoAlbumActivity"
+            android:exported="false"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.ClassInfoActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.photo.PhotoAlbumTwoActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.photo.ShowPhotoAlbumActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.AttenceActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.banner.manager.ShowImageActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.video1.ViewPagerVideoActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.KBActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.MessageActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.honor.HonorWallActivity"
+            android:exported="false"/>
+        <service
+            android:name="com.yd.android_brand_mvp.BluetoothService"
+            android:enabled="true"
+            android:exported="true"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.user.BookYwActivity"
+            android:exported="false"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.SiteKBActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.exam.ExamArrangementActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.exam.ExamArrangementDetailActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.exam.ExamFullScreenActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.reserve.ReservationActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.reserve.ReservationFullActivity"
+            android:exported="false"/>
+        <service
+            android:name="com.yd.android_brand_mvp.websocket.JWebSocketClientService"
+            android:exported="true"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.CustomDominateActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.TBSWebViewActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.collect.CollectFormActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.collect.FormSituationActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.vote.VoteDetailActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.vote.VoteListActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.collect.CollectFormDetailActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.iotControl.DoorControlActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.patrol.PatrolListActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.patrol.PatrolDetailActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.activity.patrol.PatrolEditActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.landscape.moraleducation.ui.ROEPInThisClassActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.landscape.moraleducation.ui.DailyScoreDetailsActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.landscape.moraleducation.ui.DailyScoreWeekDetailsActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.landscape.moraleducation.ui.ROEPInEveryClassActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.landscape.moraleducation.ui.CFRFInThisClassActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.yd.android_brand_mvp.landscape.moraleducation.ui.ClassMEAppraisalActivity"
+            android:exported="false"/>
+        <activity android:name="com.yd.android_brand_mvp.activity.repair.RepairActivity"/>
+        <service
+            android:label="dexopt"
+            android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
+            android:exported="true"
+            android:process=":dexopt"/>
+        <activity
+            android:theme="@style/SplashTheme"
+            android:name="com.yyide.im.chat.SplashActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.yyide.im.chat.scenes.LiveRoomAnchorActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:name="com.yyide.im.chat.scenes.LiveRoomAudienceActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:name="com.yyide.im.chat.login.LoginForDevActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.yyide.im.chat.main.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.yyide.im.chat.chat.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data
+                    android:scheme="pushscheme"
+                    android:host="com.tencent.qcloud"
+                    android:path="/detail"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:scheme="pushscheme"
+                    android:host="com.tencent.qcloud"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yyide.im.chat.menu.AddMoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.yyide.im.chat.contact.FriendProfileActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.yyide.im.chat.contact.NewFriendActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.yyide.im.chat.contact.BlackListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.yyide.im.chat.contact.GroupListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.yyide.im.chat.menu.StartC2CChatActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.yyide.im.chat.profile.WebViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.yyide.im.chat.menu.StartGroupChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.vivo.push.sdk.LinkProxyClientActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":pushservice"/>
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushservice"/>
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true"/>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.yyide.im.chat.thirdpush.XiaomiMsgReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.yyide.im.chat.thirdpush.HUAWEIHmsMessageService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value=""/>
+        <receiver android:name="com.yyide.im.chat.thirdpush.MEIZUPushReceiver">
+            <intent-filter>
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE"/>
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK"/>
+                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK"/>
+                <action android:name="com.meizu.c2dm.intent.REGISTRATION"/>
+                <action android:name="com.meizu.c2dm.intent.RECEIVE"/>
+                <category android:name="com.tencent.qcloud.tim.demo.thirdpush"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.vivo.push.sdk.service.CommandClientService"
+            android:exported="true"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.vivo.push.sdk.LinkProxyClientActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <receiver android:name="com.yyide.im.chat.thirdpush.VIVOPushMessageReceiverImpl">
+            <intent-filter>
+                <action android:name="com.vivo.pushclient.action.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="com.vivo.push.api_key"
+            android:value=""/>
+        <meta-data
+            android:name="com.vivo.push.app_id"
+            android:value=""/>
+        <service
+            android:name="com.yyide.im.chat.thirdpush.GoogleFCMMsgService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.heytap.msp.push.service.CompatibleDataMessageCallbackService"
+            android:permission="com.coloros.mcs.permission.SEND_MCS_MESSAGE">
+            <intent-filter>
+                <action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.heytap.msp.push.service.DataMessageCallbackService"
+            android:permission="com.heytap.mcs.permission.SEND_PUSH_MESSAGE">
+            <intent-filter>
+                <action android:name="com.heytap.mcs.action.RECEIVE_MCS_MESSAGE"/>
+                <action android:name="com.heytap.msp.push.RECEIVE_MCS_MESSAGE"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:name="com.tencent.qcloud.tim.uikit.component.video.CameraActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tencent.qcloud.tim.uikit.component.video.VideoViewActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.tencent.qcloud.tim.uikit.component.photoview.PhotoViewActivity"/>
+        <activity
+            android:name="com.tencent.qcloud.tim.uikit.modules.group.info.GroupInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tencent.qcloud.tim.uikit.modules.group.info.StartGroupMemberSelectActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tencent.qcloud.tim.uikit.component.SelectionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tencent.qcloud.tim.uikit.modules.group.apply.GroupApplyManagerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity
+            android:name="com.tencent.qcloud.tim.uikit.modules.group.apply.GroupApplyMemberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name="com.tencent.liteav.SelectContactActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:theme="@style/NoTitleDialog3"
+            android:name="com.tencent.liteav.trtcaudiocalldemo.ui.TRTCAudioCallActivity"
+            android:launchMode="singleTop"/>
+        <activity
+            android:theme="@style/NoTitleDialog3"
+            android:name="com.tencent.liteav.trtcvideocalldemo.ui.TRTCVideoCallActivity"
+            android:launchMode="singleTop"/>
+        <provider
+            android:name="com.tencent.qcloud.tim.uikit.utils.TUIKitFileProvider"
+            android:exported="false"
+            android:authorities="com.yd.android_brand_mvp.uikit.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public"/>
+        </provider>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <activity
+            android:name="com.tencent.qcloud.tim.tuikit.live.modules.liveroom.ui.DefaultGroupLiveAnchorActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="com.tencent.qcloud.tim.tuikit.live.grouplive.anchor"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.qcloud.tim.tuikit.live.modules.liveroom.ui.DefaultGroupLiveAudienceActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="com.tencent.qcloud.tim.tuikit.live.grouplive.audience"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.yd.android_brand_mvp.firebaseinitprovider"
+            android:initOrder="100"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false"/>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:permission="android.permission.INSTALL_PACKAGES"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <service
+            android:name="com.taobao.sophix.aidl.DownloadService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.taobao.hotfix.action"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.seewo.version.lib-open-sdk"
+            android:value="3.2.48"/>
+        <provider
+            android:name="androidx.work.impl.WorkManagerInitializer"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.yd.android_brand_mvp.workmanager-init"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.yd.android_brand_mvp.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <receiver
+            android:name="com.huawei.hms.support.api.push.PushMsgReceiver"
+            android:permission="com.yd.android_brand_mvp.permission.PROCESS_PUSH_MSG"
+            android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY"/>
+                <action android:name="com.huawei.intent.action.PUSH"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.huawei.hms.support.api.push.PushReceiver"
+            android:permission="com.yd.android_brand_mvp.permission.PROCESS_PUSH_MSG"
+            android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.huawei.android.push.intent.REGISTRATION"/>
+                <action android:name="com.huawei.android.push.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.huawei.hms.support.api.push.service.HmsMsgService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.huawei.push.msg.NOTIFY_MSG"/>
+                <action android:name="com.huawei.push.msg.PASSBY_MSG"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.huawei.hms.support.api.push.PushProvider"
+            android:permission="com.yd.android_brand_mvp.permission.PUSH_PROVIDER"
+            android:readPermission="com.yd.android_brand_mvp.permission.PUSH_PROVIDER"
+            android:writePermission="com.yd.android_brand_mvp.permission.PUSH_WRITE_PROVIDER"
+            android:exported="true"
+            android:authorities="com.yd.android_brand_mvp.huawei.push.provider"/>
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:push"
+            android:value="push:5.0.2.300"/>
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:push:push"
+            android:value="1"/>
+        <provider
+            android:name="com.huawei.hms.aaid.InitProvider"
+            android:exported="false"
+            android:authorities="com.yd.android_brand_mvp.aaidinitprovider"/>
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:opendevice"
+            android:value="opendevice:5.0.2.300"/>
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:opendevice:push"
+            android:value="1"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <activity
+            android:theme="@style/ActivityTranslucent"
+            android:name="com.blankj.utilcode.util.PermissionUtils$PermissionActivity"
+            android:multiprocess="true"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <provider
+            android:name="com.blankj.utilcode.util.Utils$FileProvider4UtilCode"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.yd.android_brand_mvp.utilcode.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/util_code_provider_paths"/>
+        </provider>
+        <provider
+            android:name="razerdp.basepopup.BasePopupInitializer"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.github.razerdp.com.yd.android_brand_mvp.BasePopupInitializer"/>
+        <provider
+            android:name="me.jessyan.autosize.InitProvider"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.yd.android_brand_mvp.autosize-init-provider"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.tencent.liteav.audio2.permission.PermissionActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <service
+            android:name="com.ttlock.bl.sdk.service.DfuService"
+            android:exported="true"/>
+        <provider
+            android:name="com.ttlock.bl.sdk.provider.InitProvider"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.yd.android_brand_mvp.ttlock.sdk.provider"/>
+        <receiver
+            android:name="com.tencent.android.mipush.XMPushMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.meizu.cloud.pushsdk.NotificationService"
+            android:exported="true"/>
+        <receiver android:name="com.meizu.cloud.pushsdk.SystemReceiver">
+            <intent-filter>
+                <action android:name="com.meizu.cloud.pushservice.action.PUSH_SERVICE_START"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.tencent.android.mzpush.MZPushMessageReceiver">
+            <intent-filter>
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE"/>
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK"/>
+                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK"/>
+                <action android:name="com.meizu.c2dm.intent.REGISTRATION"/>
+                <action android:name="com.meizu.c2dm.intent.RECEIVE"/>
+                <category android:name="com.yd.android_brand_mvp"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.tencent.android.vivopush.VivoPushMessageReceiver">
+            <intent-filter>
+                <action android:name="com.vivo.pushclient.action.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.huawei.android.hms.tpns.HWHmsMessageService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.tencent.rtmp.video.TXScreenCapture$TXScreenCaptureAssistantActivity"/>
+        <service
+            android:name="com.tencent.rtmp.video.ScreenCaptureService"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection"/>
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:base"
+            android:value="base:5.0.0.301"/>
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:base:hmscore"
+            android:value="1"/>
+        <meta-data
+            android:name="availableLoaded"
+            android:value="yes"/>
+        <provider
+            android:name="com.huawei.hms.update.provider.UpdateProvider"
+            android:exported="false"
+            android:authorities="com.yd.android_brand_mvp.hms.update.provider"
+            android:grantUriPermissions="true"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.huawei.hms.activity.BridgeActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|screenLayout|orientation|locale"
+            android:hardwareAccelerated="true">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent"/>
+        </activity>
+        <activity
+            android:name="com.huawei.hms.activity.EnableServiceActivity"
+            android:exported="false"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden"/>
+        <provider
+            android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider"
+            android:exported="false"
+            android:authorities="com.yd.android_brand_mvp.AGCInitializeProvider"/>
+        <service
+            android:name="com.huawei.agconnect.core.ServiceDiscovery"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/upsdkDlDialog"
+            android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity"
+            android:exported="false"
+            android:configChanges="screenSize|orientation">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar"/>
+        </activity>
+        <activity
+            android:theme="@style/upsdkDlDialog"
+            android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity"
+            android:exported="false"
+            android:configChanges="screenSize|orientation|keyboardHidden">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent"/>
+        </activity>
+        <provider
+            android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider"
+            android:exported="false"
+            android:authorities="com.yd.android_brand_mvp.updateSdk.fileProvider"
+            android:grantUriPermissions="true"/>
+    </application>
+</manifest>

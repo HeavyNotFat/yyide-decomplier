@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="@dimen/dp_110" android:paddingStart="@dimen/dp_40">
+        <TextView android:textSize="18.0sp" android:textColor="#393939" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发布标题：" />
+        <EditText android:textSize="@dimen/sp_18" android:id="@id/etSearchTitle" android:background="@drawable/bg_border_1dp_radius_50dp" android:layout_width="@dimen/dp_240" android:layout_height="@dimen/dp_46" android:hint="请输入" android:lines="1" android:paddingStart="@dimen/dp_15" android:paddingEnd="@dimen/dp_15" android:layout_marginStart="@dimen/dp_10" />
+        <TextView android:textSize="18.0sp" android:textColor="#393939" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发布时间：" android:layout_marginStart="@dimen/dp_30" />
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:background="@drawable/bg_border_1dp_radius_50dp" android:layout_width="wrap_content" android:layout_height="@dimen/dp_46" android:layout_marginStart="@dimen/dp_10">
+            <TextView android:textSize="@dimen/sp_18" android:textColor="@color/black11" android:gravity="center" android:id="@id/tvStartTime" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="开始日期" android:paddingStart="@dimen/dp_60" android:paddingEnd="@dimen/dp_60" />
+            <TextView android:textSize="@dimen/sp_18" android:textColor="@color/black11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="至" />
+            <TextView android:textSize="@dimen/sp_18" android:textColor="@color/black11" android:gravity="center" android:id="@id/tvEndTime" android:layout_width="match_parent" android:layout_height="match_parent" android:text="结束日期" android:paddingStart="@dimen/dp_60" android:paddingEnd="@dimen/dp_60" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView android:textSize="@dimen/sp_20" android:textColor="@color/white" android:gravity="center" android:id="@id/tvSearch" android:background="@drawable/bg_btn" android:visibility="visible" android:layout_width="167.0dp" android:layout_height="@dimen/dp_46" android:foreground="?android:selectableItemBackground" android:text="查询" android:layout_marginStart="@dimen/dp_25" />
+        <TextView android:textSize="@dimen/sp_20" android:textColor="@color/black11" android:gravity="center" android:id="@id/tvReset" android:background="@drawable/bg_border_1dp_radius_50dp" android:visibility="visible" android:layout_width="167.0dp" android:layout_height="@dimen/dp_46" android:foreground="?android:selectableItemBackground" android:text="重置" android:layout_marginStart="@dimen/dp_25" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <include layout="@layout/layout_line" />
+    <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" app:msv_emptyView="@layout/item_null_layout_4" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+        <LinearLayout android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@id/layout_poster" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/layout_poster" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/llContent" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingEnd="@dimen/dp_30">
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="wrap_content" android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:layout_width="510.0dp" android:layout_height="match_parent" android:layout_marginBottom="@dimen/dp_58" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:id="@id/tvNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="" android:layout_marginEnd="@dimen/dp_15" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/rv_list" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View android:id="@id/viewLine" android:background="@color/line2" android:layout_width="1.0px" android:layout_height="match_parent" />
+            <include android:id="@id/layout_content" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/layout_list_announcement" />
+        </LinearLayout>
+    </com.yd.android_brand_mvp.weight.MultiStateView>
+</LinearLayout>

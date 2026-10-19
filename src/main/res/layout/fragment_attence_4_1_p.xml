@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_660" android:layout_height="@dimen/dp_202">
+        <include android:id="@id/in_title" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_head_title" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/content" android:background="@drawable/bg_white20" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_26" android:layout_marginRight="@dimen/dp_10" android:layout_below="@id/in_title">
+            <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" app:msv_emptyView="@layout/item_min_null_layout_2_1_p" app:msv_errorView="@layout/layout_error_1p" app:msv_loadingView="@layout/layout_loading">
+                <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:id="@id/rl_attence" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </com.yd.android_brand_mvp.weight.MultiStateView>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/sp_14" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_att" android:background="@drawable/icon_att_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/dp_14" android:text="考勤" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</FrameLayout>

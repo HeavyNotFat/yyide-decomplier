@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/dp_10" android:paddingEnd="@dimen/dp_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:background="@mipmap/icon_cartoon_assignment_bg" android:layout_width="@dimen/dp_444" android:layout_height="@dimen/dp_454">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_30" android:layout_marginStart="@dimen/dp_30">
+            <ImageView android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_60" android:src="@mipmap/icon_cartoon_zy_left" />
+            <TextView android:textSize="38.0sp" android:textStyle="bold" android:textColor="#ff856100" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="今日作业" android:layout_marginStart="@dimen/dp_10" />
+        </LinearLayout>
+        <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_30" android:layout_above="@id/ll_indicator" android:layout_below="@id/ll_top" android:layout_marginEnd="@dimen/dp_20" app:msv_emptyView="@layout/item_min_null_work_layout_2" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+            <androidx.viewpager.widget.ViewPager android:id="@id/vp_assignment" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </com.yd.android_brand_mvp.weight.MultiStateView>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_indicator" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_20" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yyide.facepass.camera.CameraPreview android:id="@id/camera_fragment_verify_face" android:layout_width="480.0dp" android:layout_height="300.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.yd.android_brand_mvp.widget.FaceView android:id="@id/faceView_fragment_verify_face" android:layout_width="480.0dp" android:layout_height="300.0dp" app:layout_constraintStart_toStartOf="@id/camera_fragment_verify_face" app:layout_constraintTop_toTopOf="@id/camera_fragment_verify_face" />
+    <TextView android:textSize="24.0sp" android:textColor="@color/color_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/please_device_face_area" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@id/camera_fragment_verify_face" app:layout_constraintStart_toStartOf="@id/camera_fragment_verify_face" app:layout_constraintTop_toBottomOf="@id/camera_fragment_verify_face" />
+</androidx.constraintlayout.widget.ConstraintLayout>

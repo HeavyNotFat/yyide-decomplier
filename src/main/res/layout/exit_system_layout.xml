@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white10" android:layout_width="@dimen/dp_580" android:layout_height="@dimen/dp_290">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
+            <TextView android:textStyle="normal" android:textColor="@color/black3" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="确认要" style="@style/TextSize_28" />
+            <TextView android:textStyle="normal" android:textColor="@color/purple2" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="退出系统" style="@style/TextSize_28" />
+            <TextView android:textStyle="normal" android:textColor="@color/black3" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="吗？" style="@style/TextSize_28" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_55">
+            <TextView android:textStyle="normal" android:textColor="@color/black13" android:gravity="center" android:id="@id/cancel" android:background="@drawable/bg_rb_ann_23_off_stroke" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:text="取消" android:layout_marginEnd="@dimen/dp_25" style="@style/TextSize_24black" />
+            <TextView android:textStyle="normal" android:textColor="@color/white" android:gravity="center" android:id="@id/yes" android:background="@drawable/bg_comment_bt_30" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:text="确定" style="@style/TextSize_24black" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

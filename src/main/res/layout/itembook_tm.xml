@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#fff7f7f8" android:paddingLeft="@dimen/dp_15" android:layout_width="match_parent" android:layout_height="40.0dp">
+        <TextView android:textSize="14.0sp" android:textColor="#ff999999" android:id="@id/adress" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="馆藏地" android:layout_weight="1.0" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff999999" android:id="@id/no" android:layout_width="170.0dp" android:layout_height="wrap_content" android:text="索取号" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff999999" android:id="@id/dl" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="登录号" android:layout_weight="1.0" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff999999" android:id="@id/stuas" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="状态" android:layout_weight="1.0" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff999999" android:id="@id/lx" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="借阅类型" android:layout_weight="1.0" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff999999" android:id="@id/jg" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="价格" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

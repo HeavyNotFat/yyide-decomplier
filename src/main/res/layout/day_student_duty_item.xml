@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="440.0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_zr" android:layout_width="match_parent" android:layout_height="@dimen/dp_84">
+        <TextView android:textSize="@dimen/sp_28" android:textStyle="bold" android:gravity="center_vertical" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/dp_30" style="@style/TextSize_24black" />
+        <Button android:textSize="@dimen/sp_20" android:textStyle="bold" android:textColor="@color/purple2" android:gravity="center" android:id="@id/bt_duty_today" android:background="@drawable/bg_white20" android:layout_width="@dimen/dp_120" android:layout_height="@dimen/dp_40" android:layout_marginRight="@dimen/dp_40" android:text="@string/gank_Is_on_duty_today" />
+    </LinearLayout>
+    <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" app:msv_emptyView="@layout/item_min_null_layout_2_2" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+        <com.yd.android_brand_mvp.customview.NestRecyclerView android:id="@id/rv_duty" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </com.yd.android_brand_mvp.weight.MultiStateView>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#f9f8fd" android:layout_width="match_parent" android:layout_height="@dimen/dp_56" android:layout_marginLeft="@dimen/dp_24" android:layout_marginTop="@dimen/dp_1" android:layout_marginRight="@dimen/dp_12">
+        <TextView android:textSize="@dimen/dp_20" android:textColor="@color/white" android:gravity="center" android:id="@id/lab1" android:background="@drawable/bg_att1" android:paddingLeft="@dimen/dp_12" android:paddingRight="@dimen/dp_12" android:layout_width="wrap_content" android:layout_height="@dimen/dp_30" android:layout_marginTop="13.0dp" android:layout_marginBottom="13.0dp" android:text="考勤" android:singleLine="true" android:layout_marginVertical="13.0dp" android:paddingHorizontal="@dimen/dp_12" />
+        <TextView android:textSize="@dimen/dp_20" android:textColor="#333333" android:gravity="center_vertical" android:id="@id/tv_count" android:paddingLeft="@dimen/dp_12" android:paddingRight="@dimen/dp_12" android:layout_width="match_parent" android:layout_height="@dimen/dp_30" android:text="考勤" android:singleLine="true" android:paddingHorizontal="@dimen/dp_12" />
+        <View android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

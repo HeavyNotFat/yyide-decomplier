@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bg" android:background="@drawable/bp_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" />
+    <FrameLayout android:id="@id/top_hint" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <include android:layout_width="match_parent" android:layout_height="@dimen/dp_82" layout="@layout/top_layout" />
+    <com.yd.android_brand_mvp.widget.YDViewPager android:id="@id/pager" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="72.0dp" android:layout_marginBottom="62.0dp" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center|bottom" android:layout_width="match_parent" android:layout_height="8.0dp" android:layout_marginBottom="50.0dp">
+        <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center|bottom" android:id="@id/recyleview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="right|bottom" android:id="@id/download_msg" android:background="@drawable/bg_donwload" android:visibility="gone" android:layout_width="@dimen/dp_55" android:layout_height="@dimen/dp_55" android:layout_marginBottom="@dimen/dp_11" android:layout_marginEnd="@dimen/dp_200" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="right|bottom" android:orientation="horizontal" android:id="@id/layout_setting" android:layout_width="@dimen/dp_230" android:layout_height="@dimen/dp_64" android:layout_marginBottom="@dimen/dp_11" android:paddingStart="@dimen/dp_20" android:paddingEnd="@dimen/dp_20">
+        <TextView android:textSize="@dimen/sp_20" android:textColor="@color/white" android:id="@id/vsname" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/dp_10" />
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/img_set" android:visibility="gone" android:layout_width="@dimen/dp_52" android:layout_height="@dimen/dp_52" android:src="@drawable/icon_bg_sz" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="65.0dp" android:layout_marginBottom="@dimen/dp_11" android:layout_marginStart="@dimen/dp_28">
+        <ImageView android:id="@id/xx" android:layout_width="@dimen/dp_46" android:layout_height="@dimen/dp_46" android:src="@drawable/xx" />
+        <com.paradoxie.autoscrolltextview.VerticalTextview android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_20" />
+        <TextView android:layout_width="0.0dp" android:layout_height="41.0dp" android:layout_weight="1.0" />
+        <TextView android:layout_gravity="bottom" android:id="@id/lock" android:background="@drawable/lock" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/flContent" android:layout_width="match_parent" android:layout_height="match_parent" />
+</FrameLayout>

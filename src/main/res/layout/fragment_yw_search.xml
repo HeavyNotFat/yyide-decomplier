@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/s1" android:layout_width="match_parent" android:layout_height="52.0dp" android:layout_marginEnd="@dimen/dp_100">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="match_parent">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black9" android:gravity="left|center" android:id="@id/tj" android:background="@drawable/bg_book_tk1" android:layout_width="@dimen/dp_180" android:layout_height="match_parent" android:text="任意字段" android:paddingStart="@dimen/dp_20" />
+            <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/xl_icon" android:layout_marginEnd="@dimen/dp_20" />
+        </FrameLayout>
+        <com.yd.android_brand_mvp.widget.YDEditText android:id="@id/edit" android:background="@drawable/bg_book_tk2" android:layout_width="0.0dp" android:layout_height="match_parent" android:hint="请输入关键字" android:maxLines="1" android:maxEms="38" android:singleLine="true" android:maxLength="38" android:layout_weight="1.0" android:paddingStart="@dimen/dp_15" />
+        <FrameLayout android:id="@id/seach" android:background="@drawable/bg_book_acticity_tk3" android:layout_width="120.0dp" android:layout_height="match_parent">
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/seach" />
+        </FrameLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_30" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/layout_info" android:layout_width="@dimen/dp_310" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/book_img" />
+            <TextView android:textSize="32.0sp" android:textColor="@color/book_color667" android:layout_gravity="center_horizontal" android:id="@id/msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_25" android:text="海量图书等你检索~" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

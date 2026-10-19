@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/banner_bg_10dp" android:paddingTop="@dimen/dp_15" android:paddingBottom="@dimen/dp_50" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:padding="@dimen/dp_10" android:layout_width="1104.0dp" android:layout_height="match_parent">
+            <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" app:msv_emptyView="@layout/item_video_null_layout" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+                <com.yd.android_brand_mvp.banner.manager.ChangeBanner android:id="@id/banner" android:layout_width="match_parent" android:layout_height="match_parent" />
+            </com.yd.android_brand_mvp.weight.MultiStateView>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

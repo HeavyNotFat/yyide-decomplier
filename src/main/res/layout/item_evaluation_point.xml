@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ff333333" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="人人都有好习惯" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/tvDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="2023.06.23 19:45:00" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    <TextView android:textSize="20.0sp" android:textColor="#ff8568e3" android:id="@id/tvPoint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+10" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/tvTitle" />
+    <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="累计积分：" app:layout_constraintEnd_toStartOf="@id/tvTotalPoint" app:layout_constraintTop_toTopOf="@id/tvTotalPoint" />
+    <TextView android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/tvTotalPoint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="1200" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/tvPoint" />
+    <View android:id="@id/line" android:background="#d8d8d8" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="@dimen/dp_20" app:layout_constraintTop_toBottomOf="@id/tvDate" />
+</androidx.constraintlayout.widget.ConstraintLayout>

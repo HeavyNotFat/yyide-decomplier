@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/bg_white40" android:padding="@dimen/dp_30" android:layout_width="726.0dp" android:layout_height="896.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="24.0sp" android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="当前周次：" app:layout_constraintEnd_toStartOf="@id/tv_week" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="@color/black9" android:id="@id/tv_week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="第5周" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_week" />
+</androidx.constraintlayout.widget.ConstraintLayout>

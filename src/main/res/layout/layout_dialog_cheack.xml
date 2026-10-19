@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="vertical" android:background="@drawable/bg_white10" android:layout_width="@dimen/dp_580" android:layout_height="290.0dp">
+        <FrameLayout android:background="@drawable/bg_cheack" android:layout_width="match_parent" android:layout_height="56.0dp" android:layout_marginLeft="@dimen/dp_90" android:layout_marginTop="@dimen/dp_90" android:layout_marginRight="@dimen/dp_90">
+            <com.yd.android_brand_mvp.widget.YDEditText android:textSize="@dimen/sp_20" android:textColor="#999999" android:id="@id/edit" android:background="@null" android:layout_width="match_parent" android:layout_height="56.0dp" android:hint="请输入验证码" android:inputType="textPassword" android:layout_marginStart="@dimen/dp_40" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/sp_24" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center|bottom" android:id="@id/qd" android:background="@drawable/cheack_qd" android:paddingTop="@dimen/dp_8" android:layout_width="@dimen/dp_167" android:layout_height="55.0dp" android:layout_marginBottom="@dimen/dp_46" android:text="确定" />
+    </FrameLayout>
+</LinearLayout>

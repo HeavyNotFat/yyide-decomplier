@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.qcloud.tim.demo.scenes.view.VoiceRoomSeatLayout android:id="@id/live_test_vrsl" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/live_scenes_voice_room_swipe_refresh_layout_list" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/live_scenes_voice_room_rv_room_list" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <RelativeLayout android:id="@id/live_scenes_voice_create_room" android:background="@drawable/live_create_room_btn" android:clickable="true" android:layout_width="65.0dp" android:layout_height="65.0dp" android:layout_marginRight="20.0dp" android:layout_marginBottom="20.0dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <TextView android:textSize="40.0sp" android:textColor="#006eff" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

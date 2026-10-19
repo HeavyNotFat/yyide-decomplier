@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bp_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/bg_white20" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_80" android:layout_marginTop="@dimen/dp_62" android:layout_marginRight="@dimen/dp_80" android:layout_marginBottom="@dimen/dp_62">
+        <TextView android:textSize="56.0sp" android:textColor="#666666" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="366.0dp" android:text="欢迎使用" />
+    </FrameLayout>
+    <FrameLayout android:paddingLeft="@dimen/dp_150" android:paddingRight="@dimen/dp_195" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="200.0dp" android:src="@drawable/login_bg" />
+    </FrameLayout>
+</FrameLayout>

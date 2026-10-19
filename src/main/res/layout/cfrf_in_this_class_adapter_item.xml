@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="@dimen/dp_210" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_medal_of_honor" android:layout_width="@dimen/dp_210" android:layout_height="@dimen/dp_210" />
+    <TextView android:textSize="@dimen/sp_18" android:textColor="@color/color_333333" android:layout_gravity="center_horizontal" android:id="@id/tv_week_cycle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_30" android:minHeight="@dimen/dp_25" />
+</LinearLayout>

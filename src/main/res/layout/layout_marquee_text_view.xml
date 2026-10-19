@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/clContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_40" android:layout_marginBottom="@dimen/dp_75"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:id="@id/llShow" android:background="@drawable/bg_top_bottom_12dp" android:layout_width="wrap_content" android:layout_height="32.0dp" android:paddingStart="@dimen/dp_15" android:paddingEnd="@dimen/dp_10" app:layout_constraintBottom_toTopOf="@id/tvMarquee" app:layout_constraintEnd_toEndOf="parent">
+        <ImageView android:id="@id/ivIcon" android:layout_width="@dimen/dp_26" android:layout_height="@dimen/dp_26" android:src="@mipmap/icon_show_marquee" android:scaleType="center" android:layout_marginEnd="@dimen/dp_6" app:layout_constraintEnd_toStartOf="@id/tvShow" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textSize="@dimen/sp_18" android:textColor="@color/white" android:id="@id/tvExpend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="收起" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <com.yd.android_brand_mvp.view.ScrollTextView android:id="@id/tvMarquee" android:layout_width="0.0dp" android:layout_height="80.0dp" android:singleLine="true" app:clickEnable="true" app:isHorizontal="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/llShow" />
+</androidx.constraintlayout.widget.ConstraintLayout>

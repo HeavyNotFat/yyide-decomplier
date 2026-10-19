@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tencent.qcloud.tim.uikit.component.TitleBarLayout android:id="@id/add_friend_titlebar" android:layout_width="match_parent" android:layout_height="@dimen/page_title_height" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:layout_marginRight="20.0dp">
+        <TextView android:textColor="#000" android:gravity="center_vertical" android:layout_width="70.0dp" android:layout_height="45.0dp" android:text="@string/user_id" />
+        <EditText android:textSize="@dimen/btn_text_size" android:id="@id/user_id" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10.0dp" android:hint="@string/hint_add_user_id" android:singleLine="true" android:maxLength="30" android:layout_weight="1.0" android:iconifiedByDefault="false" android:textCursorDrawable="@drawable/my_cursor" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:layout_marginRight="20.0dp">
+        <TextView android:textColor="#000" android:gravity="center_vertical" android:layout_width="70.0dp" android:layout_height="45.0dp" android:text="@string/add_wording" />
+        <EditText android:textSize="@dimen/btn_text_size" android:id="@id/add_wording" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:hint="@string/hint_add_wording" android:maxLength="100" android:layout_weight="1.0" android:textCursorDrawable="@drawable/my_cursor" />
+    </LinearLayout>
+    <Button android:textColor="#fb6155" android:background="@color/bg_negative_btn" android:layout_width="match_parent" android:layout_height="45.0dp" android:layout_marginLeft="@dimen/btn_margin_left" android:layout_marginTop="@dimen/btn_margin_top" android:layout_marginRight="@dimen/btn_margin_right" android:text="@string/contact_add" android:onClick="add" />
+</LinearLayout>

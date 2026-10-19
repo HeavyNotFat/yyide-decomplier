@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@mipmap/icon_cartoon_duty_bg" android:layout_width="444.0dp" android:layout_height="454.0dp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_25" android:layout_marginStart="@dimen/dp_20">
+            <ImageView android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_60" android:src="@mipmap/icon_cartoon_duty_left" />
+            <TextView android:textSize="38.0sp" android:textStyle="bold" android:textColor="#ff856100" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="值日" android:layout_marginStart="@dimen/dp_20" />
+        </LinearLayout>
+        <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:padding="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="@dimen/dp_20" android:layout_weight="1.0" app:msv_emptyView="@layout/item_min_null_layout_2_2" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_duty" android:paddingTop="@dimen/dp_25" android:layout_width="match_parent" android:layout_height="match_parent" android:layerType="none" />
+        </com.yd.android_brand_mvp.weight.MultiStateView>
+    </LinearLayout>
+</FrameLayout>

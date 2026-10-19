@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" app:msv_emptyView="@layout/item_min_null_layout_2" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.yd.android_brand_mvp.widget.YDViewPager android:id="@id/vp_stu_production" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dp_30">
+            <TextView android:textSize="@dimen/sp_20" android:textColor="@color/purple2" android:gravity="center" android:id="@id/tv_last" android:background="@drawable/bg_rb_ann_23_on_stroke" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:text="上一个作品" />
+            <TextView android:textSize="@dimen/sp_20" android:textColor="@color/purple2" android:gravity="center" android:id="@id/tv_next" android:background="@drawable/bg_rb_ann_23_on_stroke" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_46" android:text="下一个作品" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.yd.android_brand_mvp.weight.MultiStateView>

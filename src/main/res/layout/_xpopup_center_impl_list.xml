@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/_xpopup_round3_bg" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/_xpopup_title_color" android:ellipsize="end" android:gravity="center" android:id="@id/tv_title" android:paddingLeft="18.0dp" android:paddingTop="14.0dp" android:paddingRight="18.0dp" android:paddingBottom="14.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" />
+    <include layout="@layout/_xpopup_divider" />
+    <com.lxj.xpopup.widget.VerticalRecyclerView android:orientation="vertical" android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dp" android:layout_marginRight="4.0dp" android:overScrollMode="never" />
+</LinearLayout>

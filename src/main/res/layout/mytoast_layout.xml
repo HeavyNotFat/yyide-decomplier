@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/bg_white20" android:paddingLeft="20.0dp" android:paddingTop="20.0dp" android:paddingRight="20.0dp" android:paddingBottom="20.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="60.0dp" android:paddingHorizontal="20.0dp" android:paddingVertical="20.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <TextView android:textSize="26.0sp" android:textColor="@color/black11" android:layout_gravity="center" android:id="@id/tv_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="测试测试测试" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

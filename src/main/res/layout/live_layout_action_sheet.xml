@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="13.0sp" android:textColor="@color/live_dark_black" android:gravity="center" android:id="@id/txt_title" android:background="@drawable/live_action_sheet_top_normal" android:paddingLeft="15.0dp" android:paddingTop="10.0dp" android:paddingRight="15.0dp" android:paddingBottom="10.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="45.0dp" />
+    <ScrollView android:id="@id/sLayout_content" android:fadingEdge="none" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/lLayout_content" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <TextView android:textSize="18.0sp" android:textColor="@color/live_action_sheet_blue" android:gravity="center" android:id="@id/txt_cancel" android:background="@drawable/live_action_sheet_single_selector" android:layout_width="match_parent" android:layout_height="45.0dp" android:layout_marginTop="8.0dp" android:text="@string/live_cancel" />
+</LinearLayout>

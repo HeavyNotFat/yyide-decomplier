@@ -1,0 +1,51 @@
+package com.yd.android_brand_mvp.base;
+
+/* JADX INFO: loaded from: classes4.dex */
+public class MinaConstants {
+    public static int ATTENCE = 16;
+    public static int ATTENCE_MODULE = 10087;
+    public static int ActivationFaceCode = 103;
+    public static int ActivationFaceCodeStatus = 106;
+    public static int CLASS_CUTOVER_LOGIN = 1317;
+    public static int CLASS_MODE = 1325;
+    public static int CODE_ATTENCE = 102;
+    public static final int CODE_CAMPUSSTYLE_CHANGE = 1307;
+    public static int CODE_COLLECT = 1804;
+    public static int CODE_DOMINATE_CUSTOM = 1700;
+    public static int CODE_DOMINATE_LEVEL = 1701;
+    public static int CODE_DOMINATE_LEVEL1 = 2711;
+    public static int CODE_EXAM = 1600;
+    public static int CODE_RESERVE = 1801;
+    public static int CODE_SCREEN_SHOT = 1702;
+    public static int CODE_UPDATA_ATTENCE_LIST = 101;
+    public static int CODE_VOTE = 1803;
+    public static int ClassInfo = 1311;
+    public static int ClassInfoChange = 1318;
+    public static int Dominate = 1313;
+    public static int Duty = 1302;
+    public static int FACE_ACTIVE = 94;
+    public static int FACE_ALL_SYNC = 1206;
+    public static int GetVoice = 1309;
+    public static int HomeLayout = 1305;
+    public static int NC = 1315;
+    public static int NOTICE_SUBTITLE = 107;
+    public static int Notice = 1303;
+    public static int PhotoVideo = 1306;
+    public static int PostFace = 98;
+    public static int SEMESTER = 1316;
+    public static int SOCKET_IP = 105;
+    public static int SchoolUpdateInfo = 1319;
+    public static int StudentMsg = 99;
+    public static int TABLE_CODE = 104;
+    public static int THEME_BG = 10086;
+    public static int Table = 1304;
+    public static int TimeContro = 1312;
+    public static int Timer = 1308;
+    public static int Updata_Leave = 100;
+    public static int Work = 1310;
+    public static int Zy = 1314;
+    public static int netWork = 106;
+    public static int photoAndvideo = 90;
+    public static int update = 97;
+    public static int updateBook = 95;
+}

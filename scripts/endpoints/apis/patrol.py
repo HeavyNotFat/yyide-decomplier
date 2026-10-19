@@ -1,0 +1,87 @@
+"""巡课（由 scripts/endpoints 生成）"""
+from __future__ import annotations
+
+from ..common import Endpoint
+
+GROUP = "patrol"
+TITLE = "巡课"
+
+ENDPOINTS = [
+    Endpoint(
+        id='patrol-001',
+        method='POST',
+        path='/app/patrolDayTaskSite/finishSiteTask',
+        params={},
+        json_body={'id': '{patrol_id}', 'formJson': '{}', 'userId': '{teacher_id}'},
+        files=None,
+        auth=True,
+        base=None,
+        description='巡课 / requestSubmitPatrol',
+        source='requestSubmitPatrol',
+    ),
+    Endpoint(
+        id='patrol-002',
+        method='GET',
+        path='/app/patrolDayTaskSite/get',
+        params={'id': '{brand_id}'},
+        json_body=None,
+        files=None,
+        auth=True,
+        base=None,
+        description='巡课 / requestPatrolDetail',
+        source='requestPatrolDetail',
+    ),
+    Endpoint(
+        id='patrol-003',
+        method='POST',
+        path='/app/patrolDayTaskSite/page',
+        params={},
+        json_body={'patrolType': 1,
+ 'pageNo': 1,
+ 'siteId': '{site_id}',
+ 'pageSize': 20,
+ 'userId': '{teacher_id}',
+ 'status': 0},
+        files=None,
+        auth=True,
+        base=None,
+        description='巡课任务列表',
+        source='requestPatrolList',
+    ),
+    Endpoint(
+        id='patrol-004',
+        method='POST',
+        path='/app/patrolDayTaskSite/updateClockIn',
+        params={},
+        json_body={'id': '{patrol_id}', 'formJson': '{}', 'userId': '{teacher_id}'},
+        files=None,
+        auth=True,
+        base=None,
+        description='巡课 / requestUpdatePatrolPunch',
+        source='requestUpdatePatrolPunch',
+    ),
+    Endpoint(
+        id='patrol-005',
+        method='POST',
+        path='/app/patrolDayTaskSite/updateNowClock',
+        params={},
+        json_body={'userId': '{teacher_id}', 'businessId': '{patrol_id}'},
+        files=None,
+        auth=True,
+        base=None,
+        description='巡课 / requestPatrolPunch',
+        source='requestPatrolPunch',
+    ),
+    Endpoint(
+        id='patrol-006',
+        method='GET',
+        path='/app/patrolQrCode/getSiteQrCodeStatus',
+        params={'siteId': '{site_id}'},
+        json_body=None,
+        files=None,
+        auth=True,
+        base=None,
+        description='巡课 / requestScanQrCodeStatus',
+        source='requestScanQrCodeStatus',
+    ),
+]

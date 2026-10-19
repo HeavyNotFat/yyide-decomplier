@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+        <GridView android:id="@id/grid" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_30" android:layout_marginTop="@dimen/dp_30" android:layout_marginRight="@dimen/dp_30" android:layout_marginBottom="@dimen/dp_20" android:horizontalSpacing="@dimen/dp_30" android:verticalSpacing="@dimen/dp_30" android:numColumns="7" android:layout_marginHorizontal="@dimen/dp_30" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/rg_check" android:paddingLeft="@dimen/dp_600" android:paddingRight="@dimen/dp_600" android:layout_width="match_parent" android:layout_height="@dimen/dp_60" android:layout_marginBottom="@dimen/dp_10">
+        <CheckedTextView android:textSize="@dimen/sp_20" android:textColor="@color/rb_check_color4" android:gravity="center" android:layout_gravity="right|center" android:id="@id/up" android:background="@drawable/bg_white_stroke" android:layout_width="@dimen/dp_140" android:layout_height="@dimen/dp_46" android:text="上一页" android:textAlignment="center" />
+        <TextView android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/sp_20" android:textColor="@color/black11" android:id="@id/index" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <CheckedTextView android:textSize="@dimen/sp_20" android:textColor="@color/rb_check_color4" android:gravity="center" android:layout_gravity="right|center" android:id="@id/down" android:background="@drawable/bg_white_stroke" android:layout_width="@dimen/dp_140" android:layout_height="@dimen/dp_46" android:text="下一页" android:textAlignment="center" />
+    </LinearLayout>
+</LinearLayout>

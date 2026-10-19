@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:id="@id/top" android:background="@drawable/icon_center_top_bg" android:layout_width="match_parent" android:layout_height="464.0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.makeramen.roundedimageview.RoundedImageView android:id="@id/img" android:layout_width="@dimen/dp_140" android:layout_height="@dimen/dp_140" android:layout_marginTop="@dimen/dp_60" android:layout_marginStart="@dimen/dp_39" />
+        <TextView android:textSize="@dimen/sp_30" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_98" android:layout_marginStart="@dimen/dp_31" android:layout_toEndOf="@id/img" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_146" android:layout_marginStart="@dimen/dp_31" android:layout_toEndOf="@id/img">
+            <TextView android:textSize="@dimen/sp_16" android:textColor="@color/white" android:id="@id/tv_class_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:layout_gravity="center_vertical" android:background="#999999" android:layout_width="1.0dp" android:layout_height="15.0dp" android:layout_marginLeft="@dimen/dp_20" android:layout_marginRight="@dimen/dp_20" />
+            <TextView android:textSize="@dimen/sp_16" android:textColor="@color/white" android:ellipsize="end" android:id="@id/teacherName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+        </LinearLayout>
+        <com.youth.banner.Banner android:id="@id/banner" android:background="@drawable/bg_white10" android:layout_width="match_parent" android:layout_height="186.0dp" android:layout_marginBottom="15.0dp" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/dp_30" android:layout_marginEnd="@dimen/dp_30" />
+    </RelativeLayout>
+    <androidx.fragment.app.FragmentContainerView android:id="@id/content" android:background="@drawable/bg_white20" android:padding="2.0dp" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="@dimen/dp_12" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/top" />
+</androidx.constraintlayout.widget.ConstraintLayout>

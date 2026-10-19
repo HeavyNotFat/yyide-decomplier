@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="320.0dp" android:layout_height="202.0dp">
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_head_title" />
+        <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_50" app:msv_emptyView="@layout/item_min_null_layout_2_1_p" app:msv_errorView="@layout/layout_error_1p" app:msv_loadingView="@layout/layout_loading">
+            <com.jude.rollviewpager.RollPagerView android:id="@id/announRoll" android:layout_width="match_parent" android:layout_height="match_parent" app:rollviewpager_hint_paddingBottom="10.0dp" app:rollviewpager_play_delay="30000" />
+            <include android:visibility="gone" layout="@layout/fragment_timer_item_one_21p" />
+        </com.yd.android_brand_mvp.weight.MultiStateView>
+    </FrameLayout>
+</LinearLayout>

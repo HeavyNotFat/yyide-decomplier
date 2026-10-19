@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="30.0dp" android:paddingEnd="10.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yd.android_brand_mvp.weight.MultiStateView android:id="@id/mu" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_10" android:layout_weight="1.0" app:msv_emptyView="@layout/layout_empty" app:msv_errorView="@layout/layout_error" app:msv_loadingView="@layout/layout_loading">
+        <FrameLayout android:id="@id/frame" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </com.yd.android_brand_mvp.weight.MultiStateView>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/s1" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="52.0dp">
+        <FrameLayout android:id="@id/typelayout" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/type" android:background="@drawable/bg_book_tk4" android:layout_width="180.0dp" android:layout_height="match_parent" android:text="全部分类" />
+            <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_20" android:src="@drawable/xl_icon" />
+        </FrameLayout>
+        <FrameLayout android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/flag" android:background="@drawable/bg_book_tk4" android:layout_width="400.0dp" android:layout_height="match_parent" android:text="任意" />
+            <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_20" android:src="@drawable/xl_icon" />
+        </FrameLayout>
+        <TextView android:layout_width="12.0dp" android:layout_height="wrap_content" />
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="match_parent">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/time" android:background="@drawable/bg_book_tk4" android:layout_width="400.0dp" android:layout_height="match_parent" android:text="年" />
+            <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_20" android:src="@drawable/xl_icon" />
+        </FrameLayout>
+        <TextView android:layout_width="12.0dp" android:layout_height="wrap_content" />
+        <FrameLayout android:id="@id/yz_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/language" android:background="@drawable/bg_book_tk4" android:layout_width="400.0dp" android:layout_height="match_parent" android:text="全部语种" />
+            <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_20" android:src="@drawable/xl_icon" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/flaglayout2" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/flag2" android:background="@drawable/bg_book_tk4" android:layout_width="400.0dp" android:layout_height="match_parent" android:text="全部文献" />
+            <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_20" android:src="@drawable/xl_icon" />
+        </FrameLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_white20" android:layout_width="781.0dp" android:layout_height="398.0dp">
+        <TextView android:textSize="40.0dp" android:textColor="@color/black3" android:layout_gravity="center|bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="105.0dp" android:text="连接成功" />
+        <TextView android:layout_gravity="center_horizontal" android:background="@drawable/icon_ljcg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="106.0dp" />
+        <TextView android:layout_gravity="right" android:id="@id/close" android:background="@drawable/del_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:layout_marginRight="20.0dp" />
+    </FrameLayout>
+</LinearLayout>

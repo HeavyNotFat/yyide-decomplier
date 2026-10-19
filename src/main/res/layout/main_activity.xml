@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/empty_view" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="horizontal" android:background="#f7f7f7" android:layout_width="match_parent" android:layout_height="57.179993dp">
+        <RelativeLayout android:id="@id/conversation_btn_group" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.0" android:onClick="tabClick">
+            <TextView android:textSize="12.0sp" android:textColor="@color/tab_text_selected_color" android:gravity="center" android:id="@id/conversation" android:layout_width="50.0dp" android:layout_height="wrap_content" android:text="@string/tab_conversation_tab_text" android:drawableTop="@drawable/conversation_selected" android:drawablePadding="3.0dp" android:layout_weight="1.0" android:layout_centerInParent="true" />
+            <com.tencent.qcloud.tim.uikit.component.UnreadCountTextView android:textSize="13.599976sp" android:textColor="#fff" android:gravity="center" android:id="@id/msg_total_unread" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="50.0dp" android:layout_marginTop="5.0dp" android:minWidth="18.399994dp" android:minHeight="18.399994dp" android:includeFontPadding="false" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/contact_btn_group" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.0" android:onClick="tabClick">
+            <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/contact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tab_contact_tab_text" android:drawableTop="@drawable/contact_normal" android:drawablePadding="3.0dp" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/scenes_btn_group" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.0" android:onClick="tabClick">
+            <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/scenes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tab_scenes_tab_text" android:drawableTop="@drawable/live_normal" android:drawablePadding="3.0dp" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/myself_btn_group" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.0" android:onClick="tabClick">
+            <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/mine" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tab_profile_tab_text" android:drawableTop="@drawable/myself_normal" android:drawablePadding="3.0dp" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

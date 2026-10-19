@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/content_layout" android:background="@drawable/bg_white20" android:layout_width="680.0dp" android:layout_height="553.0dp">
+        <TextView android:layout_gravity="center_horizontal" android:background="@drawable/icon_updataing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_40" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_107" android:layout_marginRight="@dimen/dp_107" android:layout_marginBottom="@dimen/dp_140">
+            <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/update_progress" android:layout_width="match_parent" android:layout_height="10.0dp" android:max="100" style="@style/MyProgressBar" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/sp_20" android:textColor="#999999" android:layout_gravity="center|bottom" android:id="@id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_60" android:text="软件更新中..." />
+        <TextView android:textSize="@dimen/sp_20" android:textColor="#ff846ae4" android:layout_gravity="right" android:id="@id/pause" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:layout_marginRight="@dimen/dp_30" android:text="暂停更新" />
+    </FrameLayout>
+</LinearLayout>

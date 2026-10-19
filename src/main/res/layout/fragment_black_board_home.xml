@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/white" android:padding="@dimen/dp_30" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.viewpager.widget.ViewPager android:id="@id/viewPager" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.material.tabs.TabLayout android:id="@id/tablayout" android:background="@drawable/shape_tab_bg" android:layout_width="match_parent" android:layout_height="52.0dp" app:tabIndicator="@drawable/shape_full_tab_indicator" app:tabIndicatorColor="#9e84f1" app:tabIndicatorFullWidth="true" app:tabIndicatorHeight="52.0dp" app:tabMaxWidth="888.0dp" app:tabMinWidth="888.0dp" app:tabMode="fixed" app:tabSelectedTextColor="@color/white" app:tabTextColor="#555555" style="@style/TabLayoutStyle" />
+    </androidx.viewpager.widget.ViewPager>
+</FrameLayout>

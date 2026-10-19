@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_item_reservation_meeting" android:background="@mipmap/bg_reserve_other" android:paddingLeft="20.0dp" android:paddingRight="20.0dp" android:layout_width="200.0dp" android:layout_height="230.0dp" android:layout_marginStart="30.0dp" android:paddingHorizontal="20.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="22.0sp" android:textColor="@color/white" android:id="@id/tv_item_reservation_meeting_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="14:15-14:45" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="22.0sp" android:textColor="@color/white" android:id="@id/tv_item_reservation_meeting_theme" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="预约主题预约主题预约主题预约主题" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_item_reservation_meeting_time" />
+</androidx.constraintlayout.widget.ConstraintLayout>

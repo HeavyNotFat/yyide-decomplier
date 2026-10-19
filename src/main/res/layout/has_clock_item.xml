@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="186.0dp" android:layout_marginTop="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_10" android:layout_marginVertical="@dimen/dp_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.makeramen.roundedimageview.RoundedImageView android:id="@id/iv_head" android:layout_width="88.0dp" android:layout_height="88.0dp" android:src="@drawable/default_img" android:scaleType="fitXY" app:riv_oval="true" />
+    <TextView android:textSize="20.0sp" android:textColor="@color/black9" android:ellipsize="end" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dp" android:text="刘伟伟" android:lines="1" android:singleLine="true" />
+    <TextView android:textSize="20.0sp" android:textColor="#ff999999" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dp" android:text="10：00" android:lines="2" />
+</LinearLayout>
