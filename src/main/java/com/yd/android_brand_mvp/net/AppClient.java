@@ -1,5 +1,6 @@
 package com.yd.android_brand_mvp.net;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.yd.android_brand_mvp.utils.SpData;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -7,6 +8,7 @@ import okhttp3.CacheControl;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -67,6 +69,14 @@ public class AppClient {
             builder.readTimeout(30L, TimeUnit.SECONDS);
             builder.connectTimeout(30L, TimeUnit.SECONDS);
             builder.writeTimeout(30L, TimeUnit.SECONDS);
+            HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() { // from class: com.yd.android_brand_mvp.net.AppClient.1
+                @Override // okhttp3.logging.HttpLoggingInterceptor.Logger
+                public void log(String str) {
+                    LogUtils.i(new Object[]{str});
+                }
+            });
+            httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+            builder.addInterceptor(httpLoggingInterceptor);
             builder.addInterceptor(REWRITE_CACHE_CONTROL_INTERCEPTOR);
             builder.retryOnConnectionFailure(false);
             okHttpClient = builder.build();

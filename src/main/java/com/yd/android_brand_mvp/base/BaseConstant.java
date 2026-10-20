@@ -21,14 +21,14 @@ public class BaseConstant {
     public static final String HTTP_QRCODE_UEL = "https://mcloud.yyide.com/#/verify";
     public static int IBAUDRATE115200 = 115200;
     public static int IBAUDRATE9600 = 9600;
-    public static String IN_SETTING_PWD = "__SEC_PASSWORD_F81E33EC__";
+    public static String IN_SETTING_PWD = "ydbpcs8888";
     public static String LOGINNAME = "LOGINNAME2";
     public static final int MINA_PORT = 60000;
     public static final String MQTT_HOST = "tcp://116.63.71.76:1883";
     public static final String MQTT_HOST_RELEASE = "tcp://116.63.71.76:1883";
     public static final String MQTT_HOST_UAT = "tcp://192.168.3.158:1883";
     public static String NUMBER = "NUMBER";
-    public static String PASSWORD = "__SEC_PASSWORD_B1351797__";
+    public static String PASSWORD = "PASSWORD2";
     public static int REQUEST_SUCCES = 10000;
     public static int REQUEST_SUCCES2 = 200;
     public static final int REQUEST_SUCCES20 = 0;
@@ -45,7 +45,7 @@ public class BaseConstant {
     public static final String URL_DEV_IP = "http://192.168.3.158:9528";
     public static final String URL_RELEASE_IP = "https://api.yyide.com";
     public static final String WS_HOST = "192.168.3.229";
-    public static String debugPassword = "__SEC_PASSWORD_4963A901__";
+    public static String debugPassword = "ydbp8888";
     public static final String deviceType = "2";
     public static int exitOutTime = 60;
     public static int exitTime = 60;

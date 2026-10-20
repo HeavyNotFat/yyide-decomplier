@@ -347,7 +347,7 @@ public class HomePresenter extends BasePresenter<HomeView> {
     }
 
     public void getToken() {
-        addSubscription(this.dingApiStores.newLogin(SPUtils.getInstance().getString(BaseConstant.LOGINNAME, ""), SPUtils.getInstance().getString(BaseConstant.PASSWORD, ""), "yide-cloud", "brand", "__SEC_CLIENT_SECRET_68B09CCF__", ""), new ApiCallback<NewLoginRsp>() { // from class: com.yd.android_brand_mvp.presenter.HomePresenter.16
+        addSubscription(this.dingApiStores.newLogin(SPUtils.getInstance().getString(BaseConstant.LOGINNAME, ""), SPUtils.getInstance().getString(BaseConstant.PASSWORD, ""), "yide-cloud", "brand", "yide1234567", ""), new ApiCallback<NewLoginRsp>() { // from class: com.yd.android_brand_mvp.presenter.HomePresenter.16
             @Override // com.yd.android_brand_mvp.net.ApiCallback
             public void onFinish() {
             }

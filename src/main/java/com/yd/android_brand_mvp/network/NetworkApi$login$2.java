@@ -44,7 +44,7 @@ final class NetworkApi$login$2 extends SuspendLambda implements Function1<Contin
         if (i == 0) {
             ResultKt.throwOnFailure(obj);
             this.label = 1;
-            obj = NetworkApi.INSTANCE.getService().login(this.$username, this.$password, "yide-cloud", "brand", "__SEC_CLIENT_SECRET_68B09CCF__", this);
+            obj = NetworkApi.INSTANCE.getService().login(this.$username, this.$password, "yide-cloud", "brand", "yide1234567", this);
             if (obj == coroutine_suspended) {
                 return coroutine_suspended;
             }

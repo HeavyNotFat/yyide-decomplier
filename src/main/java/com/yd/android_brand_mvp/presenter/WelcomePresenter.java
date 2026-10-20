@@ -18,7 +18,7 @@ public class WelcomePresenter extends BasePresenter<WelcomeView> {
     }
 
     public void getNewToken(String str, String str2) {
-        addSubscription(this.dingApiStores.newLogin(str, str2, "yide-cloud", "brand", "__SEC_CLIENT_SECRET_68B09CCF__", ""), new ApiCallback<NewLoginRsp>() { // from class: com.yd.android_brand_mvp.presenter.WelcomePresenter.1
+        addSubscription(this.dingApiStores.newLogin(str, str2, "yide-cloud", "brand", "yide1234567", ""), new ApiCallback<NewLoginRsp>() { // from class: com.yd.android_brand_mvp.presenter.WelcomePresenter.1
             @Override // com.yd.android_brand_mvp.net.ApiCallback
             public void onFinish() {
             }

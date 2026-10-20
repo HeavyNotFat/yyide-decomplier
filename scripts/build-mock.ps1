@@ -1,5 +1,5 @@
-param(
-    [string]$Out = "dist\智慧班牌-3.0.14-MOCK.apk"
+﻿param(
+    [string]$Out = "dist\智慧班牌-3.0.15-MOCK.apk"
 )
 
 $ErrorActionPreference = "Stop"

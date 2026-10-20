@@ -44,7 +44,7 @@ public class BluetoothService extends Service {
     LockObj mCurrentLock;
     KeyObj mMyTestLockEKey;
     public String account = "15920012647";
-    public String password = "__SEC_PASSWORD_6BEF24BC__";
+    public String password = "dingchao110";
     private String TAG = BluetoothService.class.getSimpleName();
     private int pageNo = 1;
     private int pageSize = 100;

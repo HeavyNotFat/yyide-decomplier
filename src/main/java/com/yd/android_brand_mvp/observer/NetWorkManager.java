@@ -6,18 +6,18 @@ import java.util.List;
 
 /* JADX INFO: loaded from: classes4.dex */
 public class NetWorkManager implements NetWorkListener {
-    private static NetWorkManager netWorkManager;
-    private List<NetWorkStaus> list = new ArrayList();
+    private final List<NetWorkStaus> list = new ArrayList();
+
+    /* JADX INFO: loaded from: classes4.dex */
+    private static final class NetWorkManagerHolder {
+        private static final NetWorkManager netWorkManager = new NetWorkManager();
+
+        private NetWorkManagerHolder() {
+        }
+    }
 
     public static NetWorkManager getInstance() {
-        if (netWorkManager == null) {
-            synchronized (NetWorkManager.class) {
-                if (netWorkManager == null) {
-                    netWorkManager = new NetWorkManager();
-                }
-            }
-        }
-        return netWorkManager;
+        return NetWorkManagerHolder.netWorkManager;
     }
 
     @Override // com.yd.android_brand_mvp.observer.NetWorkListener
@@ -35,8 +35,6 @@ public class NetWorkManager implements NetWorkListener {
 
     @Override // com.yd.android_brand_mvp.observer.NetWorkListener
     public void remove(NetWorkStaus netWorkStaus) {
-        if (this.list.contains(netWorkStaus)) {
-            this.list.remove(netWorkStaus);
-        }
+        this.list.remove(netWorkStaus);
     }
 }

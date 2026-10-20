@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import butterknife.BindView;
+import com.blankj.utilcode.util.LogUtils;
 import com.google.gson.Gson;
 import com.orhanobut.hawk.Hawk;
 import com.yd.android_brand_mvp.R;
@@ -15,6 +16,7 @@ import com.yd.android_brand_mvp.model.PhotoAlbumTwoBean;
 import com.yd.android_brand_mvp.presenter.PhotoAlbumTwoPresenter;
 import com.yd.android_brand_mvp.utils.ToastUtil;
 import com.yd.android_brand_mvp.utils.Tool;
+import com.yd.android_brand_mvp.utils.view.net.GsonUtils;
 import com.yd.android_brand_mvp.view.PhotoAlbumTwoView;
 import com.yd.android_brand_mvp.weight.MultiStateView;
 import com.yd.android_brand_mvp.weight.rv.PagerGridLayoutManager;
@@ -124,6 +126,7 @@ public class PhotoAlbumAllFragment extends BaseMvpFragment<PhotoAlbumTwoPresente
 
     @Override // com.yd.android_brand_mvp.view.PhotoAlbumTwoView
     public void getDataSuccess(PhotoAlbumTwoBean photoAlbumTwoBean) {
+        LogUtils.i(new Object[]{"相册二级列表：" + GsonUtils.toJson(photoAlbumTwoBean)});
         if (photoAlbumTwoBean.data != null && photoAlbumTwoBean.code == 0) {
             this.dataList.addAll(photoAlbumTwoBean.data);
             if ("2".equals(this.activity.kind)) {

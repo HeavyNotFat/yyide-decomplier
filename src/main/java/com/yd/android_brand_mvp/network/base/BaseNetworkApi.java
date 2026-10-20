@@ -37,6 +37,7 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -69,7 +70,17 @@ public abstract class BaseNetworkApi<I> implements IService<I> {
     private static final Lazy<OkHttpClient> noInterceptorOkHttpClient$delegate = LazyKt.lazy(new Function0<OkHttpClient>() { // from class: com.yd.android_brand_mvp.network.base.BaseNetworkApi$Companion$noInterceptorOkHttpClient$2
         @Override // kotlin.jvm.functions.Function0
         public final OkHttpClient invoke() {
-            return new OkHttpClient.Builder().callTimeout(30L, TimeUnit.SECONDS).connectTimeout(30L, TimeUnit.SECONDS).readTimeout(30L, TimeUnit.SECONDS).writeTimeout(30L, TimeUnit.SECONDS).retryOnConnectionFailure(true).build();
+            OkHttpClient.Builder builderRetryOnConnectionFailure = new OkHttpClient.Builder().callTimeout(30L, TimeUnit.SECONDS).connectTimeout(30L, TimeUnit.SECONDS).readTimeout(30L, TimeUnit.SECONDS).writeTimeout(30L, TimeUnit.SECONDS).retryOnConnectionFailure(true);
+            HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() { // from class: com.yd.android_brand_mvp.network.base.BaseNetworkApi$Companion$noInterceptorOkHttpClient$2$loggingInterceptor$1
+                @Override // okhttp3.logging.HttpLoggingInterceptor.Logger
+                public void log(String message) {
+                    Intrinsics.checkNotNullParameter(message, "message");
+                    LogUtils.i(new Object[]{message});
+                }
+            });
+            httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+            builderRetryOnConnectionFailure.addInterceptor(httpLoggingInterceptor);
+            return builderRetryOnConnectionFailure.build();
         }
     });
     private static Interceptor REWRITE_CACHE_CONTROL_INTERCEPTOR = new Interceptor() { // from class: com.yd.android_brand_mvp.network.base.-$$Lambda$BaseNetworkApi$65wtRVK3JIYcqzHqX2TB3aJTp5Y

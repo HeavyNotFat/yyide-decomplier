@@ -1,10 +1,10 @@
-<#
+﻿<#
 .SYNOPSIS
     Build a cloud-controller APK: every api.yyide.com / weather / book URL is
     rewritten to your local cloud controller.
 
 .DESCRIPTION
-    Works on the restored APK (recommended) or a stock 3.0.14 APK. Only the dex
+    Works on the restored APK (recommended) or a stock 3.0.15 APK. Only the dex
     files that actually contain the URLs are disassembled, patched and
     reassembled, so the build takes a few seconds instead of minutes.
 
@@ -43,18 +43,18 @@ $debugKeystore = Join-Path $env:USERPROFILE '.android\debug.keystore'
 
 if (-not $BaseApk) {
     $candidates = @(
-        (Join-Path $root 'dist\智慧班牌-3.0.14-还原版.apk'),
-        (Join-Path $root 'dist\智慧班牌-3.0.14-原版签名.apk'),
-        'D:\Desktop\反编译\文件\智慧班牌\智慧班牌_3.0.14.apk'
+        (Join-Path $root 'dist\智慧班牌-3.0.15-还原版.apk'),
+        (Join-Path $root 'dist\智慧班牌-3.0.15-原版签名.apk'),
+        'D:\Desktop\反编译\文件\智慧班牌\智慧班牌_3.0.15.apk'
     )
     foreach ($candidate in $candidates) {
         if (Test-Path -LiteralPath $candidate) { $BaseApk = $candidate; break }
     }
 }
 if (-not $BaseApk -or -not (Test-Path -LiteralPath $BaseApk)) {
-    throw '找不到基础 APK。请用 -BaseApk 指定 3.0.14 还原版或原版安装包。'
+    throw '找不到基础 APK。请用 -BaseApk 指定 3.0.15 还原版或原版安装包。'
 }
-if (-not $OutApk) { $OutApk = Join-Path $root 'dist\智慧班牌-3.0.14-云端版.apk' }
+if (-not $OutApk) { $OutApk = Join-Path $root 'dist\智慧班牌-3.0.15-云端版.apk' }
 
 foreach ($tool in @($java, $zipalign, $apksigner)) {
     if (-not (Test-Path -LiteralPath $tool)) { throw "缺少工具: $tool" }

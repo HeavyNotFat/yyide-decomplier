@@ -54,4 +54,8 @@ public class DisplayUtil {
     public static int sp2px(Context context, float f) {
         return (int) ((f * context.getResources().getDisplayMetrics().scaledDensity) + 0.5f);
     }
+
+    public static int getDensityDpi(Activity activity) {
+        return activity.getResources().getDisplayMetrics().densityDpi;
+    }
 }

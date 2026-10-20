@@ -246,7 +246,7 @@ public class BaseApplication extends DemoApplication {
 
     public String getMac() {
         // 还原版：固定为真实班牌 MAC，保证 /brand/obtain 与考勤上报使用同一设备身份。
-        return "__SEC_MAC_LITERAL_E8635151__";
+        return "001122334455";
     }
 
     /* JADX WARN: Code duplicated, block: B:12:0x0060 A[Catch: Exception -> 0x0090, TryCatch #0 {Exception -> 0x0090, blocks: (B:7:0x0017, B:9:0x0021, B:11:0x002b, B:13:0x0078, B:15:0x0082, B:12:0x0060), top: B:20:0x0017 }] */

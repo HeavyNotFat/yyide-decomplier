@@ -2,8 +2,8 @@
 
 > 文档导航：[README.md](README.md) · [ENDPOINTS.md](ENDPOINTS.md) · [scripts/endpoints/README.md](scripts/endpoints/README.md) · [GITHUB.md](GITHUB.md)
 
-产物：`dist/智慧班牌-3.0.14-还原版.apk`
-包名 / 版本：`com.yd.android_brand_mvp` / `3.0.14 (3002)`
+产物：`dist/智慧班牌-3.0.15-还原版.apk`
+包名 / 版本：`com.yd.android_brand_mvp` / `3.0.15 (3002)`
 
 ## 改了什么
 
@@ -51,12 +51,12 @@
 python scripts/secrets.py restore
 
 .\scripts\build-restore-apk.ps1 `
-  -BaseApk "D:\path\to\智慧班牌_3.0.14.apk"
+  -BaseApk "D:\path\to\智慧班牌_3.0.15.apk"
 ```
 
 流程：`javac`（7 个补丁类）→ `d8` → 注入 patch `classes.dex` → 原 dex 后移 → `zipalign` → `apksigner`。
 
-> 完整源码 Gradle 重建（`-PuseDecompiledClasses`）能出包，但 ECJ 恢复的库类启动时会抛 `Unresolved compilation problems`，正式出包用“原版字节码 + 补丁类”。
+> 完整源码 Gradle 重建（默认的 `app-classes-hybrid.jar` 模式）能出包，但 ECJ 恢复的类在部分方法里仍会抛 `Unresolved compilation problems`；需要稳定运行请用 `-PuseOriginalClasses`（全部原版字节码），或本文件的 patch-dex 方式（原版字节码 + 7 个补丁类）。
 
 ## 验证
 

@@ -15,7 +15,7 @@ python cloud-server/server.py --port 8765
 
 ```powershell
 .\scripts\build-cloud-apk.ps1 -CloudUrl "http://10.0.2.2:8765"
-adb install -r "dist\智慧班牌-3.0.14-云端版.apk"
+adb install -r "dist\智慧班牌-3.0.15-云端版.apk"
 ```
 
 模拟器用 `10.0.2.2`；真机用电脑局域网 IP，并重新构建 APK。

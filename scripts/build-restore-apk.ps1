@@ -1,7 +1,7 @@
-# Build the identity-patched 智慧班牌 restoration APK.
+﻿# Build the identity-patched 智慧班牌 restoration APK.
 #
 #   .\scripts\build-restore-apk.ps1
-#   .\scripts\build-restore-apk.ps1 -BaseApk "D:\path\to\智慧班牌_3.0.14.apk"
+#   .\scripts\build-restore-apk.ps1 -BaseApk "D:\path\to\智慧班牌_3.0.15.apk"
 #
 # The script compiles the two patched Java classes, dexes them, inserts the
 # patch dex as classes.dex, shifts the original dex files to classes2..N,
@@ -46,18 +46,18 @@ $debugKeystore = Join-Path $env:USERPROFILE '.android\debug.keystore'
 
 if (-not $BaseApk) {
     $candidates = @(
-        (Join-Path $root 'dist\智慧班牌-3.0.14-原版签名.apk'),
-        'D:\Desktop\反编译\文件\智慧班牌\智慧班牌_3.0.14.apk'
+        (Join-Path $root 'dist\智慧班牌-3.0.15-原版签名.apk'),
+        'D:\Desktop\反编译\文件\智慧班牌\智慧班牌_3.0.15.apk'
     )
     foreach ($candidate in $candidates) {
         if (Test-Path -LiteralPath $candidate) { $BaseApk = $candidate; break }
     }
 }
 if (-not $BaseApk -or -not (Test-Path -LiteralPath $BaseApk)) {
-    throw '找不到原版 APK。请用 -BaseApk 指定 3.0.14 原版安装包。'
+    throw '找不到原版 APK。请用 -BaseApk 指定 3.0.15 原版安装包。'
 }
 if (-not $OutApk) {
-    $OutApk = Join-Path $root 'dist\智慧班牌-3.0.14-还原版.apk'
+    $OutApk = Join-Path $root 'dist\智慧班牌-3.0.15-还原版.apk'
 }
 
 foreach ($tool in @($javac, $java, $jar, $androidJar, $d8Jar, $zipalign, $apksigner, $originalJar, $appR)) {

@@ -36,8 +36,8 @@
 | `src/main/assets/` | 71MB | 人脸模型、皮肤、字体缺失；人脸/部分 UI 资源不可用 |
 | `vendor-src/` | 299MB | 第三方库源码缺失；不影响还原版补丁构建，但不利于完整审计 |
 | `libs/original-classes.jar`、`app-classes.jar`、`app-support-classes.jar`、`app-patch-classes.jar`、`decompiled-libs.jar` | 100MB | **本地构建/实验用，含原版编译字节码和硬编码配置，不要公开上传** |
-| `dist/智慧班牌-3.0.14-还原版.apk` | 185MB | 不能直接下载 APK；建议作为 GitHub Release 附件 |
-| `dist/智慧班牌-3.0.14-云端版.apk` | 185MB | 云端控制器调试包；同样走 Release，不要进 git |
+| `dist/智慧班牌-3.0.15-还原版.apk` | 185MB | 不能直接下载 APK；建议作为 GitHub Release 附件 |
+| `dist/智慧班牌-3.0.15-云端版.apk` | 185MB | 云端控制器调试包；同样走 Release，不要进 git |
 
 建议：
 
@@ -45,9 +45,9 @@
 - APK 不要进 git，直接：
 
 ```powershell
-gh release create v3.0.14 `
-  "dist\智慧班牌-3.0.14-还原版.apk" `
-  --title "智慧班牌 3.0.14 还原版" `
+gh release create v3.0.15 `
+  "dist\智慧班牌-3.0.15-还原版.apk" `
+  --title "智慧班牌 3.0.15 还原版" `
   --notes "固定设备身份 + 8×6 真实布局 + 刷卡/离线快捷入口"
 ```
 

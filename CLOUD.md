@@ -267,7 +267,7 @@ curl -X POST http://127.0.0.1:8765/api/reset
 .\scripts\build-cloud-apk.ps1 -CloudUrl "http://10.0.2.2:8765"
 ```
 
-输出：`dist/智慧班牌-3.0.14-云端版.apk`
+输出：`dist/智慧班牌-3.0.15-云端版.apk`
 
 脚本做的事：
 
@@ -285,7 +285,7 @@ curl -X POST http://127.0.0.1:8765/api/reset
 
 ```powershell
 adb uninstall com.yd.android_brand_mvp
-adb install -r "dist\智慧班牌-3.0.14-云端版.apk"
+adb install -r "dist\智慧班牌-3.0.15-云端版.apk"
 ```
 
 - 云端版使用 Android Debug 签名，不能覆盖原版（原版 `CN=ChenHao`）；

@@ -2140,7 +2140,7 @@
     html += '<div class="step"><div><h4>构建云端调试包</h4><p>使用脚本把 APK 内的 <code class="mono">https://api.yyide.com</code> 替换成本控制器地址，并保留还原版的设备身份与快捷入口。</p>' +
       '<div class="code" style="margin-top:8px">./scripts/build-cloud-apk.ps1 -CloudUrl "http://10.0.2.2:' + srv.port + '"</div></div></div>';
     html += '<div class="step"><div><h4>卸载旧版并安装</h4><p>调试包使用 Android Debug 签名，不能覆盖原版。</p>' +
-      '<div class="code" style="margin-top:8px">adb uninstall com.yd.android_brand_mvp\nadb install -r "dist/智慧班牌-3.0.14-云端版.apk"</div></div></div>';
+      '<div class="code" style="margin-top:8px">adb uninstall com.yd.android_brand_mvp\nadb install -r "dist/智慧班牌-3.0.15-云端版.apk"</div></div></div>';
     html += '<div class="step"><div><h4>登录</h4><p>账号 <b>demo</b>，密码 <b>demo</b>（任意账号也会返回演示数据）。</p></div></div>';
     html += '<div class="step"><div><h4>刷新首页</h4><p>回到首页或重启 App，云端布局、公告、相册立即生效。</p></div></div>';
     html += '</div></div></div>';

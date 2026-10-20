@@ -25,7 +25,7 @@ public class LoginPresenter extends BasePresenter<LoginView> {
     }
 
     public void getToken(String str, String str2, String str3, String str4) {
-        addSubscription(this.dingApiStores.newLogin(str, str2, "yide-cloud", str3, "__SEC_CLIENT_SECRET_68B09CCF__", str4), new ApiCallback<NewLoginRsp>() { // from class: com.yd.android_brand_mvp.presenter.LoginPresenter.1
+        addSubscription(this.dingApiStores.newLogin(str, str2, "yide-cloud", str3, "yide1234567", str4), new ApiCallback<NewLoginRsp>() { // from class: com.yd.android_brand_mvp.presenter.LoginPresenter.1
             @Override // com.yd.android_brand_mvp.net.ApiCallback
             public void onFinish() {
             }
@@ -47,7 +47,7 @@ public class LoginPresenter extends BasePresenter<LoginView> {
         map.put("loginName", str);
         map.put("no", str2);
         map.put("wlanMac", NetWorkUtil.getMacAddressByWifiInfo());
-        map.put("seriaNo", "__SEC_ANDROID_ID_PUT_9FC4DBAF__");
+        map.put("seriaNo", "a5d9e0a1b06430eb");
         map.put(HiAnalyticsConstant.HaKey.BI_KEY_DIRECTION, str3);
         addSubscription(this.dingApiStores.getBrandObtain(RequestBody.create(MediaType.parse("application/json; charset=utf-8"), JSON.toJSONString((Object) map, true))), new ApiCallback<NewBrandLoginRsp>() { // from class: com.yd.android_brand_mvp.presenter.LoginPresenter.2
             @Override // com.yd.android_brand_mvp.net.ApiCallback

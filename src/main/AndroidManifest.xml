@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     android:versionCode="3002"
-    android:versionName="3.0.14"
+    android:versionName="3.0.15"
     android:compileSdkVersion="31"
     android:compileSdkVersionCodename="12"
     platformBuildVersionCode="31"

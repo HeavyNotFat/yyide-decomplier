@@ -46,6 +46,7 @@ import com.alibaba.fastjson.TypeReference;
 import com.blankj.utilcode.util.ActivityUtils;
 import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.LogUtils;
+import com.blankj.utilcode.util.NetworkUtils;
 import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.ScreenUtils;
 import com.blankj.utilcode.util.StringUtils;
@@ -195,6 +196,7 @@ import tv.danmaku.ijk.media.player.IMediaPlayer;
 
 /* JADX INFO: loaded from: classes4.dex */
 public class MainActivity extends BaseMvpActivity<HomePresenter> implements HomeView, MinaListener, NetworkChangeReceiver.NetStateChangeObserver, MQTTClient.OnMessageCallBack {
+    private static final long CLICK_INTERVAL = 500;
     private static final String FILE_SEP = System.getProperty("file.separator");
     private static final String FIRST_ACTION = "download_helper_first_action";
     private View TopCouseview;
@@ -316,7 +318,7 @@ public class MainActivity extends BaseMvpActivity<HomePresenter> implements Home
     private final Runnable runnable = new Runnable() { // from class: com.yd.android_brand_mvp.MainActivity.2
         @Override // java.lang.Runnable
         public void run() {
-            NetWorkManager.getInstance().notifyObserver(Tool.isNetworkAvailable(MainActivity.this));
+            NetWorkManager.getInstance().notifyObserver(NetworkUtils.isConnected());
             MainActivity.this.postData();
             TimeManager.getInstance().notifyObserver(System.currentTimeMillis() / 1000);
             MainActivity.this.handler.postDelayed(this, WorkRequest.MIN_BACKOFF_MILLIS);
@@ -525,8 +527,16 @@ public class MainActivity extends BaseMvpActivity<HomePresenter> implements Home
     };
     private boolean isSite = false;
     private boolean isRebootTime = true;
+    private long lastClickTime = 0;
 
-    private void sendFaceSync() {
+    private int getWifiDrawableByLevel(int i) {
+        if (i == 2) {
+            return R.drawable.wifi2;
+        }
+        if (i != 3) {
+            return (i == 4 || i == 5) ? R.drawable.wifi4 : R.drawable.wifi1;
+        }
+        return R.drawable.wifi3;
     }
 
     @Override // com.yd.android_brand_mvp.view.HomeView
@@ -1049,6 +1059,7 @@ public class MainActivity extends BaseMvpActivity<HomePresenter> implements Home
     }
 
     public /* synthetic */ void lambda$SetWindView$12$MainActivity(View view) {
+        LogUtils.i(new Object[]{"mwindowview"});
         ActivityUtils.finishToActivity((Class<? extends Activity>) MainActivity.class, false);
         if (this.pager.getCurrentItem() != 0) {
             this.pager.setCurrentItem(0);
@@ -1458,7 +1469,7 @@ public class MainActivity extends BaseMvpActivity<HomePresenter> implements Home
             return;
         }
         if (i == MinaConstants.FACE_ACTIVE) {
-            this.handler.postDelayed(this.initFaceSdkRunnable, 500L);
+            this.handler.postDelayed(this.initFaceSdkRunnable, CLICK_INTERVAL);
             return;
         }
         if (i == MinaConstants.photoAndvideo) {
@@ -2267,14 +2278,9 @@ public class MainActivity extends BaseMvpActivity<HomePresenter> implements Home
         });
     }
 
-    @OnClick({R.id.layout_setting, R.id.wifi, R.id.weatherlayout, R.id.calendar_layout, R.id.img_set, R.id.xx, R.id.lock, R.id.logo, R.id.ivTiming, R.id.ivBlank})
+    @OnClick({R.id.layout_setting, R.id.weatherlayout, R.id.img_set, R.id.xx, R.id.lock, R.id.logo, R.id.ivTiming, R.id.ivBlank})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.calendar_layout /* 2131362139 */:
-            case R.id.wifi /* 2131365038 */:
-                startActivity(new Intent(this.mActivity, (Class<?>) TeacherCheackActivity.class));
-                setBtnEnable(false);
-                break;
             case R.id.img_set /* 2131362850 */:
                 startActivity(new Intent(this.mActivity, (Class<?>) TeacherCheackActivity.class));
                 setBtnEnable(false);
@@ -2336,43 +2342,21 @@ public class MainActivity extends BaseMvpActivity<HomePresenter> implements Home
     @Override // com.yd.android_brand_mvp.base.BaseActivity, com.yd.android_brand_mvp.observer.NetWorkStaus
     public void getWork(boolean z) {
         super.getWork(z);
-        if (z) {
-            NetworkInfo networkAvailableTypeName = Tool.getNetworkAvailableTypeName(this);
-            if (networkAvailableTypeName != null) {
-                if (!TextUtils.isEmpty(networkAvailableTypeName.getTypeName()) && "Ethernet".equals(networkAvailableTypeName.getTypeName())) {
-                    this.wifi.setImageResource(R.drawable.network_intneter);
-                    return;
-                }
-                int iObtainWifiInfo = Tool.obtainWifiInfo(this);
-                if (iObtainWifiInfo == 0) {
-                    this.wifi.setImageResource(R.drawable.wifi1);
-                    return;
-                }
-                if (iObtainWifiInfo == 1) {
-                    this.wifi.setImageResource(R.drawable.wifi1);
-                    return;
-                }
-                if (iObtainWifiInfo == 2) {
-                    this.wifi.setImageResource(R.drawable.wifi2);
-                    return;
-                }
-                if (iObtainWifiInfo == 3) {
-                    this.wifi.setImageResource(R.drawable.wifi3);
-                    return;
-                } else if (iObtainWifiInfo == 4) {
-                    this.wifi.setImageResource(R.drawable.wifi4);
-                    return;
-                } else {
-                    if (iObtainWifiInfo != 5) {
-                        return;
-                    }
-                    this.wifi.setImageResource(R.drawable.wifi4);
-                    return;
-                }
-            }
+        if (!z) {
+            this.wifi.setImageResource(R.drawable.wifi_false);
             return;
         }
-        this.wifi.setImageResource(R.drawable.wifi_false);
+        NetworkInfo networkAvailableTypeName = Tool.getNetworkAvailableTypeName(this);
+        if (networkAvailableTypeName == null) {
+            this.wifi.setImageResource(R.drawable.wifi_false);
+            return;
+        }
+        String typeName = networkAvailableTypeName.getTypeName();
+        if (!TextUtils.isEmpty(typeName) && "Ethernet".equals(typeName)) {
+            this.wifi.setImageResource(R.drawable.network_intneter);
+        } else {
+            this.wifi.setImageResource(getWifiDrawableByLevel(Tool.obtainWifiInfo(this)));
+        }
     }
 
     @Override // com.yd.android_brand_mvp.base.BaseActivity, com.yd.android_brand_mvp.utils.view.net.NetworkChangeReceiver.NetStateChangeObserver

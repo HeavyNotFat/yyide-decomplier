@@ -62,8 +62,8 @@ public final class MQTTClient {
     public static final MQTTClient INSTANCE = new MQTTClient();
     private static final String TAG = "MQTTClient";
     private static final String username = "yide";
-    private static final String password = "__SEC_PASSWORD_40F3803D__";
-    private static final String uat_password = "__SEC_PASSWORD_BB6C369D__";
+    private static final String password = "m8IFxdsRMkEFfaO1";
+    private static final String uat_password = "yide123456";
     private static String schoolId = "";
     private static String mac = "";
     private static String topicHead = "brand";

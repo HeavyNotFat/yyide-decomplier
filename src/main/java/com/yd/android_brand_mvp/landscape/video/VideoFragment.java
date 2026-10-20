@@ -37,6 +37,7 @@ import java.util.Random;
 /* JADX INFO: loaded from: classes4.dex */
 public class VideoFragment extends BaseMvpFragment<VideoPresenter> implements ClassPhotoView {
     private static final String BJSPID = "1";
+    private static final long CLICK_INTERVAL = 10000;
     private static final String XJSPID = "2";
     private static final String bjsp = "班级视频";
     private static final String hbbjsp23 = "hbbjsp23";
@@ -57,6 +58,7 @@ public class VideoFragment extends BaseMvpFragment<VideoPresenter> implements Cl
     List<VideoListBean.DataBean> dataList = new ArrayList();
     String frType = "2";
     private boolean isResume = false;
+    private long lastClickTime = 0;
     String kind;
 
     @BindView(R.id.ll_indicator)
@@ -121,6 +123,11 @@ public class VideoFragment extends BaseMvpFragment<VideoPresenter> implements Cl
     public void onResume() {
         super.onResume();
         this.isResume = true;
+        long jCurrentTimeMillis = System.currentTimeMillis();
+        if (jCurrentTimeMillis - this.lastClickTime < CLICK_INTERVAL) {
+            return;
+        }
+        this.lastClickTime = jCurrentTimeMillis;
         getData();
     }
 

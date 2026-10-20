@@ -38,6 +38,7 @@ def main() -> None:
     print("classes_id:", client.context.get("classes_id"))
 
     # Code Here
+    print(client.device_get_newest_version_2())
 
 
 if __name__ == "__main__":

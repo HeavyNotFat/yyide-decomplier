@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android WebView JavaScript 交互测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .test-section h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .log-area {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        .log-entry {
+            margin-bottom: 5px;
+            padding: 3px 0;
+        }
+        .log-info { color: #007bff; }
+        .log-success { color: #28a745; }
+        .log-warning { color: #ffc107; }
+        .log-error { color: #dc3545; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Android WebView JavaScript 交互测试</h1>
+        
+        <div class="test-section">
+            <h3>基础接口测试</h3>
+            <button onclick="testShowToast()">测试 Toast 提示</button>
+            <button onclick="testShowValidation()">测试 WebView 接口回调</button>
+            <button onclick="testGetDeviceInfo()">测试获取设备信息</button>
+        </div>
+
+        <div class="test-section">
+            <h3>班牌设备接口测试</h3>
+            <button onclick="testGetBrandInfo()">测试获取班牌信息</button>
+            <button onclick="testGetBrandSite()">测试获取场地信息</button>
+            <button onclick="testCardCallback()">测试刷卡回调</button>
+            <button onclick="testFaceCallback()">测试人脸识别回调</button>
+        </div>
+
+        <div class="test-section">
+            <h3>环境检测</h3>
+            <button onclick="checkEnvironment()">检测运行环境</button>
+            <button onclick="checkAndroidInterface()">检测Android接口</button>
+        </div>
+
+        <div class="test-section">
+            <h3>日志输出</h3>
+            <button onclick="clearLogs()">清空日志</button>
+            <div id="logArea" class="log-area">
+                <div class="log-entry log-info">页面加载完成，开始测试...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 日志管理
+        function addLog(message, type = 'info') {
+            const logArea = document.getElementById('logArea');
+            const logEntry = document.createElement('div');
+            logEntry.className = `log-entry log-${type}`;
+            logEntry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logArea.appendChild(logEntry);
+            logArea.scrollTop = logArea.scrollHeight;
+        }
+
+        function clearLogs() {
+            document.getElementById('logArea').innerHTML = '<div class="log-entry log-info">日志已清空</div>';
+        }
+
+        // 基础接口测试
+        function testShowToast() {
+            try {
+                if (typeof android !== 'undefined' && android.showToast) {
+                    android.showToast('简单教程,简单编程');
+                    addLog('Toast测试成功', 'success');
+                } else {
+                    addLog('android.showToast 接口不存在', 'warning');
+                    alert('android.showToast 接口不存在');
+                }
+            } catch (error) {
+                addLog(`Toast测试失败: ${error.message}`, 'error');
+            }
+        }
+
+        function testShowValidation() {
+            try {
+                if (typeof android !== 'undefined' && android.showValidation) {
+                    android.showValidation();
+                    addLog('WebView接口回调测试成功', 'success');
+                } else {
+                    addLog('android.showValidation 接口不存在', 'warning');
+                    alert('android.showValidation 接口不存在');
+                }
+            } catch (error) {
+                addLog(`WebView接口回调测试失败: ${error.message}`, 'error');
+            }
+        }
+
+        function testGetDeviceInfo() {
+            try {
+                if (typeof android !== 'undefined' && android.getDeviceInfo) {
+                    const deviceInfo = android.getDeviceInfo();
+                    addLog(`设备信息: ${JSON.stringify(deviceInfo)}`, 'success');
+                } else {
+                    addLog('android.getDeviceInfo 接口不存在', 'warning');
+                }
+            } catch (error) {
+                addLog(`获取设备信息失败: ${error.message}`, 'error');
+            }
+        }
+
+        // 班牌设备接口测试
+        function testGetBrandInfo() {
+            try {
+                if (typeof android !== 'undefined' && android.getBrandInfo) {
+                    const brandInfo = android.getBrandInfo();
+                    addLog(`班牌信息: ${JSON.stringify(brandInfo)}`, 'success');
+                } else {
+                    addLog('android.getBrandInfo 接口不存在', 'warning');
+                    // 模拟测试数据
+                    const mockData = {
+                        id: 'BR001',
+                        brandName: '测试班牌',
+                        classesId: 'CL001'
+                    };
+                    getBrandInfo(mockData);
+                }
+            } catch (error) {
+                addLog(`获取班牌信息失败: ${error.message}`, 'error');
+            }
+        }
+
+        function testGetBrandSite() {
+            try {
+                if (typeof android !== 'undefined' && android.getBrandSite) {
+                    const brandSite = android.getBrandSite();
+                    addLog(`场地信息: ${JSON.stringify(brandSite)}`, 'success');
+                } else {
+                    addLog('android.getBrandSite 接口不存在', 'warning');
+                    // 模拟测试数据
+                    const mockData = {
+                        siteId: 'ST001',
+                        siteName: '测试场地'
+                    };
+                    getBrandSite(mockData);
+                }
+            } catch (error) {
+                addLog(`获取场地信息失败: ${error.message}`, 'error');
+            }
+        }
+
+        function testCardCallback() {
+            try {
+                // 模拟刷卡回调 - 按照文档格式：{cardNo:"卡号"}
+                const cardData = {
+                    cardNo: 'CARD123456'
+                };
+                cardCallBack(JSON.stringify(cardData));
+                addLog('刷卡回调测试完成', 'success');
+            } catch (error) {
+                addLog(`刷卡回调测试失败: ${error.message}`, 'error');
+            }
+        }
+
+        function testFaceCallback() {
+            try {
+                // 模拟人脸识别回调 - 按照文档格式：{id=人员ID, name=姓名}
+                const faceData = {
+                    id: 'USER001',
+                    name: '张三'
+                };
+                faceCallBack(JSON.stringify(faceData));
+                addLog('人脸识别回调测试完成', 'success');
+            } catch (error) {
+                addLog(`人脸识别回调测试失败: ${error.message}`, 'error');
+            }
+        }
+
+        // 环境检测
+        function checkEnvironment() {
+            addLog('=== 环境检测开始 ===', 'info');
+            
+            // 检测User Agent
+            addLog(`User Agent: ${navigator.userAgent}`, 'info');
+            
+            // 检测是否在WebView中
+            if (navigator.userAgent.includes('WebView') || navigator.userAgent.includes('Android')) {
+                addLog('检测到Android WebView环境', 'success');
+            } else {
+                addLog('未检测到Android WebView环境', 'warning');
+            }
+            
+            // 检测全局对象
+            if (typeof android !== 'undefined') {
+                addLog('android对象存在', 'success');
+            } else {
+                addLog('android对象不存在', 'warning');
+            }
+            
+            if (typeof window !== 'undefined') {
+                addLog('window对象存在', 'success');
+            }
+            
+            addLog('=== 环境检测完成 ===', 'info');
+        }
+
+        function checkAndroidInterface() {
+            addLog('=== Android接口检测开始 ===', 'info');
+            
+            if (typeof android !== 'undefined') {
+                const interfaces = ['showToast', 'showValidation', 'getDeviceInfo', 'getBrandInfo', 'getBrandSite'];
+                interfaces.forEach(interfaceName => {
+                    if (typeof android[interfaceName] === 'function') {
+                        addLog(`${interfaceName} 接口存在`, 'success');
+                    } else {
+                        addLog(`${interfaceName} 接口不存在`, 'warning');
+                    }
+                });
+            } else {
+                addLog('android对象不存在，无法检测接口', 'error');
+            }
+            
+            addLog('=== Android接口检测完成 ===', 'info');
+        }
+
+        // 回调函数定义 - 按照文档格式
+        function cardCallBack(json) {
+            const message = `刷卡函数监听回调: 返回JSON字符串 ${json}`;
+            
+            // 视觉提示：页面标题闪烁
+            flashTitle('刷卡回调');
+            
+            // 声音提示（如果支持）
+            if (typeof Audio !== 'undefined') {
+                try {
+                    const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT');
+                    audio.play();
+                } catch (e) {
+                    // 忽略音频错误
+                }
+            }
+            
+            alert(message);
+            addLog(message, 'info');
+            
+            // 高亮显示日志条目
+            highlightLatestLog();
+            
+            // 处理对应业务逻辑
+        }
+
+        function faceCallBack(json) {
+            const message = `人脸识别结果函数监听回调: 返回JSON字符串 ${json}`;
+            
+            // 视觉提示：页面标题闪烁
+            flashTitle('人脸识别回调');
+            
+            // 声音提示（如果支持）
+            if (typeof Audio !== 'undefined') {
+                try {
+                    const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT');
+                    audio.play();
+                } catch (e) {
+                    // 忽略音频错误
+                }
+            }
+            
+            alert(message);
+            addLog(message, 'info');
+            
+            // 高亮显示日志条目
+            highlightLatestLog();
+            
+            // 处理对应业务逻辑
+        }
+
+        // 页面标题闪烁效果
+        function flashTitle(message) {
+            const originalTitle = document.title;
+            let flashCount = 0;
+            const maxFlashes = 6;
+            
+            const flash = () => {
+                if (flashCount < maxFlashes) {
+                    document.title = flashCount % 2 === 0 ? `🔔 ${message}` : originalTitle;
+                    flashCount++;
+                    setTimeout(flash, 500);
+                } else {
+                    document.title = originalTitle;
+                }
+            };
+            
+            flash();
+        }
+
+        // 高亮最新日志条目
+        function highlightLatestLog() {
+            const logArea = document.getElementById('logArea');
+            const latestLog = logArea.lastElementChild;
+            
+            if (latestLog) {
+                latestLog.style.backgroundColor = '#fff3cd';
+                latestLog.style.border = '2px solid #ffc107';
+                latestLog.style.borderRadius = '4px';
+                latestLog.style.padding = '8px';
+                latestLog.style.margin = '4px 0';
+                
+                // 3秒后恢复正常样式
+                setTimeout(() => {
+                    latestLog.style.backgroundColor = '';
+                    latestLog.style.border = '';
+                    latestLog.style.borderRadius = '';
+                    latestLog.style.padding = '';
+                    latestLog.style.margin = '';
+                }, 3000);
+            }
+        }
+
+        function getBrandInfo(json) {
+            const message = `获取班牌信息: 返回JSON字符串 ${json}`;
+            alert(message);
+            addLog(message, 'info');
+            
+            // 处理对应业务逻辑
+            return {
+                id: json.id || 'BR001',
+                brandName: json.brandName || '默认班牌',
+                classesId: json.classesId || 'CL001'
+            };
+        }
+
+        function getBrandSite(json) {
+            const message = `获取场地信息: 返回JSON字符串 ${json}`;
+            alert(message);
+            addLog(message, 'info');
+            
+            // 处理对应业务逻辑
+            return {
+                siteId: json.siteId || 'ST001',
+                siteName: json.siteName || '默认场地'
+            };
+        }
+
+        // 页面加载完成后的初始化
+        window.onload = function() {
+            addLog('页面加载完成，可以开始测试', 'success');
+            checkEnvironment();
+        };
+    </script>
+</body>
+</html> 

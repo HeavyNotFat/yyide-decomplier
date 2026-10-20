@@ -89,7 +89,7 @@ def default_site() -> dict:
             "cityCode": "500000",
             "direction": "2",
             "isMessage": True,
-            "isSecond": True,
+            "isSecond": False,
             "badgeUrl": "/mock/logo.png",
             "verify": [{"id": "verify-1", "name": "刷卡验证"}, {"id": "verify-2", "name": "离线码"}],
         },
@@ -136,10 +136,10 @@ def default_site() -> dict:
             "weatherimg": "cloudy", "weathercode": "01", "week": "星期二",
         },
         "device": {
-            "mac": "__SEC_MAC_PUT_92F7D57E__",
+            "mac": "aabbccddeeff",
             "androidId": "0123456789abcdef",
             "model": "YD-BRAND-3",
-            "version": "3.0.14",
+            "version": "3.0.15",
         },
     }
 

@@ -24,7 +24,7 @@ android {
         // Original APK targets API 29 (see AndroidManifest.xml).
         targetSdk = 29
         versionCode = 3002
-        versionName = '3.0.14'
+        versionName = '3.0.15'
         vectorDrawables.useSupportLibrary = true
         // The APK contains well over 64K methods; minSdk 22 supports native
         // multidex, so no multidex support library is required.
@@ -109,37 +109,20 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 dependencies {
-    // javax.annotation.* (@Nullable/@Nonnull) is referenced by hundreds of
-    // decompiled files, but annotations are not part of the APK dex.
-    compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
-
     // Runtime build modes:
     //
-    //  * default: use the classes present in the dex2jar jar
-    //    (libs/original-classes.jar).  This is build-only: dex2jar drops the
-    //    original R8 lambda classes (-$$Lambda$...), so the D8 output crashes
-    //    at runtime.  Use dist/智慧班牌-3.0.14-原版签名.apk for board/trial runs.
+    //  * default: sources compiled by the external ECJ tool into
+    //    libs/app-classes.jar (with original fallbacks in app-classes-hybrid.jar),
+    //    plus the third-party classes from the APK in libs/library-classes.jar.
+    //    Gradle only merges them and generates R.
     //
-    //  * -PuseDecompiledClasses: use the reconstructed ECJ jars.  This is for
-    //    source-level work; it is not runtime-safe either.
-    if (project.hasProperty('useDecompiledClasses')) {
-        implementation files('libs/app-classes.jar')
-        implementation files('libs/app-patch-classes.jar')
-        implementation files('libs/decompiled-libs.jar')
-        implementation files('libs/app-support-classes.jar')
-    } else {
+    //  * -PuseOriginalClasses: package the original dex2jar
+    //    libs/original-classes.jar unchanged.  This is the runtime-faithful
+    //    build (the dex2jar jar contains the original R8 lambda classes).
+    if (project.hasProperty('useOriginalClasses')) {
         implementation files('libs/original-classes.jar')
+    } else {
+        implementation files('libs/app-classes-hybrid.jar')
+        implementation files('libs/library-classes.jar')
     }
-
-    // Annotation-only APIs referenced by the decompiled third-party sources.
-    // They are not needed at runtime (retention is CLASS/SOURCE), so they are
-    // compileOnly and never end up in the APK.
-    compileOnly 'com.google.errorprone:error_prone_annotations:2.18.0'
-    compileOnly 'org.checkerframework:checker-qual:3.32.0'
-    compileOnly 'org.checkerframework:checker-compat-qual:2.5.5'
-    compileOnly 'org.joda:joda-convert:2.2.3'
-    compileOnly 'org.apache.httpcomponents:httpclient:4.5.14'
-    compileOnly 'org.slf4j:slf4j-api:1.7.36'
-    compileOnly 'org.slf4j:slf4j-simple:1.7.36'
-    compileOnly 'org.greenrobot:greendao:3.3.0'
 }

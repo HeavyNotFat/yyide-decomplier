@@ -473,6 +473,7 @@ public class BroCast {
                 MyManager myManager2 = MyManager.getInstance(context);
                 myManager2.hideNavBar(true);
                 myManager2.setSlideShowNavBar(false);
+                myManager2.setSlideShowNotificationBar(false);
             }
         }
     }

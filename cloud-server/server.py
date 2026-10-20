@@ -300,7 +300,7 @@ def handle_brand(path: str) -> dict:
         return {"code": 0, "message": "", "data": brand}
     if path in ("cloud/v2/barrier/getRegistrationCode", "cloud/v2/barrier/getOrBindingDevice"):
         return {"code": 0, "message": "操作成功", "data": {
-            "id": "reg-1", "no": s.get("device", {}).get("mac", "__SEC_MAC_PUT_92F7D57E__"),
+            "id": "reg-1", "no": s.get("device", {}).get("mac", "aabbccddeeff"),
             "schoolId": brand.get("schoolId"), "name": brand.get("brandName"),
             "registrationCode": "DEMO-REG-3002", "authorizeCode": "DEMO-AUTH-3002",
             "authorizeCodeId": "auth-1", "type": "1",
@@ -674,7 +674,7 @@ def handle_device(path: str) -> dict:
     if path == "brand/brand/getSwitchsType":
         return envelope({"type": "1"})
     if path == "cloud/v2/barrier/getAppVersion":
-        return envelope({"version": s.get("device", {}).get("version", "3.0.14"),
+        return envelope({"version": s.get("device", {}).get("version", "3.0.15"),
                          "url": "", "updateType": "0"})
     if path == "manage/machineInfo/getMachineConfigByDeviceNo":
         return envelope({"mac": s.get("device", {}).get("mac"), "deviceType": "2"})
