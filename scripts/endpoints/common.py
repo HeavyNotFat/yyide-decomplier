@@ -9,6 +9,16 @@ This module only talks to the production / vendor endpoints from
     https://zhwnlapi.etouch.cn
 
 The browser User-Agent is applied to every request.
+
+Pipeline::
+
+    Endpoint (apis/*.py template)
+        -> prepare() renders {placeholders} from ApiClient.context
+        -> RequestSpec (URL / query / JSON / form / files / headers)
+        -> execute() sends the request with requests.Session
+
+Unresolved placeholder names are collected in RequestSpec.unresolved; execute()
+refuses to send such a request.
 """
 from __future__ import annotations
 
@@ -34,8 +44,26 @@ SENSITIVE_QUERY = {
     "authorization", "client_secret_key", "door_password",
 }
 
+# Java-style names used by the APK -> snake_case context keys.  Keeping the
+# table in one place ensures _set_context() and _sync_aliases() agree.
+CONTEXT_ALIASES = {
+    "ctrlNo": "ctrl_no",
+    "topType": "top_type",
+    "classId": "classes_id",
+    "classesId": "classes_id",
+    "schoolId": "school_id",
+    "studentId": "student_id",
+    "brandId": "brand_id",
+    "siteId": "site_id",
+    "libraryId": "library_id",
+    "itemTypeId": "item_type_id",
+    "employeeId": "teacher_id",
+    "deviceNo": "mac",
+}
+
 
 def redact_value(value: Any) -> Any:
+    """Deep-copy JSON-like data, replacing sensitive keys with ***."""
     if isinstance(value, dict):
         return {
             key: ("***" if str(key).lower() in SENSITIVE_QUERY else redact_value(val))
@@ -47,7 +75,25 @@ def redact_value(value: Any) -> Any:
 
 
 class Endpoint:
-    """One request template, grouped by API area."""
+    """One request template from apis/*.py.
+
+    Attributes:
+        id: stable endpoint id, e.g. home-002.
+        method: HTTP method.
+        path: URL path or absolute URL; {name} is rendered from context.
+        params: query parameters (path keys are removed by prepare()).
+        json_body: JSON body template (dict / list / None).
+        form_body: form body template used by TTLock.
+        files: multipart map: field name -> local file path.
+        auth: send Authorization: Bearer ...
+        base: optional base-URL override.
+        client: yide / ttlock / book / weather / external.
+        description: human-readable label.
+        source: original Retrofit method (or source location).
+        headers: extra headers.
+        stream: response is text/event-stream.
+        executable: False for templates that need extra signing/UserSig.
+    """
 
     __slots__ = (
         "id", "method", "path", "params", "json_body", "form_body", "files",
@@ -95,6 +141,13 @@ class Endpoint:
 
 @dataclass
 class RequestSpec:
+    """Fully rendered request, ready for requests.
+
+    unresolved lists placeholder names that were not present in the context;
+    execute() refuses to send while it is non-empty.  The redacted_* helpers
+    keep secrets out of runner output and logs.
+    """
+
     endpoint: Endpoint
     method: str
     url: str
@@ -127,6 +180,7 @@ class RequestSpec:
         return redact_value(self.form_body)
 
     def curl(self) -> str:
+        """Return a copy-pasteable curl command with secrets redacted."""
         from urllib.parse import urlencode
 
         url = self.url
@@ -168,7 +222,12 @@ def _md5(text: str) -> str:
 
 
 def render(value: Any, context: Dict[str, Any]) -> Tuple[Any, List[str]]:
-    """Replace {name} placeholders recursively; collect unresolved names."""
+    """Replace {name} placeholders recursively; collect unresolved names.
+
+    A placeholder resolves when its key exists in context and the value is not
+    None or an empty string.  The original {name} token is kept when it is
+    missing, so previews show exactly which value still has to be supplied.
+    """
     missing: List[str] = []
 
     if isinstance(value, str):
@@ -198,12 +257,15 @@ def render(value: Any, context: Dict[str, Any]) -> Tuple[Any, List[str]]:
 
 
 def join_url(base: str, path: str) -> str:
+    """Join a base URL and path, keeping absolute paths untouched."""
     if path.startswith("http://") or path.startswith("https://"):
         return path
     return base.rstrip("/") + "/" + path.lstrip("/")
 
 
 class ApiError(RuntimeError):
+    """HTTP or business-code failure, carrying status and response body."""
+
     def __init__(self, message: str, status: Optional[int] = None, body: Any = None):
         super().__init__(message)
         self.status = status
@@ -211,6 +273,13 @@ class ApiError(RuntimeError):
 
 
 class ApiClient:
+    """Session wrapper that renders endpoint templates and sends requests.
+
+    context is a flat dict of runtime values (account, MAC, brand/classes ids,
+    tokens).  _set_context keeps Java-style and snake_case spellings in sync,
+    so classesId and classes_id both work in templates.
+    """
+
     def __init__(self, settings: Settings, context: Optional[Dict[str, Any]] = None):
         self.settings = settings
         self.session = requests.Session()
@@ -233,43 +302,31 @@ class ApiClient:
         return re.sub(r"[^0-9a-zA-Z_]+", "_", value).strip("_").lower()
 
     def _set_context(self, key: str, value: Any) -> None:
+        """Store a value under its Java-style and snake_case names.
+
+        The alias table keeps classId/classes_id, deviceNo/mac and
+        employeeId/teacher_id in sync, so generated methods can be called with
+        either spelling and later placeholders still resolve.
+        """
         self.context[key] = value
         snake = self._snake(key)
         if snake:
             self.context[snake] = value
-        for alias, target in {
-            "ctrlNo": "ctrl_no", "topType": "top_type", "classId": "classes_id",
-            "classesId": "classes_id", "schoolId": "school_id",
-            "studentId": "student_id", "brandId": "brand_id",
-            "siteId": "site_id", "libraryId": "library_id",
-            "itemTypeId": "item_type_id", "employeeId": "teacher_id",
-            "deviceNo": "mac",
-        }.items():
+        for alias, target in CONTEXT_ALIASES.items():
             if target == snake:
                 self.context[alias] = value
+            if alias == key:
+                self.context[target] = value
 
     def _sync_aliases(self) -> None:
-        """Map Java-style path names to the snake_case context keys."""
-        aliases = {
-            "ctrlNo": "ctrl_no",
-            "topType": "top_type",
-            "classId": "classes_id",
-            "classesId": "classes_id",
-            "schoolId": "school_id",
-            "studentId": "student_id",
-            "brandId": "brand_id",
-            "siteId": "site_id",
-            "libraryId": "library_id",
-            "itemTypeId": "item_type_id",
-            "employeeId": "teacher_id",
-            "deviceNo": "mac",
-        }
-        for alias, key in aliases.items():
+        """Fill Java-style aliases from snake_case context values."""
+        for alias, key in CONTEXT_ALIASES.items():
             if alias not in self.context and self.context.get(key):
                 self.context[alias] = self.context[key]
 
     # ------------------------------------------------------------------ auth
     def set_token(self, token: str) -> None:
+        """Set a Bearer token and keep the raw token in context."""
         if not token.lower().startswith("bearer "):
             token = "Bearer " + token
         self.token = token
@@ -277,6 +334,7 @@ class ApiClient:
         self.context["access_token"] = token[7:]
 
     def login_yide(self) -> Dict[str, Any]:
+        """OAuth password login; stores accessToken/refreshToken in context."""
         username = str(self.context.get("username") or "")
         password = str(self.context.get("password") or "")
         if not username or not password:
@@ -313,6 +371,7 @@ class ApiClient:
         return body
 
     def obtain(self, mac: Optional[str] = None, android_id: Optional[str] = None) -> Dict[str, Any]:
+        """Call /brand/obtain and fill brand/classes/site/school ids."""
         mac = mac or str(self.context.get("mac") or "")
         android_id = android_id or str(self.context.get("android_id") or "")
         if not mac:
@@ -350,6 +409,7 @@ class ApiClient:
         return payload
 
     def discover_student(self) -> Optional[str]:
+        """Fetch the first student of the current class and store student_id."""
         classes_id = self.context.get("classes_id")
         if not classes_id or not self.token:
             return None
@@ -376,6 +436,7 @@ class ApiClient:
         return None
 
     def login_ttlock(self) -> Dict[str, Any]:
+        """TTLock OAuth login; stores ttlock_access_token for form requests."""
         username = str(self.context.get("ttlock_username") or "")
         password = str(self.context.get("ttlock_password") or "")
         if not username or not password:
@@ -407,6 +468,12 @@ class ApiClient:
 
     # --------------------------------------------------------------- prepare
     def prepare(self, endpoint: Endpoint) -> RequestSpec:
+        """Render one endpoint template into a concrete RequestSpec.
+
+        Steps: sync context aliases -> render path/query/JSON/files -> build
+        headers (Content-Type, Accept, Authorization) -> collect unresolved
+        placeholder names for the caller.
+        """
         self._sync_aliases()
         if endpoint.client == "ttlock":
             return self._prepare_ttlock(endpoint)
@@ -468,6 +535,7 @@ class ApiClient:
         )
 
     def _prepare_ttlock(self, endpoint: Endpoint) -> RequestSpec:
+        """Render a TTLock request (clientId/accessToken/date in form/query)."""
         form, missing = render(endpoint.form_body or {}, self.context)
         params, miss = render(endpoint.params, self.context)
         missing.extend(miss)
@@ -497,6 +565,7 @@ class ApiClient:
 
     # ---------------------------------------------------------------- execute
     def execute(self, spec: RequestSpec) -> requests.Response:
+        """Send a prepared request; refuse to send unresolved placeholders."""
         if spec.unresolved:
             raise ApiError("未解析的占位符: " + ", ".join(spec.unresolved))
         if spec.files:
@@ -529,6 +598,7 @@ class ApiClient:
     # ------------------------------------------------------------------ utils
     @staticmethod
     def _json(resp: requests.Response, label: str) -> Dict[str, Any]:
+        """Parse a response envelope and raise ApiError for HTTP/code errors."""
         try:
             body = resp.json()
         except ValueError:
@@ -545,6 +615,7 @@ class ApiClient:
 
     @staticmethod
     def redact_mapping(data: Dict[str, Any]) -> Dict[str, Any]:
+        """Shallow-copy a mapping with sensitive values replaced by ***."""
         out = {}
         for key, value in data.items():
             if key.lower() in SENSITIVE_QUERY:

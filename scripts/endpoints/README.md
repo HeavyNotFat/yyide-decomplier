@@ -1,8 +1,10 @@
 # scripts/endpoints：接口请求表与 Python 客户端
 
-> 文档导航：[README.md](../../README.md)（构建/使用/目录） · [ENDPOINTS.md](../../ENDPOINTS.md)（API） · [RESTORE.md](../../RESTORE.md)（还原版）
+> 文档导航：[README.md](../../README.md)（构建/使用/目录） · [ENDPOINTS.md](../../ENDPOINTS.md)
+> （API） · [RESTORE.md](../../RESTORE.md)（还原版）
 
-这套脚本把反编译源码里的 Retrofit 接口、TTLock/人脸/外部接口整理成**可预览、可执行、可伪造**的请求表，并提供一个包含全部 257 个方法的 `BrandClient`。
+这套脚本把反编译源码里的 Retrofit 接口、TTLock/人脸/外部接口整理成**可预览、可执行、可伪造**的请求表，并提供一个包含全部 257
+个方法的 `BrandClient`。
 
 - 默认目标：`https://api.yyide.com`（真实环境）
 - 其它 host：TTLock、图书 SaaS、天气、腾讯 IM
@@ -52,7 +54,9 @@ scripts/endpoints/
 ├─ permission_loader.py        # 解析本地凭据表（不随仓库发布）
 ├─ runner.py                   # CLI：列表 / 预览 / 执行 / 伪造
 ├─ build_request_table.py      # 生成 output/requests.*
-├─ client.py                   # BrandClient：257 个接口方法
+├─ client.py                   # BrandClient：257 个带类型/注释的接口方法
+├─ schemas.py                  # 自动生成：JSON Body 的 TypedDict（IDE 补全）
+├─ gen_client.py               # 自动生成器：更新 schemas.py 与 client.py 方法
 ├─ device_info.py              # adb 读取 MAC / Android ID / 型号
 ├─ requirements.txt
 ├─ apis/
@@ -104,20 +108,20 @@ scripts/endpoints/
 
 常用环境变量：
 
-| 变量 | 说明 |
-| --- | --- |
-| `YIDE_BASE_URL` | 默认 `https://api.yyide.com` |
-| `YIDE_USERNAME` | 班牌账号 |
-| `YIDE_PASSWORD` | 班牌密码 |
-| `YIDE_CLIENT_ID` | 默认 `yide-cloud` |
-| `YIDE_CLIENT_SECRET` | OAuth 客户端密钥 |
-| `YIDE_SCHOOL_ID` | 学校 ID |
-| `YIDE_MAC` | 设备 MAC，12 位小写 |
-| `YIDE_ANDROID_ID` | 16 位 Android ID |
-| `TTLOCK_CLIENT_ID` / `TTLOCK_CLIENT_SECRET` | TTLock |
-| `TTLOCK_USERNAME` / `TTLOCK_PASSWORD` | TTLock 账号 |
-| `BOOK_URL_KEY` | 图书/人脸外部系统签名密钥 |
-| `TIM_SDKAPPID` / `TIM_SECRET_KEY` | 腾讯 IM |
+| 变量                                          | 说明                         |
+|---------------------------------------------|----------------------------|
+| `YIDE_BASE_URL`                             | 默认 `https://api.yyide.com` |
+| `YIDE_USERNAME`                             | 班牌账号                       |
+| `YIDE_PASSWORD`                             | 班牌密码                       |
+| `YIDE_CLIENT_ID`                            | 默认 `yide-cloud`            |
+| `YIDE_CLIENT_SECRET`                        | OAuth 客户端密钥                |
+| `YIDE_SCHOOL_ID`                            | 学校 ID                      |
+| `YIDE_MAC`                                  | 设备 MAC，12 位小写              |
+| `YIDE_ANDROID_ID`                           | 16 位 Android ID            |
+| `TTLOCK_CLIENT_ID` / `TTLOCK_CLIENT_SECRET` | TTLock                     |
+| `TTLOCK_USERNAME` / `TTLOCK_PASSWORD`       | TTLock 账号                  |
+| `BOOK_URL_KEY`                              | 图书/人脸外部系统签名密钥              |
+| `TIM_SDKAPPID` / `TIM_SECRET_KEY`           | 腾讯 IM                      |
 
 PowerShell 示例：
 
@@ -255,7 +259,7 @@ client = BrandClient(
     mac="<MAC>",
     android_id="<Android ID>",
     school_id="<学校 ID>",
-    auto_obtain=True,      # 自动 /brand/obtain，填充 brand_id/classes_id/site_id
+    auto_obtain=True,  # 自动 /brand/obtain，填充 brand_id/classes_id/site_id
 )
 
 # 方法名 = 分组 + 接口方法名
@@ -268,7 +272,7 @@ announcements = client.messages_get_new_notice_with_pag(pageNo=1, pageSize="18")
 data = client.call("home-002", classesId=client.context["classes_id"])
 
 # 完整外壳
-raw = client.home_get_new_layout_list(full=True, id=client.context["brand_id"])
+raw = client.school_get_new_layout_list(full=True, id=client.context["brand_id"])
 
 # 只伪造，不发送
 req = client.forge("home-002")
@@ -283,7 +287,58 @@ all_requests = client.forge_all()
 - `client.method_names` / `client.method_index` 可查看 257 个方法；
 - TTLock/人脸/外部接口也包含在 `client` 中。
 
-### 8.1 自定义 context
+### 8.1 代码提示与参数说明
+
+每个接口方法都有显式的 keyword-only 参数（不再是 `**kwargs`），PyCharm / VS Code / Pyright
+会直接提示字段名、类型和默认值；悬停方法还能看到完整参数表和示例。
+
+```python
+# 直接写字段：IDE 会提示 classesId、pageNo、pageSize
+works = client.home_get_new_student_work_list(
+    classesId=client.context["classes_id"],
+    pageNo="2",
+)
+
+# 一次传完整 JSON：TypedDict 会在 dict 字面量里补全键名
+from scripts.endpoints.schemas import HomeGetNewStudentWorkListBody
+
+body: HomeGetNewStudentWorkListBody = {
+    "classesId": client.context["classes_id"],
+    "pageNo": "2",
+}
+works = client.home_get_new_student_work_list(body=body)
+
+# 模板是列表的接口（如考勤签到）
+from scripts.endpoints.schemas import AttendanceBrandAttendanceClockItem
+
+items: list[AttendanceBrandAttendanceClockItem] = [{...}]
+client.attendance_brand_attendance_clock(body=items)
+```
+
+有已知字段的接口都有对应的 `TypedDict`（包括部分模板为 `{}`、但 `ENDPOINTS.md` 有示例的接口）；完全没有字段记录的动态接口使用
+`body: Dict[str, Any]`，说明见方法 docstring。
+
+参数标签（方法 docstring 与 TypedDict 注释里一致）：
+
+| 标签     | 含义                                                   |
+|--------|------------------------------------------------------|
+| **必填** | 必须传参，或先写入 `client.context["..."]`；占位符字段缺失时请求会带未解析占位符 |
+| **自动** | 登录、`/brand/obtain`、凭据、随机数或 `context` 自动填充，通常不用传      |
+| **可选** | 不传时使用接口模板默认值；没有模板默认值的文档示例字段则不发送                      |
+
+合并顺序：接口模板 -> 文档自动默认值 -> `body=` -> 显式字段 -> `**extra`。与模板默认值相同的字段会被忽略，所以 `body={...}`
+不会被签名里的默认值覆盖；自动占位符（如 `classesId`）会先从 `client.context` 取值。
+
+其它：
+
+- `full=True` 返回完整 `{"code":0,...,"data":...}` 外壳，默认只返回 `data`；
+- 未列出的字段可以直接作为关键字参数传入（`**extra`），会按 path/query/JSON/form 自动归类；
+- 仍需要旧的宽松写法时用 `client.call("home-002", classesId=...)`；
+- TTLock 的 form 字段同样在签名里；上传接口用 `file="本地路径"`；
+- 请求模板为 `{}`、但接口文档里有字段的接口（如 `home-002`、`honor-001`）已把这些字段补进签名和 TypedDict；其中自动占位符会从
+  `client.context` 填充，其余字段传参时才加入请求体。
+
+### 8.2 自定义 context
 
 ```python
 client.context.update({
@@ -293,7 +348,26 @@ client.context.update({
 })
 ```
 
-### 8.2 只调登录
+### 8.3 重新生成客户端与类型
+
+修改或新增 `apis/*.py` 后：
+
+```powershell
+# 重新生成 schemas.py + client.py 的方法区
+python -m scripts.endpoints.gen_client
+
+# 提交前检查是否忘记重新生成
+python -m scripts.endpoints.gen_client --check
+```
+
+生成器会：
+
+- 根据 `apis/*.py` 生成 `schemas.py` 的全部 `TypedDict`；
+- 重写 `client.py` 中 `# <generated: ...>` 标记区（方法、`method_index`、schema import）；
+- 保留 `client.py` 中手写部分（构造函数、`call`、`_invoke`、`forge`）；
+- 如果新字段没有在 `gen_client.py` 的 `PARAM_DOCS` 里写说明，直接报错并指出字段名。
+
+### 8.4 只调登录
 
 ```python
 client.login()
@@ -304,13 +378,13 @@ print(client.token)
 
 ## 9. 输出文件
 
-| 文件 | 是否含真实值 | 说明 |
-| --- | --- | --- |
-| `output/requests.csv/json/md` | 否 | 默认请求表 |
-| `output/groups/*.csv/md` | 否 | 分组表 |
-| `output/requests.resolved.*` | **是（token）** | 登录后生成 |
-| `output/forged-requests.json` | **是（token）** | `--forge` 生成 |
-| `output/run-*.jsonl` | **是（响应）** | `--execute` 生成 |
+| 文件                            | 是否含真实值       | 说明             |
+|-------------------------------|--------------|----------------|
+| `output/requests.csv/json/md` | 否            | 默认请求表          |
+| `output/groups/*.csv/md`      | 否            | 分组表            |
+| `output/requests.resolved.*`  | **是（token）** | 登录后生成          |
+| `output/forged-requests.json` | **是（token）** | `--forge` 生成   |
+| `output/run-*.jsonl`          | **是（响应）**    | `--execute` 生成 |
 
 发布前删除 `*.resolved.*`、`forged-requests.json`、`run-*.jsonl`，并运行脱敏脚本。
 
@@ -359,14 +433,14 @@ python scripts/secrets.py restore
 
 ## 12. 排查
 
-| 问题 | 处理 |
-| --- | --- |
-| `YIDE_CLIENT_SECRET 未配置` | 设置环境变量或本地凭据 |
-| `401/403` | token 过期，重新登录；检查 `Authorization` |
-| `UnknownHostException` | 设备/电脑 DNS 无法解析 `api.yyide.com` |
-| `code=500 系统繁忙` | 接口侧限流/繁忙，降低频率后重试 |
-| 占位符未解析 | 用 `--mac` / `--android-id` / `--classes-id` 补齐，或先 `auto_obtain` |
-| 表里没有真实 secret | 设计如此；执行时从环境变量注入 |
+| 问题                       | 处理                                                              |
+|--------------------------|-----------------------------------------------------------------|
+| `YIDE_CLIENT_SECRET 未配置` | 设置环境变量或本地凭据                                                     |
+| `401/403`                | token 过期，重新登录；检查 `Authorization`                                |
+| `UnknownHostException`   | 设备/电脑 DNS 无法解析 `api.yyide.com`                                  |
+| `code=500 系统繁忙`          | 接口侧限流/繁忙，降低频率后重试                                                |
+| 占位符未解析                   | 用 `--mac` / `--android-id` / `--classes-id` 补齐，或先 `auto_obtain` |
+| 表里没有真实 secret            | 设计如此；执行时从环境变量注入                                                 |
 
 ---
 

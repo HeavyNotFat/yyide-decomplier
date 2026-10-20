@@ -18,8 +18,9 @@
 | 90 个 Activity | 功能地图列出全部页面、导出状态和 adb 启动命令 |
 | 内容中心 | 公告、班级/校园相册、视频、荣誉、值日、作品、考试、图书、活动、投票、课表等 |
 | 接口日志 | 实时显示班牌请求、命中处理器、耗时；可清空 |
+| 组件数据 | 每个组件单独设置它读取的接口响应；213 个组件已映射接口，其余 80 个走卡片属性 |
 | 组件巡展 | 一键把组件自动排成多页布局，左右滑动逐页浏览 |
-| 演示数据 | 内置示例学校、班级、教师、学生、公告、图片、视频，开箱即用 |
+| 演示数据 | 内置示例学校、班级、教师、学生、公告和班牌演示素材，开箱即用 |
 
 控制台地址：`http://127.0.0.1:8765/admin`，演示账号 `demo / demo`（服务端其实不校验密码）。
 
@@ -30,16 +31,18 @@
 ```text
 cloud-server/
   server.py                 Flask 服务：控制台 API + 班牌接口模拟
-  store.py                  JSON 存储、演示数据、图片/视频生成
+  store.py                  JSON 存储、演示数据、班牌演示素材生成
   data/
     catalog.json            293 组件 + 90 Activity + 257 接口（自动生成）
     site.json               学校/班级/教师/学生/天气/设备身份（运行时生成）
     layout.json             分页与卡片布局（运行时生成）
     content.json            各模块内容（运行时生成）
+    component_endpoints.json 293 组件 -> 接口映射（由源码生成）
+    endpoint_templates.json 257 接口的默认模拟响应（启动时生成）
     overrides.json          接口覆盖（运行时生成）
     requests.log            请求日志（运行时生成）
   web/                      控制台前端（纯 HTML/CSS/JS，无需构建）
-  assets/                   自动生成的演示图片/视频
+  assets/                   班牌需要的演示图片/视频（运行时生成，不是截图）
   tools/extract_catalog.py  从反编译源码重新生成 catalog.json
 ```
 
@@ -59,7 +62,8 @@ cloud-server/
 ### 3.1 依赖
 
 - Python 3.10+，安装依赖：`pip install -r cloud-server/requirements.txt`
-- 图片/视频演示资源需要 Pillow；视频可选 ffmpeg（没有则视频卡片为空）
+- 班牌演示素材需要 Pillow；视频可选 ffmpeg（没有则视频为空）
+- 控制器只生成班牌需要的演示素材到 `cloud-server/assets/`，不保存任何截图/测试图片
 - 控制器默认监听 `0.0.0.0:8765`
 
 ### 3.2 启动
@@ -86,7 +90,7 @@ python cloud-server/server.py --port 8765
 
 ### 3.3 第一次启动
 
-首次运行会自动生成 `data/site.json`、`layout.json`、`content.json`、`overrides.json` 和演示图片/视频。想恢复初始演示数据：
+首次运行会自动生成 `data/site.json`、`layout.json`、`content.json`、`overrides.json`。想恢复初始演示数据：
 
 ```powershell
 curl -X POST http://127.0.0.1:8765/api/reset
@@ -106,8 +110,14 @@ curl -X POST http://127.0.0.1:8765/api/reset
 
 - 画布是 **8 列 × 6 行**；
 - 拖动卡片移动，拖动右下角缩放；
-- 点击卡片在右侧修改模块名、坐标、尺寸、边框/背景色、跳转链接、图片列表、JSON 参数、二次页返回时间；
-- 「添加卡片」从组件库选一个组件；当前页满了会自动新建分页；
+- **卡片上直接显示模拟数据预览**：标题、姓名/副标题、条目标题（纯文本，不加载图片）；
+- 右上角「数据预览」开关可关闭预览；鼠标悬停可看完整摘要；
+- 「添加卡片」弹窗与组件库一致：搜索、分类筛选、尺寸筛选、卡片网格；点「加入当前页」可连续添加，当前页满自动新建分页；
+- 右侧属性面板按「基础信息 / 位置与尺寸 / 外观 / 内容 / 高级」分组；
+  - 颜色有取色器和快捷色块；原版 Fragment 不读取颜色，只有自定义/网页组件会生效（面板会明确提示）；
+  - 图片只保留 URL 文本框，不显示缩略图、不写入本地文件；
+  - 坐标、尺寸带范围提示；
+  - JSON 参数放在「高级」里并带说明；
 - 分页标签可重命名、复制、清空、删除；
 - 「保存布局」写入 `data/layout.json`，班牌下拉刷新或重启后读取；
 - 「恢复默认」恢复 7 张卡片的默认首页。
@@ -127,15 +137,19 @@ curl -X POST http://127.0.0.1:8765/api/reset
 
 | 子页 | 内容 |
 | --- | --- |
-| 站点与班级 | 学校名、英文名、班级、年级、班主任、口号、人数、教室、MAC、版本 |
+| 站点与班级 | 学校名、英文名、班级、年级、班主任、口号、人数、教室、MAC、版本、**允许二级页面（二级菜单）** |
 | 通知公告 | 标题、来源、发布人、日期、封面、正文 HTML |
-| 相册 | 班级/校园相册，封面与图片 URL 列表 |
-| 视频 | 名称、视频 URL、封面 |
-| 荣誉 | 荣誉名、获得者、事迹、日期、级别、头像 |
+| 相册 | 名称、日期、图片 URL 文本（不显示图片） |
+| 视频 | 名称、视频 URL 文本（不显示封面） |
+| 荣誉 | 荣誉名、获得者、事迹、日期、级别（不显示头像） |
 | 其他模块 | 值日、作品、考试、图书、活动、投票、课表、报修的 JSON 编辑 |
 | 天气/倒计时 | 天气字段与倒计时 JSON |
 
 保存后即时写入 `data/content.json`，班牌下次请求即生效。
+
+> **二级菜单开关**：站点与班级里的「允许二级页面」对应 `/brand/obtain` 的 `isSecond`。关闭后班牌点击卡片进入二级页会提示“二级页面已禁用”。修改后需要重启班牌或重新登录（客户端把该值存在 `SpData.MSGTYPE`）。
+>
+> **图片**：控制台页面不展示图片预览，图片字段只保留 URL 文本；`cloud-server/assets/` 只生成班牌需要的演示素材，`/mock/...` 正常提供给 App。文档和 `dist/` 不放截图。
 
 ### 4.5 接口模拟
 
@@ -172,7 +186,26 @@ curl -X POST http://127.0.0.1:8765/api/reset
 - 一键生成组件巡展；
 - 演示身份与数据管理。
 
-### 4.7 功能地图
+### 4.7 组件数据（每个组件单独模拟）
+
+侧边栏「组件数据」把 **293 个组件** 和它们实际读取的接口对应起来：
+
+- **213 个组件**已自动映射到 88 个业务接口（荣誉、课表、考勤、考试、图书、投票等），另有 36 个组件带推荐接口；
+- 合计 **249 个组件**有可配置数据，剩余 **44 个**由卡片属性驱动（图片列表、跳转链接、JSON 参数）；
+- 点任意组件的「编辑数据」：
+  - 列出它读取的接口、共用该接口的组件数、当前是「默认数据」还是「已自定义」；
+  - 勾选「启用自定义」后，默认进入**可视化表单**：字段有中文名称、英文 key、说明，列表可展开/折叠、添加/删除条目；
+  - 复杂字段或要粘贴抓包数据时，展开「JSON 源码」直接编辑，再点「从 JSON 刷新表单」；
+  - 「载入默认模板」把内置模拟数据填入编辑器和表单；
+  - 「清除自定义」恢复内置模拟；
+  - 「手动添加接口」可从全部 257 个接口中选择，给任何组件补充数据源；
+- 接口按**路径**全局生效：如果显示「共用 6 个组件」，修改会同时影响它们；
+- 顶部「一键补全模拟数据」会把所有组件当前缺失的接口用默认模板写成覆盖（不会覆盖已有自定义），适合让全部组件先显示数据，再逐个调整；
+- 「清除全部模拟」会删除所有接口覆盖，恢复内置动态模拟。
+
+> 保存后班牌端重启或下拉刷新才会重新请求；部分页面会先用本地缓存渲染。默认模板在服务启动时由各接口的模拟处理器生成，保存在 `data/endpoint_templates.json`。修改 `server.py` 后可调用 `POST /api/endpoint-templates/rebuild` 重建。
+
+### 4.8 功能地图
 
 - 90 个 Activity 的名称、包名、是否导出、adb 启动命令；
 - 组件分类分布；
@@ -301,7 +334,9 @@ adb install -r "dist\智慧班牌-3.0.14-云端版.apk"
 | `site.json` | 学校、班级、教师、学生、天气、设备身份 |
 | `layout.json` | 分页与卡片 |
 | `content.json` | 各模块内容 |
-| `overrides.json` | 接口覆盖 |
+| `component_endpoints.json` | 293 个组件到接口的映射（由源码生成） |
+| `endpoint_templates.json` | 257 个接口的默认模拟响应（启动时生成） |
+| `overrides.json` | 接口覆盖（组件数据保存在这里） |
 | `requests.log` | JSON Lines 请求日志 |
 
 - 备份：直接复制这几个 JSON；
@@ -316,6 +351,18 @@ python cloud-server/tools/extract_catalog.py
 
 该脚本解析 `HomeFragment.java` 的 tag 哈希分支与 Fragment 返回分支，用 `javap -constants` 解析常量，再解析 `AndroidManifest.xml` 和 `scripts/endpoints`。
 
+重新生成组件到接口的映射：
+
+```powershell
+python cloud-server/tools/build_component_endpoints.py
+```
+
+接口模板会在启动时生成；修改了 `server.py` 的模拟逻辑后可重建：
+
+```powershell
+curl -X POST http://127.0.0.1:8765/api/endpoint-templates/rebuild
+```
+
 ---
 
 ## 9. 接口覆盖原理
@@ -326,6 +373,21 @@ python cloud-server/tools/extract_catalog.py
 2. 有则原样返回 `body`；
 3. 否则按路径前缀分派到内置处理器（auth/brand/school/messages/home/timetable/honor/exam/library/...）；
 4. 未知接口返回通用 `{code:0,data:{list:[]}}` 或空对象，保证 App 不崩。
+
+### 组件级数据接口
+
+| 接口 | 作用 |
+| --- | --- |
+| `GET /api/components` | 293 个组件的接口映射、已配置数量 |
+| `GET /api/component/<tag>` | 单个组件的接口、共享数、默认模板、当前覆盖 |
+| `POST /api/component/<tag>/data` | 保存该组件的接口覆盖（`items: [{path, enabled, body}]`） |
+| `POST /api/component/<tag>/reset` | 清除该组件的全部覆盖 |
+| `POST /api/components/fill` | 一键补全（`mode: missing`，可选 `categories`） |
+| `POST /api/overrides/clear` | 清除所有接口自定义，恢复内置模拟 |
+| `GET /api/endpoint-templates` | 全部接口的默认模板 |
+| `POST /api/endpoint-templates/rebuild` | 重建默认模板 |
+
+覆盖仍然按路径生效；「组件数据」只是把相关路径聚合到组件上，方便操作。
 
 覆盖的 key 是**路径**，所以同一路径的多个接口（例如多个 `getBrandObtain`）会一起被覆盖。
 
@@ -372,7 +434,7 @@ def handle_home(path: str) -> dict:
 | 班牌仍请求 `api.yyide.com` | 安装的是未打补丁的 APK；用 `build-cloud-apk.ps1` 重新构建，或看控制台「实时请求」是否有日志 |
 | 登录后一直转圈 | 服务端是否在运行；`curl http://127.0.0.1:8765/api/health`；模拟器用 `10.0.2.2` |
 | 页面白屏/闪退 | 先恢复默认布局；查看 logcat：`adb logcat -d | grep AndroidRuntime` |
-| 图片/视频不显示 | 确认服务端 `/mock/...` 可访问；视频需要 ffmpeg 生成 mp4；媒体 URL 会自动转成绝对地址 |
+| 图片/视频不显示 | 确认 `cloud-server/assets/` 已生成、`/mock/...` 可访问；控制台页面本身不显示图片预览 |
 | 布局改了没生效 | 班牌重启或下拉刷新；服务端日志里应有新的 `layoutclasssign/layoutlist` |
 | 巡展页数太多卡顿 | 减少「最多生成页数」，按分类生成；删除不需要的分页 |
 | 端口被占用 | `--port 8766`，同时重新构建 APK 的 `-CloudUrl` |
@@ -383,7 +445,7 @@ def handle_home(path: str) -> dict:
 ## 12. 安全与发布
 
 - 控制器默认监听 `0.0.0.0` 且**没有登录鉴权**，只应在可信局域网使用；
-- 不要把 `cloud-server/data/`、`assets/`、`requests.log` 提交到公开仓库（已在 `.gitignore` 中排除运行时文件）；
+- 不要把 `cloud-server/data/`、`requests.log` 提交到公开仓库（已在 `.gitignore` 中排除运行时文件）；
 - 云端版 APK 使用 Android Debug 签名，仅供自有设备调试；
 - 发布仓库前执行 `python scripts/secrets.py check/scrub`，确认没有真实 MAC、Android ID、账号、密钥；
 - 本工具不改变原版业务逻辑，只替换网络端点；请遵守设备与服务的使用条款。

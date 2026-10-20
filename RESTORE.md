@@ -64,7 +64,7 @@ python scripts/secrets.py restore
 - 登录后 7 个模块全部加载，强杀重启自动登录；
 - 全 8 卡号 / `1145` → 教师端设置页；
 - `1234567890` / `1024` → 学生空间（显示“测试学生 / 高一6班”）；
-- 截图：`dist/preview-home.png`、`preview-teacher.png`、`preview-student.png`。
+
 
 ## 注意
 

@@ -16,13 +16,18 @@
     logsSince: 0,
     logTimer: null,
     activityQ: '',
-    showcaseCats: {}
+    showcaseCats: {},
+    componentStatus: null,
+    dataQ: '',
+    dataCategory: '全部',
+    showPreview: true
   };
 
   var VIEW_META = {
     dashboard: { title: '概览', subtitle: '云端控制器与班牌实时数据' },
     layout: { title: '卡片布局', subtitle: '拖拽卡片、调整尺寸，实时下发到班牌首页' },
     library: { title: '组件库', subtitle: 'APK 内全部 293 个首页组件，任意组合成卡片' },
+    componentdata: { title: '组件数据', subtitle: '为每个组件配置接口模拟数据，默认=内置模拟，自定义=覆盖响应' },
     content: { title: '内容中心', subtitle: '编辑公告、相册、荣誉、课表等模块数据' },
     endpoints: { title: '接口模拟', subtitle: '257 个接口的响应覆盖与实时请求日志' },
     device: { title: '设备连接', subtitle: '把班牌指向这台控制器并安装调试包' },
@@ -149,6 +154,7 @@
       state.data.layout = payload;
       clearDirty();
       toast('布局已保存，班牌刷新后生效');
+      loadState();
     }).catch(function (err) { toast('保存失败：' + err.message, 'err'); });
   }
 
@@ -201,6 +207,11 @@
         '<button class="btn danger" id="btnResetAll">恢复演示数据</button>';
     } else if (state.view === 'library') {
       actions = '<button class="btn primary" id="btnShowcase">生成组件巡展</button>';
+    } else if (state.view === 'componentdata') {
+      actions = '<button class="btn" id="btnDataReload">刷新</button>' +
+        '<button class="btn" id="btnRebuildTemplates">重建模板</button>' +
+        '<button class="btn danger" id="btnClearAllData">清除全部模拟</button>' +
+        '<button class="btn primary" id="btnFillAll">一键补全模拟数据</button>';
     } else {
       actions = '<button class="btn" id="btnReload">刷新</button>';
     }
@@ -223,6 +234,7 @@
     if (state.view === 'dashboard') view.innerHTML = viewDashboard();
     else if (state.view === 'layout') view.innerHTML = viewLayout();
     else if (state.view === 'library') view.innerHTML = viewLibrary();
+    else if (state.view === 'componentdata') view.innerHTML = viewComponentData();
     else if (state.view === 'content') view.innerHTML = viewContent();
     else if (state.view === 'endpoints') view.innerHTML = viewEndpoints();
     else if (state.view === 'device') view.innerHTML = viewDevice();
@@ -281,6 +293,7 @@
     html += '<div class="panel"><div class="panel-head"><div><h3>快捷操作</h3><p>常用的控制入口</p></div></div><div class="panel-body"><div class="stack">';
     html += quick('▦', '设计首页', '拖拽、缩放卡片，调整模块名与颜色', 'layout');
     html += quick('✦', '组件巡展', '一键生成覆盖全部组件的多页布局', 'showcase');
+    html += quick('⛁', '组件数据', '为荣誉、课表、考勤等每个组件设置模拟数据', 'componentdata');
     html += quick('✎', '更新内容', '公告、相册、荣誉、课表一次改完', 'content');
     html += quick('⌁', '连接班牌', '查看地址并安装云端调试包', 'device');
     html += '</div></div></div>';
@@ -330,6 +343,60 @@
   // ---------------------------------------------------------------------
   // layout designer
   // ---------------------------------------------------------------------
+  function previewForCard(card) {
+    var list = (state.data && state.data.previews) || {};
+    return list[card.id] || null;
+  }
+
+  function fallbackPreview(card, comp) {
+    return {
+      title: card.moduleName || (comp && comp.name) || card.tag,
+      subtitle: (comp && comp.category) || '',
+      image: '',
+      meta: (comp && comp.fragment) || '',
+      lines: ['保存布局后生成数据预览'],
+      kind: 'fallback'
+    };
+  }
+
+  function safeCssColor(value) {
+    return /^#[0-9a-fA-F]{3,8}$/.test(String(value || '').trim()) ? String(value).trim() : '';
+  }
+
+  function cardTileInner(c) {
+    var comp = component(c.tag) || { name: c.moduleName, category: '', fragment: '' };
+    var prev = previewForCard(c) || fallbackPreview(c, comp);
+    var hClass = c.height <= 1 ? ' h1' : (c.height <= 2 ? ' h2' : '');
+    var show = state.showPreview !== false;
+    var titleText = prev.title || c.moduleName || comp.name || '';
+    var titleAttr = [titleText, prev.subtitle, prev.meta].filter(Boolean).join(' · ');
+    var styleExtra = '';
+    if (safeCssColor(c.borderColor)) styleExtra += 'border-color:' + safeCssColor(c.borderColor) + ';';
+    if (safeCssColor(c.backgroundColor)) styleExtra += 'background:' + safeCssColor(c.backgroundColor) + ';';
+    var html = '<span class="tag">' + esc(c.tag) + '</span>';
+    if (c.showModuleName !== false) html += '<div class="name">' + esc(c.moduleName || comp.name || '未命名') + '</div>';
+    if (show) {
+      html += '<div class="tile-preview">';
+      html += '<div class="tile-preview-text">';
+      html += '<strong title="' + esc(titleAttr) + '">' + esc(titleText) + '</strong>';
+      if (prev.subtitle) html += '<span>' + esc(prev.subtitle) + '</span>';
+      if (prev.meta && c.height >= 2) html += '<em>' + esc(prev.meta) + '</em>';
+      html += '</div></div>';
+      if (prev.lines && prev.lines.length && c.height >= 3) {
+        html += '<div class="tile-preview-lines">';
+        var maxLines = c.height >= 5 ? 4 : (c.height >= 3 ? 2 : 0);
+        prev.lines.slice(0, maxLines).forEach(function (line) { html += '<span>' + esc(line) + '</span>'; });
+        html += '</div>';
+      }
+    } else {
+      html += '<div class="body-hint">' + esc(comp.category || '') + '</div>';
+    }
+    html += '<span class="size">' + c.width + '×' + c.height + '</span>';
+    html += '<span class="resize" data-resize="' + esc(c.id) + '"></span>';
+    return { html: html, hClass: hClass, title: titleAttr, styleExtra: styleExtra,
+             borderColor: safeCssColor(c.borderColor), background: safeCssColor(c.backgroundColor) };
+  }
+
   function viewLayout() {
     var page = currentPage();
     var html = '<div class="layout-shell"><div class="panel">';
@@ -345,6 +412,8 @@
     html += '<button class="btn small" id="btnDupPage">复制分页</button>';
     html += '<button class="btn small" id="btnClearPage">清空</button>';
     html += '<button class="btn small" id="btnResetLayout">恢复默认</button>';
+    html += '<label class="check" style="font-size:10.5px;margin-left:6px"><input type="checkbox" id="chkPreview" ' +
+      (state.showPreview !== false ? 'checked' : '') + '> 数据预览</label>';
     html += '</div>';
 
     if (!page) {
@@ -352,17 +421,13 @@
     } else {
       html += '<div class="board" id="board">';
       page.cards.forEach(function (c) {
-        var comp = component(c.tag) || { name: c.moduleName, category: '', fragment: '' };
+        var tile = cardTileInner(c);
         var selected = c.id === state.selected ? ' selected' : '';
         var disabled = c.enabled === false ? ' disabled' : '';
         var style = 'left:calc(' + pct(c.x, 8) + ' + 2px);top:calc(' + pct(c.y, 6) + ' + 2px);' +
-          'width:calc(' + pct(c.width, 8) + ' - 4px);height:calc(' + pct(c.height, 6) + ' - 4px)';
-        html += '<div class="card-tile' + selected + disabled + '" data-card="' + esc(c.id) + '" style="' + style + '">' +
-          '<span class="tag">' + esc(c.tag) + '</span>' +
-          '<div class="name">' + esc(c.moduleName || comp.name || '未命名') + '</div>' +
-          '<div class="body-hint">' + esc(comp.category || '') + '</div>' +
-          '<span class="size">' + c.width + '×' + c.height + '</span>' +
-          '<span class="resize" data-resize="' + esc(c.id) + '"></span></div>';
+          'width:calc(' + pct(c.width, 8) + ' - 4px);height:calc(' + pct(c.height, 6) + ' - 4px);' + tile.styleExtra;
+        html += '<div class="card-tile' + selected + disabled + tile.hClass + '" data-card="' + esc(c.id) +
+          '" style="' + style + '" title="' + esc(tile.title) + '">' + tile.html + '</div>';
       });
       html += '</div>';
       html += '<div class="board-hint"><span>拖动卡片移动</span><span>右下角拖拽缩放</span><span>点击卡片编辑属性</span><span>8 列 × 6 行栅格</span></div>';
@@ -372,10 +437,23 @@
     return html;
   }
 
+  function colorHex(value, fallback) {
+    var v = String(value || '').trim();
+    if (/^#[0-9a-fA-F]{6}$/.test(v)) return v;
+    if (/^#[0-9a-fA-F]{3}$/.test(v)) return '#' + v[1] + v[1] + v[2] + v[2] + v[3] + v[3];
+    return fallback;
+  }
+
+  function imageRowHtml(url) {
+    return '<div class="image-row">' +
+      '<input class="input img-url" value="' + esc(url || '') + '" placeholder="图片 URL（只保存文本，不下载图片）">' +
+      '<button class="icon-btn" data-delimg="1" title="删除">✕</button></div>';
+  }
+
   function inspectorHtml() {
     var card = state.selected ? getCard(state.selected) : null;
     var html = '<div class="panel"><div class="panel-head"><div><h3>' + (card ? '卡片属性' : '未选择卡片') + '</h3>' +
-      '<p>' + (card ? '修改后自动标记为未保存' : '点击左侧卡片进行编辑') + '</p></div>';
+      '<p>' + (card ? '改完点右上角「保存布局」' : '点击左侧卡片进行编辑') + '</p></div>';
     if (card) html += '<button class="icon-btn" id="btnCloseInspector">✕</button>';
     html += '</div><div class="panel-body">';
     if (!card) {
@@ -383,31 +461,80 @@
       return html + '</div></div>';
     }
     var comp = component(card.tag);
+    var prev = previewForCard(card) || fallbackPreview(card, comp);
+    var imageUrls = String(card.images || '').split(',').map(function (x) { return x.trim(); }).filter(Boolean);
+
+    html += '<div class="inspector-preview">';
+    html += '<div><strong>' + esc(prev.title || card.moduleName || '未命名') + '</strong>' +
+      (prev.subtitle ? '<span>' + esc(prev.subtitle) + '</span>' : '') +
+      (prev.meta ? '<em>' + esc(prev.meta) + '</em>' : '') +
+      (prev.lines && prev.lines.length ? '<p>' + esc(prev.lines[0]) + '</p>' : '') +
+      '</div></div>';
+    html += '<div class="field-help" style="margin:-4px 0 12px">上方是卡片当前读取到的模拟数据预览；要改这些数据，点下面「组件数据」。</div>';
+
+    html += '<details class="insp-section" open><summary>基础信息</summary>';
     html += '<div class="field"><label>组件标识 <em>' + esc(comp ? comp.fragment : '') + '</em></label>' +
       '<div class="row"><input class="input mono" id="fTag" value="' + esc(card.tag) + '" readonly>' +
-      '<button class="btn small" id="btnPickComponent">更换</button></div></div>';
-    html += '<div class="field"><label>模块名称</label><input class="input" id="fName" value="' + esc(card.moduleName || '') + '"></div>';
+      '<button class="btn small" id="btnPickComponent">更换组件</button></div>' +
+      '<div class="field-help">标签决定班牌用哪个 Fragment 渲染，一般不需要手动改。</div></div>';
+    html += '<div class="field"><label>模块名称 <em>显示在卡片左上角</em></label><input class="input" id="fName" value="' + esc(card.moduleName || '') + '"></div>';
+    html += '<div class="field"><label>副标题 / 描述 <em>可留空</em></label><input class="input" id="fDesc" value="' + esc(card.descriptive || '') + '"></div>';
+    html += '<label class="check"><input type="checkbox" id="fShowName" ' + (card.showModuleName !== false ? 'checked' : '') + '> 显示模块名称</label>';
+    html += '<label class="check" style="margin-left:14px"><input type="checkbox" id="fEnabled" ' + (card.enabled !== false ? 'checked' : '') + '> 在首页启用</label>';
+    html += '</details>';
+
+    html += '<details class="insp-section" open><summary>位置与尺寸</summary>';
     html += '<div class="field-row">';
-    html += '<div class="field"><label>列 x</label><input class="input" type="number" min="0" max="7" id="fX" value="' + card.x + '"></div>';
-    html += '<div class="field"><label>行 y</label><input class="input" type="number" min="0" max="5" id="fY" value="' + card.y + '"></div>';
+    html += '<div class="field"><label>列 x <em>0–7</em></label><input class="input" type="number" min="0" max="7" id="fX" value="' + card.x + '"></div>';
+    html += '<div class="field"><label>行 y <em>0–5</em></label><input class="input" type="number" min="0" max="5" id="fY" value="' + card.y + '"></div>';
     html += '<div class="field"><label>宽 w</label><input class="input" type="number" min="1" max="8" id="fW" value="' + card.width + '"></div>';
     html += '<div class="field"><label>高 h</label><input class="input" type="number" min="1" max="6" id="fH" value="' + card.height + '"></div>';
-    html += '</div>';
+    html += '</div><div class="field-help">8 列 × 6 行栅格；宽高建议与组件原生尺寸一致，否则可能被裁切。</div></details>';
+
+    var customLook = comp && /WebView|Custom/i.test(comp.fragment || '');
+    html += '<details class="insp-section"><summary>外观' + (customLook ? '' : '（仅预览）') + '</summary>';
     html += '<div class="field-row">';
-    html += '<div class="field"><label>边框颜色</label><input class="input" id="fBorder" value="' + esc(card.borderColor || '') + '" placeholder="#2F6BFF"></div>';
-    html += '<div class="field"><label>背景颜色</label><input class="input" id="fBack" value="' + esc(card.backgroundColor || '') + '" placeholder="留空为默认"></div>';
-    html += '</div>';
-    html += '<div class="field"><label>跳转链接 <em>自定义/网页组件</em></label><input class="input" id="fUrl" value="' + esc(card.url || '') + '" placeholder="https://"></div>';
-    html += '<div class="field"><label>图片列表 <em>逗号分隔</em></label><textarea class="textarea" id="fImages" style="min-height:54px">' + esc(card.images || '') + '</textarea></div>';
-    html += '<div class="field"><label>副标题 / 描述</label><input class="input" id="fDesc" value="' + esc(card.descriptive || '') + '"></div>';
-    html += '<div class="field"><label>二次页返回秒数</label><input class="input" type="number" id="fSec" value="' + (card.secPageBackTime || 10) + '"></div>';
-    html += '<div class="field"><label class="check"><input type="checkbox" id="fShowName" ' + (card.showModuleName !== false ? 'checked' : '') + '> 显示模块名称</label></div>';
-    html += '<div class="field"><label class="check"><input type="checkbox" id="fEnabled" ' + (card.enabled !== false ? 'checked' : '') + '> 在首页启用</label></div>';
-    html += '<div class="field"><label>JSON 参数 <em>自定义组件内容</em></label><textarea class="textarea" id="fJson" placeholder="{...}">' + esc(card.jsonParam || '') + '</textarea></div>';
-    html += '<div class="meta-line">标签 ' + esc(card.tag) + ' · 组件尺寸 ' + (comp ? comp.size : card.width + '×' + card.height) + ' · ' + esc(comp ? comp.category : '') + '</div>';
-    html += '<div class="row" style="margin-top:14px"><button class="btn small" id="btnDupCard">复制</button>' +
+    html += '<div class="field"><label>边框颜色</label><div class="color-row">' +
+      '<input type="color" id="cBorder" value="' + colorHex(card.borderColor, '#2f6bff') + '">' +
+      '<input class="input" id="fBorder" value="' + esc(card.borderColor || '') + '" placeholder="留空"></div></div>';
+    html += '<div class="field"><label>背景颜色</label><div class="color-row">' +
+      '<input type="color" id="cBack" value="' + colorHex(card.backgroundColor, '#ffffff') + '">' +
+      '<input class="input" id="fBack" value="' + esc(card.backgroundColor || '') + '" placeholder="留空"></div></div>';
+    html += '</div><div class="swatches">';
+    ['#2f6bff', '#7c5cff', '#0ea874', '#e59b16', '#e5484d', '#0f172a', ''].forEach(function (color) {
+      html += '<button class="swatch" data-swatch="' + color + '" style="background:' + (color || '#fff') + '" title="' + (color || '透明') + '">' + (color ? '' : '×') + '</button>';
+    });
+    html += '</div><div class="field-help">点色块可快速套用边框颜色；背景色用于卡片底色。</div>';
+    if (!customLook) {
+      html += '<div class="field-help" style="color:#b45309">注意：该组件是原版 Fragment，班牌端不会读取这里的颜色；颜色只用于控制器预览。需要真实改色请使用自定义/网页组件。</div>';
+    } else {
+      html += '<div class="field-help">该组件会读取 borderColor 字段。</div>';
+    }
+    html += '</details>';
+
+    html += '<details class="insp-section" open><summary>内容</summary>';
+    html += '<div class="field"><label>图片 <em>相册/图片类组件</em></label><div id="imageList">';
+    if (imageUrls.length) imageUrls.forEach(function (url) { html += imageRowHtml(url); });
+    else html += '<div class="field-help" style="margin:0 0 6px">还没有图片，使用接口返回的图片。</div>';
+    html += '</div><button class="btn small" id="btnAddImage">＋ 添加图片</button>' +
+      '<div class="field-help">图片按顺序显示；留空则使用接口数据。可直接填 /mock/xxx.jpg 或完整 URL。</div></div>';
+    html += '<div class="field"><label>跳转链接 <em>网页/自定义组件</em></label><input class="input" id="fUrl" value="' + esc(card.url || '') + '" placeholder="https://"></div>';
+    html += '</details>';
+
+    html += '<details class="insp-section"><summary>高级</summary>';
+    html += '<div class="field"><label>二次页返回秒数</label><input class="input" type="number" id="fSec" value="' + (card.secPageBackTime || 10) + '">' +
+      '<div class="field-help">进入二级页面后多久自动返回卡片。</div></div>';
+    html += '<div class="field"><label>JSON 参数 <em>仅自定义组件需要</em></label>' +
+      '<textarea class="textarea" id="fJson" placeholder="{...}">' + esc(card.jsonParam || '') + '</textarea>' +
+      '<div class="row" style="margin-top:6px"><button class="btn small" id="btnFormatJson">格式化 JSON</button></div>' +
+      '<div class="field-help">普通卡片保持为空，内容由「组件数据」里的接口模拟控制。</div></div>';
+    html += '</details>';
+
+    html += '<div class="meta-line">标签 ' + esc(card.tag) + ' · 原生尺寸 ' + (comp ? comp.size : card.width + '×' + card.height) + ' · ' + esc(comp ? comp.category : '') + '</div>';
+    html += '<div class="row" style="margin-top:14px"><button class="btn small primary" id="btnCardData">组件数据</button>' +
+      '<button class="btn small" id="btnDupCard">复制</button>' +
       '<button class="btn small danger" id="btnDelCard">删除</button><div class="spacer"></div>' +
-      '<button class="btn small" id="btnFitBoard">自动布局</button></div>';
+      '<button class="btn small" id="btnFitBoard">移到左上</button></div>';
     html += '</div></div>';
     return html;
   }
@@ -509,19 +636,19 @@
     if (!board) return;
     board.innerHTML = '';
     page.cards.forEach(function (c) {
-      var comp = component(c.tag) || { name: c.moduleName, category: '', fragment: '' };
+      var tile = cardTileInner(c);
       var div = document.createElement('div');
-      div.className = 'card-tile' + (c.id === state.selected ? ' selected' : '') + (c.enabled === false ? ' disabled' : '');
+      div.className = 'card-tile' + (c.id === state.selected ? ' selected' : '') +
+        (c.enabled === false ? ' disabled' : '') + tile.hClass;
       div.dataset.card = c.id;
+      div.title = tile.title;
       div.style.left = 'calc(' + pct(c.x, 8) + ' + 2px)';
       div.style.top = 'calc(' + pct(c.y, 6) + ' + 2px)';
       div.style.width = 'calc(' + pct(c.width, 8) + ' - 4px)';
       div.style.height = 'calc(' + pct(c.height, 6) + ' - 4px)';
-      div.innerHTML = '<span class="tag">' + esc(c.tag) + '</span>' +
-        '<div class="name">' + esc(c.moduleName || comp.name || '未命名') + '</div>' +
-        '<div class="body-hint">' + esc(comp.category || '') + '</div>' +
-        '<span class="size">' + c.width + '×' + c.height + '</span>' +
-        '<span class="resize" data-resize="' + esc(c.id) + '"></span>';
+      if (tile.borderColor) div.style.borderColor = tile.borderColor;
+      if (tile.background) div.style.background = tile.background;
+      div.innerHTML = tile.html;
       board.appendChild(div);
     });
     bindBoard();
@@ -544,22 +671,117 @@
     var comp = component(card.tag);
     function upd(fn) { fn(); markDirty(); }
     var f;
-    f = $('#fName'); if (f) f.oninput = function () { card.moduleName = f.value; var tile = $('[data-card="' + card.id + '"] .name'); if (tile) tile.textContent = f.value; markDirty(); };
-    f = $('#fX'); if (f) f.onchange = function () { upd(function () { card.x = clamp(parseInt(f.value, 10) || 0, 0, 8 - card.width); }); renderBoardOnly(); };
-    f = $('#fY'); if (f) f.onchange = function () { upd(function () { card.y = clamp(parseInt(f.value, 10) || 0, 0, 6 - card.height); }); renderBoardOnly(); };
-    f = $('#fW'); if (f) f.onchange = function () { upd(function () { card.width = clamp(parseInt(f.value, 10) || 1, 1, 8 - card.x); }); renderBoardOnly(); };
-    f = $('#fH'); if (f) f.onchange = function () { upd(function () { card.height = clamp(parseInt(f.value, 10) || 1, 1, 6 - card.y); }); renderBoardOnly(); };
-    f = $('#fBorder'); if (f) f.oninput = function () { card.borderColor = f.value; markDirty(); };
-    f = $('#fBack'); if (f) f.oninput = function () { card.backgroundColor = f.value; markDirty(); };
-    f = $('#fUrl'); if (f) f.oninput = function () { card.url = f.value; markDirty(); };
-    f = $('#fImages'); if (f) f.oninput = function () { card.images = f.value; markDirty(); };
-    f = $('#fDesc'); if (f) f.oninput = function () { card.descriptive = f.value; markDirty(); };
-    f = $('#fSec'); if (f) f.onchange = function () { card.secPageBackTime = parseInt(f.value, 10) || 10; markDirty(); };
-    f = $('#fJson'); if (f) f.oninput = function () { card.jsonParam = f.value; markDirty(); };
-    f = $('#fShowName'); if (f) f.onchange = function () { card.showModuleName = f.checked; markDirty(); };
-    f = $('#fEnabled'); if (f) f.onchange = function () { card.enabled = f.checked; markDirty(); renderBoardOnly(); };
+    f = $('#fName'); if (f) f.oninput = function () {
+      card.moduleName = this.value;
+      var tile = $('[data-card="' + card.id + '"] .name');
+      if (tile) tile.textContent = this.value;
+      markDirty();
+    };
+    f = $('#fX'); if (f) f.onchange = function () { var v = this.value; upd(function () { card.x = clamp(parseInt(v, 10) || 0, 0, 8 - card.width); }); renderBoardOnly(); };
+    f = $('#fY'); if (f) f.onchange = function () { var v = this.value; upd(function () { card.y = clamp(parseInt(v, 10) || 0, 0, 6 - card.height); }); renderBoardOnly(); };
+    f = $('#fW'); if (f) f.onchange = function () { var v = this.value; upd(function () { card.width = clamp(parseInt(v, 10) || 1, 1, 8 - card.x); }); renderBoardOnly(); };
+    f = $('#fH'); if (f) f.onchange = function () { var v = this.value; upd(function () { card.height = clamp(parseInt(v, 10) || 1, 1, 6 - card.y); }); renderBoardOnly(); };
+    function syncImages() {
+      var urls = [];
+      $$('#imageList .img-url').forEach(function (input) {
+        var v = input.value.trim();
+        if (v) urls.push(v);
+      });
+      card.images = urls.join(',');
+      markDirty();
+    }
+    function bindImageRow(row) {
+      var input = row.querySelector('.img-url');
+      var img = row.querySelector('img');
+      if (input) input.oninput = function () {
+        var v = input.value.trim();
+        if (img) { img.src = v; img.style.visibility = v ? 'visible' : 'hidden'; }
+        syncImages();
+      };
+      var del = row.querySelector('[data-delimg]');
+      if (del) del.onclick = function () {
+        row.remove();
+        syncImages();
+      };
+    }
+    $$('#imageList .image-row').forEach(bindImageRow);
+    var addImage = $('#btnAddImage');
+    if (addImage) addImage.onclick = function () {
+      var holder = $('#imageList');
+      var tmp = document.createElement('div');
+      tmp.innerHTML = imageRowHtml('');
+      var row = tmp.firstChild;
+      holder.appendChild(row);
+      bindImageRow(row);
+      row.querySelector('.img-url').focus();
+    };
+
+    function applyTileStyle() {
+      var tile = $('[data-card="' + card.id + '"]');
+      if (!tile) return;
+      tile.style.borderColor = safeCssColor(card.borderColor);
+      tile.style.background = safeCssColor(card.backgroundColor);
+    }
+    var cBorder = $('#cBorder');
+    f = $('#fBorder');
+    if (f && cBorder) {
+      f.oninput = function () {
+        card.borderColor = this.value.trim();
+        if (/^#[0-9a-fA-F]{6}$/.test(card.borderColor)) cBorder.value = card.borderColor;
+        applyTileStyle();
+        markDirty();
+      };
+      cBorder.oninput = function () {
+        card.borderColor = cBorder.value;
+        $('#fBorder').value = cBorder.value;
+        applyTileStyle();
+        markDirty();
+      };
+    }
+    var cBack = $('#cBack');
+    f = $('#fBack');
+    if (f && cBack) {
+      f.oninput = function () {
+        card.backgroundColor = this.value.trim();
+        if (/^#[0-9a-fA-F]{6}$/.test(card.backgroundColor)) cBack.value = card.backgroundColor;
+        applyTileStyle();
+        markDirty();
+      };
+      cBack.oninput = function () {
+        card.backgroundColor = cBack.value;
+        $('#fBack').value = cBack.value;
+        applyTileStyle();
+        markDirty();
+      };
+    }
+    $$('[data-swatch]').forEach(function (b) {
+      b.onclick = function () {
+        card.borderColor = b.dataset.swatch;
+        if ($('#fBorder')) $('#fBorder').value = b.dataset.swatch;
+        if (cBorder) cBorder.value = colorHex(b.dataset.swatch, '#2f6bff');
+        applyTileStyle();
+        markDirty();
+      };
+    });
+    f = $('#fUrl'); if (f) f.oninput = function () { card.url = this.value; markDirty(); };
+    f = $('#fDesc'); if (f) f.oninput = function () { card.descriptive = this.value; markDirty(); };
+    f = $('#fSec'); if (f) f.onchange = function () { card.secPageBackTime = parseInt(this.value, 10) || 10; markDirty(); };
+    f = $('#fJson'); if (f) f.oninput = function () { card.jsonParam = this.value; markDirty(); };
+    var fmt = $('#btnFormatJson');
+    if (fmt) fmt.onclick = function () {
+      var ta = $('#fJson');
+      try {
+        ta.value = JSON.stringify(JSON.parse(ta.value || '{}'), null, 2);
+        card.jsonParam = ta.value;
+        markDirty();
+        toast('JSON 已格式化');
+      } catch (e) { toast('JSON 格式错误：' + e.message, 'err'); }
+    };
+    f = $('#fShowName'); if (f) f.onchange = function () { card.showModuleName = this.checked; markDirty(); };
+    f = $('#fEnabled'); if (f) f.onchange = function () { card.enabled = this.checked; markDirty(); renderBoardOnly(); };
     var close = $('#btnCloseInspector'); if (close) close.onclick = function () { state.selected = null; render(); };
     var pick = $('#btnPickComponent'); if (pick) pick.onclick = function () { openComponentPicker(card); };
+    var dataBtn = $('#btnCardData'); if (dataBtn) dataBtn.onclick = function () { openComponentData(card.tag); };
     var dup = $('#btnDupCard'); if (dup) dup.onclick = function () { duplicateCard(card); };
     var del = $('#btnDelCard'); if (del) del.onclick = function () { deleteCard(card); };
     var fit = $('#btnFitBoard'); if (fit) fit.onclick = function () { fitCard(card); };
@@ -764,6 +986,7 @@
           '<div class="frag">' + esc(c.fragment || '—') + '</div>' +
           '<div style="font-size:10.5px;color:#94a3b8">' + esc(c.category) + '</div>' +
           '<div class="actions"><button class="btn small primary" data-addtag="' + esc(c.tag) + '">加入布局</button>' +
+          '<button class="btn small" data-data="' + esc(c.tag) + '">数据</button>' +
           '<button class="btn small" data-copytag="' + esc(c.tag) + '">复制标签</button></div></div>';
       });
       html += '</div>';
@@ -773,44 +996,676 @@
   }
 
   function openComponentPicker(replaceCard) {
-    var comps = state.catalog.components;
-    var body = '<div class="search" style="margin-bottom:12px"><input class="input" id="pickSearch" placeholder="搜索组件…"></div>' +
-      '<div id="pickList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;max-height:52vh;overflow:auto">';
-    comps.forEach(function (c) {
-      body += '<button class="comp-card" style="text-align:left;cursor:pointer" data-picktag="' + esc(c.tag) + '">' +
-        '<div class="top"><span class="tag">' + esc(c.tag) + '</span><span class="badge">' + esc(c.size) + '</span></div>' +
-        '<h4>' + esc(c.name) + '</h4><div class="frag">' + esc(c.category) + '</div></button>';
+    state.picker = { q: '', category: '全部', size: '全部', replace: replaceCard || null };
+    renderPickerModal();
+  }
+
+  function pickerSizes() {
+    var counts = {};
+    state.catalog.components.forEach(function (c) { counts[c.size] = (counts[c.size] || 0) + 1; });
+    return Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; });
+  }
+
+  function pickerFiltered() {
+    var p = state.picker;
+    var q = p.q.toLowerCase();
+    return state.catalog.components.filter(function (c) {
+      if (p.category !== '全部' && c.category !== p.category) return false;
+      if (p.size !== '全部' && c.size !== p.size) return false;
+      if (q && (c.tag + ' ' + c.name + ' ' + c.fragment + ' ' + c.category).toLowerCase().indexOf(q) < 0) return false;
+      return true;
     });
-    body += '</div>';
-    openModal(replaceCard ? '更换组件' : '添加卡片', body, '<button class="btn" id="pickCancel">取消</button>', { wide: true });
-    var search = $('#pickSearch');
-    if (search) search.oninput = function () {
-      var q = search.value.toLowerCase();
-      $$('[data-picktag]').forEach(function (b) {
-        var c = component(b.dataset.picktag);
-        var text = (c.tag + ' ' + c.name + ' ' + c.category).toLowerCase();
-        b.style.display = text.indexOf(q) >= 0 ? '' : 'none';
-      });
-    };
-    $('#pickCancel').onclick = closeModal;
-    $$('[data-picktag]').forEach(function (b) {
+  }
+
+  function pickerCardsHtml() {
+    var list = pickerFiltered();
+    if (!list.length) return '<div class="empty"><div class="big">⌕</div>没有匹配的组件</div>';
+    var html = '<div class="comp-grid">';
+    list.forEach(function (c) {
+      html += '<div class="comp-card">' +
+        '<div class="top"><span class="tag">' + esc(c.tag) + '</span><span class="badge">' + esc(c.size) + '</span></div>' +
+        '<h4>' + esc(c.name) + '</h4>' +
+        '<div class="frag">' + esc(c.fragment || '—') + '</div>' +
+        '<div style="font-size:10.5px;color:#94a3b8">' + esc(c.category) + '</div>' +
+        '<div class="actions"><button class="btn small primary" data-pickadd="' + esc(c.tag) + '">' +
+        (state.picker.replace ? '替换为它' : '加入当前页') + '</button></div></div>';
+    });
+    return html + '</div>';
+  }
+
+  function renderPickerListOnly() {
+    var holder = $('#pickList');
+    if (!holder) return;
+    holder.innerHTML = pickerCardsHtml();
+    var count = $('#pickCount');
+    if (count) count.textContent = '共 ' + pickerFiltered().length + ' 个';
+    bindPickerCards();
+  }
+
+  function bindPickerCards() {
+    $$('[data-pickadd]').forEach(function (b) {
       b.onclick = function () {
-        var tag = b.dataset.picktag;
+        var tag = b.dataset.pickadd;
         var comp = component(tag);
-        closeModal();
-        if (replaceCard) {
-          var card = getCard(replaceCard.id);
+        if (state.picker.replace) {
+          var card = getCard(state.picker.replace.id);
           card.tag = tag;
           card.moduleName = comp.name;
           card.width = clamp(comp.width || card.width, 1, 8);
           card.height = clamp(comp.height || card.height, 1, 6);
           markDirty();
+          closeModal();
           render();
+          toast('已更换为「' + comp.name + '」');
         } else {
           addCard(tag, comp);
+          b.textContent = '已加入';
+          b.disabled = true;
+          setTimeout(function () { b.textContent = '加入当前页'; b.disabled = false; }, 700);
         }
       };
     });
+  }
+
+  function renderPickerModal() {
+    var p = state.picker;
+    var cats = ['全部'].concat(state.catalog.categories || []);
+    var sizes = pickerSizes();
+    var body = '<div class="toolbar"><div class="search"><input class="input" id="pickSearch" placeholder="搜索标签、名称、Fragment…" value="' + esc(p.q) + '"></div>' +
+      '<span class="pill" id="pickCount">共 ' + pickerFiltered().length + ' 个</span></div>';
+    body += '<div class="toolbar" style="gap:5px;margin-bottom:8px">';
+    cats.forEach(function (c) {
+      if (c !== '全部' && !state.catalog.components.some(function (x) { return x.category === c; })) return;
+      body += '<button class="pill' + pillActive(p.category, c) + '" data-pickcat="' + esc(c) + '">' + esc(c) + '</button>';
+    });
+    body += '</div><div class="toolbar" style="gap:5px;margin-bottom:14px">';
+    body += '<button class="pill' + pillActive(p.size, '全部') + '" data-picksize="全部">全部尺寸</button>';
+    sizes.slice(0, 14).forEach(function (s) {
+      body += '<button class="pill' + pillActive(p.size, s) + '" data-picksize="' + esc(s) + '">' + esc(s) + '</button>';
+    });
+    body += '</div><div id="pickList" style="max-height:56vh;overflow:auto;padding-right:4px">' + pickerCardsHtml() + '</div>';
+    body += '<div class="meta-line" style="margin-top:10px">添加后窗口保持打开，可连续添加；当前分页满时会自动新建分页。</div>';
+    openModal(p.replace ? '更换组件' : '添加卡片', body,
+      '<button class="btn primary" id="pickDone">完成</button>', { wide: true });
+    $('#pickDone').onclick = closeModal;
+    var search = $('#pickSearch');
+    search.oninput = function () {
+      p.q = search.value;
+      renderPickerListOnly();
+    };
+    $$('[data-pickcat]').forEach(function (b) {
+      b.onclick = function () { p.category = b.dataset.pickcat; renderPickerModal(); };
+    });
+    $$('[data-picksize]').forEach(function (b) {
+      b.onclick = function () { p.size = b.dataset.picksize; renderPickerModal(); };
+    });
+    bindPickerCards();
+  }
+
+  // ---------------------------------------------------------------------
+  // component data overview
+  // ---------------------------------------------------------------------
+  function refreshComponentStatus() {
+    return api('/api/components').then(function (data) {
+      state.componentStatus = data;
+      var el = $('#navComponentData');
+      if (el) el.textContent = (data.counts && data.counts.components) || 293;
+      if (state.view === 'componentdata') render();
+      return data;
+    }).catch(function (err) {
+      toast('读取组件数据失败：' + err.message, 'err');
+    });
+  }
+
+  function viewComponentData() {
+    if (!state.componentStatus) {
+      refreshComponentStatus();
+      return '<div class="panel"><div class="panel-body"><div class="skeleton" style="height:120px"></div>' +
+        '<div class="empty">正在读取 293 个组件的数据映射…</div></div></div>';
+    }
+    var status = state.componentStatus.components || {};
+    var comps = state.catalog.components;
+    var categories = state.catalog.categories || [];
+    var total = comps.length;
+    var mapped = 0, configured = 0, layout = 0;
+    comps.forEach(function (c) {
+      var s = status[c.tag];
+      if (s && s.total > 0) {
+        mapped++;
+        if (s.configured > 0) configured++;
+      } else {
+        layout++;
+      }
+    });
+    var currentCat = state.dataCategory;
+    var q = state.dataQ.toLowerCase();
+    var filtered = comps.filter(function (c) {
+      if (currentCat !== '全部' && c.category !== currentCat) return false;
+      if (!q) return true;
+      return (c.tag + ' ' + c.name + ' ' + c.fragment + ' ' + c.category).toLowerCase().indexOf(q) >= 0;
+    });
+
+    var html = '<div class="stat-grid">';
+    html += statCard('▤', '组件总数', String(total), '全部来自 HomeFragment');
+    html += statCard('⇄', '可配置数据', String(mapped), '其余由卡片属性驱动');
+    html += statCard('✔', '已配置自定义', String(configured), '按组件统计');
+    html += statCard('⚙', '属性驱动', String(layout), '图片 / URL / JSON 参数');
+    html += '</div>';
+
+    html += '<div class="panel"><div class="panel-head"><div><h3>按组件配置数据</h3>' +
+      '<p>每个组件可设置它读取的接口响应；未勾选自定义时使用内置模拟数据</p></div>' +
+      '<span class="tag-chip">' + filtered.length + ' / ' + total + '</span></div><div class="panel-body">';
+    html += '<div class="toolbar"><div class="search"><input class="input" id="dataSearch" placeholder="搜索组件标签、名称、Fragment…" value="' + esc(state.dataQ) + '"></div></div>';
+    html += '<div class="toolbar" style="gap:6px;margin-bottom:14px">';
+    ['全部'].concat(categories).forEach(function (c) {
+      if (c !== '全部' && !comps.some(function (x) { return x.category === c; })) return;
+      html += '<button class="pill' + pillActive(currentCat, c) + '" data-datacat="' + esc(c) + '">' + esc(c) + '</button>';
+    });
+    html += '</div>';
+    if (!filtered.length) {
+      html += '<div class="empty"><div class="big">⌕</div>没有匹配的组件</div>';
+    } else {
+      html += '<div style="max-height:64vh;overflow:auto;padding-right:4px">';
+      filtered.forEach(function (c) {
+        var s = status[c.tag] || { endpoints: [], configured: 0, total: 0 };
+        var totalPaths = s.total || (s.endpoints || []).length;
+        var badge = '';
+        if (!totalPaths) badge = '<span class="tag-chip" style="background:#fff8e6;color:#9a6b00">属性驱动</span>';
+        else if (s.configured > 0) badge = '<span class="tag-chip" style="background:#e8f7f0;color:#0b8f63">自定义 ' + s.configured + '/' + totalPaths + '</span>';
+        else badge = '<span class="tag-chip">可配置 ' + totalPaths + ' 个接口</span>';
+        html += '<div class="list-row">' +
+          '<div class="thumb" style="display:grid;place-items:center;color:#2f6bff;font-weight:700">▤</div>' +
+          '<div class="info"><strong>' + esc(c.name) + ' <span class="tag-chip">' + esc(c.tag) + '</span></strong>' +
+          '<span>' + esc(c.size) + ' · ' + esc(c.category) + ' · ' + esc(c.fragment || '—') + '</span></div>' +
+          badge +
+          '<div class="ops"><button class="btn small primary" data-data="' + esc(c.tag) + '">编辑数据</button>' +
+          '<button class="btn small" data-addtag="' + esc(c.tag) + '">加入布局</button></div></div>';
+      });
+      html += '</div>';
+    }
+    html += '</div></div>';
+    return html;
+  }
+
+  function bindComponentDataView() {
+    var s = $('#dataSearch');
+    if (s) s.oninput = function () {
+      var pos = s.selectionStart;
+      state.dataQ = s.value;
+      render();
+      var n = $('#dataSearch');
+      if (n) { n.focus(); try { n.setSelectionRange(pos, pos); } catch (e) {} }
+    };
+    $$('[data-datacat]').forEach(function (b) {
+      b.onclick = function () { state.dataCategory = b.dataset.datacat; render(); };
+    });
+    $$('[data-data]').forEach(function (b) { b.onclick = function () { openComponentData(b.dataset.data); }; });
+    $$('[data-addtag]').forEach(function (b) { b.onclick = function () { addCard(b.dataset.addtag); }; });
+    var reload = $('#btnDataReload');
+    if (reload) reload.onclick = function () { state.componentStatus = null; refreshComponentStatus(); toast('已刷新组件数据'); };
+    var rebuild = $('#btnRebuildTemplates');
+    if (rebuild) rebuild.onclick = function () {
+      api('/api/endpoint-templates/rebuild', { method: 'POST' }).then(function (res) {
+        toast('已重建 ' + res.count + ' 个接口模板');
+        state.componentStatus = null;
+        refreshComponentStatus();
+      }).catch(function (err) { toast('重建失败：' + err.message, 'err'); });
+    };
+    var clearAll = $('#btnClearAllData');
+    if (clearAll) clearAll.onclick = function () {
+      if (!window.confirm('清除所有接口的自定义模拟数据，恢复内置模拟？')) return;
+      api('/api/overrides/clear', { method: 'POST' }).then(function (res) {
+        toast('已清除 ' + res.cleared + ' 个接口自定义');
+        state.componentStatus = null;
+        refreshComponentStatus();
+        loadState();
+      }).catch(function (err) { toast('清除失败：' + err.message, 'err'); });
+    };
+    var fill = $('#btnFillAll');
+    if (fill) fill.onclick = function () {
+      if (!window.confirm('将为所有组件的接口写入当前默认模拟数据（已有自定义不会被覆盖）。\n这样会让通知/天气/相册等动态模块也变成静态响应，确定继续？')) return;
+      api('/api/components/fill', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ mode: 'missing' })
+      }).then(function (res) {
+        toast('已补全 ' + res.saved + ' 个接口模拟数据');
+        state.componentStatus = null;
+        refreshComponentStatus();
+        loadState();
+      }).catch(function (err) { toast('补全失败：' + err.message, 'err'); });
+    };
+  }
+
+  // ---------------------------------------------------------------------
+  // per-component mock data
+  // ---------------------------------------------------------------------
+  var COMPONENT_DATA = { detail: null, rows: {} };
+
+  function jsonText(value) {
+    try { return JSON.stringify(value === undefined ? {} : value, null, 2); }
+    catch (e) { return '{}'; }
+  }
+
+  function openComponentData(tag) {
+    api('/api/component/' + encodeURIComponent(tag)).then(function (detail) {
+      COMPONENT_DATA.detail = detail;
+      COMPONENT_DATA.rows = {};
+      (detail.endpoints || []).forEach(function (item) { COMPONENT_DATA.rows[item.path] = item; });
+      renderComponentDataModal();
+    }).catch(function (err) { toast('读取组件数据失败：' + err.message, 'err'); });
+  }
+
+  function findCardByTag(tag) {
+    var list = pages();
+    for (var i = 0; i < list.length; i++) {
+      for (var j = 0; j < list[i].cards.length; j++) {
+        if (list[i].cards[j].tag === tag) return { pageIndex: i, card: list[i].cards[j] };
+      }
+    }
+    return null;
+  }
+
+  var JF_LABELS = {
+    data: '数据', list: '列表', records: '记录', rows: '行', total: '总数', pageNo: '页码', pageSize: '每页数量',
+    size: '数量', current: '当前页', pages: '总页数', code: '状态码', message: '提示', msg: '提示',
+    name: '名称', title: '标题', content: '内容', author: '发布人', source: '来源', timerDate: '时间',
+    coverImg: '封面图', contentImg: '内容图', identityUserName: '发布者', messType: '消息类型', contentType: '内容类型',
+    id: 'ID', imgPaths: '图片', avatar: '头像', winnerNames: '获得者', honorType: '荣誉类型', level: '级别',
+    createTime: '时间', reason: '事迹', subjectName: '科目', startTime: '开始时间', endTime: '结束时间',
+    week: '星期', section: '节次', sectionName: '节次名称', sectionType: '节次类型', teacherList: '教师',
+    examinationRoomName: '考场', buildingName: '楼栋', examStartTime: '开始时间', examEndTime: '结束时间',
+    studentSeat: '座位', weekDay: '星期', subjectId: '科目 ID', examinationId: '考试 ID', siteName: '场地',
+    className: '班级', classesName: '班级名称', classesId: '班级 ID', headerTeacher: '班主任', studentCount: '人数',
+    weather: '天气', real: '温度', highest: '最高温', lowest: '最低温', tips: '提示', area: '地区',
+    url: '链接', type: '类型', status: '状态', price: '价格', score: '分数', rank: '排名', count: '数量',
+    options: '选项', startDate: '开始日期', endDate: '结束日期', date: '日期', time: '时间', room: '教室', seat: '座位',
+    bookName: '书名', authorName: '作者', isbn: 'ISBN', borrowStatus: '借阅状态', image: '图片', images: '图片',
+    items: '条目', courses: '课程', task: '任务', studentName: '学生', teacherName: '教师', dutyName: '值日项目',
+    startTimeStr: '开始时间', endTimeStr: '结束时间', createBy: '创建人', updateTime: '更新时间'
+  };
+  var JF_HINTS = {
+    level: '荣誉级别：1=校级，2=省级，3=国家级',
+    honorType: '1=班级荣誉，2=学生荣誉，3=教师荣誉',
+    messType: '1=普通公告，2=图文公告，5=图文详情',
+    contentType: '0=富文本，1=图片',
+    code: '0=成功；其他值可模拟错误', data: '接口返回的数据主体', list: '列表数据，每一项对应一张卡片/一条内容',
+    pageNo: '第几页，从 1 开始', pageSize: '每页条数', total: '总条数',
+    week: '1=周一 … 7=周日', section: '第几节课',
+    imgPaths: '图片地址，支持 /mock/xxx.jpg 或完整 URL',
+    content: '支持 HTML 标签', startTime: 'HH:mm 或 yyyy-MM-dd HH:mm:ss'
+  };
+
+  function jfLabel(key) { return JF_LABELS[key] || key; }
+  function jfHint(key) { return JF_HINTS[key] || ''; }
+  function jfLastKey(path) {
+    var parts = String(path || '').split('.');
+    return parts[parts.length - 1] || '';
+  }
+  function jfClone(value) {
+    try { return JSON.parse(JSON.stringify(value)); } catch (e) { return value; }
+  }
+  function jfGet(root, path) {
+    var parts = String(path || '').split('.').filter(Boolean);
+    if (parts[0] === 'root') parts.shift();
+    var cur = root;
+    for (var i = 0; i < parts.length; i++) {
+      if (cur == null) return undefined;
+      cur = cur[parts[i]];
+    }
+    return cur;
+  }
+  function jfSet(root, path, value) {
+    var parts = String(path || '').split('.').filter(Boolean);
+    if (parts[0] === 'root') parts.shift();
+    var cur = root;
+    for (var i = 0; i < parts.length - 1; i++) {
+      if (cur[parts[i]] == null || typeof cur[parts[i]] !== 'object') cur[parts[i]] = {};
+      cur = cur[parts[i]];
+    }
+    cur[parts[parts.length - 1]] = value;
+  }
+
+  function jfBlank(sample) {
+    if (sample == null) return '';
+    if (Array.isArray(sample)) return [];
+    if (typeof sample === 'object') {
+      var out = {};
+      Object.keys(sample).forEach(function (key) {
+        var v = sample[key];
+        if (Array.isArray(v)) out[key] = [];
+        else if (v && typeof v === 'object') out[key] = {};
+        else if (typeof v === 'number') out[key] = 0;
+        else if (typeof v === 'boolean') out[key] = false;
+        else out[key] = '';
+      });
+      return out;
+    }
+    if (typeof sample === 'number') return 0;
+    if (typeof sample === 'boolean') return false;
+    return '';
+  }
+
+  function jfPrimitive(value, path, key, hint) {
+    var type = typeof value;
+    var attr = ' data-jf-path="' + esc(path) + '"';
+    var help = hint ? '<div class="field-help">' + esc(hint) + '</div>' : '';
+    if (type === 'boolean') {
+      return '<label class="check" style="font-size:11px"><input type="checkbox"' + attr + ' data-jf-type="bool" ' +
+        (value ? 'checked' : '') + '> ' + (hint || '是 / 否') + '</label>';
+    }
+    if (type === 'number') {
+      return '<input class="input jf-input" type="number"' + attr + ' data-jf-type="number" value="' + esc(value) + '">' + help;
+    }
+    var longText = /content|html|desc|reason|tips|json|remark|note/i.test(key || '') ||
+      (typeof value === 'string' && value.length > 120);
+    var control;
+    if (longText) {
+      control = '<textarea class="textarea jf-input"' + attr + ' data-jf-type="string" style="min-height:88px">' +
+        esc(value == null ? '' : value) + '</textarea>';
+    } else {
+      control = '<input class="input jf-input"' + attr + ' data-jf-type="string" value="' +
+        esc(value == null ? '' : value) + '">';
+    }
+    return control + help;
+  }
+
+  function jsonFormHtml(value, path, depth) {
+    depth = depth || 0;
+    if (Array.isArray(value)) {
+      var open = ' open';
+      var title = jfLabel(jfLastKey(path)) || '列表';
+      var html = '<details class="jf-node"' + open + '><summary>' + esc(title) +
+        ' <em>' + value.length + ' 项</em></summary><div class="jf-array" data-jf-array="' + esc(path) + '">';
+      value.forEach(function (item, index) {
+        var delButton = '<button class="btn small danger" type="button" data-jf-del="' + esc(path) +
+          '" data-jf-index="' + index + '">删除</button>';
+        if (item && typeof item === 'object') {
+          var openItem = (value.length <= 3 || index === 0) ? ' open' : '';
+          html += '<details class="jf-item-node"' + openItem + '><summary><span>#' + (index + 1) + '</span>' +
+            delButton + '</summary>' + jsonFormHtml(item, path + '.' + index, depth + 1) + '</details>';
+        } else {
+          html += '<div class="jf-item"><div class="jf-item-head"><span>#' + (index + 1) + '</span>' +
+            delButton + '</div>' + jsonFormHtml(item, path + '.' + index, depth + 1) + '</div>';
+        }
+      });
+      html += '<button class="btn small" type="button" data-jf-add="' + esc(path) + '">＋ 添加一项</button></div></details>';
+      return html;
+    }
+    if (value && typeof value === 'object') {
+      var keys = Object.keys(value);
+      var out = '<div class="jf-object" data-jf-object="' + esc(path) + '">';
+      if (!keys.length) out += '<div class="field-help">空对象</div>';
+      keys.forEach(function (key) {
+        var v = value[key];
+        var p = path + '.' + key;
+        var label = jfLabel(key);
+        var hint = jfHint(key);
+        out += '<div class="jf-field"><label>' + esc(label) + ' <em>' + esc(key) + '</em></label>';
+        if (v && typeof v === 'object') {
+          out += jsonFormHtml(v, p, depth + 1);
+        } else {
+          out += jfPrimitive(v, p, key, hint);
+        }
+        out += '</div>';
+      });
+      return out + '</div>';
+    }
+    return jfPrimitive(value, path, '', '');
+  }
+
+  function componentDataRow(item) {
+    var hasOverride = item.override !== null && item.override !== undefined;
+    var enabled = hasOverride && item.enabled !== false;
+    var body = hasOverride ? item.override : item.template;
+    if (typeof body === 'string') {
+      try { body = JSON.parse(body); } catch (e) { body = {}; }
+    }
+    if (body === null || body === undefined) body = {};
+    var status = hasOverride ? '已自定义' : '默认数据';
+    var statusStyle = hasOverride ? 'background:#e8f7f0;color:#0b8f63' : 'background:#f1f5fb;color:#64748b';
+    var html = '<div class="cd-row" data-path="' + esc(item.path) + '" data-had="' + (hasOverride ? '1' : '0') + '">';
+    html += '<div class="row" style="gap:8px">';
+    html += '<span class="method ' + esc(item.method || 'POST') + '">' + esc(item.method || 'POST') + '</span>';
+    html += '<code class="mono" style="font-size:11px">' + esc(item.path) + '</code>';
+    if (item.shared > 1) html += '<span class="tag-chip">共用 ' + item.shared + ' 个组件</span>';
+    html += '<span class="tag-chip" style="' + statusStyle + '">' + status + '</span>';
+    html += '<div class="spacer"></div>';
+    html += '<label class="check" style="font-size:11px"><input type="checkbox" class="cd-enabled" ' + (enabled ? 'checked' : '') + '> 启用自定义</label>';
+    html += '</div>';
+    html += '<div class="row" style="margin-top:10px"><strong style="font-size:11px">可视化编辑</strong>' +
+      '<span class="field-help" style="margin:0">直接改字段，复杂结构在下面 JSON 源码里</span></div>';
+    html += '<div class="jf-form" data-jf-root="' + esc(item.path) + '" style="margin-top:6px">' +
+      jsonFormHtml(body, 'root', 0) + '</div>';
+    html += '<details class="json-details"><summary>JSON 源码（高级，可粘贴完整响应）</summary>' +
+      '<textarea class="textarea cd-body" spellcheck="false" style="min-height:160px">' + esc(jsonText(body)) + '</textarea>' +
+      '<div class="row" style="margin-top:6px"><button class="btn small cd-refresh" type="button">从 JSON 刷新表单</button></div>' +
+      '</details>';
+    html += '<div class="row" style="margin-top:6px"><button class="btn small cd-template" type="button">载入默认模板</button>' +
+      '<button class="btn small cd-clear" type="button">清除自定义</button>' +
+      '<span style="font-size:10px;color:#94a3b8">' + esc(item.description || '') + '</span></div>';
+    html += '</div>';
+    return html;
+  }
+
+  function renderComponentDataModal() {
+    var detail = COMPONENT_DATA.detail;
+    var rows = COMPONENT_DATA.rows;
+    var html = '<div class="stack">';
+    var usedCard = findCardByTag(detail.tag);
+    html += '<div class="row"><span class="tag">' + esc(detail.tag) + '</span>' +
+      '<span class="tag-chip">' + esc(detail.fragment || '') + '</span>' +
+      '<span class="tag-chip">' + esc(detail.category || '') + '</span>' +
+      '<span class="tag-chip">' + (detail.endpoints || []).length + ' 个数据接口</span>' +
+      (usedCard ? '<button class="btn small" id="cdLocateCard">定位到当前卡片</button>' :
+        '<button class="btn small" id="cdAddToLayout">加入布局</button>') + '</div>';
+    html += '<p style="margin:0;font-size:12px;line-height:1.75;color:#475569">下面列出该组件读取的接口。勾选「启用自定义」后，可直接在可视化表单里改常用字段，或展开「JSON 源码」粘贴完整响应。保存后班牌请求这些接口时会返回你的模拟数据。' +
+      '接口按路径全局生效，若显示「共用 N 个组件」，修改会同时影响它们。</p>';
+    if ((detail.layoutFields || []).length) {
+      var labels = [];
+      (detail.layoutFields || []).forEach(function (f) {
+        labels.push(f === 'images' ? '图片列表' : f === 'url' ? '跳转链接' : f === 'jsonParam' ? 'JSON 参数' : f);
+      });
+      html += '<div class="url-card"><strong>卡片属性也可控制显示</strong><div style="font-size:11px;color:#64748b;line-height:1.7">该组件还支持：' +
+        esc(labels.join(' / ')) + '。' + (usedCard ? '当前布局已使用该组件，可直接定位到卡片修改。' : '先把组件加入布局，再在卡片属性里修改。') + '</div></div>';
+    }
+    html += '<div id="cdRows">';
+    (detail.endpoints || []).forEach(function (item) { html += componentDataRow(item); });
+    if (!(detail.endpoints || []).length) {
+      html += '<div class="empty"><div class="big">▤</div>这个组件没有映射到接口<br>可以手动添加任意接口，或直接使用卡片属性（图片/链接/JSON）</div>';
+    }
+    html += '</div>';
+    html += '<div class="panel" style="margin-top:4px"><div class="panel-head"><div><h3>手动添加接口</h3><p>可从全部 257 个接口中选择</p></div></div><div class="panel-body"><div class="row">';
+    html += '<select class="select" id="cdAddPath" style="flex:1;min-width:240px">';
+    (detail.allPaths || []).forEach(function (p) {
+      html += '<option value="' + esc(p.path) + '" data-method="' + esc(p.method || 'POST') + '">[' + esc(p.method || 'POST') + '] ' + esc(p.path) + (p.description ? ' · ' + esc(p.description) : '') + '</option>';
+    });
+    html += '</select><button class="btn" id="cdAdd">添加接口</button></div></div></div>';
+    html += '</div>';
+    openModal('组件数据 · ' + detail.tag, html,
+      '<button class="btn danger" id="cdResetAll">清除全部</button>' +
+      '<button class="btn" id="cdCancel">取消</button>' +
+      '<button class="btn primary" id="cdSave">保存全部</button>', { wide: true });
+
+    $('#cdCancel').onclick = closeModal;
+    $('#cdSave').onclick = saveComponentData;
+    var resetAll = $('#cdResetAll');
+    if (resetAll) resetAll.onclick = function () {
+      if (!window.confirm('清除该组件的全部自定义响应？')) return;
+      api('/api/component/' + encodeURIComponent(COMPONENT_DATA.detail.tag) + '/reset', { method: 'POST' })
+        .then(function (res) {
+          closeModal();
+          toast('已清除 ' + res.cleared + ' 个接口自定义');
+          state.componentStatus = null;
+          refreshComponentStatus();
+        }).catch(function (err) { toast('清除失败：' + err.message, 'err'); });
+    };
+    $('#cdAdd').onclick = addComponentDataEndpoint;
+    var addLayout = $('#cdAddToLayout');
+    if (addLayout) addLayout.onclick = function () {
+      var tag = COMPONENT_DATA.detail.tag;
+      closeModal();
+      setView('layout');
+      addCard(tag);
+    };
+    var locate = $('#cdLocateCard');
+    if (locate) locate.onclick = function () {
+      var found = findCardByTag(COMPONENT_DATA.detail.tag);
+      if (!found) return;
+      closeModal();
+      var pageIndex = found.pageIndex;
+      var cardId = found.card.id;
+      setView('layout');
+      state.pageIndex = pageIndex;
+      state.selected = cardId;
+      render();
+    };
+    $$('.cd-row', $('#modalBody')).forEach(bindComponentDataRow);
+  }
+
+  function bindComponentDataRow(row) {
+    var path = row.dataset.path;
+    var body = row.querySelector('.cd-body');
+    var enabled = row.querySelector('.cd-enabled');
+    var tpl = row.querySelector('.cd-template');
+    var clear = row.querySelector('.cd-clear');
+    var form = row.querySelector('.jf-form');
+    var item = COMPONENT_DATA.rows[path];
+    var initial = item ? (item.override !== null && item.override !== undefined ? item.override : item.template) : {};
+    if (typeof initial === 'string') {
+      try { initial = JSON.parse(initial); } catch (e) { initial = {}; }
+    }
+    row._body = jfClone(initial || {});
+
+    function syncJson() {
+      body.value = jsonText(row._body);
+    }
+    function renderForm() {
+      form.innerHTML = jsonFormHtml(row._body, 'root', 0);
+      syncJson();
+    }
+    if (body) body.oninput = function () { if (enabled) enabled.checked = true; };
+    if (form) {
+      form.addEventListener('input', function (ev) {
+        var el = ev.target;
+        var p = el.getAttribute('data-jf-path');
+        if (!p) return;
+        if (enabled) enabled.checked = true;
+        var t = el.getAttribute('data-jf-type');
+        var value;
+        if (t === 'bool') value = el.checked;
+        else if (t === 'number') value = el.value === '' ? 0 : Number(el.value);
+        else value = el.value;
+        jfSet(row._body, p, value);
+        syncJson();
+      });
+      form.addEventListener('click', function (ev) {
+        var add = ev.target.closest('[data-jf-add]');
+        if (add) {
+          var addPath = add.getAttribute('data-jf-add');
+          var arr = jfGet(row._body, addPath);
+          if (Array.isArray(arr)) {
+            arr.push(jfBlank(arr.length ? arr[0] : ''));
+            if (enabled) enabled.checked = true;
+            renderForm();
+          }
+          return;
+        }
+        var del = ev.target.closest('[data-jf-del]');
+        if (del) {
+          ev.preventDefault();
+          var delPath = del.getAttribute('data-jf-del');
+          var list = jfGet(row._body, delPath);
+          var index = parseInt(del.getAttribute('data-jf-index'), 10);
+          if (Array.isArray(list) && !isNaN(index)) {
+            list.splice(index, 1);
+            renderForm();
+          }
+        }
+      });
+    }
+    if (tpl) tpl.onclick = function () {
+      var it = COMPONENT_DATA.rows[path];
+      if (!it) return;
+      row._body = jfClone(it.template || {});
+      renderForm();
+      enabled.checked = true;
+    };
+    if (clear) clear.onclick = function () {
+      var it = COMPONENT_DATA.rows[path];
+      enabled.checked = false;
+      if (it) {
+        row._body = jfClone(it.template || {});
+        renderForm();
+      }
+    };
+    var refresh = row.querySelector('.cd-refresh');
+    if (refresh) refresh.onclick = function () {
+      try {
+        row._body = JSON.parse(body.value || '{}');
+        renderForm();
+        toast('表单已按 JSON 刷新');
+      } catch (e) { toast('JSON 格式错误：' + e.message, 'err'); }
+    };
+  }
+
+  function addComponentDataEndpoint() {
+    var select = $('#cdAddPath');
+    if (!select) return;
+    var path = select.value;
+    if (!path) return;
+    if (COMPONENT_DATA.rows[path]) {
+      var existing = $('.cd-row[data-path="' + path.replace(/"/g, '\\"') + '"]');
+      if (existing) existing.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    var option = select.options[select.selectedIndex];
+    var method = option.getAttribute('data-method') || 'POST';
+    api('/api/endpoint-templates?path=' + encodeURIComponent(path)).then(function (res) {
+      var item = {
+        path: path, method: method, shared: 0, override: null, enabled: false,
+        template: res.template || { code: 0, message: '操作成功', data: {} },
+        description: ''
+      };
+      COMPONENT_DATA.rows[path] = item;
+      var holder = $('#cdRows');
+      var tmp = document.createElement('div');
+      tmp.innerHTML = componentDataRow(item);
+      var row = tmp.firstChild;
+      holder.appendChild(row);
+      bindComponentDataRow(row);
+      row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }).catch(function (err) { toast('加载模板失败：' + err.message, 'err'); });
+  }
+
+  function saveComponentData() {
+    var items = [];
+    var error = '';
+    $$('.cd-row', $('#modalBody')).forEach(function (row) {
+      if (error) return;
+      var path = row.dataset.path;
+      var enabled = row.querySelector('.cd-enabled').checked;
+      var had = row.dataset.had === '1';
+      if (!enabled) {
+        if (had) items.push({ path: path, enabled: false });
+        return;
+      }
+      var text = row.querySelector('.cd-body').value;
+      var body;
+      try { body = JSON.parse(text); }
+      catch (e) { error = path + ' 的 JSON 格式错误：' + e.message; return; }
+      items.push({ path: path, enabled: true, body: body });
+    });
+    if (error) { toast(error, 'err'); return; }
+    api('/api/component/' + encodeURIComponent(COMPONENT_DATA.detail.tag) + '/data', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items: items })
+    }).then(function (res) {
+      closeModal();
+      toast('组件数据已保存：' + res.saved + ' 个接口' + (res.cleared ? '，清除 ' + res.cleared + ' 个' : ''));
+      state.componentStatus = null;
+      refreshComponentStatus();
+      loadState();
+    }).catch(function (err) { toast('保存失败：' + err.message, 'err'); });
   }
 
   // ---------------------------------------------------------------------
@@ -865,6 +1720,9 @@
     html += inputField('设备 MAC', 's-mac', d.mac);
     html += inputField('版本号', 's-version', d.version);
     html += '</div></div>';
+    html += '<div class="field" style="margin-top:14px"><label class="check"><input type="checkbox" id="s-isSecond" ' +
+      (b.isSecond !== false ? 'checked' : '') + '> 允许二级页面（二级菜单）</label>' +
+      '<div class="field-help">关闭后，班牌点击卡片进入二级页面时会提示“二级页面已禁用”。保存后重启班牌/重新登录生效。</div></div>';
     html += '<div class="row" style="margin-top:14px"><div class="spacer"></div><button class="btn primary" id="btnSaveSite">保存站点信息</button></div>';
     html += '</div></div>';
     return html;
@@ -881,7 +1739,7 @@
       '<button class="btn primary small" id="btnAddNotice">＋ 新增公告</button></div><div class="panel-body">';
     if (!list.length) html += '<div class="empty"><div class="big">✉</div>还没有公告</div>';
     list.forEach(function (n, i) {
-      html += '<div class="list-row"><img class="thumb" src="' + esc(n.coverImg || '/mock/cover-1.jpg') + '" alt="">' +
+      html += '<div class="list-row">' +
         '<div class="info"><strong>' + esc(n.title) + '</strong><span>' + esc(n.source || '') + ' · ' + esc(n.timerDate || '') + ' · ' + esc(n.author || '') + '</span></div>' +
         '<div class="ops"><button class="btn small" data-editnotice="' + i + '">编辑</button>' +
         '<button class="btn small danger" data-delnotice="' + i + '">删除</button></div></div>';
@@ -897,8 +1755,8 @@
     ['class', 'campus'].forEach(function (kind) {
       html += '<h4 style="font-size:12px;color:#64748b;margin:6px 0 10px">' + (kind === 'class' ? '班级相册' : '校园相册') + '</h4>';
       (c[kind] || []).forEach(function (a, i) {
-        html += '<div class="list-row"><img class="thumb" src="' + esc(a.cover) + '" alt="">' +
-          '<div class="info"><strong>' + esc(a.name) + '</strong><span>' + (a.images || []).length + ' 张 · ' + esc(a.date || '') + '</span></div>' +
+        html += '<div class="list-row">' +
+          '<div class="info"><strong>' + esc(a.name) + '</strong><span>' + (a.images || []).length + ' 个 URL · ' + esc(a.date || '') + '</span></div>' +
           '<div class="ops"><button class="btn small" data-editalbum="' + kind + ':' + i + '">编辑</button>' +
           '<button class="btn small danger" data-delalbum="' + kind + ':' + i + '">删除</button></div></div>';
       });
@@ -912,7 +1770,7 @@
     var html = '<div class="panel"><div class="panel-head"><div><h3>视频</h3><p>校园视频卡片的播放列表</p></div>' +
       '<button class="btn primary small" id="btnAddVideo">＋ 新增视频</button></div><div class="panel-body">';
     list.forEach(function (v, i) {
-      html += '<div class="list-row"><img class="thumb" src="' + esc(v.cover || '/mock/cover-8.jpg') + '" alt="">' +
+      html += '<div class="list-row">' +
         '<div class="info"><strong>' + esc(v.name) + '</strong><span class="mono">' + esc(v.url) + '</span></div>' +
         '<div class="ops"><button class="btn small" data-editvideo="' + i + '">编辑</button>' +
         '<button class="btn small danger" data-delvideo="' + i + '">删除</button></div></div>';
@@ -926,7 +1784,7 @@
     var html = '<div class="panel"><div class="panel-head"><div><h3>荣誉墙</h3><p>首页荣誉卡片与班级荣誉</p></div>' +
       '<button class="btn primary small" id="btnAddHonor">＋ 新增荣誉</button></div><div class="panel-body">';
     list.forEach(function (h, i) {
-      html += '<div class="list-row"><img class="thumb" src="' + esc(h.avatar || '/mock/avatar-1.png') + '" alt="">' +
+      html += '<div class="list-row">' +
         '<div class="info"><strong>' + esc(h.name) + ' · ' + esc(h.studentName) + '</strong><span>' + esc(h.reason) + ' · ' + esc(h.date) + '</span></div>' +
         '<div class="ops"><button class="btn small" data-edithonor="' + i + '">编辑</button>' +
         '<button class="btn small danger" data-delhonor="' + i + '">删除</button></div></div>';
@@ -993,6 +1851,7 @@
       s.classes.classroom = $('#s-room').value;
       s.device.mac = $('#s-mac').value;
       s.device.version = $('#s-version').value;
+      s.brand.isSecond = $('#s-isSecond') ? $('#s-isSecond').checked : true;
       saveSite();
     };
     var addN = $('#btnAddNotice'); if (addN) addN.onclick = function () { editNotice(-1); };
@@ -1468,6 +2327,11 @@
       var rp = $('#btnRenamePage'); if (rp) rp.onclick = renamePage;
       var dp = $('#btnDupPage'); if (dp) dp.onclick = duplicatePage;
       var cp = $('#btnClearPage'); if (cp) cp.onclick = clearPage;
+      var chk = $('#chkPreview'); if (chk) chk.onchange = function () {
+        state.showPreview = chk.checked;
+        renderBoardOnly();
+        toast(chk.checked ? '已显示数据预览' : '已隐藏数据预览');
+      };
       var rl = $('#btnResetLayout'); if (rl) rl.onclick = function () {
         if (!window.confirm('恢复为默认的 7 张首页卡片？')) return;
         api('/api/layout/reset', { method: 'POST' }).then(function () {
@@ -1481,8 +2345,10 @@
       $$('[data-libcat]').forEach(function (b) { b.onclick = function () { state.library.category = b.dataset.libcat; render(); }; });
       $$('[data-libsize]').forEach(function (b) { b.onclick = function () { state.library.size = b.dataset.libsize; render(); }; });
       $$('[data-addtag]').forEach(function (b) { b.onclick = function () { addCard(b.dataset.addtag); }; });
+      $$('[data-data]').forEach(function (b) { b.onclick = function () { openComponentData(b.dataset.data); }; });
       $$('[data-copytag]').forEach(function (b) { b.onclick = function () { copyText(b.dataset.copytag); }; });
     }
+    if (state.view === 'componentdata') bindComponentDataView();
     if (state.view === 'content') bindContent();
     if (state.view === 'endpoints') bindEndpoints();
     if (state.view === 'device') bindDevice();
