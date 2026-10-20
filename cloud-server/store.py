@@ -89,7 +89,7 @@ def default_site() -> dict:
             "cityCode": "500000",
             "direction": "2",
             "isMessage": True,
-            "isSecond": False,
+            "isSecond": True,
             "badgeUrl": "/mock/logo.png",
             "verify": [{"id": "verify-1", "name": "刷卡验证"}, {"id": "verify-2", "name": "离线码"}],
         },

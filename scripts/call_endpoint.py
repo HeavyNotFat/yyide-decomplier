@@ -37,16 +37,7 @@ def main() -> None:
     print("brand_id  :", client.context.get("brand_id"))
     print("classes_id:", client.context.get("classes_id"))
 
-    layout = client.school_get_new_layout_list(id=client.context["brand_id"])
-    for page in layout or []:
-        for module in page.get("layoutClassSignDetailsEntityList", []):
-            print(
-                module.get("tag"),
-                module.get("x"),
-                module.get("y"),
-                module.get("width"),
-                module.get("height"),
-            )
+    # Code Here
 
 
 if __name__ == "__main__":

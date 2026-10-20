@@ -28,7 +28,6 @@
 | 内容 | 位置 | 说明 |
 | --- | --- | --- |
 | 还原版 APK | `dist/智慧班牌-3.0.14-还原版.apk` | 固定班牌设备身份，保留原版完整界面与 8×6 首页布局；新增刷卡/离线验证快捷入口 |
-| 还原版截图 | `dist/preview-home.png`、`preview-teacher.png`、`preview-student.png` | 首页、教师端、学生空间 |
 | 反编译应用源码 | `src/main/java/` | JADX 输出，约 2,895 个 `.java` |
 | 应用资源 | `src/main/res/`、`src/main/assets/` | 布局、图片、字符串、证书、字体、皮肤 |
 | 原生库 | `src/main/lib/` | armeabi-v7a / arm64-v8a / x86 / x86_64 |
@@ -267,13 +266,30 @@ client = BrandClient(
 raw = client.school_get_new_layout_list(full=True, id=client.context["brand_id"])
 # 只要 data
 layout = client.school_get_new_layout_list(id=client.context["brand_id"])
+
+# 每个方法的 JSON/Query/Form 字段都有 IDE 补全和中文 docstring
+works = client.home_get_new_student_work_list(
+    classesId=client.context["classes_id"],
+    pageNo="2",
+)
+
+# 完整 JSON 用 TypedDict，dict 字面量里也会补全键名
+from scripts.endpoints.schemas import HomeGetNewStudentWorkListBody
+
+body: HomeGetNewStudentWorkListBody = {
+    "classesId": client.context["classes_id"],
+    "pageNo": "2",
+}
+works = client.home_get_new_student_work_list(body=body)
 ```
 
 - 构造时自动 OAuth 登录；
 - `auto_obtain=True` 时自动 `/brand/obtain`，填充 `brand_id/classes_id/site_id`；
-- 257 个方法见 `client.method_names`；
+- 257 个方法都是显式 keyword-only 参数，IDE 直接提示 JSON/Query/Form 字段；
+- 参数分为 **必填 / 自动 / 可选**，详见 [scripts/endpoints/README.md](scripts/endpoints/README.md) 的 8.1；
 - 按 ID 调用：`client.call("home-002", classesId=...)`；
-- 只伪造请求：`client.forge("home-002")`、`client.forge_all()`。
+- 只伪造请求：`client.forge("home-002")`、`client.forge_all()`；
+- 修改 `apis/*.py` 后运行 `python -m scripts.endpoints.gen_client` 重新生成方法。
 
 ### 4.4 真实执行与伪造
 
@@ -308,18 +324,15 @@ adb install -r "dist\智慧班牌-3.0.14-云端版.apk"
 
 控制台提供：
 
-- **卡片布局**：8×6 栅格拖拽/缩放，293 个组件任意组合，多分页；
+- **卡片布局**：8×6 栅格拖拽/缩放，卡片上直接显示模拟数据预览；添加卡片采用组件库式搜索/分类/尺寸筛选；
 - **组件库**：全部首页组件，可搜索、按分类/尺寸筛选；
+- **组件数据**：为每个组件单独设置接口模拟数据（荣誉、课表、考勤、考试、图书等），支持中文表单编辑、JSON 源码、一键补全；
 - **内容中心**：公告、相册、视频、荣誉、值日、考试、图书、活动、投票、课表；
 - **接口模拟**：257 个接口的自定义响应覆盖 + 实时请求日志；
 - **组件巡展**：一键生成多页布局，逐页浏览全部组件；
 - **功能地图**：90 个 Activity、导出状态与 adb 启动命令。
 
 登录账号 `demo / demo`。完整说明见 [CLOUD.md](CLOUD.md)。
-
-![云端控制器](dist/preview-cloud-admin.png)
-
-![云端版首页](dist/preview-cloud-home.png)
 
 ---
 
@@ -371,10 +384,6 @@ HackedBrand/
 ├─ dist/
 │  ├─ 智慧班牌-3.0.14-还原版.apk
 │  ├─ 智慧班牌-3.0.14-云端版.apk
-│  ├─ preview-home.png
-│  ├─ preview-teacher.png
-│  ├─ preview-student.png
-│  └─ preview-cloud-*.png                 云端控制器与云端版截图
 ├─ ENDPOINTS.md                           接口文档
 ├─ CLOUD.md                               云端控制器说明
 ├─ RESTORE.md                             还原版说明
@@ -414,7 +423,9 @@ HackedBrand/
 | `permission_loader.py` | 解析本地凭据表（不随仓库发布） |
 | `runner.py` | CLI：列表、预览、执行、伪造 |
 | `build_request_table.py` | 生成 `output/requests.*` 和分组表 |
-| `client.py` | `BrandClient`，257 个接口方法 |
+| `client.py` | `BrandClient`，257 个带类型/注释的接口方法 |
+| `schemas.py` | 自动生成：每个 JSON Body 的 `TypedDict`（IDE 补全） |
+| `gen_client.py` | 从 `apis/*.py` 重新生成 client/schemas |
 | `device_info.py` | 通过 adb 读 MAC/Android ID/型号 |
 | `apis/*.py` | 20 个分组的接口定义 |
 | `output/` | 生成的请求表与执行日志 |

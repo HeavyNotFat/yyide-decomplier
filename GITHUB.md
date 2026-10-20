@@ -18,8 +18,6 @@
 | `src/main/AndroidManifest.xml` | 56KB | 应用清单 |
 | `src/main/*.properties`、`*.txt`、`*.json` | ~2MB | 资源/构建元数据 |
 | `libs/app-r.jar` | 217KB | 补丁类编译需要的 R 常量 |
-| `dist/preview-home.png`、`preview-teacher.png`、`preview-student.png` | ~1.1MB | README 截图 |
-| `dist/preview-cloud-*.png` | ~1.5MB | 云端控制器 / 云端版首页截图 |
 
 > `libs/original-classes.jar`、`app-classes.jar` 等编译 jar 含有原版硬编码凭据，**不随公开仓库发布**；本地构建时保留即可。公开仓库只放 `libs/app-r.jar`。
 
@@ -95,9 +93,8 @@ git add scripts
 git add src/main/java src/main/res src/main/AndroidManifest.xml
 git add src/main/*.properties src/main/*.txt src/main/*.json
 
-# 最小构建依赖 + 截图
+# 最小构建依赖
 git add libs/app-r.jar
-git add dist/preview-home.png dist/preview-teacher.png dist/preview-student.png
 
 git status
 git commit -m "feat: restore class board with real layout and verification shortcuts"
@@ -135,5 +132,5 @@ git diff --cached --stat
 
 - 确认没有 `_private/`、真实账号、MAC、Android ID、Secret、证书、私钥；
 - 确认 APK 只在 Release，不在 commit；
-- 确认 README 里的截图路径存在；
+
 - 如果之前 push 过敏感内容，删除文件不够，需要 `git filter-repo` 清理历史并轮换凭据。

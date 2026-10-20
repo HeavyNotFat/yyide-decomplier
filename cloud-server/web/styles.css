@@ -207,6 +207,20 @@ a { color: var(--primary); text-decoration: none; }
 .card-tile .name { font-size: 11.5px; font-weight: 600; margin-top: 6px; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .card-tile .size { position: absolute; right: 7px; bottom: 6px; font-size: 9.5px; color: var(--muted-2); }
 .card-tile .body-hint { margin-top: 5px; font-size: 9.5px; color: var(--muted-2); line-height: 1.4; overflow: hidden; }
+.card-tile .tile-preview { display: flex; gap: 6px; margin-top: 5px; align-items: center; min-width: 0; }
+.card-tile .preview-img { width: 40px; height: 40px; border-radius: 7px; object-fit: cover; flex: 0 0 40px; background: #eef3fb; }
+.card-tile .tile-preview-text { min-width: 0; }
+.card-tile .tile-preview-text strong { display: block; font-size: 10.5px; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card-tile .tile-preview-text span { display: block; font-size: 9.5px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card-tile .tile-preview-text em { display: block; font-size: 9px; color: var(--muted-2); font-style: normal; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card-tile .tile-preview-lines { margin-top: 4px; font-size: 9px; color: var(--muted); line-height: 1.35; overflow: hidden; }
+.card-tile .tile-preview-lines span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card-tile.h1 .tile-preview { margin-top: 4px; }
+.card-tile.h1 .preview-img { width: 26px; height: 26px; flex-basis: 26px; }
+.card-tile.h1 .tile-preview-text span,
+.card-tile.h1 .tile-preview-text em,
+.card-tile.h1 .tile-preview-lines { display: none; }
+.card-tile.h1 .name { font-size: 10.5px; margin-top: 3px; }
 .resize {
   position: absolute; right: 2px; bottom: 2px; width: 14px; height: 14px;
   cursor: nwse-resize; opacity: 0; transition: opacity .12s;
@@ -231,6 +245,25 @@ a { color: var(--primary); text-decoration: none; }
 .check { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #334155; }
 .check input { width: 14px; height: 14px; accent-color: var(--primary); }
 .meta-line { font-size: 10.5px; color: var(--muted-2); line-height: 1.6; margin-top: 4px; }
+.field-help { font-size: 10px; color: var(--muted-2); line-height: 1.55; margin-top: 3px; }
+.insp-section { border: 1px solid var(--line); border-radius: 11px; padding: 0 12px; margin-bottom: 10px; background: #fbfcff; }
+.insp-section > summary { cursor: pointer; padding: 10px 0; font-size: 11.5px; font-weight: 600; color: #334155; }
+.insp-section[open] > summary { border-bottom: 1px solid var(--line-2); margin-bottom: 10px; }
+.insp-section .field { margin-bottom: 10px; }
+.insp-section .check { font-size: 11px; margin-bottom: 6px; }
+.color-row { display: flex; gap: 6px; align-items: center; }
+.color-row input[type="color"] { width: 32px; height: 32px; border: 1px solid var(--line); border-radius: 8px; padding: 2px; background: #fff; flex: 0 0 32px; }
+.swatches { display: flex; gap: 6px; margin: 4px 0 6px; }
+.swatch { width: 20px; height: 20px; border-radius: 6px; border: 1px solid #d8e0ee; cursor: pointer; font-size: 10px; color: #64748b; padding: 0; }
+.image-row { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+.image-row img { width: 36px; height: 36px; border-radius: 7px; object-fit: cover; background: #eef3fb; flex: 0 0 36px; }
+.image-row .img-url { flex: 1; }
+.inspector-preview { display: flex; gap: 10px; padding: 10px; border: 1px dashed #cbd9f2; border-radius: 11px; background: #fbfdff; margin-bottom: 10px; }
+.inspector-preview img { width: 56px; height: 56px; border-radius: 9px; object-fit: cover; background: #eef3fb; flex: 0 0 56px; }
+.inspector-preview strong { display: block; font-size: 12px; }
+.inspector-preview span { display: block; font-size: 10.5px; color: #475569; margin-top: 2px; }
+.inspector-preview em { display: block; font-size: 10px; color: #94a3b8; font-style: normal; margin-top: 2px; }
+.inspector-preview p { margin: 4px 0 0; font-size: 10.5px; color: #64748b; }
 .empty { padding: 44px 20px; text-align: center; color: var(--muted-2); font-size: 12px; }
 .empty .big { font-size: 28px; margin-bottom: 8px; opacity: .5; }
 
@@ -270,6 +303,31 @@ tbody tr:hover { background: #fbfcff; }
 .status { display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; }
 .status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
 .status.off::before { background: var(--muted-2); }
+.cd-row {
+  border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px;
+  background: #fff; margin-bottom: 10px;
+}
+.cd-row .cd-body { background: #fbfcff; }
+.jf-form { border: 1px solid var(--line); border-radius: 10px; padding: 10px; background: #fbfcff; max-height: 380px; overflow: auto; }
+.jf-node { border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; margin: 6px 0; background: #fff; }
+.jf-node > summary { cursor: pointer; font-size: 10.5px; color: #475569; }
+.jf-node > summary em { font-style: normal; color: var(--muted-2); font-size: 9.5px; }
+.jf-field { margin: 7px 0; }
+.jf-field > label { display: flex; justify-content: space-between; gap: 8px; font-size: 10.5px; color: var(--muted); margin-bottom: 3px; }
+.jf-field > label em { font-style: normal; font-size: 9px; color: var(--muted-2); }
+.jf-item { border-left: 2px solid #dbe6fb; padding-left: 8px; margin: 8px 0; }
+.jf-item-node { border-left: 2px solid #dbe6fb; padding-left: 8px; margin: 8px 0; }
+.jf-item-node > summary { display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 10px; color: var(--muted-2); }
+.jf-item-node > summary .btn { margin: 0; }
+.jf-item-head { display: flex; justify-content: space-between; align-items: center; font-size: 9.5px; color: var(--muted-2); margin-bottom: 4px; }
+.jf-array { padding-left: 2px; }
+.jf-with-thumb { display: flex; gap: 6px; align-items: center; }
+.jf-with-thumb input { flex: 1; }
+.jf-with-thumb img { width: 32px; height: 32px; border-radius: 6px; object-fit: cover; background: #eef3fb; flex: 0 0 32px; }
+.json-details { margin-top: 8px; }
+.json-details > summary { cursor: pointer; font-size: 10.5px; color: var(--muted); }
+.cd-row .tag-chip { white-space: nowrap; }
+
 .panel-body > table { table-layout: fixed; }
 .panel-body > table td, .panel-body > table th { overflow: hidden; text-overflow: ellipsis; }
 
